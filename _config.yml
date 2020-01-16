@@ -112,7 +112,7 @@ kramdown:
 defaults:
   -
     scope:
-      path: "projet"
+      path: ""
       type: "posts"
     values:
       layout: "post"
