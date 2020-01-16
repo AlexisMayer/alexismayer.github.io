@@ -6,7 +6,11 @@ use-site-title: true
 ---
 
 <link rel="stylesheet" href="/css/shiny.css" />
-
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/bootstrap-social.css" />
+<link rel="stylesheet" href="/css/main.css" />
+    
+    
 <div id="aboutme-section">
   <p class="about-text">
     <span class="fa fa-briefcase about-icon fa-fw" aria-hidden="true"></span>
@@ -47,6 +51,17 @@ use-site-title: true
   </div>
 </div>
 
+<div class="shinyapp">
+<a class="applink" href="https://daattali.com/shiny/shinyalert-demo/">
+<img class="appimg" src="/img/shiny/shinyalert.png" />
+<div class="apptitle">
+shinyalert demo
+</div>
+<div class="appdesc">
+'shinyalert' is an R package I built for easily creating pretty popup messages (modals) in Shiny.
+</div>
+</a>
+</div>
 
 <div class="posts-list">
   {% for post in paginator.posts %}
