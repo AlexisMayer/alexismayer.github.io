@@ -1,0 +1,19 @@
+#aboutme-section {
+max-width: 910px;
+margin: 35px auto 50px;
+font-size: 21px;
+}
+#aboutme-section .about-text {
+text-align: left;
+position: relative;
+padding-left: 45px;
+padding-right: 5px;
+}
+#aboutme-section .about-text strong {
+font-weight: 600;
+}
+#aboutme-section .about-text .fa {
+position: absolute;
+left: 5px;
+top: 5px;
+}
