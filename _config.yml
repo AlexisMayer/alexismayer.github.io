@@ -11,6 +11,7 @@ description: Freelance Data Scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Projet: "projet"
   Gallery: "gallery"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
