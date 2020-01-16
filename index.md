@@ -5,6 +5,7 @@ subtitle: ...
 use-site-title: true
 ---
 
+```HTML
 <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
@@ -70,3 +71,4 @@ use-site-title: true
   {% endif %}
 </ul>
 {% endif %}
+```
