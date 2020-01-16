@@ -11,6 +11,7 @@ description: Freelance Data Scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  index: "index"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
@@ -36,13 +37,6 @@ hover-col: "#0085A1"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
-
-# Alternatively, the navbar, footer, and page background can be set to use background images
-# instead of colour
-
-# navbar-img: "/img/bgimage.png"
-# footer-img: "/img/bgimage.png"
-# page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
 
@@ -77,15 +71,6 @@ google_analytics: "UA-156365102-1"
 
 # --- Comments --- #
 
-# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
-
-# If you want to use JustComments fill with the API Key
-#just-comments: "ABCD-EFGH-IJKL"
-
-# To use Facebook Comments, fill in a Facebook App ID
-# fb_comment_id: ""
-
 # To use Staticman comments, fill in repository, branch, and endpoint
 staticman:
   repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
@@ -98,9 +83,6 @@ staticman:
     secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
 # --- Misc --- #
-
-# Facebook App ID
-# fb_app_id: ""
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
