@@ -77,11 +77,7 @@ footer {
 #intro-section .about-text strong {
   font-weight: 600;
 }
-#intro-section .about-text .fa {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-}
+
 #clients-link {
   cursor: pointer;
   color: #1E6DE8;
