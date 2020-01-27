@@ -66,13 +66,14 @@ footer {
   max-width: 910px;
   margin: 35px auto 50px;
   font-size: 21px;
-  color:#f5f5f5;
+  color: #f5f5f5;
 }
 #intro-section .about-text {
   text-align: justify;
   position: relative;
   padding-left: 45px;
   padding-right: 5px;
+  color: #f5f5f5;
 }
 #intro-section .about-text strong {
   font-weight: 600;
