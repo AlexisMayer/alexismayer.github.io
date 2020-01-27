@@ -68,7 +68,7 @@ footer {
   font-size: 21px;
 }
 #intro-section .about-text {
-  text-align: center;
+  text-align: justify;
   position: relative;
   padding-left: 45px;
   padding-right: 5px;
