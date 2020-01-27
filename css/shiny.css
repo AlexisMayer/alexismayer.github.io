@@ -65,14 +65,14 @@ footer {
   top: 5px;
 }
 #intro-section {
-  max-width: 910px;
+  max-width: 1100px;
   margin: 35px auto 50px;
   font-size: 21px;
 }
 #intro-section .about-text {
   text-align: left;
   position: relative;
-  padding-left: 45px;
+  padding-left: 5px;
   padding-right: 5px;
 }
 #intro-section .about-text strong {
