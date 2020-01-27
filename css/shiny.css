@@ -46,7 +46,7 @@ footer {
 #aboutme-section {
   max-width: 910px;
   margin: 35px auto 50px;
-  font-size: 21px;
+  font-size: 19px;
 }
 #aboutme-section .about-text {
   text-align: left;
@@ -58,6 +58,25 @@ footer {
   font-weight: 600;
 }
 #aboutme-section .about-text .fa {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+#intro-section {
+  max-width: 910px;
+  margin: 35px auto 50px;
+  font-size: 21px;
+}
+#intro-section .about-text {
+  text-align: center;
+  position: relative;
+  padding-left: 45px;
+  padding-right: 5px;
+}
+#intro-section .about-text strong {
+  font-weight: 600;
+}
+#intro-section .about-text .fa {
   position: absolute;
   left: 5px;
   top: 5px;
