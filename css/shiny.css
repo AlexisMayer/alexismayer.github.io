@@ -21,7 +21,7 @@ p a:hover, #qualifications a:hover {
   display: none;
 }
 #header {
-  background: #fff;
+  background-image: url("/img/logo-packages.png");
   text-align: center;
   margin-top: 51px;
 }
