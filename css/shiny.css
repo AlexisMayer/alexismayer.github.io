@@ -21,7 +21,7 @@ p a:hover, #qualifications a:hover {
   display: none;
 }
 #header {
-  background-image: url("/img/logo-packages.png");
+  background-image: url("https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwji9In0h6fnAhW_AWMBHf1dAg4QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.eoda.de%2Fen%2Fleistungen%2Finfrastruktur-und-implementierung%2Frstudio-partner&psig=AOvVaw25KVbgO8_9laNsCPzsHDhQ&ust=1580327249576791");
   text-align: center;
   margin-top: 51px;
 }
