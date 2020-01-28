@@ -364,7 +364,7 @@ footer {
 .grid-col {
   display: inline-block;
   vertical-align: top;
-  max-width: 450px;
+  max-width: 550px;
 }
 .size-1of3 {
   width: 33.333%;
