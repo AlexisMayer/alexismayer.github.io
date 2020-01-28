@@ -8,3 +8,7 @@ css: "../css/shiny.css"
 ---
 
 # Description du projet 
+
+Dans le cadre d'une enquète annuelle nationale sur les besoins en main d'oeuvre,
+j'ai eu locasion de réaliser une application permettant de visualiser spatialement
+l'évolution de ces besoins.
