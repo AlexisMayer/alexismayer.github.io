@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Cartographie des Besoins en Main d'oeuvre
-subtitle: <br> Application SHINY <br><br>
+title: Améliorer la rentabilité des hôtels en analysant la satisfaction des clients
 use-site-title: true
 googlefonts: ["Roboto"]
 css: "../css/shiny.css"

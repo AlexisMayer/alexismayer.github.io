@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Cartographie des Besoins en Main d'oeuvre
-subtitle: <br> Application SHINY <br><br>
+title: Détection d'anomalies et modélisation temporelle d'opérations bancaires
 use-site-title: true
 googlefonts: ["Roboto"]
 css: "../css/shiny.css"

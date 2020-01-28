@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Cartographie des Besoins en Main d'oeuvre
-subtitle: <br> Application SHINY <br><br>
+title: Analyse des inquiétudes vis-à-vis de l'alimentation
 use-site-title: true
 googlefonts: ["Roboto"]
 css: "../css/shiny.css"

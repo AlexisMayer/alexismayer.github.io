@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Cartographie des Besoins en Main d'oeuvre
-subtitle: <br> Application SHINY <br><br>
+title: Opinion des Français fâce à l'ouverture des commerces le dimanche <br>
 use-site-title: true
 googlefonts: ["Roboto"]
 css: "../css/shiny.css"
