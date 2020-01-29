@@ -24,11 +24,11 @@ avatar: "/img/avatar-dog.jpg"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-#navbar-col: "#F5F5F5"
-navbar-img: "/img/logo-packages.png"
+navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
-page-col: "#FFFFFF"
+#page-col: "#FFFFFF"
+page-img: "/img/logo-packages.png"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
