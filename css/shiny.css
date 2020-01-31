@@ -209,6 +209,12 @@ footer {
   text-align: center;
   font-size: 34px;
 }
+#clients-small-title,
+#qualifications-title,
+#more-links-title {
+  text-align: center;
+  font-size: 26px;
+}
 #clients-subtitle {
   font-size: 22px;
   margin: 20px 0 30px;
