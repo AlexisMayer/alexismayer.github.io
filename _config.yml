@@ -10,7 +10,6 @@ description: Freelance Data Scientist
 
 # List of links in the navigation bar
 navbar-links:
-  Services: "aboutme"
   Projet: "projet"
   Gallery: "gallery"
 
