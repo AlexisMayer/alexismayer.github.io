@@ -32,11 +32,11 @@ footer {
   padding-top: 30px;
   margin-bottom: -10px;
   font-size: 70px;
-  background-color: #2b323c;
+  background: #2b323c;
 }
 #subtitle  {
   font-size: 45px;
-  background-color: #2b323c;
+  background: #2b323c;
 }
 #links {
   font-size: 20px;
