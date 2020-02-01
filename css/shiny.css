@@ -30,9 +30,9 @@ footer {
 #title {
   margin: 0;
   padding-top: 30px;
-  margin-bottom: -10px;
-  font-size: 70px;
-  background: #2b323c;
+  margin-bottom: 10px;
+  font-size: 34px;
+  text-align: center;
 }
 #subtitle  {
   font-size: 45px;
