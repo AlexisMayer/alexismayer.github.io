@@ -54,15 +54,15 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: false
   email: "alexis45740@hotmail.com"
-  github: "https://github.com/AlexisMayer"
-  linkedin: "https://www.linkedin.com/in/alexis-mayer-574a7112a/" 
+  github: AlexisMayer
+  linkedin: alexis-mayer
   telephone: 0637206792
 
 # Select which share links to show in posts
 share-links-active:
   linkedin: true
+  
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
