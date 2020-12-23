@@ -145,7 +145,7 @@ footer {
 #shinyapps-big .shinyapp {
   width: 50%;
   color: #3d3852;
-  margin: 0 30px 60px;
+  margin: 0 10px 10px;
   background: #fff;
   transition: all 250ms;
   text-align: left;
@@ -163,6 +163,7 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
+  display: inline-block;
   width: 100%;
   height: 250px;
   cursor: pointer;
