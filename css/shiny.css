@@ -162,7 +162,6 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
-  width: 100%;
   height: 250px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
