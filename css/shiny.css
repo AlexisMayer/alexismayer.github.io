@@ -143,7 +143,6 @@ footer {
   overflow:hidden;
 }
 #shinyapps-big .shinyapp {
-  display: inline-block;
   width: 50%;
   color: #3d3852;
   margin: 0 10px 10px;
@@ -354,18 +353,16 @@ footer {
 	content: '3 .grid-col.size-1of3';
 }
 @media only screen and (max-width: 650px) {
-  #shinyapps-big .shinyapp {
-    margin:0 15px 30px;
-  }
   #shinyapps-big[data-columns]::before {
     content: '2 .grid-col.size-1of2';
   }
 }
 @media only screen and (max-width: 500px) {
-  #shinyapps-big[data-columns]::before {
+  #shinyapps-big[data-columns]::before {  
     content: '1 .grid-col.size-1of1';
   }
 }
+
 .grid-col {
   display: inline-block;
   vertical-align: top;
