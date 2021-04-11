@@ -162,7 +162,7 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
-  width: 100%;
+  width: 150px;
   height: 150px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
@@ -347,21 +347,19 @@ footer {
 .btns-sep {
   display: none;
 }
-
 #shinyapps-big[data-columns]::before {
 	content: '3 .grid-col.size-1of3';
-}
+} 
 @media only screen and (max-width: 650px) {
   #shinyapps-big[data-columns]::before {
     content: '2 .grid-col.size-1of2';
   }
-}
+} 
 @media only screen and (max-width: 400px) {
   #shinyapps-big[data-columns]::before {  
     content: '1 .grid-col.size-1of1';
   }
 }
-
 .grid-col {
   display: inline-block;
   vertical-align: top;
