@@ -162,7 +162,7 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
-  width: 150px;
+  width: 100%;
   height: 150px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
@@ -355,7 +355,7 @@ footer {
     content: '2 .grid-col.size-1of2';
   }
 } 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 300px) {
   #shinyapps-big[data-columns]::before {  
     content: '1 .grid-col.size-1of1';
   }
@@ -378,7 +378,6 @@ footer {
 p {
   line-height: 1;
 }
-
 h1 {
   font-weight: 700;
   line-height: 1.4;
