@@ -163,7 +163,7 @@ footer {
 }
 #shinyapps-big .shinyapp .appimg {
   width: 100%;
-  height: 150px;
+  height: 100px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
 }
@@ -351,14 +351,14 @@ footer {
 	content: '3 .grid-col.size-1of3';
 } 
 @media only screen and (max-width: 650px) {
-  #shinyapps-big[data-columns]::before {
-    content: '2 .grid-col.size-1of2';
-  }
+#shinyapps-big[data-columns]::before {
+  content: '2 .grid-col.size-1of2';
+}
 } 
 @media only screen and (max-width: 300px) {
-  #shinyapps-big[data-columns]::before {  
-    content: '1 .grid-col.size-1of1';
-  }
+#shinyapps-big[data-columns]::before {  
+  content: '1 .grid-col.size-1of1';
+}
 }
 .grid-col {
   display: inline-block;
