@@ -162,8 +162,8 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   cursor: pointer;
   border-bottom: 1px solid #eee;
 }
@@ -350,12 +350,12 @@ footer {
 #shinyapps-big[data-columns]::before {
 	content: '3 .grid-col.size-1of3';
 } 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 650px) {
 #shinyapps-big[data-columns]::before {
   content: '2 .grid-col.size-1of2';
 }
 } 
-@media only screen and (max-width: 150px) {
+@media only screen and (max-width: 350px) {
 #shinyapps-big[data-columns]::before {  
   content: '1 .grid-col.size-1of1';
 }
