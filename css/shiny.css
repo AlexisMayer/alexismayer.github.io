@@ -389,3 +389,19 @@ IMG.displayed {
   margin-left: auto;
   margin-right: auto;
 }
+.shinyapp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* pour gérer les images lorsque l'écran est trop petit*/
+}
+
+.appimg {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) { /* tailles d'écrans à partir de 768px */
+  .shinyapp {
+    flex-direction: row;
+  }
+}
+
