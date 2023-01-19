@@ -140,6 +140,9 @@ footer {
   color: #999;
 }
 #shinyapps-big {
+  width: 45%;
+  display: inline-block;
+  float: left;
   overflow:hidden;
 }
 #shinyapps-big .shinyapp {
@@ -162,8 +165,8 @@ footer {
   padding: 10px 15px;
 }
 #shinyapps-big .shinyapp .appimg {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
   cursor: pointer;
   border-bottom: 1px solid #eee;
 }
@@ -389,19 +392,3 @@ IMG.displayed {
   margin-left: auto;
   margin-right: auto;
 }
-.shinyapp {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap; /* pour gérer les images lorsque l'écran est trop petit*/
-}
-
-.appimg {
-  max-width: 100%;
-}
-
-@media (min-width: 768px) { /* tailles d'écrans à partir de 768px */
-  .shinyapp {
-    flex-direction: row;
-  }
-}
-
