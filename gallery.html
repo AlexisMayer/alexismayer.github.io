@@ -24,6 +24,34 @@ css: "/css/shiny.css"
     width: 100%; /* ou une autre valeur qui convient */
 }
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div id="portfolio-carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#portfolio-carousel" data-slide-to="1"></li>
+    <li data-target="#portfolio-carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="shinyapp">
+        <a class="applink" href="/portfolio/projet_3.html" rel="import" target="_blank">
+          <img class="appimg" src="/img/logo-accor.png">
+          <div class="apptitle">Analyse de la satisfaction des clients</div>
+        </a>
+      </div>
+      <div class="shinyapp">
+	 <a class="applink" href="/portfolio/projet_3.html" rel="import" target="_blank">
+          <img class="appimg" src="/img/logo-accor.png">
+          <div class="apptitle">Analyse de la satisfaction des clients</div>
+        </a>
+      </div>
+   </div>
+</div>
+
+
 <div id="portfolio-out">
 
   <div id="portfolio">
