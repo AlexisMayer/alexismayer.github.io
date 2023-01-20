@@ -10,7 +10,7 @@ description: Innovation data
 
 # List of links in the navigation bar
 navbar-links:
-  Projet: "Newsletter systèmes d'IA"
+  Newsletter : "projet"
   Gallery: "gallery"
 
 # Image to show in the navigation bar - image must be a square (width = height)
