@@ -150,7 +150,7 @@ footer {
   overflow:hidden;
 }
 #shinyapps-big .shinyapp {
-  width: 300px;
+  width: calc(33.333% - 20px);
   color: #3d3852;
   margin: 0 10px 10px;
   background: #fff;
