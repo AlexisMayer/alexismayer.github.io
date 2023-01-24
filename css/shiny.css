@@ -145,9 +145,11 @@ footer {
 }
 #shinyapps-big {
   width: 100%;
-  display: flex;
-  float: left;
   overflow:hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 #shinyapps-big .shinyapp {
   width: calc(33.333% - 20px);
