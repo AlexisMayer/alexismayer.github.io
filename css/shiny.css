@@ -273,56 +273,6 @@ footer {
 #more-links .shiny-apps div {
   margin-bottom: 15px;
 }
-
-@media only screen and (max-width: 1179px) {
-  #services .service {
-    width: 150px;
-    padding: 10px 5px;
-  }
-}
-@media only screen and (max-width: 999px) {
-  #services .service {
-    width: 120px;
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 650px) {
-  #services .service {
-    display: block;
-    width: auto;
-    margin: 0 auto;
-  }
-  #services {
-    padding: 15px 0;
-  }
-  #portfolio-title {
-    font-size: 28px;
-  }
-}
-@media only screen and (min-width: 751px) {
-  #title {
-    margin-left: -175px;
-    margin-bottom: -30px;
-  }
-  #subtitle {
-    margin-left: 175px;
-  }
-}
-@media only screen and (max-width: 750px) {
-  #title {
-    font-size: 40px;
-  }
-  #subtitle {
-    font-size: 30px;
-  }
-  #titleBar {
-    padding-bottom: 15px;
-  }
-  #links {
-    font-size: 17px;
-  }
-}
-
 .actionbtn {
   display: inline-block;
   margin-left: 10px;
@@ -354,19 +304,6 @@ footer {
 }
 .btns-sep {
   display: none;
-}
-#shinyapps-big[data-columns]::before {
-	content: '3 .grid-col.size-1of3';
-} 
-@media only screen and (max-width: 650px) {
-#shinyapps-big[data-columns]::before {
-  content: '2 .grid-col.size-1of2';
-}
-} 
-@media only screen and (max-width: 350px) {
-#shinyapps-big[data-columns]::before {  
-  content: '1 .grid-col.size-1of1';
-}
 }
 .grid-col {
   display: inline-block;
@@ -433,23 +370,80 @@ IMG.displayed {
  .news-item .like-count i, .news-item .retweet-count i {
   margin-right: 5px;
  }
- @media (max-width: 768px) {
-  .news-item {
+@media only screen and (max-width: 1179px) {
+  #services .service {
+    width: 150px;
+    padding: 10px 5px;
+  }
+}
+@media only screen and (max-width: 999px) {
+  #services .service {
+    width: 120px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #services .service {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+  #services {
+    padding: 15px 0;
+  }
+  #portfolio-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 751px) {
+  #title {
+    margin-left: -175px;
+    margin-bottom: -30px;
+  }
+  #subtitle {
+    margin-left: 175px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #title {
+    font-size: 40px;
+  }
+  #subtitle {
+    font-size: 30px;
+  }
+  #titleBar {
+    padding-bottom: 15px;
+  }
+  #links {
+    font-size: 17px;
+  }
+}
+#shinyapps-big[data-columns]::before {
+	content: '3 .grid-col.size-1of3';
+} 
+@media only screen and (max-width: 650px) {
+#shinyapps-big[data-columns]::before {
+  content: '2 .grid-col.size-1of2';
+ }
+} 
+@media only screen and (max-width: 350px) {
+#shinyapps-big[data-columns]::before {  
+  content: '1 .grid-col.size-1of1';
+ }
+}
+@media (max-width: 768px) {
+ .news-item {
   width: calc(50% - 20px);
-  }
  }
- @media (max-width: 576px) {
-  .news-item {
-  width: 100%;
-  }
- }
- @media (max-width: 768px) {
-  .shinyapp {
+ .shinyapp {
   width: calc(50% - 20px);
-  }
  }
- @media (max-width: 576px) {
-  .shinyapp {
+}
+@media (max-width: 576px) {
+ .news-item {
   width: 100%;
-  }
  }
+ .shinyapp {
+  width: 100%;
+ }
+}
