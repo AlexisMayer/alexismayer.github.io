@@ -140,9 +140,6 @@ footer {
 #portfolio-title:hover {
   color: #999;
 }
-#shinyapps {
-  width: 100%;
-}
 #shinyapps-big {
   display: flex;
   flex-wrap: wrap;
