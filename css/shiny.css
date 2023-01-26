@@ -146,7 +146,7 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
 }
-#shinyapps-big .shinyapp {
+.shinyapp {
   width: calc(33.333% - 20px);
   color: #3d3852;
   margin: 0 10px 10px;
