@@ -10,7 +10,6 @@ description: Freelance Data-science
 
 # List of links in the navigation bar
 navbar-links:
-  Newsletter : "newsletter"
   Services : "services"
   Gallerie : "gallery"
 
