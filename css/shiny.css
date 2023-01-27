@@ -431,3 +431,27 @@ IMG.displayed {
   width: 100%;
  }
 }
+.testimonials {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+.testimonial p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+.client-name {
+  font-style: italic;
+  font-size: 1.1em;
+}  
