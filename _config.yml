@@ -10,6 +10,7 @@ description: Freelance Data-science
 
 # List of links in the navigation bar
 navbar-links:
+  Projet : "comptines-audio"
   Services : "services"
   Gallerie : "gallery"
 
