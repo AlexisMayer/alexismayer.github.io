@@ -338,7 +338,7 @@ IMG.displayed {
   align-items: flex-start;
 }
 .news-item {
-  width: calc(33.333% - 20px);
+  width: calc(100% - 20px);
   margin: 10px;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -455,3 +455,34 @@ IMG.displayed {
   font-style: italic;
   font-size: 1.1em;
 }  
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+.workflow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.step {
+  text-align: center;
+}
+.step-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.step-title {
+  font-weight: bold;
+}
+.step-description {
+  font-size: 14px;
+  color: #666;
+}
