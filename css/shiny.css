@@ -436,6 +436,9 @@ IMG.displayed {
  .news-item {
   width: calc(50% - 20px);
  }
+ .news-item2 {
+  width: 100%;
+ }
  .shinyapp {
   width: calc(50% - 20px);
  }
