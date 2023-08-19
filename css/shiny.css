@@ -455,7 +455,7 @@ IMG.displayed {
   font-style: italic;
   font-size: 1.1em;
 }  
-.container-workflow {
+.cworkflow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,14 +466,15 @@ IMG.displayed {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .step {
   text-align: center;
+  padding: 10px;
 }
 .step-icon {
   font-size: 24px;
