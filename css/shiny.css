@@ -459,7 +459,7 @@ IMG.displayed {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100px;
   background-color: #f0f0f0;
 }
 .workflow {
@@ -471,6 +471,7 @@ IMG.displayed {
   border: 1px solid #ddd;
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 .step {
   text-align: center;
