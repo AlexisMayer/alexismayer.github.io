@@ -23,7 +23,7 @@ p {
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 a {
   color: {{ site.link-col }};
@@ -462,7 +462,6 @@ footer .theme-by {
 }
 .intro-header .page-heading {
   text-align: center;
-  padding-top: 30px !important;
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
@@ -525,7 +524,7 @@ footer .theme-by {
     padding: 50px 0;
   }
   .intro-header .page-heading h1 {
-    font-size: 80px;
+    font-size: 85px;
   }
   .intro-header .post-heading h1 {
     font-size: 50px;
