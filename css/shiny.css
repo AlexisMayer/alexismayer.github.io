@@ -337,7 +337,7 @@ IMG.displayed {
   justify-content: space-between;
   align-items: flex-start;
 }
-.news-bigitem {
+.news-item2 {
   width: calc(50% - 20px);
   margin: 10px;
   background-color: #fff;
@@ -357,7 +357,7 @@ IMG.displayed {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.news-bigitem h3 {
+.news-item2 h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -366,7 +366,7 @@ IMG.displayed {
   line-height: 1.5;
   margin-bottom: 10px;
  }
- .news-bigitem p {
+ .news-item2 p {
   font-size: 15px;
   line-height: 1.5;
   margin-bottom: 10px;
