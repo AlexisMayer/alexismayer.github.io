@@ -337,6 +337,14 @@ IMG.displayed {
   justify-content: space-between;
   align-items: flex-start;
 }
+.news-bigitem {
+  width: calc(50% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
 .news-item {
   width: calc(33% - 20px);
   margin: 10px;
@@ -349,8 +357,17 @@ IMG.displayed {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.news-bigitem h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 .news-item p {
   font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+ }
+ .news-bigitem p {
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 10px;
  }
