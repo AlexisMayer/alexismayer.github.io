@@ -510,3 +510,44 @@ IMG.displayed {
   font-size: 14px;
   color: #666;
 }
+/* Style for the timeline and vertical bar */
+.timeline {
+  display: flex;
+  align-items: stretch;
+  flex-direction: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.timeline-item {
+  max-width: 35%;
+  position: relative;
+  margin: 15px 0;
+}
+
+.timeline-content {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.timeline-title {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.timeline-date {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .timeline-item {
+    margin: 10px 0;
+  }
+}
