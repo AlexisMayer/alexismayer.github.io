@@ -1,14 +1,16 @@
 /* Style for the timeline and vertical bar */
 .timeline {
   display: flex;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
+  align-items: stretch;
+  flex-direction: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .timeline-item {
+  max-width: 35%;
   position: relative;
-  margin: 50px 0;
+  margin: 15px 0;
 }
 
 .timeline-content {
@@ -16,7 +18,6 @@
   padding: 20px;
   border-radius: 8px;
   position: relative;
-  border-left: 2px solid #3498db;
 }
 
 .timeline-title {
