@@ -511,7 +511,7 @@ IMG.displayed {
   color: #666;
 }
 /* Style for the timeline and vertical bar */
-.timeline {
+.timelinepage {
   display: flex;
   align-items: stretch;
   flex-direction: wrap;
@@ -519,25 +519,25 @@ IMG.displayed {
   flex-direction: row;
 }
 
-.timeline-item {
+.timelinepage-item {
   max-width: 35%;
   position: relative;
   margin: 15px 0;
 }
 
-.timeline-content {
+.timelinepage-content {
   background: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
   position: relative;
 }
 
-.timeline-title {
+.timelinepage-title {
   font-size: 18px;
   margin-top: 0;
 }
 
-.timeline-date {
+.timelinepage-date {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -547,7 +547,7 @@ IMG.displayed {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-  .timeline-item {
+  .timelinepage-item {
     margin: 10px 0;
   }
 }
