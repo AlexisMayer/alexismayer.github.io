@@ -1,9 +1,9 @@
 /* Style for the timeline and vertical bar */
 .timeline {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
-  padding-left: 40px;
+  flex-direction: column;
 }
 
 .timeline-item {
@@ -35,16 +35,6 @@
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   .timeline-item {
-    margin: 30px 0;
+    margin: 10px 0;
   }
-}
-
-/* Style for the vertical bar */
-.vertical-bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, gray 0%, gray 2016px, blue 2017px, blue 2021px, red 2022px);
 }
