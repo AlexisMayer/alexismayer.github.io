@@ -1,37 +1,57 @@
 .timeline {
-  position: relative;
-  padding: 20px 0;
-}
-
-.timeline-item {
-  position: relative;
-  margin: 50px 0;
-}
-
-.timeline-content {
-  background: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  border-left: 2px solid #3498db;
-}
-
-.timeline-title {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-.timeline-date {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 14px;
-  color: #666;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .timeline-item {
-    margin: 30px 0;
+    position: relative;
+    padding: 20px 0;
   }
-}
+  
+  .timeline-item {
+    position: relative;
+    margin: 50px 0;
+  }
+  
+  .timeline-content {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    border-left: 2px solid #3498db;
+  }
+  
+  .timeline-title {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  .timeline-date {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Color coding */
+  .timeline-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 100%;
+    width: 2px;
+    background-color: #ccc; /* Default color for years before 2017 */
+  }
+  
+  .timeline-item:nth-child(2):before {
+    background-color: #3498db; /* Blue color for years between 2018 and mid-2021 */
+  }
+  
+  .timeline-item:nth-child(3):before {
+    background-color: #e74c3c; /* Red color for years after mid-2021 */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .timeline-item {
+      margin: 30px 0;
+    }
+  }
+  
