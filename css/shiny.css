@@ -432,7 +432,7 @@ IMG.displayed {
     font-size: 17px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
  .news-item {
   width: calc(50% - 20px);
  }
@@ -443,7 +443,7 @@ IMG.displayed {
   width: calc(50% - 20px);
  }
 }
-@media (max-width: 576px) {
+@media (max-width: 700px) {
  .news-item {
   width: 100%;
  }
