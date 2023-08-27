@@ -211,7 +211,9 @@ footer {
 #qualifications-title,
 #more-links-title {
   text-align: center;
-  font-size: 34px;
+  font-size: 48px;
+  margin: 20px 0 50px;
+
 }
 #clients-small-title,
 #qualifications-title,
@@ -220,7 +222,7 @@ footer {
   font-size: 26px;
 }
 #clients-subtitle {
-  font-size: 22px;
+  font-size: 32px;
   margin: 50px 0 50px;
 }
 #clients a {
