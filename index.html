@@ -25,6 +25,7 @@ bigimg:
             border: 1px solid #ccc;
             border-radius: 5px;
             overflow: hidden;
+            z-index: 9999;
         }
         .chatbox-content {
             height: 100%;
@@ -44,16 +45,25 @@ bigimg:
             border: none;
             cursor: pointer;
         }
+        .chatbox-input {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
 </style>
- <div class="chatbox-container">
+    <div class="chatbox-container">
         <div class="chatbox-content">
-            <div class="chatbox-message" id="chatboxMessage"></div>
-            <button class="chatbox-button" onclick="toggleChatbox()">+</button>
+            <div class="chatbox-message" id="chatboxMessage">
+                <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
+            </div>
+            <button class="chatbox-button" onclick="toggleChatbox()">-</button>
         </div>
+        <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
     </div>
 
     <script>
-        var chatboxOpen = false;
+        var chatboxOpen = true;
 
         function toggleChatbox() {
             var chatboxMessage = document.getElementById("chatboxMessage");
@@ -69,8 +79,18 @@ bigimg:
 
             chatboxOpen = !chatboxOpen;
         }
-    </script>
-	
+
+        function sendMessage() {
+            var chatboxInput = document.getElementById("chatboxInput");
+            var message = chatboxInput.value;
+            chatboxInput.value = "";
+
+            var chatboxMessage = document.getElementById("chatboxMessage");
+            var newMessage = document.createElement("p");
+            newMessage.textContent = message;
+            chatboxMessage.appendChild(newMessage);
+        }
+    </script>	
 <!-- Intro -->
 <section id="introduction">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
