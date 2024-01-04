@@ -15,106 +15,108 @@ bigimg:
 
 <!-- Chatbox -->
 <style>
-	 .chatbox-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background-color: #f2f2f2;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-            z-index: 9999;
-        }
-        .chatbox-content {
-            height: calc(100% - 40px);
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
-        .chatbox-message {
-            flex-grow: 1;
-            overflow-y: auto;
-        }
-        .chatbox-bubble {
-            display: inline-block;
-            max-width: 80%;
-            padding: 8px;
-            margin-bottom: 8px;
-            border-radius: 10px;
-            color: #fff;
-        }
-        .chatbox-user {
-            text-align: right;
-            background-color: #d4eaf7;
-        }
-        .chatbox-bot {
-            text-align: left;
-            background-color: #007bff;
-        }
-        .chatbox-input {
-            margin-top: 10px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .chatbox-button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+    .chatbox-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        height: 400px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    .chatbox-content {
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .chatbox-message-container {
+        flex-grow: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chatbox-message-wrapper {
+        display: inline-block;
+        max-width: 80%;
+        padding: 8px;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        background-color: #e2e2e2;
+    }
+
+    .chatbox-user {
+        text-align: right;
+        background-color: #d4eaf7;
+    }
+
+    .chatbox-input {
+        margin-top: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .chatbox-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
 </style>
-  <div class="chatbox-container">
-        <div class="chatbox-content">
-            <div class="chatbox-message" id="chatboxMessage">
-                <div class="chatbox-bubble chatbox-bot">
-                    <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
-                </div>
+<div class="chatbox-container">
+    <div class="chatbox-content">
+        <div class="chatbox-message-container" id="chatboxMessage">
+            <div class="chatbox-message-wrapper chatbox-user">
+                <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
             </div>
-            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
-            <button class="chatbox-button" onclick="sendMessage()">Envoyer</button>
         </div>
-        <button class="chatbox-button" onclick="toggleChatbox()">-</button>
+        <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
+        <button class="chatbox-button" onclick="sendMessage()">Envoyer</button>
     </div>
+    <button class="chatbox-button" onclick="toggleChatbox()">-</button>
+</div>
 
-    <script>
-        var chatboxOpen = true;
+<script>
+    var chatboxOpen = true;
 
-        function toggleChatbox() {
-            var chatboxContent = document.querySelector(".chatbox-content");
-            var chatboxButton = document.querySelector(".chatbox-button");
+    function toggleChatbox() {
+        var chatboxContent = document.querySelector(".chatbox-content");
+        var chatboxButton = document.querySelector(".chatbox-button");
 
-            if (chatboxOpen) {
-                chatboxContent.style.height = "40px";
-                chatboxButton.textContent = "+";
-            } else {
-                chatboxContent.style.height = "calc(100% - 40px)";
-                chatboxButton.textContent = "-";
-            }
-
-            chatboxOpen = !chatboxOpen;
+        if (chatboxOpen) {
+            chatboxContent.style.height = "40px";
+            chatboxButton.textContent = "+";
+        } else {
+            chatboxContent.style.height = "calc(100% - 40px)";
+            chatboxButton.textContent = "-";
         }
 
-        function sendMessage() {
-            var chatboxInput = document.getElementById("chatboxInput");
-            var message = chatboxInput.value;
-            chatboxInput.value = "";
+        chatboxOpen = !chatboxOpen;
+    }
 
-            var chatboxMessage = document.getElementById("chatboxMessage");
-            var newMessage = document.createElement("div");
-            newMessage.classList.add("chatbox-bubble");
-            newMessage.textContent = message;
+    function sendMessage() {
+        var chatboxInput = document.getElementById("chatboxInput");
+        var message = chatboxInput.value;
+        chatboxInput.value = "";
 
-            if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user")) {
-                newMessage.classList.add("chatbox-user");
-            } else {
-                newMessage.classList.add("chatbox-bot");
-            }
+        var chatboxMessage = document.getElementById("chatboxMessage");
+        var newMessage = document.createElement("div");
+        newMessage.classList.add("chatbox-message-wrapper");
+        newMessage.textContent = message;
 
-            chatboxMessage.appendChild(newMessage);
+        if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user")) {
+            newMessage.classList.add("chatbox-user");
         }
-    </script>
+
+        chatboxMessage.appendChild(newMessage);
+    }
+</script>
 <!-- Intro -->
 <section id="introduction">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
