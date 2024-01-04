@@ -26,10 +26,15 @@ bigimg:
         border-radius: 5px;
         overflow: hidden;
         z-index: 9999;
+        transition: height 0.3s ease;
+    }
+
+    .chatbox-container.collapsed {
+        height: 40px;
     }
 
     .chatbox-content {
-        height: calc(100% - 40px);
+        height: 100%;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -38,20 +43,18 @@ bigimg:
     .chatbox-message-container {
         flex-grow: 1;
         overflow-y: auto;
-        display: flex;
-        flex-direction: column;
     }
 
-    .chatbox-message-wrapper {
+    .chatbox-bubble {
         display: inline-block;
-        max-width: 80%;
+        max-width: 100%;
         padding: 8px;
         margin-bottom: 8px;
         border-radius: 10px;
         background-color: #e2e2e2;
     }
 
-    .chatbox-user {
+    .chatbox-user-message .chatbox-bubble {
         text-align: right;
         background-color: #d4eaf7;
     }
@@ -69,35 +72,28 @@ bigimg:
         cursor: pointer;
     }
 </style>
-<div class="chatbox-container">
+<div class="chatbox-container" onclick="toggleChatbox()">
     <div class="chatbox-content">
         <div class="chatbox-message-container" id="chatboxMessage">
-            <div class="chatbox-message-wrapper chatbox-user">
+            <div class="chatbox-bubble chatbox-user-message">
                 <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
             </div>
         </div>
         <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
         <button class="chatbox-button" onclick="sendMessage()">Envoyer</button>
     </div>
-    <button class="chatbox-button" onclick="toggleChatbox()">-</button>
+    <button class="chatbox-button">-</button>
 </div>
 
 <script>
     var chatboxOpen = true;
 
     function toggleChatbox() {
-        var chatboxContent = document.querySelector(".chatbox-content");
+        var chatboxContainer = document.querySelector(".chatbox-container");
         var chatboxButton = document.querySelector(".chatbox-button");
 
-        if (chatboxOpen) {
-            chatboxContent.style.height = "40px";
-            chatboxButton.textContent = "+";
-        } else {
-            chatboxContent.style.height = "calc(100% - 40px)";
-            chatboxButton.textContent = "-";
-        }
-
-        chatboxOpen = !chatboxOpen;
+        chatboxContainer.classList.toggle("collapsed");
+        chatboxButton.textContent = chatboxContainer.classList.contains("collapsed") ? "+" : "-";
     }
 
     function sendMessage() {
@@ -107,11 +103,11 @@ bigimg:
 
         var chatboxMessage = document.getElementById("chatboxMessage");
         var newMessage = document.createElement("div");
-        newMessage.classList.add("chatbox-message-wrapper");
+        newMessage.classList.add("chatbox-bubble");
         newMessage.textContent = message;
 
-        if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user")) {
-            newMessage.classList.add("chatbox-user");
+        if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user-message")) {
+            newMessage.classList.add("chatbox-user-message");
         }
 
         chatboxMessage.appendChild(newMessage);
