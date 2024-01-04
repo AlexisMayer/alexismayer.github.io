@@ -20,7 +20,7 @@ bigimg:
             bottom: 20px;
             right: 20px;
             width: 300px;
-            height: 50px;
+            height: 400px;
             background-color: #f2f2f2;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -28,28 +28,25 @@ bigimg:
             z-index: 9999;
         }
         .chatbox-content {
-            height: 100%;
+            height: calc(100% - 40px);
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
             padding: 10px;
         }
         .chatbox-message {
-            display: none;
+            flex-grow: 1;
+            overflow-y: auto;
         }
-        .chatbox-open {
-            display: block;
+        .chatbox-input {
+            margin-top: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
         .chatbox-button {
             background-color: transparent;
             border: none;
             cursor: pointer;
-        }
-        .chatbox-input {
-            width: 200px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
         }
 </style>
     <div class="chatbox-container">
@@ -57,23 +54,23 @@ bigimg:
             <div class="chatbox-message" id="chatboxMessage">
                 <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
             </div>
-            <button class="chatbox-button" onclick="toggleChatbox()">-</button>
+            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
         </div>
-        <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
+        <button class="chatbox-button" onclick="toggleChatbox()">-</button>
     </div>
 
     <script>
         var chatboxOpen = true;
 
         function toggleChatbox() {
-            var chatboxMessage = document.getElementById("chatboxMessage");
+            var chatboxContent = document.querySelector(".chatbox-content");
             var chatboxButton = document.querySelector(".chatbox-button");
 
             if (chatboxOpen) {
-                chatboxMessage.style.display = "none";
+                chatboxContent.style.height = "40px";
                 chatboxButton.textContent = "+";
             } else {
-                chatboxMessage.style.display = "block";
+                chatboxContent.style.height = "calc(100% - 40px)";
                 chatboxButton.textContent = "-";
             }
 
