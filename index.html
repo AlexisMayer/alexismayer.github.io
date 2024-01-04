@@ -15,7 +15,7 @@ bigimg:
 
 <!-- Chatbox -->
 <style>
-.chatbox-container {
+	 .chatbox-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -43,11 +43,15 @@ bigimg:
             padding: 8px;
             margin-bottom: 8px;
             border-radius: 10px;
-            background-color: #e2e2e2;
+            color: #fff;
         }
         .chatbox-user {
             text-align: right;
             background-color: #d4eaf7;
+        }
+        .chatbox-bot {
+            text-align: left;
+            background-color: #007bff;
         }
         .chatbox-input {
             margin-top: 10px;
@@ -61,10 +65,10 @@ bigimg:
             cursor: pointer;
         }
 </style>
-<div class="chatbox-container">
+  <div class="chatbox-container">
         <div class="chatbox-content">
             <div class="chatbox-message" id="chatboxMessage">
-                <div class="chatbox-bubble chatbox-user">
+                <div class="chatbox-bubble chatbox-bot">
                     <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
                 </div>
             </div>
@@ -104,6 +108,8 @@ bigimg:
 
             if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user")) {
                 newMessage.classList.add("chatbox-user");
+            } else {
+                newMessage.classList.add("chatbox-bot");
             }
 
             chatboxMessage.appendChild(newMessage);
