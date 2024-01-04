@@ -15,7 +15,7 @@ bigimg:
 
 <!-- Chatbox -->
 <style>
-        .chatbox-container {
+.chatbox-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -37,6 +37,18 @@ bigimg:
             flex-grow: 1;
             overflow-y: auto;
         }
+        .chatbox-bubble {
+            display: inline-block;
+            max-width: 80%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            background-color: #e2e2e2;
+        }
+        .chatbox-user {
+            text-align: right;
+            background-color: #d4eaf7;
+        }
         .chatbox-input {
             margin-top: 10px;
             padding: 5px;
@@ -49,12 +61,15 @@ bigimg:
             cursor: pointer;
         }
 </style>
-    <div class="chatbox-container">
+<div class="chatbox-container">
         <div class="chatbox-content">
             <div class="chatbox-message" id="chatboxMessage">
-                <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
+                <div class="chatbox-bubble chatbox-user">
+                    <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
+                </div>
             </div>
             <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
+            <button class="chatbox-button" onclick="sendMessage()">Envoyer</button>
         </div>
         <button class="chatbox-button" onclick="toggleChatbox()">-</button>
     </div>
@@ -83,8 +98,14 @@ bigimg:
             chatboxInput.value = "";
 
             var chatboxMessage = document.getElementById("chatboxMessage");
-            var newMessage = document.createElement("p");
+            var newMessage = document.createElement("div");
+            newMessage.classList.add("chatbox-bubble");
             newMessage.textContent = message;
+
+            if (chatboxMessage.lastElementChild && chatboxMessage.lastElementChild.classList.contains("chatbox-user")) {
+                newMessage.classList.add("chatbox-user");
+            }
+
             chatboxMessage.appendChild(newMessage);
         }
     </script>
