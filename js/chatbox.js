@@ -1,5 +1,4 @@
-<script>
-    var chatboxOpen = true;
+var chatboxOpen = true;
 
     function toggleChatbox() {
         var chatboxContainer = document.querySelector(".chatbox-container");
@@ -24,4 +23,3 @@
         }
         chatboxMessage.appendChild(newMessage);
     }
-</script>
