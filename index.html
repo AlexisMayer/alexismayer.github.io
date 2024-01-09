@@ -16,6 +16,7 @@ bigimg:
 <!-- Chatbox -->
 <div class="chatbox-container">
     <div class="chatbox-content">
+	<button class="chatbox-button" onclick="toggleChatbox()">-</button>
         <div class="chatbox-message-container" id="chatboxMessage">
             <div class="chatbox-bubble chatbox-user-message">
                 <p>Bienvenue dans le chatbox! Comment puis-je vous aider?</p>
@@ -24,7 +25,6 @@ bigimg:
         <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Entrez votre message...">
         <button class="chatbox-button" onclick="sendMessage()">Envoyer</button>
     </div>
-    <button class="chatbox-button" onclick="toggleChatbox()">-</button>
 </div>
 <script src="/js/chatbox.js"></script>
 <!-- Intro -->
