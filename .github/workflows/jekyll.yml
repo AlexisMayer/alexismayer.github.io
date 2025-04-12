@@ -26,7 +26,7 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          cache-version: 1 # Incrémente si besoin de vider le cache
+          cache-version: 2 # Incrémente si besoin de vider le cache
 
       - name: Update Bundler & Install dependencies
         run: |
