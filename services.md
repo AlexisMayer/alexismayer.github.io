@@ -9,3 +9,7 @@ intro_image_hide_on_mobile: true
 
 Chaque projet est unique, et nous nous engageons à fournir des solutions innovantes, pragmatiques et adaptées à vos besoins. 
 Contactez-nous pour discuter de vos projets !
+
+---
+
+Découvrez nos services ou contactez-nous pour discuter de vos projets et besoins spécifiques !
