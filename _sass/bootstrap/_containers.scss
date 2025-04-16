@@ -18,7 +18,7 @@
 
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
       %responsive-container-#{$breakpoint} {
-        max-width: $container-max-width + 200px; // Élargir de 200px pour chaque point de rupture
+        max-width: $container-max-width + 300px; // Élargir de 300px pour chaque point de rupture
       }
 
       // Extend each breakpoint which is smaller or equal to the current breakpoint
