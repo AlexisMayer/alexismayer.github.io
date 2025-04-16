@@ -1,26 +1,26 @@
 ---
 ---
 
-// Colors
-$primary: #2d2f5a;
-$primary-dark: #01145b;
-$secondary: #244ab6;
+// Colors — Inspirées de la France, territoire et tech
+$primary: #002654; // Bleu France (marine foncé)
+$primary-dark: #011145; // Encore plus profond
+$secondary: #E2001A; // Rouge coquelicot
 $black: #2f2f41;
 $white: #ffffff;
-$white-offset: #f6faff;
-$steel: #5c5a5a;
+$white-offset: #f6f6f6; // Plus neutre, moins bleuté
+$steel: #5A5A5A; // Invariable pour cohérence industrielle
 
 // Links
-$link-color: $primary;
+$link-color: $secondary; // Accent rouge
 $link-decoration: none;
-$link-hover-color: lighten($primary, 10%);
+$link-hover-color: lighten($secondary, 10%);
 $link-hover-decoration: underline;
 
-// Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: "Playfair Display", serif, -apple-system;
+// Fonts — équilibre modernité et ancrage
+$font-family-base: 'Inter', Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Playfair Display', serif, -apple-system;
 
-// Footer
+// Footer — fond bleu institutionnel, texte clair
 $footer-background-color: $primary;
 $footer-text-color: $white;
 $sub-footer-background-color: darken($primary, 10%);
