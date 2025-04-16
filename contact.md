@@ -9,11 +9,13 @@ description: Nous contacter
 Nous sommes là pour répondre à toutes vos questions et discuter de vos projets en Data et Intelligence Artificielle. N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
 
 ## Informations de Contact
+
 - **Adresse e-mail** : contact@pyai.com
-- **Téléphone** : +33 6 12 34 56 78
-- **Adresse** : 123 Rue de l'Innovation, 75000 Paris, France
+- **Téléphone** :
+- **Adresse** :
 
 ## Horaires d'ouverture
+
 | Jour        | Heures d'ouverture   |
 | ----------- | -------------------- |
 | Lundi       | Fermé                |
@@ -25,6 +27,7 @@ Nous sommes là pour répondre à toutes vos questions et discuter de vos projet
 | Dimanche    | Fermé                |
 
 ## Besoin d'une assistance personnalisée ?
+
 Remplissez notre formulaire en ligne ou envoyez-nous un e-mail, et nous reviendrons vers vous dans les plus brefs délais.
 
 Nous sommes impatients de collaborer avec vous pour transformer vos idées en solutions innovantes !
