@@ -14,25 +14,25 @@ PyAi accompagne les PME dans l'exploitation de la Data et de l'Intelligence Arti
 Notre mission est de rendre ces technologies accessibles et adaptées aux besoins spécifiques.
 Nous aidons les entreprises à améliorer leur compétitivité, innover et renforcer les compétences de leurs équipes.
 
-</br>
+<br><br>
 
 ### Diagnostic et conseil
 
 Analyse des besoins, recommandations stratégiques adaptées.
 
-<\br>
+<br>
 
 ### Développement de logiciels
 
 Création d’outils sur mesure, intuitifs et performants.
 
-</br>
+<br>
 
 ### Formation et accompagnement
 
 Programmes personnalisés pour l’autonomie des équipes.
 
-<br>
+<br><br>
 
 ## Contactez-nous !
 
