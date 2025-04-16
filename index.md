@@ -8,7 +8,7 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Votre partenaire Data & IA
+# Solution Data & IA
 
 PyAi accompagne les PME dans l'exploitation de la Data et de l'Intelligence Artificielle. 
 Notre mission est de rendre ces technologies accessibles et adaptées aux besoins spécifiques.
