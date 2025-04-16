@@ -1,87 +1,39 @@
 ---
-title: About
+title: À propos
 layout: page
-description: About
+description: En savoir plus sur PyAi
 bodyClass: page-about
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+# À propos de PyAi
+
+## Notre Mission
+PyAi accompagne les PME dans l’adoption sereine et efficace des technologies de la Data et de l’Intelligence Artificielle (IA). Notre objectif est de rendre ces outils accessibles et utiles au quotidien, en mettant l'accent sur des bénéfices concrets et mesurables adaptés à chaque métier. Nous croyons fermement que la Data et l'IA sont des leviers clés pour améliorer la compétitivité et l’innovation des entreprises.
 
 ![Accounting Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
 
-# Objectives
+## Pourquoi PyAi ?
+Les PME font face à divers défis pour intégrer la Data et l’IA :
+- **Manque de ressources** : Peu de budget pour recruter des experts ou investir dans des solutions complexes.
+- **Méconnaissance des bénéfices** : Difficulté à identifier les cas d’usage apportant une réelle valeur ajoutée.
+- **Complexité perçue** : Ces technologies sont souvent perçues comme réservées aux grandes entreprises.
 
-Financial accounting and financial reporting are often used as synonyms.
+Chez PyAi, nous sommes là pour lever ces freins grâce à une approche adaptée, pragmatique et sur mesure.
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+## Notre Vision
+Nous souhaitons être reconnus comme un partenaire stratégique de confiance pour les PME. Notre ambition est de contribuer à leur compétitivité et leur pérennité en leur offrant des solutions innovantes, pragmatiques et éthiques. Nous privilégions l’écoute, l’adaptation aux besoins spécifiques et le transfert de compétences pour garantir une utilisation autonome et efficace.
 
-## Relevance
+## Historique
+PyAi est née d'une conviction : même les plus petites entreprises peuvent bénéficier des avancées de la Data et de l'IA. Après avoir constaté les difficultés rencontrées par les PME, Alexis Mayer a fondé PyAi pour leur offrir un accompagnement sur mesure, accessible et orienté résultats.
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+## Perspectives
+Pour répondre aux besoins grandissants, PyAi prévoit :
+- **Collaborations ponctuelles** avec des experts freelances pour répondre à des projets spécifiques.
+- **Recrutement stratégique** à moyen terme, incluant un CTO, un CSO et un CCO, pour structurer et renforcer nos capacités internes.
 
-> The ingredients of relevance are the predictive value and confirmatory value.
-
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
-
-## Faithful Representation
-
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
-
-## Enhancing Qualitative Characteristics
-
-### Verifiability
-
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
-
-### Comparability
-
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
-
-### Understandability
-
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
+## Structure
+Dans un souci de simplicité et de prudence, PyAi fonctionne actuellement sous le régime de la micro-entreprise. Une évolution vers une structure juridique telle qu’une SASU ou une EURL est envisagée pour accompagner la croissance.
 
 ---
 
-## Statement of cash flows
-
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
-
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
-
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
-
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
-
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
-
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
-
-## Statement of financial position (balance sheet)
-
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
-
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
-
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.
+Découvrez nos services ou contactez-nous pour discuter de vos projets et besoins spécifiques !
