@@ -7,7 +7,7 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Diagnostic & Conseil
+## Diagnostic & Conseil
 
 Nous élaborons une vision claire et stratégique pour vos projets Data et IA :
 
@@ -16,7 +16,7 @@ Nous élaborons une vision claire et stratégique pour vos projets Data et IA :
 - **Recommandations stratégiques** : Feuille de route avec des actions concrètes.
 - **Audit de la qualité des données** : Vérification de la fiabilité et de l'exploitabilité des données.
 
-# Développement & Implémentation
+## Développement & Implémentation
 
 Nous développons des solutions technologiques sur mesure :
 
@@ -26,7 +26,7 @@ Nous développons des solutions technologiques sur mesure :
 - **Analyse sémantique et NLP** : Exploitez vos données textuelles pour en tirer des insights.
 - **Vision par ordinateur** : Améliorez la qualité et la sécurité grâce à l'analyse d'images.
 
-# Formation & Accompagnement
+## Formation & Accompagnement
 
 Nous assurons un transfert de compétences pour une autonomie totale :
 
