@@ -30,10 +30,4 @@ Création d’outils sur mesure, intuitifs et performants.
 
 Programmes personnalisés pour l’autonomie des équipes.
 
-<br>
-
-## Contactez-nous !
-
-Discutons de votre projet et élaborons ensemble des solutions adaptées à vos besoins.
-
 ---
