@@ -40,7 +40,7 @@ bodyClass: "page-home"
     </div>
     <div class="row justify-content-center">
       <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">Explorer</a>
+        <a class="button button-primary" href="{{ 'services' | relative_url }}">Explorer</a>
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ bodyClass: "page-home"
           {% if feature.image %}
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
           {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
+          <h2 class="feature-title" href="{{ 'services' | relative_url }}">{{ feature.title }}</h2>
           <div class="feature-content">{{ feature.description }}</div>
         </div>
       </div>

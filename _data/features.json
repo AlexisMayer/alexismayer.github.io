@@ -1,7 +1,8 @@
 [
   {
     "title": "Consultation Gratuite",
-    "description": "New clients receive an obligation free consultation.",
+    "description": "Bénéficiez d’un diagnostic complet de votre projet."
+     ,
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
       "width": 80,
@@ -10,7 +11,7 @@
   },
   {
     "title": "Data & Développement",
-    "description": "All members of our team are certified accountants.",
+    "description": "Une solution entièrement adaptée à vos besoins pour maximiser l’impact de vos investissements.",
     "image": {
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
@@ -19,7 +20,7 @@
   },
   {
     "title": "Stratégie Data",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "description": "Une stratégie claire et des outils performants pour anticiper les tendances.",
     "image": {
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,
