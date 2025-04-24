@@ -10,6 +10,7 @@
   h1 {
     color: $black;
     font-size: 32px;
+    font-family: $font-family-heading;
     font-weight: bold;
     line-height: 1.2;
     @include media-breakpoint-up(md) {
@@ -21,18 +22,20 @@
     }
   }
   h2 {
-    width: 80%;
     font-size: 24px;
+    font-family: $font-family-heading;
     line-height: 1.4;
-    margin-bottom: 30px;
-    color: $black;
-    font-family: $font-family-base;
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      font-size: 26px;
+      line-height: 1.4;
+    }
   }
   h3 {
     font-size: 20px;
     line-height: 1.4;
     color: $black;
-    font-family: $font-family-base;
+    font-family: $font-family-heading;
     @include media-breakpoint-up(md) {
       font-size: 24px;
     }
@@ -41,7 +44,7 @@
     font-size: 16px;
     line-height: 1.4;
     color: $black;
-    font-family: $font-family-base;
+    font-family: $font-family-heading;
     @include media-breakpoint-up(md) {
       font-size: 20px;
     }
