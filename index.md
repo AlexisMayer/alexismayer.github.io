@@ -8,17 +8,17 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# PyAi – Libérez le potentiel de la Data & de l’IA pour votre PME
+# Libérez le potentiel de la Data & de l’IA
 
 ## 🎯 Une mission claire : rendre la Data et l’IA accessibles aux PME 
 
 Chez PyAi, nous croyons que l’intelligence artificielle et la data ne sont pas réservées aux grandes entreprises. Nous accompagnons les PME dans leur transformation numérique grâce à des solutions sur mesure, simples à déployer, et adaptées à vos objectifs métier.
 
-#### ➡️ Diagnostic & Conseil stratégique
+### ➡️ Diagnostic & Conseil stratégique
 
-#### ➡️ Développement d’outils Data & IA personnalisés
+### ➡️ Développement d’outils Data & IA personnalisés
 
-#### ➡️ Formation et accompagnement de vos équipes
+### ➡️ Formation et accompagnement de vos équipes
 
 ## 🚀 Pourquoi choisir PyAi ?
 
