@@ -1,7 +1,7 @@
 [
   {
-    "title": "Consultation Gratuite",
-    "description": "Bénéficiez d’un diagnostic complet de votre projet."
+    "title": "Diagnostic Data & Audit",
+    "description": "Évaluation de votre maturité digitale, audit de vos données, recommandations concrètes."
      ,
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
@@ -10,8 +10,8 @@
     }
   },
   {
-    "title": "Data & Développement",
-    "description": "Une solution entièrement adaptée à vos besoins pour maximiser l’impact de vos investissements.",
+    "title": "Développement d’outils IA & Data sur mesure",
+    "description": "Prévisions, détections d’anomalies, automatisation, NLP, vision par ordinateur...",
     "image": {
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
@@ -19,8 +19,8 @@
     }
   },
   {
-    "title": "Stratégie Data",
-    "description": "Une stratégie claire et des outils performants pour anticiper les tendances.",
+    "title": "Formations sur mesure",
+    "description": "Ateliers pratiques, cas concrets.",
     "image": {
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,
