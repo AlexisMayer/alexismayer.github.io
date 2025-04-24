@@ -1,7 +1,12 @@
 ---
-title: Développement & Implémentation
+title: "Développement d’outils IA & Data sur mesure",
+description: "Prévisions, détections d’anomalies, automatisation, NLP, vision par ordinateur...",
+image": {
+  "url": "images/features/noun_The Process_1885341.svg",
+  "width": 80,
+  "height": 80
+}
 layout: service
-description: Création de solutions sur mesure pour répondre aux besoins des PME
 ---
 
 # ⚙️ Développement & Implémentation de solutions IA

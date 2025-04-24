@@ -1,7 +1,12 @@
 ---
-title: Diagnostic & Conseil
+title: "Diagnostic Data & Audit",
+description: "Évaluation de votre maturité digitale, audit de vos données, recommandations concrètes.",
+image": {
+    "url": "images/features/noun_branding_1885335.svg",
+    "width": 80,
+    "height": 80
+},
 layout: service
-description: Évaluation stratégique et recommandations personnalisées en Data et IA
 ---
 
 # 🔍 Diagnostic & Conseil Data
