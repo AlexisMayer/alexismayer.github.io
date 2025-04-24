@@ -4,7 +4,7 @@ layout: service
 description: Formations et accompagnement pour maîtriser les outils Data et IA
 ---
 
-# Formation & Accompagnement
+# 📚 Formation & Accompagnement
 
 PyAi propose des programmes de formation et d’accompagnement sur mesure pour permettre aux PME de développer leur autonomie dans l’utilisation des outils Data et Intelligence Artificielle. Nous vous aidons à maîtriser les technologies pour en tirer le meilleur parti.
 

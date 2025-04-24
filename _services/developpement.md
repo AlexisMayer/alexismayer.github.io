@@ -4,7 +4,7 @@ layout: service
 description: Création de solutions sur mesure pour répondre aux besoins des PME
 ---
 
-# Développement & Implémentation
+# ⚙️ Développement & Implémentation de solutions IA
 
 Chez PyAi, nous transformons vos besoins en solutions concrètes grâce à des outils technologiques sur mesure, intuitifs et performants. De la prédiction des tendances à l'automatisation des processus, nous vous accompagnons dans chaque étape de votre transformation digitale.
 

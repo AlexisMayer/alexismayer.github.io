@@ -7,11 +7,15 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Des services sur mesure 
+# 🛠️ Nos expertises Data & IA à votre service
 
-<br>
+## 🧩 Une offre modulaire et adaptée à chaque étape de votre maturité digitale
 
-Chaque projet est unique, et nous nous engageons à fournir des solutions innovantes, pragmatiques et adaptées à vos besoins. 
+Chez PyAi, nous pensons que chaque entreprise est unique. Nos services sont construits pour répondre à vos besoins spécifiques, que vous soyez au début de votre réflexion ou prêt à déployer des solutions concrètes.
+
+## 🧠 Besoin d’un accompagnement global ?
+
+Découvrez nos offres packagées combinant audit, développement, formation et hébergement à prix préférentiels.
 
 ---
 

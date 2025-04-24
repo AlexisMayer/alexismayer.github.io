@@ -4,7 +4,7 @@ layout: service
 description: Évaluation stratégique et recommandations personnalisées en Data et IA
 ---
 
-# Diagnostic & Conseil
+# 🔍 Diagnostic & Conseil Data
 
 PyAi propose un service de diagnostic et de conseil conçu pour guider les PME dans leur transformation digitale. Ce service permet d'évaluer vos besoins, d'analyser vos données et de définir une feuille de route stratégique adaptée à vos objectifs.
 

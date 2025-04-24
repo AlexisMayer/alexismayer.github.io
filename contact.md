@@ -4,8 +4,15 @@ layout: contact
 description: Nous contacter
 ---
 
-Nous sommes là pour répondre à toutes vos questions et discuter de vos projets en Data et Intelligence Artificielle. N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+# 📬 Parlons de votre projet
 
-- **Adresse e-mail** : contact@pyai.com
-- **Téléphone** :
-- **Adresse** :
+## Prêt à transformer vos données en levier de performance ?
+
+Chez PyAi, on commence toujours par une discussion. Pas de jargon, pas de pitch commercial agressif. Juste un échange sincère pour comprendre vos enjeux.
+
+## 📞 Contactez-nous
+
+#### 📧 Email : contact@pyai.fr
+#### 📞 Téléphone : +33 6 XX XX XX XX
+#### 📍 Adresse : Paris, France
+#### 📅 Réservez un diagnostic gratuit
