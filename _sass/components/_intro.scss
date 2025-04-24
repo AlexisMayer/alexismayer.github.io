@@ -6,58 +6,7 @@
   padding-bottom: 40px;
   margin-left: 7%;
   overflow: hidden;
-  
-  h1 {
-    color: $black;
-    font-size: 32px;
-    font-family: $font-family-heading;
-    font-weight: bold;
-    line-height: 1.2;
-    @include media-breakpoint-up(md) {
-      width: 80%;
-      font-size: 36px;
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 40px;
-    }
-  }
-  h2 {
-    font-size: 24px;
-    font-family: $font-family-heading;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    @include media-breakpoint-up(md) {
-      font-size: 26px;
-      line-height: 1.4;
-    }
-  }
-  h3 {
-    font-size: 20px;
-    line-height: 1.4;
-    color: $black;
-    font-family: $font-family-heading;
-    @include media-breakpoint-up(md) {
-      font-size: 24px;
-    }
-  }
-  h4 {
-    font-size: 16px;
-    line-height: 1.4;
-    color: $black;
-    font-family: $font-family-heading;
-    @include media-breakpoint-up(md) {
-      font-size: 20px;
-    }
-  }
-  p {
-    font-size: 1.2rem;
-    font-weight: light;
-    line-height: 1.5;
-    color: $steel;
-    @include media-breakpoint-up(md) {
-      width: 80%;
-    }
-  }
+
 }
 
 .intro-small {
