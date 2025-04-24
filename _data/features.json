@@ -1,13 +1,13 @@
 [
   {
     "title": "Diagnostic Data & Audit",
-    "description": "Évaluation de votre maturité digitale, audit de vos données, recommandations concrètes."
-     ,
+    "description": "Évaluation de votre maturité digitale, audit de vos données, recommandations concrètes.",
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
       "width": 80,
       "height": 80
-    }
+    },
+    "url": "/services/diagnostic-data-audit"
   },
   {
     "title": "Développement d’outils IA & Data sur mesure",
@@ -16,7 +16,8 @@
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
       "height": 80
-    }
+    },
+    "url": "/services/developpement-ia-data"
   },
   {
     "title": "Formations sur mesure",
@@ -25,6 +26,7 @@
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,
       "height": 80
-    }
+    },
+    "url": "/services/formations-sur-mesure"
   }
 ]
