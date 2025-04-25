@@ -1,7 +1,7 @@
 ---
 title: "Développement d’outils IA & Data sur mesure"
 description: "Prévisions, détections d’anomalies, automatisation, NLP, vision par ordinateur..."
-url: "images/features/noun_The Process_1885341.svg"
+image: "images/features/noun_The Process_1885341.svg"
 layout: service
 ---
 
