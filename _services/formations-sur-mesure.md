@@ -10,16 +10,18 @@ PyAi propose des programmes de formation et d’accompagnement sur mesure pour p
 
 ## Ce que nous proposons :
 
-- **Formations sur mesure** :
+### Formations sur mesure
   - **Objectif** : Apprendre à utiliser les outils Data et IA, interpréter les résultats et prendre des décisions éclairées.
   - **Exemples de modules** :
     - Initiation à la Data et à l’IA.
     - Utilisation de tableaux de bord interactifs.
     - Analyse des données pour des décisions stratégiques.
-- **Accompagnement continu** :
+
+### Accompagnement continu
   - Support personnalisé pour répondre aux questions, résoudre les problèmes et améliorer les performances des solutions mises en œuvre.
   - Assistance technique pour optimiser vos outils et processus.
-- **Sensibilisation aux enjeux éthiques et réglementaires** :
+
+### Sensibilisation aux enjeux éthiques et réglementaires
   - Formation sur les implications de l’IA en matière de protection des données (RGPD), biais algorithmiques et responsabilité sociale.
 
 ## Pourquoi choisir ce service ?

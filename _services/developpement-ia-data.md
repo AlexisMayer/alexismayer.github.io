@@ -10,19 +10,23 @@ Chez PyAi, nous transformons vos besoins en solutions concrètes grâce à des o
 
 ## Ce que nous proposons :
 
-- **Modèles prédictifs et simulations** :
+### Modèles prédictifs et simulations
   - **Applications** : Prévision des ventes, optimisation des stocks, simulation d'impact.
   - **Bénéfices** : Décisions éclairées, réduction des risques, amélioration de la rentabilité.
-- **Détection d'anomalies et alertes précoces** :
+
+### Détection d'anomalies et alertes précoces
   - **Applications** : Détection des pannes, surveillance de la sécurité, prévention des fraudes.
   - **Bénéfices** : Réduction des arrêts, amélioration de la sécurité, prévention des pertes.
-- **Automatisation des processus métiers (RPA)** :
+
+### Automatisation des processus métiers (RPA)
   - **Applications** : Gestion des commandes, traitement des factures, réponse automatisée aux clients.
   - **Bénéfices** : Gain de temps, réduction des erreurs, satisfaction accrue des clients.
-- **Analyse sémantique et NLP (Natural Language Processing)** :
+
+### Analyse sémantique et NLP (Natural Language Processing)
   - **Applications** : Analyse des sentiments, résumé automatique de documents, traitement des retours clients.
   - **Bénéfices** : Meilleure compréhension des clients, automatisation du traitement des données textuelles.
-- **Vision par ordinateur** :
+
+### Vision par ordinateur
   - **Applications** : Contrôle qualité, analyse d'images médicales, surveillance par caméras intelligentes.
   - **Bénéfices** : Amélioration de la précision, réduction des coûts, optimisation des processus.
 
