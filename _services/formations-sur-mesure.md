@@ -1,11 +1,6 @@
 ---
-title: "Formations sur mesure",
-description: "Ateliers pratiques, cas concrets.",
-image: {
-  "url": "images/features/noun_3d modeling_1885342.svg",
-  "width": 80,
-  "height": 80
-}
+title: "Formations sur mesure"
+description: "Ateliers pratiques, cas concrets."
 layout: service
 ---
 
