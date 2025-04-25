@@ -7,7 +7,7 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# 🛠️ Nos expertises Data & IA à votre service
+# Nos expertises Data & IA à votre service
 
 ## 🧩 Une offre modulaire et adaptée à chaque étape de votre maturité digitale
 

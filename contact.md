@@ -4,7 +4,7 @@ layout: contact
 description: Nous contacter
 ---
 
-# 📬 Parlons de votre projet
+# Parlons de votre projet
 
 ## Prêt à transformer vos données en levier de performance ?
 

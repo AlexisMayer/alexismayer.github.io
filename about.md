@@ -5,7 +5,7 @@ description: En savoir plus sur PyAi
 bodyClass: page-about
 ---
 
-# 👤 Qui sommes-nous ?
+# Qui sommes-nous ?
 
 ## Une conviction forte : l’IA accessible à tous.
 
