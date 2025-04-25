@@ -1,6 +1,7 @@
 ---
 title: "Diagnostic Data & Audit"
 description: "Évaluation de votre maturité digitale, audit de vos données, recommandations concrètes."
+image: "images/features/noun_branding_1885335.svg"
 layout: service
 ---
 

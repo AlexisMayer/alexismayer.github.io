@@ -1,6 +1,7 @@
 ---
 title: "Formations sur mesure"
 description: "Ateliers pratiques, cas concrets."
+image: "images/features/noun_3d modeling_1885342.svg"
 layout: service
 ---
 
