@@ -9,7 +9,7 @@ release = true
 dist = "dist"
 
 # The public URL from which assets are served.
-public_url = "/alexismayer.github.io/"
+public_url = "/"
 
 # Tailwind CSS configuration
 tailwind-input-file = "style/tailwind.css"
