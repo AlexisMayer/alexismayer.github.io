@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SoftIA - Data et IA pour les PME du Centre-Val de Loire</title>
+        <meta
+            name="description"
+            content="SoftIA rend la data et l'IA accessibles aux PME du Centre-Val de Loire. Solutions personnalisées d'analyse et d'implémentation d'outils data/IA. Offres Exploration et Bâtisseur."
+        />
+
+        <!-- Trunk will inject the CSS and JS here -->
+        <link data-trunk rel="tailwind-css" href="style/tailwind.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <!-- Keywords -->
+        <meta
+            name="keywords"
+            content="data science, intelligence artificielle, PME, Centre-Val de Loire, analyse de données, IA, solutions sur mesure, consultation, audit data"
+        />
+
+        <!-- Open Graph meta tags -->
+        <meta
+            property="og:title"
+            content="SoftIA - Data et IA pour les PME du Centre-Val de Loire"
+        />
+        <meta
+            property="og:description"
+            content="Solutions personnalisées d'analyse et d'implémentation d'outils data/IA pour les PME. Offres Exploration (4000€) et Bâtisseur (15000€)."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://votre-username.github.io/softia/"
+        />
+        <meta property="og:locale" content="fr_FR" />
+
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SoftIA - Data et IA pour les PME" />
+        <meta
+            name="twitter:description"
+            content="Solutions data/IA personnalisées pour PME du Centre-Val de Loire"
+        />
+    </head>
+    <body>
+        <div id="app">
+            <!-- Loading indicator -->
+            <div
+                id="loading"
+                class="flex justify-center items-center h-screen bg-gradient-to-br from-primary-500 to-primary-700 text-white"
+            >
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin mx-auto mb-6"
+                    ></div>
+                    <h2 class="text-3xl font-bold mb-2">SoftIA</h2>
+                    <p class="text-lg text-white/90 mb-2">
+                        Data et IA pour les PME
+                    </p>
+                    <p class="text-white/80">Chargement en cours...</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Hide loading when app is ready */
+            body[data-app-loaded="true"] #loading {
+                display: none;
+            }
+        </style>
+
+        <script>
+            // Hide loading indicator once the app is mounted
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    const loading = document.getElementById("loading");
+                    if (loading) {
+                        loading.style.display = "none";
+                    }
+                    document.body.setAttribute("data-app-loaded", "true");
+                }, 100);
+            });
+        </script>
+    </body>
+</html>
