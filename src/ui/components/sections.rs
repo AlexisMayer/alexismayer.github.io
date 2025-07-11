@@ -31,7 +31,7 @@ pub fn HeroSection(
             </div>
 
             <div class="relative container-soft section-py">
-                <div class=format!("max-w-4xl {}", if centered { "mx-auto text-center" } else { "" })>
+                <div class=format!("max-w-5xl {}", if centered { "mx-auto text-center" } else { "" })>
                     // Title
                     {title.map(|t| view! {
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up">
