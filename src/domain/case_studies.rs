@@ -7,18 +7,21 @@
 #[derive(Debug, Clone, PartialEq)]
 pub enum SolutionType {
     ProcessAutomation,
+    AiAssistant,
 }
 
 impl SolutionType {
     pub fn get_label(&self) -> &'static str {
         match self {
             Self::ProcessAutomation => "Automatisation de processus",
+            Self::AiAssistant => "Assistant IA",
         }
     }
 
     pub fn get_icon(&self) -> &'static str {
         match self {
             Self::ProcessAutomation => "🤖",
+            Self::AiAssistant => "🧠",
         }
     }
 }
@@ -111,110 +114,110 @@ impl CaseStudy {
 }
 
 impl CaseStudy {
-    /// Create the Métallurgie Loire case study
-    pub fn metallurgie_loire() -> Self {
+    /// Create the IndusIA case study
+    pub fn indusia() -> Self {
         let metrics = vec![
             BusinessMetric::new(
-                "Arrêts non planifiés",
-                -40.0,
-                "Réduction des arrêts de production imprévus",
+                "Temps de recherche doc",
+                -70.0,
+                "Réduction du temps passé à chercher des informations",
             ),
             BusinessMetric::new(
-                "Coûts de maintenance",
-                -25.0,
-                "Optimisation des interventions préventives",
+                "Conformité normes",
+                25.0,
+                "Amélioration de l'adhésion aux normes réglementaires",
             ),
             BusinessMetric::new(
-                "Productivité équipements",
-                15.0,
-                "Amélioration du taux de rendement synthétique",
+                "Capitalisation savoirs",
+                50.0,
+                "Augmentation de la transmission des connaissances internes",
             ),
         ];
 
         let roi = RoiMetrics {
-            investment_euros: 15000,
-            annual_savings_euros: 80000,
-            payback_months: 3,
-            roi_percentage_12months: 433,
+            investment_euros: 5000,
+            annual_savings_euros: 60000,
+            payback_months: 1,
+            roi_percentage_12months: 1100,
         };
 
         Self {
-            title: "Prédiction de pannes pour optimiser la maintenance".to_string(),
-            client_name: "Métallurgie Loire".to_string(),
-            client_size_employees: 85,
-            solution_type: SolutionType::ProcessAutomation,
-            challenge_description: "Arrêts production imprévus coûteux et maintenance réactive inefficace".to_string(),
-            solution_description: "Système de maintenance prédictive basé sur l'IA analysant vibrations et températures".to_string(),
+            title: "IndusIA – L'assistant IA pour les équipes industrielles".to_string(),
+            client_name: "PME Industrielle".to_string(),
+            client_size_employees: 120,
+            solution_type: SolutionType::AiAssistant,
+            challenge_description: "Accès lent et fragmenté à la documentation technique et aux normes".to_string(),
+            solution_description: "Assistant IA en langage naturel pour accès instantané à l'information".to_string(),
             business_metrics: metrics,
             roi_metrics: roi,
-            testimonial: Some("Grâce à SoftIA, nous avons divisé par deux nos arrêts non planifiés. Le ROI a été au rendez-vous dès le 3ème mois.".to_string()),
+            testimonial: Some("IndusIA a révolutionné notre accès à l'information. Nos équipes gagnent un temps précieux chaque jour.".to_string()),
             is_featured: true,
-            completion_date: "Octobre 2024".to_string(),
+            completion_date: "Juin 2025".to_string(),
             technologies_used: vec![
-                "Dashboard temps réel (React/D3.js)".to_string(),
-                "Algorithmes ML (Python/scikit-learn)".to_string(),
-                "Base de données InfluxDB".to_string(),
-                "API d'intégration FastAPI".to_string(),
+                "Modèles de langage (LLM)".to_string(),
+                "Traitement du langage naturel (NLP)".to_string(),
+                "Base de données vectorielle".to_string(),
+                "API d'intégration".to_string(),
             ],
         }
     }
 
-    /// Create the Logistique Centre case study
-    pub fn logistique_centre() -> Self {
+    /// Create the AgriConseil IA case study
+    pub fn agriconseil_ia() -> Self {
         let metrics = vec![
             BusinessMetric::new(
-                "Coûts de transport",
-                -20.0,
-                "Optimisation des tournées de livraison",
+                "Temps de veille réglementaire",
+                -80.0,
+                "Réduction du temps passé à la veille réglementaire",
             ),
             BusinessMetric::new(
-                "Satisfaction client",
+                "Réactivité décisions",
                 30.0,
-                "Réduction des retards de livraison",
+                "Amélioration de la réactivité face aux changements",
             ),
             BusinessMetric::new(
-                "Temps de planification",
-                -60.0,
-                "Automatisation de la planification des tournées",
+                "Conformité PAC",
+                20.0,
+                "Augmentation de la conformité aux aides PAC",
             ),
         ];
 
         let roi = RoiMetrics {
-            investment_euros: 4000,
-            annual_savings_euros: 45000,
-            payback_months: 2,
-            roi_percentage_12months: 1025,
+            investment_euros: 3000,
+            annual_savings_euros: 40000,
+            payback_months: 1,
+            roi_percentage_12months: 1200,
         };
 
         Self {
-            title: "Optimisation des tournées de livraison".to_string(),
-            client_name: "Logistique Centre".to_string(),
-            client_size_employees: 45,
-            solution_type: SolutionType::ProcessAutomation,
-            challenge_description: "Planification manuelle des tournées chronophage et coûteuse".to_string(),
-            solution_description: "Algorithme d'optimisation intégré au système de gestion pour planification automatique".to_string(),
+            title: "AgriConseil IA - Assistant Agricole Intelligent".to_string(),
+            client_name: "Exploitation Agricole".to_string(),
+            client_size_employees: 5,
+            solution_type: SolutionType::AiAssistant,
+            challenge_description: "Difficulté à suivre les évolutions réglementaires et innovations agricoles".to_string(),
+            solution_description: "Assistant IA personnalisé pour la veille réglementaire et les actualités agricoles".to_string(),
             business_metrics: metrics,
             roi_metrics: roi,
-            testimonial: Some("L'outil développé par SoftIA nous fait économiser 2h de planification par jour et 20% sur nos coûts de transport.".to_string()),
+            testimonial: Some("AgriConseil IA est devenu indispensable. Je suis informé sans effort et je peux me concentrer sur mes cultures.".to_string()),
             is_featured: true,
-            completion_date: "Septembre 2024".to_string(),
+            completion_date: "Mai 2025".to_string(),
             technologies_used: vec![
-                "Algorithme d'optimisation OR-Tools".to_string(),
-                "API de géolocalisation".to_string(),
-                "Interface web (Vue.js)".to_string(),
-                "Intégration ERP".to_string(),
+                "Modèles de langage (LLM)".to_string(),
+                "API de messagerie (SMS/WhatsApp)".to_string(),
+                "Web scraping".to_string(),
+                "Base de données NoSQL".to_string(),
             ],
         }
     }
 
     /// Get all case studies
     pub fn get_all_case_studies() -> Vec<Self> {
-        vec![Self::metallurgie_loire(), Self::logistique_centre()]
+        vec![Self::indusia(), Self::agriconseil_ia()]
     }
 
     /// Get featured case studies for home page
     pub fn get_featured_case_studies() -> Vec<Self> {
-        vec![Self::metallurgie_loire(), Self::logistique_centre()]
+        vec![Self::indusia(), Self::agriconseil_ia()]
     }
 
     /// Calculate average ROI across all case studies

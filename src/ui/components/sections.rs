@@ -109,7 +109,7 @@ pub fn ContentSection(
     view! {
         <section class=format!("relative {}", bg_class)>
             <div class=format!("{} section-py-sm", container_class)>
-                <div class=format!("max-w-4xl {}", if centered { "mx-auto text-center" } else { "" })>
+                <div class=format!("max-w-5xl {}", if centered { "mx-auto text-center" } else { "" })>
                     {title.map(|t| view! {
                         <h2 class="text-3xl md:text-4xl font-bold text-secondary-900 mb-4 animate-fade-in-up">
                             {t}

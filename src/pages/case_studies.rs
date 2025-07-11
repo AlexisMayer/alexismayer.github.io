@@ -68,14 +68,14 @@ pub fn CaseStudiesPage() -> impl IntoView {
                 background="bg-gray-50".to_string()
                 centered=true
             >
-                <div class="space-y-12 mt-12">
+                <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 mt-12 scrollbar-hide">
                     {case_studies.into_iter().map(|case| {
                         let solution_icon = case.solution_type.get_icon();
                         let solution_label = case.solution_type.get_label();
                         let is_featured = case.is_featured;
 
                         view! {
-                            <div class=format!("relative p-8 lg:p-12 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 {}",
+                            <div class=format!("flex-none w-full md:w-full lg:w-full xl:w-11/12 relative p-8 lg:p-12 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 snap-center {}",
                                 if is_featured {
                                     "border-primary-200 bg-gradient-to-br from-primary-50 to-primary-100"
                                 } else {
@@ -269,9 +269,13 @@ pub fn CaseStudiesPage() -> impl IntoView {
                         description="RPA avec IA, workflows intelligents, gain de productivité".to_string()
                     />
                     <FeatureCard
+                        title="🧠 Assistant IA".to_string()
+                        description="Accès instantané à l'information, veille réglementaire, capitalisation des savoirs".to_string()
+                        highlighted=true
+                    />
+                    <FeatureCard
                         title="👥 Analytics clients".to_string()
                         description="Segmentation, prédiction de churn, personnalisation".to_string()
-                        highlighted=true
                     />
                 </div>
             </ContentSection>
