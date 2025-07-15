@@ -1,4 +1,4 @@
-//! Main layout component for the Softia application
+//! Main layout component for the CraftData application
 //!
 //! This component provides the primary layout structure used across
 //! most pages of the application with modern Tailwind CSS styling.

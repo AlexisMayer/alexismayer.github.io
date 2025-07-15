@@ -1,6 +1,6 @@
 //! Process page component
 //!
-//! This page explains SoftIA's methodology and implementation process using
+//! This page explains CraftData's methodology and implementation process using
 //! modern UI components with Tailwind CSS styling.
 
 use crate::ui::components::{ContentSection, CtaSection, FeatureCard, HeroSection};

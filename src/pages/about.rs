@@ -1,16 +1,16 @@
 //! About page component
 //!
-//! This page presents SoftIA's mission, founder information, and company approach
+//! This page presents CraftData's mission, founder information, and company approach
 //! using modern UI components with Tailwind CSS styling.
 
-use crate::domain::SoftiaCompany;
+use crate::domain::CraftDataCompany;
 use crate::ui::components::{ContentSection, FeatureCard, HeroSection};
 use crate::ui::{Footer, Header};
 use leptos::*;
 
 #[component]
 pub fn AboutPage() -> impl IntoView {
-    let company_info = SoftiaCompany::get_info();
+    let company_info = CraftDataCompany::get_info();
     let founder = company_info.founder;
 
     view! {
@@ -20,7 +20,7 @@ pub fn AboutPage() -> impl IntoView {
             // Hero Section
             <HeroSection
                 title="L'expertise data au service des PME".to_string()
-                subtitle=format!("Depuis {}, SoftIA démocratise l'accès à la data science et à l'IA", company_info.founded_year)
+                subtitle=format!("Depuis {}, CraftData démocratise l'accès à la data science et à l'IA", company_info.founded_year)
                 // description=format!("pour les entreprises du {}", company_info.target_region)
                 centered=true
                 background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()

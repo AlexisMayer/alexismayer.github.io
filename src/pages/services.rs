@@ -4,7 +4,7 @@
 //! and modern UI components with Tailwind CSS styling.
 
 use crate::domain::{get_services_by_category, ServiceCategory};
-use crate::ui::components::{ContentSection, CtaSection, FeatureCard, HeroSection};
+use crate::ui::components::{ContentSection, CtaSection, HeroSection};
 use crate::ui::{Footer, Header};
 use leptos::*;
 

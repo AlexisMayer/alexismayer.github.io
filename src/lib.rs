@@ -1,4 +1,4 @@
-//! SoftIA - Data & IA pour les PME
+//! CraftData - Data & IA pour les PME
 //!
 //! This is the main library file implementing a light Domain-Driven Design architecture.
 //! The application is organized into clear layers with separated concerns.
@@ -26,14 +26,14 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Stylesheet id="leptos" href="/pkg/softia.css"/>
-        <Title text="SoftIA - Transformez vos données en avantage concurrentiel"/>
-        <Meta name="description" content="SoftIA accompagne les PME du Centre-Val de Loire dans leur transformation data et IA. Audit, démonstrateur et solutions sur mesure. ROI garanti dès 3 mois."/>
+        <Stylesheet id="leptos" href="/pkg/craftdata.css"/>
+        <Title text="CraftData - Transformez vos données en avantage concurrentiel"/>
+        <Meta name="description" content="CraftData accompagne les PME du Centre-Val de Loire dans leur transformation data et IA. Audit, démonstrateur et solutions sur mesure. ROI garanti dès 3 mois."/>
         <Meta name="keywords" content="data science, intelligence artificielle, PME, Centre-Val de Loire, analyse de données, IA, solutions sur mesure, consultation, audit data"/>
         <Meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         // Open Graph meta tags
-        <Meta property="og:title" content="SoftIA - Data et IA pour les PME du Centre-Val de Loire"/>
+        <Meta property="og:title" content="CraftData - Data et IA pour les PME du Centre-Val de Loire"/>
         <Meta property="og:description" content="Solutions personnalisées d'analyse et d'implémentation d'outils data/IA pour les PME. Offres Exploration (4000€) et Bâtisseur (15000€)."/>
         <Meta property="og:type" content="website"/>
         <Meta property="og:locale" content="fr_FR"/>
@@ -66,11 +66,11 @@ pub fn main() {
     // Initialize logging
     console_log::init_with_level(log::Level::Info).expect("error initializing logger");
 
-    log::info!("🚀 SoftIA application starting...");
+    log::info!("🚀 CraftData application starting...");
     log::info!("Domain-driven architecture initialized");
 
     // Mount the application
     leptos::mount_to_body(App);
 
-    log::info!("✅ SoftIA application mounted successfully");
+    log::info!("✅ CraftData application mounted successfully");
 }

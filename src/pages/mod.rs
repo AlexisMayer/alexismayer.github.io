@@ -1,7 +1,7 @@
 //! Pages module - Application pages and views
 //!
 //! This module contains all the page components that represent the main views
-//! of the SoftIA application. Each page is responsible for rendering a complete
+//! of the CraftData application. Each page is responsible for rendering a complete
 //! view and orchestrating the necessary UI components and domain logic.
 
 pub mod about;

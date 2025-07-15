@@ -1,4 +1,4 @@
-//! Layout components for the Softia application
+//! Layout components for the CraftData application
 //!
 //! This module contains reusable layout components that define the overall
 //! structure and presentation of different pages in the application.

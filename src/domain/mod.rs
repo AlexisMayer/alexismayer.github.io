@@ -1,6 +1,6 @@
 //! Domain layer - Core business logic and entities
 //!
-//! This module contains the business domain models and logic for SoftIA.
+//! This module contains the business domain models and logic for CraftData.
 //! It follows Domain-Driven Design principles with clear separation of concerns.
 
 pub mod case_studies;

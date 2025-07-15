@@ -19,17 +19,15 @@ pub fn Header() -> impl IntoView {
                     <div class="flex items-center space-x-2">
                         <A href="/" class="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
                             // Logo icon
-                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                                <span class="text-white font-bold text-lg lg:text-xl">"S"</span>
-                            </div>
+                            <img src="/images/logo.png" alt="CraftData Logo" class="w-8 h-8 lg:w-10 lg:h-10 rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300" />
 
                             // Brand text
                             <div class="flex flex-col">
                                 <span class="text-xl lg:text-2xl font-bold text-gradient-primary">
-                                    "SoftIA"
+                                    "CraftData"
                                 </span>
                                 <span class="text-xs lg:text-sm text-secondary-600 -mt-1 hidden sm:block">
-                                    "Data & IA pour PME"
+                                    "Logiciel pour entreprise"
                                 </span>
                             </div>
                         </A>

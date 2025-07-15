@@ -3,13 +3,13 @@
 //! This component provides a sleek, informative footer with glass morphism effects,
 //! organized sections, and responsive design.
 
-use crate::domain::SoftiaCompany;
+use crate::domain::CraftDataCompany;
 use leptos::*;
 use leptos_router::*;
 
 #[component]
 pub fn Footer() -> impl IntoView {
-    let company_info = SoftiaCompany::get_info();
+    let company_info = CraftDataCompany::get_info();
 
     view! {
         <footer class="relative bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900">
@@ -25,11 +25,11 @@ pub fn Footer() -> impl IntoView {
                         <div class="lg:col-span-2">
                             <div class="flex items-center space-x-3 mb-6">
                                 <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg">
-                                    <span class="text-white font-bold text-xl">"S"</span>
+                                    <span class="text-white font-bold text-xl">"C"</span>
                                 </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-white">"SoftIA"</h3>
-                                    <p class="text-secondary-300 text-sm">"Data & IA pour PME"</p>
+                                    <h3 class="text-2xl font-bold text-white">"CraftData"</h3>
+                                    <p class="text-secondary-300 text-sm">"Logiciel pour entreprise"</p>
                                 </div>
                             </div>
 
@@ -55,8 +55,8 @@ pub fn Footer() -> impl IntoView {
                                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                                         </svg>
                                     </div>
-                                    <a href="mailto:contact@softia.fr" class="hover:text-primary-400 transition-colors">
-                                        "contact@softia.fr"
+                                    <a href="mailto:contact@craftdata.fr" class="hover:text-primary-400 transition-colors">
+                                        "contact@craftdata.fr"
                                     </a>
                                 </div>
 
@@ -89,15 +89,15 @@ pub fn Footer() -> impl IntoView {
                             <div class="space-y-4">
                                 <div class="text-secondary-300">
                                     <p class="font-medium text-primary-400">"Offre Exploration"</p>
-                                    <p class="text-sm">"4 000€ HT"</p>
+                                    <p class="text-sm">"3 250€ HT"</p>
                                 </div>
                                 <div class="text-secondary-300">
                                     <p class="font-medium text-primary-400">"Offre Bâtisseur"</p>
-                                    <p class="text-sm">"15 000€ HT"</p>
+                                    <p class="text-sm">"9 900€ HT"</p>
                                 </div>
                                 <div class="text-secondary-300">
                                     <p class="font-medium text-primary-400">"Support & Évolution"</p>
-                                    <p class="text-sm">"2 500€/mois"</p>
+                                    <p class="text-sm">"500€/mois"</p>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ pub fn Footer() -> impl IntoView {
                     <div class="container-soft py-6">
                         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <div class="flex items-center space-x-6 text-secondary-400 text-sm">
-                                <span>"© "{company_info.founded_year}" SoftIA. Tous droits réservés."</span>
+                                <span>"© "{company_info.founded_year}" CraftData. Tous droits réservés."</span>
                                 <span class="hidden md:inline">"•"</span>
                                 <span class="text-xs">{company_info.legal_form}</span>
                             </div>

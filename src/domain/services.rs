@@ -1,6 +1,6 @@
 //! Services domain module
 //!
-//! This module contains the business logic and types related to SoftIA's service offerings.
+//! This module contains the business logic and types related to CraftData's service offerings.
 //! It defines the core service entities and their business rules.
 
 /// Service offering types
@@ -34,7 +34,7 @@ impl ServiceOffering {
         Self {
             name: "Offre Exploration".to_string(),
             service_type: ServiceType::Exploration,
-            price_ht: 4000,
+            price_ht: 3250,
             duration_weeks: (3, 6),
             description: "Audit complet de vos données et preuve de valeur via démonstrateur"
                 .to_string(),
@@ -64,7 +64,7 @@ impl ServiceOffering {
         Self {
             name: "Offre Bâtisseur".to_string(),
             service_type: ServiceType::Builder,
-            price_ht: 15000,
+            price_ht: 9900,
             duration_weeks: (8, 12),
             description: "Implémentation complète d'une solution data/IA sur mesure".to_string(),
             benefits: vec![
@@ -94,7 +94,7 @@ impl ServiceOffering {
         Self {
             name: "Support & Évolution".to_string(),
             service_type: ServiceType::Support,
-            price_ht: 1500,
+            price_ht: 500,
             duration_weeks: (4, 4),
             description: "Accompagnement pour l'évolution de vos solutions en continu".to_string(),
             benefits: vec![
@@ -123,7 +123,7 @@ impl ServiceOffering {
         Self {
             name: "Hébergement & Maintenance".to_string(),
             service_type: ServiceType::Hosting,
-            price_ht: 200,
+            price_ht: 29,
             duration_weeks: (4, 4),
             description: "Hébergement sécurisé et maintenance de vos solutions data".to_string(),
             benefits: vec![

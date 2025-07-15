@@ -1,6 +1,6 @@
 //! Case Studies page component
 //!
-//! This page showcases SoftIA's client success stories and case studies using
+//! This page showcases CraftData's client success stories and case studies using
 //! modern UI components with Tailwind CSS styling.
 
 use crate::domain::{CaseStudy, CaseStudyAnalytics};

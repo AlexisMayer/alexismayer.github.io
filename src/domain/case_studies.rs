@@ -1,9 +1,9 @@
 //! Case Studies domain module
 //!
-//! This module contains the business logic and types related to SoftIA's case studies.
+//! This module contains the business logic and types related to CraftData's case studies.
 //! It demonstrates real business value and ROI from data/IA implementations.
 
-/// Types of solutions provided by SoftIA
+/// Types of solutions provided by CraftData
 #[derive(Debug, Clone, PartialEq)]
 pub enum SolutionType {
     ProcessAutomation,

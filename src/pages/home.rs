@@ -1,12 +1,12 @@
 //! Home page component
 //!
-//! This is the main landing page for SoftIA, showcasing the value proposition,
+//! This is the main landing page for CraftData, showcasing the value proposition,
 //! services overview, social proof, and call-to-actions. It uses domain entities
 //! and modern UI components with Tailwind CSS styling.
 
-use crate::domain::{CaseStudy, CaseStudyAnalytics, ServiceOffering, SoftiaCompany};
+use crate::domain::{ServiceOffering, CraftDataCompany};
 use crate::ui::components::{
-    ContentSection, CtaSection, FeatureCard, HeroSection, StatItem, StatsSection, TestimonialCard,
+    ContentSection, CtaSection, HeroSection, StatItem, StatsSection,
 };
 use crate::ui::{Footer, Header};
 use leptos::*;
@@ -15,9 +15,7 @@ use leptos::*;
 pub fn HomePage() -> impl IntoView {
     // Get domain data
     let services = ServiceOffering::all_main_services();
-    let featured_cases = CaseStudy::get_featured_case_studies();
-    let portfolio_stats = CaseStudyAnalytics::get_portfolio_stats();
-    let company_info = SoftiaCompany::get_info();
+    let company_info = CraftDataCompany::get_info();
 
     view! {
         <div class="min-h-screen bg-white">
@@ -26,7 +24,7 @@ pub fn HomePage() -> impl IntoView {
             // Hero Section with value proposition
             <HeroSection
                 title="Transformez vos données en avantage concurrentiel".to_string()
-                subtitle="SoftIA accompagne les PME dans leur transformation Data et IA".to_string()
+                subtitle="CraftData accompagne les PME dans leur transformation Data et IA".to_string()
                 // description=company_info.mission.to_string()
                 cta_text="Audit gratuit (30 min)".to_string()
                 cta_href="/contact".to_string()

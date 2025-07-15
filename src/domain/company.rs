@@ -1,7 +1,7 @@
 //! Company domain module
 //!
 //! This module contains the business logic and types related to company information,
-//! contact management, and business characteristics for SoftIA's target market.
+//! contact management, and business characteristics for CraftData's target market.
 
 /// Business sector options for forms
 pub fn get_business_sector_options() -> Vec<(String, String)> {
@@ -95,9 +95,9 @@ impl Founder {
     }
 }
 
-/// SoftIA company information
+/// CraftData company information
 #[derive(Debug, Clone)]
-pub struct SoftiaCompany {
+pub struct CraftDataCompany {
     pub mission: &'static str,
     pub founded_year: u16,
     pub legal_form: &'static str,
@@ -105,7 +105,7 @@ pub struct SoftiaCompany {
     pub founder: Founder,
 }
 
-impl SoftiaCompany {
+impl CraftDataCompany {
     pub fn get_info() -> Self {
         Self {
             mission: "Rendre la data et l'IA accessibles et utiles aux PME, \
@@ -117,3 +117,4 @@ impl SoftiaCompany {
         }
     }
 }
+
