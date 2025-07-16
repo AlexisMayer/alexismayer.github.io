@@ -21,7 +21,7 @@ pub fn ServicesPage() -> impl IntoView {
             <HeroSection
                 title="Services adaptés à votre maturité data".to_string()
                 subtitle="De l'audit initial à la solution complète".to_string()
-                description="Nous vous accompagnons à chaque étape de votre transformation data et IA".to_string()
+                description="".to_string()
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true

@@ -24,7 +24,7 @@ pub fn HomePage() -> impl IntoView {
             // Hero Section with value proposition
             <HeroSection
                 title="Transformez vos données en avantage concurrentiel".to_string()
-                subtitle="CraftData accompagne les PME dans leur transformation Data et IA".to_string()
+                subtitle="CraftData accompagne les entreprises dans leur transformation Data et IA".to_string()
                 // description=company_info.mission.to_string()
                 cta_text="Audit gratuit (30 min)".to_string()
                 cta_href="/contact".to_string()
@@ -35,26 +35,6 @@ pub fn HomePage() -> impl IntoView {
             >
                 // Hero stats
                 <div></div>
-                // <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto">
-                //     <div class="text-center">
-                //         <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                //             {portfolio_stats.format_average_roi()}
-                //         </div>
-                //         <div class="text-white/80 font-medium">"ROI moyen"</div>
-                //     </div>
-                //     <div class="text-center">
-                //         <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                //             {portfolio_stats.format_payback()}
-                //         </div>
-                //         <div class="text-white/80 font-medium">"Retour sur investissement"</div>
-                //     </div>
-                //     <div class="text-center">
-                //         <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                //             {format!("{}+", portfolio_stats.total_clients)}
-                //         </div>
-                //         <div class="text-white/80 font-medium">"Projets livrés"</div>
-                //     </div>
-                // </div>
             </HeroSection>
 
             // Value Proposition - Problems/Solutions

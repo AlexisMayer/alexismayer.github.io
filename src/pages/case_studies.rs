@@ -23,7 +23,7 @@ pub fn CaseStudiesPage() -> impl IntoView {
             <HeroSection
                 title="Nos réalisations".to_string()
                 subtitle="Success stories de nos clients".to_string()
-                description="Découvrez comment nous avons aidé des PME à transformer leurs données en avantage concurrentiel".to_string()
+                description="".to_string()
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true
@@ -32,35 +32,6 @@ pub fn CaseStudiesPage() -> impl IntoView {
                 <div></div>
             </HeroSection>
 
-            // Portfolio Stats Section
-            <StatsSection
-                title="Résultats de notre portfolio".to_string()
-                subtitle="Performance mesurée sur l'ensemble de nos projets clients".to_string()
-            >
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <StatItem
-                        value=portfolio_stats.total_clients.to_string()
-                        label="Projets livrés".to_string()
-                        icon="🚀".to_string()
-                    />
-                    <StatItem
-                        value=portfolio_stats.format_average_roi()
-                        label="ROI moyen".to_string()
-                        icon="📈".to_string()
-                    />
-                    <StatItem
-                        value=portfolio_stats.format_payback()
-                        label="Retour sur investissement".to_string()
-                        icon="💰".to_string()
-                    />
-                    <StatItem
-                        value=format!("{}m", portfolio_stats.average_implementation_months)
-                        label="Durée moyenne de mise en œuvre".to_string()
-                        icon="⏱️".to_string()
-                    />
-                </div>
-            </StatsSection>
-
             // Case Studies Section
             <ContentSection
                 title="Études de cas détaillées".to_string()
@@ -68,14 +39,14 @@ pub fn CaseStudiesPage() -> impl IntoView {
                 background="bg-gray-50".to_string()
                 centered=true
             >
-                <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 mt-12 scrollbar-hide">
+                <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 mt-6 scrollbar-hide">
                     {case_studies.into_iter().map(|case| {
                         let solution_icon = case.solution_type.get_icon();
                         let solution_label = case.solution_type.get_label();
                         let is_featured = case.is_featured;
 
                         view! {
-                            <div class=format!("flex-none w-full md:w-full lg:w-full xl:w-11/12 relative p-8 lg:p-12 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 snap-center {}",
+                            <div class=format!("flex-none w-full md:w-full lg:w-full xl:w-11/12 relative p-8 lg:p-12 mt-4 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 snap-center {}",
                                 if is_featured {
                                     "border-primary-200 bg-gradient-to-br from-primary-50 to-primary-100"
                                 } else {

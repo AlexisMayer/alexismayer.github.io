@@ -15,20 +15,21 @@ pub fn Header() -> impl IntoView {
             <nav class="container-soft">
                 <div class="flex items-center justify-between h-16 lg:h-20">
 
-                    // Brand/Logo
-                    <div class="flex items-center space-x-2">
+                    // Brand
+                    <div class="flex items-center space-x-1">
                         <A href="/" class="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
-                            // Logo icon
-                            <img src="/images/logo.png" alt="CraftData Logo" class="w-8 h-8 lg:w-10 lg:h-10 rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300" />
-
-                            // Brand text
-                            <div class="flex flex-col">
-                                <span class="text-xl lg:text-2xl font-bold text-gradient-primary">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg">
+                                    <span class="text-white font-bold text-xl">"C"</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xl lg:text-2xl font-bold text-gradient-primary">
                                     "CraftData"
                                 </span>
                                 <span class="text-xs lg:text-sm text-secondary-600 -mt-1 hidden sm:block">
                                     "Logiciel pour entreprise"
                                 </span>
+                                </div>
                             </div>
                         </A>
                     </div>

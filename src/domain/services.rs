@@ -35,7 +35,7 @@ impl ServiceOffering {
             name: "Offre Exploration".to_string(),
             service_type: ServiceType::Exploration,
             price_ht: 3250,
-            duration_weeks: (3, 6),
+            duration_weeks: (2, 4),
             description: "Audit complet de vos données et preuve de valeur via démonstrateur"
                 .to_string(),
             benefits: vec![
