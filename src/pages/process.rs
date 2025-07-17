@@ -21,7 +21,7 @@ pub fn ProcessPage() -> impl IntoView {
                 cta_text="Découvrir nos services".to_string()
                 cta_href="/services".to_string()
                 centered=true
-                background_variant="bg-gradient-to-br from-accent-600 to-accent-800".to_string()
+                // background_variant="bg-gradient-to-br from-accent-600 to-accent-800".to_string()
             >
                 <div></div>
             </HeroSection>

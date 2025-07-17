@@ -3,8 +3,8 @@
 //! This module provides reusable section components with modern Tailwind styling,
 //! including hero sections, content layouts, and interactive elements.
 
-use leptos::*;
 use crate::ui::components::neural_network_animation::NeuralNetworkBackground;
+use leptos::*;
 
 /// Hero section with gradient background and modern layout
 #[component]

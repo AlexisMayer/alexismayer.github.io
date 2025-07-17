@@ -11,7 +11,7 @@ pub fn Header() -> impl IntoView {
     let (is_mobile_open, set_mobile_open) = create_signal(false);
 
     view! {
-        <header class="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-lg border-b border-white/10">
+        <header class="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-lg border-b border-gray-100/20 bg-gray-50/90">
             <nav class="container-soft">
                 <div class="flex items-center justify-between h-16 lg:h-20">
 
@@ -52,7 +52,7 @@ pub fn Header() -> impl IntoView {
 
                     // Mobile menu button
                     <button
-                        class="lg:hidden p-2 rounded-xl hover:bg-white/10 transition-colors duration-200 focus-ring"
+                        class="lg:hidden p-2 rounded-xl hover:bg-gray-100/30 transition-colors duration-200 focus-ring"
                         on:click=move |_| set_mobile_open.update(|open| *open = !*open)
                         aria-label="Toggle navigation"
                     >
@@ -68,7 +68,7 @@ pub fn Header() -> impl IntoView {
                 </div>
 
                 // Mobile Navigation Menu
-                <div class=move || format!("lg:hidden absolute top-full left-0 right-0 glass-dark backdrop-blur-xl border-b border-white/10 transition-all duration-300 {}",
+                <div class=move || format!("lg:hidden absolute top-full left-0 right-0 glass-dark backdrop-blur-xl border-b border-gray-100/20 bg-white/95 transition-all duration-300 {}",
                     if is_mobile_open.get() {
                         "opacity-100 visible translate-y-0"
                     } else {
@@ -91,7 +91,7 @@ pub fn Header() -> impl IntoView {
                             </MobileNavLink>
 
                             // Mobile CTA
-                            <div class="pt-4 mt-4 border-t border-white/10">
+                            <div class="pt-4 mt-4 border-t border-gray-100/30">
                                 <A
                                     href="/contact"
                                     class="btn-primary w-full text-center"
@@ -121,8 +121,8 @@ fn NavLink(
         <A
             href=href
             exact=exact
-            class="relative px-4 py-2 rounded-lg text-secondary-700 font-medium transition-all duration-200 hover:text-primary-600 hover:bg-white/5 group"
-            active_class="text-primary-600 bg-white/10"
+            class="relative px-4 py-2 rounded-lg text-secondary-700 font-medium transition-all duration-200 hover:text-primary-600 hover:bg-gray-100/20 group"
+            active_class="text-primary-600 bg-gray-100/30"
         >
             <span class="relative z-10">{children()}</span>
             // Animated underline
@@ -145,8 +145,8 @@ where
         <A
             href=href
             exact=exact
-            class="flex items-center px-4 py-3 rounded-xl text-white/90 font-medium transition-all duration-200 hover:text-white hover:bg-white/10 group"
-            active_class="text-white bg-white/20"
+            class="flex items-center px-4 py-3 rounded-xl text-gray-700 font-medium transition-all duration-200 hover:text-gray-900 hover:bg-gray-100/30 group"
+            active_class="text-gray-900 bg-gray-100/40"
             on:click=move |e| {
                 if let Some(handler) = &on_click {
                     handler(e);
