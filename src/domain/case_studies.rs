@@ -114,6 +114,56 @@ impl CaseStudy {
 }
 
 impl CaseStudy {
+
+    /// Create SmartDocs case study
+    pub fn smartdocs() -> CaseStudy {
+        let metrics = vec![
+            BusinessMetric::new(
+                "Temps de recherche d’information",
+                -70.0,
+                "Réduction du temps passé à chercher dans les dossiers, procédures et documents internes",
+            ),
+            BusinessMetric::new(
+                "Réactivité des équipes",
+                35.0,
+                "Amélioration de la vitesse de réponse aux demandes internes et externes",
+            ),
+            BusinessMetric::new(
+                "Capitalisation du savoir",
+                60.0,
+                "Meilleure valorisation des connaissances contenues dans les fichiers historiques",
+            ),
+        ];
+
+        let roi = RoiMetrics {
+            investment_euros: 4000,
+            annual_savings_euros: 45000,
+            payback_months: 1,
+            roi_percentage_12months: 1025,
+        };
+
+        Self {
+            title: "SmartDocs – L’assistant IA universel pour vos fichiers internes".to_string(),
+            client_name: "Entreprise multisite – secteur services".to_string(),
+            client_size_employees: 80,
+            solution_type: SolutionType::AiAssistant,
+            challenge_description: "Les collaborateurs avaient du mal à retrouver et exploiter l’information dispersée dans des milliers de fichiers (PDF, Word, Excel, HTML…).".to_string(),
+            solution_description: "Déploiement d’un assistant IA interrogeable en langage naturel via une interface web interne. Il analyse et synthétise le contenu des fichiers stockés dans l’arborescence de l’entreprise.".to_string(),
+            business_metrics: metrics,
+            roi_metrics: roi,
+            testimonial: Some("SmartDocs a apporté une fluidité incroyable dans l’accès aux informations internes. Même les nouveaux arrivants deviennent opérationnels en quelques jours.".to_string()),
+            is_featured: true,
+            completion_date: "Juillet 2025".to_string(),
+            technologies_used: vec![
+                "Modèles de langage (LLM)".to_string(),
+                "RAG (Retrieval Augmented Generation)".to_string(),
+                "Base vectorielle (FAISS / Qdrant)".to_string(),
+                "FastAPI + Gradio (interface interne)".to_string(),
+                "LangChain ou LlamaIndex".to_string(),
+            ],
+        }
+    }
+
     /// Create the IndusIA case study
     pub fn indusia() -> Self {
         let metrics = vec![
@@ -212,12 +262,12 @@ impl CaseStudy {
 
     /// Get all case studies
     pub fn get_all_case_studies() -> Vec<Self> {
-        vec![Self::indusia(), Self::agriconseil_ia()]
+        vec![Self::smartdocs(), Self::indusia(), Self::agriconseil_ia()]
     }
 
     /// Get featured case studies for home page
     pub fn get_featured_case_studies() -> Vec<Self> {
-        vec![Self::indusia(), Self::agriconseil_ia()]
+        vec![Self::smartdocs(), Self::indusia(), Self::agriconseil_ia()]
     }
 
     /// Calculate average ROI across all case studies

@@ -39,62 +39,79 @@ pub fn HomePage() -> impl IntoView {
 
             // Value Proposition - Problems/Solutions
             <ContentSection
-                title="Vos défis Data & IA, nos solutions".to_string()
-                background="bg-gray-50".to_string()
-                centered=true
+              title="Vos défis Data & IA, nos solutions".to_string()
+              background="bg-gray-50".to_string()
+              centered={true}
             >
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-                    <div class="card-hover p-6 bg-white">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"❌"</span>
-                                <h3 class="text-xl font-bold text-red-600">"Vos données sont dispersées"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Excel, ERP, CRM... impossible d'avoir une vision globale"</p>
-                        </div>
-                        <div class="border-t pt-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"✅"</span>
-                                <h3 class="text-xl font-bold text-green-600">"Centralisation intelligente"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Dashboard unifié connecté à toutes vos sources"</p>
-                        </div>
-                    </div>
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
 
-                    <div class="card-hover p-6 bg-white">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"❌"</span>
-                                <h3 class="text-xl font-bold text-red-600">"Décisions au feeling"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Manque d'indicateurs fiables pour piloter"</p>
-                        </div>
-                        <div class="border-t pt-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"✅"</span>
-                                <h3 class="text-xl font-bold text-green-600">"KPIs actionnables"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Tableaux de bord avec alertes automatiques"</p>
-                        </div>
+                {/* Bloc 1 */}
+                <div class="card-hover p-6 bg-white">
+                  <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"❌"</span>
+                      <h3 class="text-xl font-bold text-red-600">Vos données sont dispersées</h3>
                     </div>
-
-                    <div class="card-hover p-6 bg-white">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"❌"</span>
-                                <h3 class="text-xl font-bold text-red-600">"Tâches répétitives"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Temps perdu sur des rapports manuels"</p>
-                        </div>
-                        <div class="border-t pt-6">
-                            <div class="flex items-center mb-3">
-                                <span class="text-2xl mr-3">"✅"</span>
-                                <h3 class="text-xl font-bold text-green-600">"Automatisation IA"</h3>
-                            </div>
-                            <p class="text-secondary-600">"Prédictions et rapports générés automatiquement"</p>
-                        </div>
+                    <p class="text-secondary-600">
+                      Excel, ERP, CRM... impossible d/'avoir une vision globale
+                    </p>
+                  </div>
+                  <div class="border-t pt-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"✅"</span>
+                      <h3 class="text-xl font-bold text-green-600">Centralisation intelligente</h3>
                     </div>
+                    <p class="text-secondary-600">
+                      Dashboard unifié connecté à toutes vos sources
+                    </p>
+                  </div>
                 </div>
+
+                {/* Bloc 2 */}
+                <div class="card-hover p-6 bg-white">
+                  <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"❌"</span>
+                      <h3 class="text-xl font-bold text-red-600">"L'IA semble complexe et inaccessible"</h3>
+                    </div>
+                    <p class="text-secondary-600">
+                      "Difficile de savoir par où commencer et comment en tirer des bénéfices concrets."
+                    </p>
+                  </div>
+                  <div class="border-t pt-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"✅"</span>
+                      <h3 class="text-xl font-bold text-green-600">IA sur-mesure, simple à adopter</h3>
+                    </div>
+                    <p class="text-secondary-600">
+                      Nous concevons des outils adaptés à vos besoins, sans complexité technique.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bloc 3 */}
+                <div class="card-hover p-6 bg-white">
+                  <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"❌"</span>
+                      <h3 class="text-xl font-bold text-red-600">Manque de temps et de ressources internes</h3>
+                    </div>
+                    <p class="text-secondary-600">
+                      "Vos équipes sont déjà mobilisées ; il vous faut des résultats rapides sans surcharge."
+                    </p>
+                  </div>
+                  <div class="border-t pt-6">
+                    <div class="flex items-center mb-3">
+                      <span class="text-2xl mr-3">"✅"</span>
+                      <h3 class="text-xl font-bold text-green-600">Accompagnement clé en main</h3>
+                    </div>
+                    <p class="text-secondary-600">
+                      Nous gérons le projet de bout en bout, pour un impact rapide et mesurable.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
             </ContentSection>
 
             // Services Preview with domain data

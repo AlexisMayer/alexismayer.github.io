@@ -4,7 +4,7 @@
 //! including hero sections, content layouts, and interactive elements.
 
 use leptos::*;
-use crate::ui::components::neural_network_animation::NeuralNetworkAnimation;
+use crate::ui::components::neural_network_animation::NeuralNetworkBackground;
 
 /// Hero section with gradient background and modern layout
 #[component]
@@ -26,7 +26,7 @@ pub fn HeroSection(
         <section class=format!("relative overflow-hidden {}", bg_class)>
             // Animated SVG Background will be managed by a dedicated component
             <div class="absolute inset-0 w-full h-full z-0">
-                <NeuralNetworkAnimation />
+                <NeuralNetworkBackground />
             </div>
 
             <div class="relative container-soft section-py z-10">
