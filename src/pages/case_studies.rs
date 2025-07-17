@@ -27,7 +27,7 @@ pub fn CaseStudiesPage() -> impl IntoView {
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true
-                background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
+                // background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
             >
                 <div></div>
             </HeroSection>

@@ -23,7 +23,7 @@ pub fn AboutPage() -> impl IntoView {
                 subtitle=format!("Depuis {}, CraftData démocratise l'accès à la data science et à l'IA", company_info.founded_year)
                 // description=format!("pour les entreprises du {}", company_info.target_region)
                 centered=true
-                background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
+                // background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
             >
                 <div></div>
             </HeroSection>

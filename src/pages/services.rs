@@ -25,7 +25,7 @@ pub fn ServicesPage() -> impl IntoView {
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true
-                background_variant="bg-gradient-to-br from-primary-600 to-primary-800".to_string()
+                // background_variant="bg-gradient-to-br from-primary-600 to-primary-800".to_string()
             >
                 <div></div>
             </HeroSection>
@@ -36,12 +36,12 @@ pub fn ServicesPage() -> impl IntoView {
                 subtitle="Solutions complètes pour transformer vos données en avantage concurrentiel".to_string()
                 centered=true
             >
-                <div class="space-y-12 mt-12">
+                <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 mt-6 scrollbar-hide">
                     {main_services.into_iter().map(|service| {
                         let is_exploration = service.service_type == crate::domain::ServiceType::Exploration;
 
                         view! {
-                            <div class=format!("relative p-8 lg:p-12 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 {}",
+                            <div class=format!("flex-none w-full md:w-full lg:w-full xl:w-11/12 relative p-8 lg:p-12 mt-4 rounded-3xl border-2 shadow-medium transition-all duration-300 hover:shadow-large hover:-translate-y-1 snap-center {}",
                                 if is_exploration {
                                     "border-primary-200 bg-gradient-to-br from-primary-50 to-primary-100"
                                 } else {

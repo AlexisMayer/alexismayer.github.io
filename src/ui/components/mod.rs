@@ -6,6 +6,7 @@
 pub mod footer;
 pub mod header;
 pub mod sections;
+pub mod neural_network_animation;
 
 // Re-export components for easier imports
 pub use footer::Footer;

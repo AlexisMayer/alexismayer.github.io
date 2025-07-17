@@ -31,7 +31,7 @@ pub fn HomePage() -> impl IntoView {
                 secondary_cta_text="Voir nos services".to_string()
                 secondary_cta_href="/services".to_string()
                 centered=true
-                background_variant="hero-gradient".to_string()
+                // background_variant="animated-neural-network".to_string()
             >
                 // Hero stats
                 <div></div>

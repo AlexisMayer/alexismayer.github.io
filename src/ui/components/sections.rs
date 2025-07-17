@@ -4,6 +4,7 @@
 //! including hero sections, content layouts, and interactive elements.
 
 use leptos::*;
+use crate::ui::components::neural_network_animation::NeuralNetworkAnimation;
 
 /// Hero section with gradient background and modern layout
 #[component]
@@ -19,18 +20,16 @@ pub fn HeroSection(
     #[prop(optional)] background_variant: Option<String>,
     children: Children,
 ) -> impl IntoView {
-    let bg_class = background_variant.unwrap_or_else(|| "hero-gradient".to_string());
+    let bg_class = background_variant.unwrap_or_else(|| "bg-secondary-950".to_string());
 
     view! {
         <section class=format!("relative overflow-hidden {}", bg_class)>
-            // Background elements
-            <div class="absolute inset-0">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
-                <div class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
+            // Animated SVG Background will be managed by a dedicated component
+            <div class="absolute inset-0 w-full h-full z-0">
+                <NeuralNetworkAnimation />
             </div>
 
-            <div class="relative container-soft section-py">
+            <div class="relative container-soft section-py z-10">
                 <div class=format!("max-w-5xl {}", if centered { "mx-auto text-center" } else { "" })>
                     // Title
                     {title.map(|t| view! {

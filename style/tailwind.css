@@ -188,6 +188,74 @@
   .focus-ring-inset {
     @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500;
   }
+
+  .animated-neural-network {
+    background-color: #0f172a; /* fallback */
+    background-image: radial-gradient(circle at 25% 25%, #0ea5e9, transparent 20%),
+                      radial-gradient(circle at 75% 75%, #0ea5e9, transparent 20%);
+    background-size: 40px 40px;
+    animation: move-dots 5s linear infinite;
+  }
+}
+
+/* --- Neural Network Animation --- */
+.neural-network-bg {
+    stroke: rgba(55, 65, 81, 0.5); /* gray-700 with opacity */
+    stroke-width: 1px;
+}
+
+.neuron-node {
+    fill: rgba(55, 65, 81, 0.8);
+    transition: all 0.3s ease;
+}
+
+.neuron-node.active {
+    fill: #3b82f6; /* blue-500 */
+    animation: node-glow 1.5s ease-in-out infinite alternate;
+}
+
+.output-neuron.active {
+    fill: #8b5cf6; /* violet-500 */
+    animation: output-glow 2s ease-in-out infinite alternate;
+}
+
+.neuron-pulse {
+    fill: none;
+    stroke: #60a5fa; /* blue-400 */
+    stroke-width: 1.5px;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: pulse-travel 3s ease-out infinite;
+    opacity: 0;
+}
+
+@keyframes node-glow {
+    from {
+        filter: drop-shadow(0 0 2px #3b82f6);
+    }
+    to {
+        filter: drop-shadow(0 0 8px #60a5fa);
+    }
+}
+
+@keyframes output-glow {
+    from {
+        filter: drop-shadow(0 0 3px #8b5cf6);
+    }
+to {
+        filter: drop-shadow(0 0 12px #a78bfa);
+    }
+}
+
+@keyframes pulse-travel {
+    0% {
+        stroke-dashoffset: 200;
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
 }
 
 /* Utility layer for custom utilities */
@@ -258,5 +326,14 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@keyframes move-dots {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
   }
 }
