@@ -291,16 +291,6 @@
         animation-delay: -9s;
         animation-direction: reverse;
     }
-
-    /* Animated neural network (legacy) */
-    .animated-neural-network {
-        background-color: #0f172a; /* fallback */
-        background-image:
-            radial-gradient(circle at 25% 25%, #0ea5e9, transparent 20%),
-            radial-gradient(circle at 75% 75%, #0ea5e9, transparent 20%);
-        background-size: 40px 40px;
-        animation: move-dots 5s linear infinite;
-    }
 }
 
 /* --- Neural Network Animation --- */
@@ -482,15 +472,6 @@
     }
 }
 
-@keyframes move-dots {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 40px 40px;
-    }
-}
-
 /* Modern fade-in animations */
 @keyframes fade-in-up {
     from {
@@ -505,39 +486,4 @@
 
 .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out forwards;
-}
-
-/* Floating particles animation */
-@keyframes particleFloat {
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    33% {
-        transform: translateY(-15px) rotate(120deg);
-    }
-    66% {
-        transform: translateY(8px) rotate(240deg);
-    }
-}
-
-.animate-particle-float {
-    animation: particleFloat 8s ease-in-out infinite;
-}
-
-/* Subtle pulse for interactive elements */
-@keyframes subtlePulse {
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 0.8;
-    }
-}
-
-.animate-subtle-pulse {
-    animation: subtlePulse 2s ease-in-out infinite;
 }

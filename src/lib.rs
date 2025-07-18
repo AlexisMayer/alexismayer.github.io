@@ -27,16 +27,6 @@ pub fn App() -> impl IntoView {
 
     view! {
         <Stylesheet id="leptos" href="/pkg/craftdata.css"/>
-        <Title text="CraftData - Transformez vos données en avantage concurrentiel"/>
-        <Meta name="description" content="CraftData accompagne les PME du Centre-Val de Loire dans leur transformation data et IA. Audit, démonstrateur et solutions sur mesure. ROI garanti dès 3 mois."/>
-        <Meta name="keywords" content="data science, intelligence artificielle, PME, Centre-Val de Loire, analyse de données, IA, solutions sur mesure, consultation, audit data"/>
-        <Meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-        // Open Graph meta tags
-        <Meta property="og:title" content="CraftData - Data et IA pour les PME du Centre-Val de Loire"/>
-        <Meta property="og:description" content="Solutions personnalisées d'analyse et d'implémentation d'outils data/IA pour les PME. Offres Exploration (4000€) et Bâtisseur (15000€)."/>
-        <Meta property="og:type" content="website"/>
-        <Meta property="og:locale" content="fr_FR"/>
 
         <Router>
             <main class="app-main">
@@ -76,7 +66,9 @@ pub fn main() {
     if let Some(window) = web_sys::window() {
         if let Some(document) = window.document() {
             if let Some(loading_element) = document.get_element_by_id("loading") {
-                loading_element.set_attribute("style", "display: none;").unwrap();
+                loading_element
+                    .set_attribute("style", "display: none;")
+                    .unwrap();
             }
         }
     }

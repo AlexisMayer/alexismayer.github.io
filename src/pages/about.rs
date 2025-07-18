@@ -21,16 +21,16 @@ pub fn AboutPage() -> impl IntoView {
             <HeroSection
                 title="L'expertise data au service des PME".to_string()
                 subtitle=format!("Depuis {}, CraftData démocratise l'accès à la data science et à l'IA", company_info.founded_year)
-                // description=format!("pour les entreprises du {}", company_info.target_region)
+
                 centered=true
-                // background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
+
             >
                 <div></div>
             </HeroSection>
 
             // Founder Story Section
             <ContentSection
-                //title=format!("{}, votre expert data", founder.name)
+
                 background="bg-gray-50".to_string()
             >
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -54,9 +54,7 @@ pub fn AboutPage() -> impl IntoView {
                     </div>
                     <div>
                         <div class="prose prose-lg max-w-none">
-                            // <p class="text-xl text-secondary-700 leading-relaxed mb-6">
-                            //     "Après " {founder.experience_years} " années à développer des solutions IA pour de grands groupes, j'ai constaté que les PME avaient les mêmes besoins mais pas les mêmes moyens."
-                            // </p>
+
 
                             <div class="bg-white p-6 rounded-2xl shadow-soft border border-gray-200 mb-8">
                                 <h3 class="text-xl font-bold text-secondary-900 mb-4 flex items-center">

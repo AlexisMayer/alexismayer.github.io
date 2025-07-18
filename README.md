@@ -1,6 +1,6 @@
-# SoftIA - Data et IA pour les PME
+# CraftData - Data et IA pour les PME
 
-Site web professionnel pour SoftIA, spécialisée dans les solutions data et IA pour les PME du Centre-Val de Loire. Développé avec Rust, Leptos et WebAssembly, déployé sur GitHub Pages.
+Site web professionnel pour CraftData, spécialisée dans les solutions data et IA pour les PME du Centre-Val de Loire. Développé avec Rust, Leptos et WebAssembly, déployé sur GitHub Pages.
 
 ## 🚀 Technologies Utilisées
 
@@ -182,7 +182,7 @@ Si vous utilisez Rust stable, supprimez les features "nightly" des dépendances 
 
 ## 💼 Contenu Entreprise
 
-Le site présente fidèlement l'activité de SoftIA :
+Le site présente fidèlement l'activité de CraftData :
 
 ### Offres Principales
 - **Offre Exploration** : Audit + démonstrateur (à partir de 4 000 € HT, 3-6 semaines)
