@@ -72,5 +72,14 @@ pub fn main() {
     // Mount the application
     leptos::mount_to_body(App);
 
+    // Hide the loading indicator
+    if let Some(window) = web_sys::window() {
+        if let Some(document) = window.document() {
+            if let Some(loading_element) = document.get_element_by_id("loading") {
+                loading_element.set_attribute("style", "display: none;").unwrap();
+            }
+        }
+    }
+
     log::info!("✅ CraftData application mounted successfully");
 }

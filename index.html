@@ -72,24 +72,5 @@
             </div>
         </div>
 
-        <style>
-            /* Hide loading when app is ready */
-            body[data-app-loaded="true"] #loading {
-                display: none;
-            }
-        </style>
-
-        <script>
-            // Hide loading indicator once the app is mounted
-            document.addEventListener("DOMContentLoaded", function () {
-                setTimeout(function () {
-                    const loading = document.getElementById("loading");
-                    if (loading) {
-                        loading.style.display = "none";
-                    }
-                    document.body.setAttribute("data-app-loaded", "true");
-                }, 100);
-            });
-        </script>
-    </body>
+        </body>
 </html>
