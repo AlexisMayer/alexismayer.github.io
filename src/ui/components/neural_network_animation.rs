@@ -37,7 +37,7 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
 
     // Configuration améliorée pour un design plus moderne
     let layer_counts = vec![5, 8, 6, 3];
-    let layer_x_positions = vec![12.0, 35.0, 65.0, 88.0];
+    let layer_x_positions = vec![10.0, 36.0, 64.0, 90.0];
 
     // Palette de couleurs moderne et élégante
     let layer_colors = vec![
@@ -67,7 +67,7 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
         // Génération des nœuds avec positionnement amélioré
         for (layer_idx, &count) in lc_clone_effect.iter().enumerate() {
             let x = lx_clone_effect[layer_idx];
-            let y_start = 50.0 - (count as f64 * 10.0) / 2.0;
+            let y_start = 50.0 - (count as f64 * 12.0) / 2.0;
 
             let node_type = match layer_idx {
                 0 => NodeType::Input,
@@ -76,7 +76,7 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
             };
 
             for i in 0..count {
-                let y = y_start + (i as f64 * 10.0) + 5.0;
+                let y = y_start + (i as f64 * 12.0) + 6.0;
                 new_nodes.push(Node {
                     id: id_counter,
                     x,
@@ -274,7 +274,7 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
 
     view! {
         <div class="neural-background-enhanced">
-            <svg width="100%" height="100%" viewBox="0 15 100 100" class="neural-svg-enhanced">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <defs>
                     // Effet de lueur moderne
                     <filter id="modernGlow">
@@ -408,15 +408,11 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100vw;
-                opacity: 0.9;
-                background: linear-gradient(135deg, #0c1426 0%, #1e293b 50%, #334155 100%);
-                backdrop-filter: blur(0.5px);
-            }
-
-            .neural-svg-enhanced {
                 width: 100%;
                 height: 100%;
+                opacity: 0.95;
+                background: linear-gradient(135deg, #0c1426 0%, #1e293b 50%, #334155 100%);
+                backdrop-filter: blur(0.5px);
             }
 
             .connection-enhanced {
@@ -495,13 +491,7 @@ pub fn NeuralNetworkBackground() -> impl IntoView {
                 }
             }
 
-            // Amélioration pour les appareils à haute densité
-            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-                .neural-svg-enhanced {
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                }
-            }"
+            "
         </style>
     }
 }
