@@ -4,10 +4,8 @@
 //! services overview, social proof, and call-to-actions. It uses domain entities
 //! and modern UI components with Tailwind CSS styling.
 
-use crate::domain::{ServiceOffering, CraftDataCompany};
-use crate::ui::components::{
-    ContentSection, CtaSection, HeroSection, StatItem, StatsSection,
-};
+use crate::domain::{CraftDataCompany, ServiceOffering};
+use crate::ui::components::{ContentSection, CtaSection, HeroSection, StatItem, StatsSection};
 use crate::ui::{Footer, Header};
 use leptos::*;
 
@@ -31,7 +29,7 @@ pub fn HomePage() -> impl IntoView {
                 secondary_cta_text="Voir nos services".to_string()
                 secondary_cta_href="/services".to_string()
                 centered=true
-                // background_variant="animated-neural-network".to_string()
+                // background_variant="neural-network".to_string()
             >
                 // Hero stats
                 <div></div>

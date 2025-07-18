@@ -25,7 +25,7 @@ pub fn ServicesPage() -> impl IntoView {
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true
-                // background_variant="bg-gradient-to-br from-primary-600 to-primary-800".to_string()
+                background_variant="neural-network".to_string()
             >
                 <div></div>
             </HeroSection>

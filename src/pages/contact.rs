@@ -22,7 +22,7 @@ pub fn ContactPage() -> impl IntoView {
                 subtitle="Audit gratuit de 30 minutes".to_string()
                 description="Identifiez votre potentiel data/IA sans engagement".to_string()
                 centered=true
-                // background_variant="bg-gradient-to-br from-primary-600 to-primary-800".to_string()
+                background_variant="neural-network".to_string()
             >
                 <div></div>
             </HeroSection>

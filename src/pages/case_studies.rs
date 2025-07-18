@@ -3,9 +3,9 @@
 //! This page showcases CraftData's client success stories and case studies using
 //! modern UI components with Tailwind CSS styling.
 
-use crate::domain::{CaseStudy, CaseStudyAnalytics};
+use crate::domain::CaseStudy;
 use crate::ui::components::{
-    ContentSection, CtaSection, FeatureCard, HeroSection, StatItem, StatsSection, TestimonialCard,
+    ContentSection, CtaSection, FeatureCard, HeroSection, TestimonialCard,
 };
 use crate::ui::{Footer, Header};
 use leptos::*;
@@ -13,7 +13,6 @@ use leptos::*;
 #[component]
 pub fn CaseStudiesPage() -> impl IntoView {
     let case_studies = CaseStudy::get_all_case_studies();
-    let portfolio_stats = CaseStudyAnalytics::get_portfolio_stats();
 
     view! {
         <div class="min-h-screen bg-white">
@@ -27,7 +26,7 @@ pub fn CaseStudiesPage() -> impl IntoView {
                 cta_text="Discuter de votre projet".to_string()
                 cta_href="/contact".to_string()
                 centered=true
-                // background_variant="bg-gradient-to-br from-secondary-600 to-secondary-800".to_string()
+                background_variant="neural-network".to_string()
             >
                 <div></div>
             </HeroSection>

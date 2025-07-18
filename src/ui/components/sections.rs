@@ -20,15 +20,15 @@ pub fn HeroSection(
     #[prop(optional)] background_variant: Option<String>,
     children: Children,
 ) -> impl IntoView {
-    let bg_class = background_variant.unwrap_or_else(|| "bg-secondary-950".to_string());
+    let bg_variant = background_variant.as_deref();
+    let bg_class = bg_variant.unwrap_or("bg-secondary-950");
 
     view! {
         <section class=format!("relative overflow-hidden {}", bg_class)>
-            // Animated SVG Background will be managed by a dedicated component
+            // Animated SVG Background - fullscreen, outside container constraints
             <div class="absolute inset-0 w-full h-full z-0">
                 <NeuralNetworkBackground />
             </div>
-
             <div class="relative container-soft section-py z-10">
                 <div class=format!("max-w-5xl {}", if centered { "mx-auto text-center" } else { "" })>
                     // Title
