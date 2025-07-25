@@ -196,15 +196,13 @@ function toggleCard(card) {
         });
 
         setTimeout(() => {
-            const cardRect = card.getBoundingClientRect();
-            const offset = (window.innerHeight - cardRect.height) / 2;
-            const targetY = cardRect.top + window.pageYOffset - offset;
-
-            window.scrollTo({
-                top: targetY,
-                behavior: 'smooth'
-            });
-        }, 650);
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 300);
 
     } else {
         closeCard(card, true);
