@@ -512,9 +512,4 @@
                 min-height: unset;
                 overflow: visible; /* Allow content to be visible */
             }
-
-            .data-card.expanded .data-card-expanded-content {
-                max-height: none; /* Remove height limit for auto-height */
-                overflow: visible;
-            }
         }
