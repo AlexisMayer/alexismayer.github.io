@@ -4,18 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CraftData - Intelligence Artificielle & Données</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <div class="scroll-progress"></div>
 
-        <div class="nav">
-            <div class="nav-dot active" data-section="0"></div>
-            <div class="nav-dot" data-section="1"></div>
-            <div class="nav-dot" data-section="2"></div>
-            <div class="nav-dot" data-section="3"></div>
-            <div class="nav-dot" data-section="4"></div>
-        </div>
+        <nav class="nav" aria-label="Navigation principale">
+            <button class="nav-dot active" data-section="0" aria-label="Aller à la section Accueil"></button>
+            <button class="nav-dot" data-section="1" aria-label="Aller à la section Vision"></button>
+            <button class="nav-dot" data-section="2" aria-label="Aller à la section Solutions"></button>
+            <button class="nav-dot" data-section="3" aria-label="Aller à la section Études de cas"></button>
+            <button class="nav-dot" data-section="4" aria-label="Aller à la section Contact"></button>
+        </nav>
 
         <canvas class="bg-canvas"></canvas>
 
@@ -59,6 +62,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -113,6 +117,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -166,6 +171,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -236,6 +242,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -291,6 +298,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -343,6 +351,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -415,6 +424,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -472,6 +482,7 @@
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
                             >
                                 &times;
                             </button>
@@ -542,6 +553,7 @@
                         </div>
                         <form class="contact-form" action="#" method="POST">
                             <div class="form-group">
+                                <label for="name" class="sr-only">Votre nom</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -551,6 +563,7 @@
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="email" class="sr-only">Votre email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -560,6 +573,7 @@
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="message" class="sr-only">Votre message</label>
                                 <textarea
                                     id="message"
                                     name="message"

@@ -1,13 +1,42 @@
-// Scroll Progress Bar
-window.addEventListener("scroll", () => {
-  const scrollProgress = document.querySelector(".scroll-progress");
+// --- UTILITY FUNCTIONS ---
+// Throttle function: limits how often a function can be called.
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
+// Debounce function: delays invoking a function until after a certain time has passed without it being called.
+function debounce(func, delay) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), delay);
+  };
+}
+
+
+// --- SCROLL PROGRESS BAR ---
+const scrollProgress = document.querySelector(".scroll-progress");
+const handleScroll = () => {
   const scrollTop = window.pageYOffset;
   const docHeight = document.body.offsetHeight - window.innerHeight;
   const scrollPercent = scrollTop / docHeight;
   scrollProgress.style.transform = `scaleX(${scrollPercent})`;
-});
+};
+window.addEventListener("scroll", throttle(handleScroll, 10));
 
-// Animated Background Canvas
+
+// --- ANIMATED BACKGROUND CANVAS ---
 const canvas = document.querySelector(".bg-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -15,11 +44,11 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-
 resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+window.addEventListener("resize", debounce(resizeCanvas, 250));
 
-// Particles system
+
+// --- PARTICLES SYSTEM ---
 const particles = [];
 for (let i = 0; i < 80; i++) {
   particles.push({
@@ -50,22 +79,20 @@ function animateParticles() {
     ctx.fillStyle = particle.color + particle.opacity + ")";
     ctx.fill();
 
-    // Add glow effect
     ctx.shadowBlur = 20;
     ctx.shadowColor = particle.color + "0.5)";
     ctx.fill();
     ctx.shadowBlur = 0;
   });
 
-  // Connect nearby particles with animated lines
   particles.forEach((particle, i) => {
     particles.slice(i + 1).forEach((otherParticle) => {
-      const distance = Math.sqrt(
-        Math.pow(particle.x - otherParticle.x, 2) +
-          Math.pow(particle.y - otherParticle.y, 2),
-      );
+      const dx = particle.x - otherParticle.x;
+      const dy = particle.y - otherParticle.y;
+      const distSquared = dx * dx + dy * dy;
 
-      if (distance < 120) {
+      if (distSquared < 14400) { // 120 * 120
+        const distance = Math.sqrt(distSquared);
         const opacity = (1 - distance / 120) * 0.3;
         const gradient = ctx.createLinearGradient(
           particle.x,
@@ -88,10 +115,10 @@ function animateParticles() {
 
   requestAnimationFrame(animateParticles);
 }
-
 animateParticles();
 
-// Scroll Animations
+
+// --- SCROLL ANIMATIONS ---
 const observerOptions = {
   threshold: 0.3,
   rootMargin: "0px 0px -50px 0px",
@@ -111,11 +138,11 @@ document.querySelectorAll(".section").forEach((section) => {
   }
 });
 
-// Navigation Dots
+
+// --- NAVIGATION DOTS ---
 const navDots = document.querySelectorAll(".nav-dot");
 const sections = document.querySelectorAll("section[data-section]");
 
-// Function to update active dot
 const updateActiveDot = () => {
   let currentSectionIndex = "0";
   sections.forEach((section) => {
@@ -132,11 +159,8 @@ const updateActiveDot = () => {
     );
   });
 };
+window.addEventListener("scroll", throttle(updateActiveDot, 100));
 
-// Update dots on scroll
-window.addEventListener("scroll", updateActiveDot);
-
-// Handle dot clicks
 navDots.forEach((dot) => {
   dot.addEventListener("click", () => {
     const sectionIndex = dot.getAttribute("data-section");
@@ -149,8 +173,10 @@ navDots.forEach((dot) => {
   });
 });
 
-// Rotating text effect
+
+// --- ROTATING TEXT EFFECT ---
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.scrollSnapType = 'y mandatory';
   const phrases = [
     "Transformons vos données en levier de performance",
     "Des solutions sur mesure, conçues pour vos enjeux métier",
@@ -171,7 +197,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 });
 
-// Card expansion functionality
+
+// --- CARD EXPANSION FUNCTIONALITY ---
 function toggleCard(card) {
     const isExpanded = card.classList.contains("expanded");
     const html = document.documentElement;
@@ -220,10 +247,10 @@ function closeCard(card, reEnableSnap = true) {
     });
 
     if (reEnableSnap) {
-        document.documentElement.style.scrollSnapType = '';
+        document.documentElement.style.scrollSnapType = 'y mandatory';
     }
 }
 
 
-// Initial call to set the correct dot
+// --- INITIALIZATION ---
 updateActiveDot();
