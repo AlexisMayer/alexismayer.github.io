@@ -474,4 +474,35 @@
             html {
                 scroll-snap-type: none;
             }
+
+            .hero h1 {
+                font-size: clamp(2.5rem, 10vw, 4rem);
+            }
+
+            .hero p {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+            }
+
+            .section h2 {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+
+            .section p {
+                font-size: clamp(1rem, 4vw, 1.2rem);
+            }
+
+            .contact-form {
+                width: 100%;
+            }
+
+            .site-footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-content {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+            }
         }
