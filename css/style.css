@@ -505,4 +505,14 @@
                 left: auto;
                 right: auto;
             }
+
+            .data-card.expanded {
+                transform: none;
+                margin: 1rem 0;
+                min-height: unset;
+            }
+
+            .data-card.expanded .data-card-expanded-content {
+                max-height: 100vh;
+            }
         }
