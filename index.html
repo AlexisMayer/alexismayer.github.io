@@ -1,0 +1,251 @@
+        <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftData - Intelligence Artificielle & Données</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    
+    <div class="nav">
+        <div class="nav-dot active" data-section="0"></div>
+        <div class="nav-dot" data-section="1"></div>
+        <div class="nav-dot" data-section="2"></div>
+        <div class="nav-dot" data-section="3"></div>
+    </div>
+
+    <canvas class="bg-canvas"></canvas>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" data-section="0">            
+            <div class="hero-content">
+                <h1>CraftData</h1>
+                <p>Transformez vos données en intelligence</p>
+                <a href="#contact" class="cta-button">Discuter de votre projet</a>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="section" data-section="1">
+            <div class="section-content">
+                <h2>Notre Vision</h2>
+                <p>Nous croyons que chaque donnée recèle un potentiel inexploité. CraftData révèle la puissance cachée de vos informations grâce à l'intelligence artificielle de pointe, transformant le chaos des données en stratégies claires et actionables.</p>
+                
+                <div class="data-viz">
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Analyse Prédictive</h3>
+                            <p>Anticipez les tendances de votre marché avec des modèles d'IA sophistiqués qui analysent vos données historiques.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Machine Learning Avancé</h4>
+                                        <p>Utilisation d'algorithmes de deep learning pour identifier des patterns complexes dans vos données.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Prédictions Temps Réel</h4>
+                                        <p>Modèles capables de s'adapter en continu aux nouvelles données pour des prédictions toujours plus précises.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Visualisations Interactives</h4>
+                                        <p>Dashboards dynamiques permettant d'explorer les prédictions selon différents scénarios.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>API & Intégrations</h4>
+                                        <p>Connectivité avec vos systèmes existants pour une mise en œuvre transparente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Automatisation Intelligente</h3>
+                            <p>Optimisez vos processus métier en automatisant les tâches répétitives grâce à nos algorithmes d'apprentissage automatique.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>RPA + IA</h4>
+                                        <p>Combinaison de l'automatisation robotique et de l'intelligence artificielle pour des processus intelligents.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Traitement du Langage</h4>
+                                        <p>Automatisation du traitement de documents, emails et communications client grâce au NLP.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Optimisation Continue</h4>
+                                        <p>Algorithmes qui apprennent et s'améliorent automatiquement pour optimiser les performances.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Monitoring Intelligent</h4>
+                                        <p>Surveillance proactive des processus avec alertes et corrections automatiques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Insights Temps Réel</h3>
+                            <p>Obtenez des analyses instantanées de vos performances avec des tableaux de bord interactifs et personnalisés.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Streaming Analytics</h4>
+                                        <p>Traitement et analyse des données en temps réel pour des insights instantanés.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Dashboards Adaptatifs</h4>
+                                        <p>Interfaces qui s'adaptent automatiquement selon les KPIs les plus pertinents pour chaque utilisateur.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Alertes Intelligentes</h4>
+                                        <p>Système de notifications contextuelles basé sur des seuils dynamiques et des anomalies détectées.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Mobile First</h4>
+                                        <p>Accès complet aux insights depuis n'importe quel appareil avec synchronisation en temps réel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section" data-section="2">
+            <div class="section-content">
+                <h2>Nos Solutions</h2>
+                <p>De la collecte à l'analyse avancée, nous accompagnons votre transformation digitale avec une approche sur-mesure adaptée à vos défis métier spécifiques.</p>
+                
+                <div class="data-viz">
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Audit & Stratégie</h3>
+                            <p>Évaluation complète de votre écosystème data et définition d'une roadmap personnalisée pour maximiser le ROI de vos investissements.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Data Assessment</h4>
+                                        <p>Analyse approfondie de la qualité, structure et potentiel de vos données existantes.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Architecture Review</h4>
+                                        <p>Évaluation de votre infrastructure technique et recommandations d'optimisation.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>ROI Modeling</h4>
+                                        <p>Modélisation financière précise pour quantifier l'impact de vos projets data.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Roadmap Stratégique</h4>
+                                        <p>Plan d'action détaillé avec priorités, timeline et jalons de réussite.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Développement IA</h3>
+                            <p>Création de modèles d'intelligence artificielle sur-mesure, du prototypage à la mise en production à grande échelle.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Custom Models</h4>
+                                        <p>Développement de modèles IA spécifiquement adaptés à vos défis métier uniques.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>MLOps Pipeline</h4>
+                                        <p>Infrastructure complète pour l'entraînement, déploiement et monitoring de vos modèles.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Scalable Architecture</h4>
+                                        <p>Solutions cloud-native conçues pour grandir avec vos besoins.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Continuous Learning</h4>
+                                        <p>Modèles qui s'améliorent automatiquement avec l'arrivée de nouvelles données.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)">&times;</button>
+                        <div class="data-card-content">
+                            <h3>Formation & Support</h3>
+                            <p>Accompagnement de vos équipes avec des formations pratiques et un support technique continu pour garantir votre autonomie.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Formations Métier</h4>
+                                        <p>Sessions adaptées à chaque profil : dirigeants, analystes, développeurs, utilisateurs finaux.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Hands-on Workshops</h4>
+                                        <p>Ateliers pratiques sur vos vraies données pour une montée en compétence immédiate.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>24/7 Support</h4>
+                                        <p>Assistance technique continue avec des experts dédiés à votre projet.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Knowledge Transfer</h4>
+                                        <p>Documentation complète et transfert de compétences pour votre autonomie totale.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" data-section="3" id="contact">
+            <div class="section-content">
+                <h2>Prêt à transformer vos données ?</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-text">
+                        <p>Contactez-nous dès aujourd'hui pour découvrir comment CraftData peut révolutionner votre approche de la donnée et vous donner un avantage concurrentiel décisif.</p>
+                    </div>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Votre email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 CraftData. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#">contact@craftdata.fr</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
