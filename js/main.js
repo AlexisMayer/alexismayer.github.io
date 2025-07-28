@@ -232,6 +232,8 @@ function toggleCard(card) {
 
         if (card.id === 'rag-use-case-card') {
             initCarousel(card);
+        } else if (card.id === 'prediction-use-case-card') {
+            initPredictionChart(card);
         }
 
         setTimeout(() => {
@@ -342,6 +344,68 @@ function initCarousel(card) {
         moveToSlide(currentSlide);
     }, 200));
     resizeObserver.observe(card);
+}
+
+function initPredictionChart(card) {
+    const ctx = card.querySelector('#predictionChart').getContext('2d');
+    const labels = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+    const historicalData = [65, 59, 80, 81, 56, 55, 40, 45, 50, 60, 70, 75];
+    const predictedData = [null, null, null, null, null, null, null, null, 55, 65, 75, 80]; // Predictions start from September
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Données Historiques',
+                    data: historicalData,
+                    borderColor: 'rgba(124, 58, 237, 1)',
+                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                    fill: false,
+                    tension: 0.1
+                },
+                {
+                    label: 'Prévisions',
+                    data: predictedData,
+                    borderColor: 'rgba(0, 212, 255, 1)',
+                    backgroundColor: 'rgba(0, 212, 255, 0.2)',
+                    borderDash: [5, 5],
+                    fill: false,
+                    tension: 0.1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Quantité'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Mois'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            }
+        }
+    });
 }
 
 // --- SIMULATION LOGIC (FILE UPLOAD & CHAT) ---

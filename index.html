@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         <div class="scroll-progress"></div>
@@ -519,7 +520,7 @@
                         </div>
 
                         <!-- Cas d’usage 2 : Prédiction des besoins -->
-                        <div class="data-card" onclick="toggleCard(this)">
+                        <div class="data-card" id="prediction-use-case-card" onclick="toggleCard(this)">
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
@@ -571,6 +572,9 @@
                                                 évolutif.
                                             </p>
                                         </div>
+                                    </div>
+                                    <div class="chart-container">
+                                        <canvas id="predictionChart"></canvas>
                                     </div>
                                 </div>
                             </div>

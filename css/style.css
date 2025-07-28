@@ -296,13 +296,13 @@ body {
 
 .expanded-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
     gap: 2rem;
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 #rag-use-case-card.expanded .expanded-details {
-    display: block;
 }
 
 .expanded-detail {
