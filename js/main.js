@@ -198,7 +198,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// --- CARD EXPANSION FUNCTIONALITY ---
+// --- CARD EXPANSION & CAROUSEL LOGIC ---
+let activeCarousel = null;
+
 function toggleCard(card) {
     const isExpanded = card.classList.contains("expanded");
     const html = document.documentElement;
@@ -208,6 +210,9 @@ function toggleCard(card) {
             closeCard(c, false);
         }
     });
+
+    const expandedContent = card.querySelector('.data-card-expanded-content');
+    if (!expandedContent) return;
 
     if (!isExpanded) {
         const section = card.closest(".section");
@@ -221,6 +226,13 @@ function toggleCard(card) {
                 otherCard.classList.add("collapsed");
             }
         });
+
+        // Set height dynamically
+        expandedContent.style.maxHeight = expandedContent.scrollHeight + "px";
+
+        if (card.id === 'rag-use-case-card') {
+            initCarousel(card);
+        }
 
         setTimeout(() => {
             const isMobile = window.innerWidth <= 768;
@@ -240,6 +252,11 @@ function closeCard(card, reEnableSnap = true) {
     const section = card.closest(".section");
     if (!section) return;
 
+    const expandedContent = card.querySelector('.data-card-expanded-content');
+    if (expandedContent) {
+        expandedContent.style.maxHeight = null;
+    }
+
     card.classList.remove("expanded");
 
     section.querySelectorAll(".data-card.collapsed").forEach(otherCard => {
@@ -250,6 +267,122 @@ function closeCard(card, reEnableSnap = true) {
         document.documentElement.style.scrollSnapType = 'y mandatory';
     }
 }
+
+function initCarousel(card) {
+    const track = card.querySelector('.carousel-track');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    const nextButton = card.querySelector('.carousel-arrow.next');
+    const prevButton = card.querySelector('.carousel-arrow.prev');
+    let slideWidth = slides[0].getBoundingClientRect().width;
+    let currentSlide = 0;
+
+    const moveToSlide = (targetIndex) => {
+        if (targetIndex < 0 || targetIndex >= slides.length) return;
+
+        slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = 'translateX(-' + targetIndex * slideWidth + 'px)';
+
+        slides[currentSlide].classList.remove('active');
+        slides[targetIndex].classList.add('active');
+        currentSlide = targetIndex;
+
+        updateArrows();
+        handleSlideChange(slides[targetIndex]);
+    }
+
+    const updateArrows = () => {
+        prevButton.style.display = (currentSlide === 0) ? 'none' : 'block';
+        nextButton.style.display = (currentSlide === slides.length - 1) ? 'none' : 'block';
+    }
+
+    nextButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        moveToSlide(currentSlide + 1);
+    });
+    prevButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        moveToSlide(currentSlide - 1);
+    });
+
+    // Swipe functionality
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, { passive: true });
+    track.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].screenX;
+        if (touchEndX < touchStartX - 50) moveToSlide(currentSlide + 1);
+        if (touchEndX > touchStartX + 50) moveToSlide(currentSlide - 1);
+    });
+
+    // Simulation logic
+    const handleSlideChange = (slide) => {
+        const progressBar = card.querySelector('.progress-bar');
+        const progressText = card.querySelector('.progress-text');
+        if (!progressBar) return;
+
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0%';
+        progressText.textContent = 'Fine-tuning en cours...';
+
+        if (slide.contains(progressBar)) {
+            setTimeout(() => {
+                progressBar.style.transition = 'width 2s ease-in-out';
+                progressBar.style.width = '100%';
+                progressText.textContent = 'Fine-tuning terminé !';
+            }, 500);
+        }
+    }
+
+    // Initial setup
+    moveToSlide(0);
+
+    // Resize listener
+    const resizeObserver = new ResizeObserver(debounce(() => {
+        moveToSlide(currentSlide);
+    }, 200));
+    resizeObserver.observe(card);
+}
+
+// --- SIMULATION LOGIC (FILE UPLOAD & CHAT) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const fileInput = document.getElementById('pdf-upload');
+    const fileInfo = document.querySelector('.file-info');
+    fileInput.addEventListener('change', () => {
+        fileInfo.textContent = fileInput.files.length > 0 ? `${fileInput.files.length} fichier(s) sélectionné(s).` : 'Aucun fichier sélectionné';
+    });
+
+    const chatInput = document.querySelector('.chat-input');
+    const chatSendButton = document.querySelector('.chat-send-button');
+    const chatBox = document.querySelector('.chat-box');
+    const chatContainer = document.querySelector('.chat-container');
+
+    // Prevent card from closing when interacting with the chat
+    chatContainer.addEventListener('click', e => e.stopPropagation());
+
+    const handleSendMessage = () => {
+        const message = chatInput.value.trim();
+        if (message) {
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message user';
+            userMsg.textContent = message;
+            chatBox.appendChild(userMsg);
+            chatInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-message bot';
+                botMsg.textContent = '[Réponse IA simulée]';
+                chatBox.appendChild(botMsg);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1500);
+        }
+    }
+
+    chatSendButton.addEventListener('click', handleSendMessage);
+    chatInput.addEventListener('keypress', e => e.key === 'Enter' && handleSendMessage());
+});
 
 
 // --- INITIALIZATION ---

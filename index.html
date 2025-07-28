@@ -420,7 +420,7 @@
 
                     <div class="data-viz">
                         <!-- Cas d’usage 1 : LLM / RAG sur PDF -->
-                        <div class="data-card" onclick="toggleCard(this)">
+                        <div class="data-card" id="rag-use-case-card" onclick="toggleCard(this)">
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
@@ -472,6 +472,47 @@
                                                 documentaire existant.
                                             </p>
                                         </div>
+                                    </div>
+                                    <div class="carousel-container">
+                                        <div class="carousel-track">
+                                            <!-- Slide 1: PDF Ingestion -->
+                                            <div class="carousel-slide active">
+                                                <h3>Étape 1: Ingestion des documents</h3>
+                                                <p>Sélectionnez un ou plusieurs documents PDF à intégrer dans la base de connaissances de l'IA.</p>
+                                                <form class="upload-form">
+                                                    <input type="file" id="pdf-upload" accept="application/pdf" multiple style="display: none;" />
+                                                    <label for="pdf-upload" class="cta-button">Choisir des fichiers</label>
+                                                    <p class="file-info">Aucun fichier sélectionné</p>
+                                                </form>
+                                            </div>
+
+                                            <!-- Slide 2: Fine-tuning -->
+                                            <div class="carousel-slide">
+                                                <h3>Étape 2: Fine-tuning du modèle</h3>
+                                                <p>Le modèle de langage (LLM) est fine-tuné sur la base de vos documents pour comprendre votre jargon.</p>
+                                                <div class="progress-bar-container">
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                                <p class="progress-text">Fine-tuning en cours...</p>
+                                            </div>
+
+                                            <!-- Slide 3: Chat with AI -->
+                                            <div class="carousel-slide">
+                                                <h3>Étape 3: Interrogation de l'IA</h3>
+                                                <p>Posez vos questions en langage naturel et obtenez des réponses précises basées sur vos documents.</p>
+                                                <div class="chat-container">
+                                                    <div class="chat-box">
+                                                        <div class="chat-message bot">Bonjour ! Sur quels documents puis-je vous aider ?</div>
+                                                    </div>
+                                                    <div class="chat-input-container">
+                                                        <input type="text" class="chat-input" placeholder="Posez votre question ici...">
+                                                        <button class="chat-send-button">Envoyer</button>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-arrow prev">&lt;</button>
+                                        <button class="carousel-arrow next">&gt;</button>
                                     </div>
                                 </div>
                             </div>
@@ -600,6 +641,8 @@
                 </div>
             </div>
         </footer>
+
+        
 
         <script src="js/main.js" defer></script>
     </body>
