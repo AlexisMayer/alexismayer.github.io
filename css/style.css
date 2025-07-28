@@ -599,7 +599,12 @@ body {
         transform: none;
         margin: 1rem 0;
         min-height: unset;
-        overflow: visible;
+        overflow-x: auto; /* Allow horizontal scroll if needed */
+        width: 100%;
+    }
+
+    .carousel-slide {
+        min-width: 340px; /* Prevent content from being crushed */
     }
 
     .data-card.expanded .data-card-expanded-content {
