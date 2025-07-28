@@ -599,12 +599,43 @@ body {
         transform: none;
         margin: 1rem 0;
         min-height: unset;
-        overflow-x: auto; /* Allow horizontal scroll if needed */
         width: 100%;
     }
 
     .carousel-slide {
-        min-width: 340px; /* Prevent content from being crushed */
+        padding: 1rem 0.5rem; /* Reduced padding for smaller screens */
+        min-height: 300px; /* Adjust min-height for mobile */
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .carousel-slide p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .chat-container {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .chat-message {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 0.5rem;
+    }
+
+    .carousel-arrow.next {
+        right: 0.5rem;
     }
 
     .data-card.expanded .data-card-expanded-content {
