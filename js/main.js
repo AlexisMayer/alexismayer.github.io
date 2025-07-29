@@ -451,3 +451,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- INITIALIZATION ---
 updateActiveDot();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Show demo button logic
+    const showDemoButton = document.querySelector('.show-demo-button');
+
+    if (showDemoButton) {
+        showDemoButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the card from closing
+
+            const card = showDemoButton.closest('.data-card');
+            if (!card) return;
+
+            const carouselContainer = card.querySelector('.carousel-container');
+            const expandedContent = card.querySelector('.data-card-expanded-content');
+
+            if (carouselContainer && expandedContent) {
+                // Show the carousel and hide the button
+                carouselContainer.style.display = 'block';
+                showDemoButton.parentElement.style.display = 'none';
+
+                // Recalculate the card's height to fit the new content
+                expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px';
+            }
+        });
+    }
+});

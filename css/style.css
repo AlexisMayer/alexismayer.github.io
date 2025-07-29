@@ -682,6 +682,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.carousel-slide p {
+    width: 90%;
+    text-align: center;
+}
+
 .carousel-arrow {
     position: absolute;
     top: 50%;
