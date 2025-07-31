@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CraftData - Intelligence Artificielle & Données</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="css/style.css" />
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
@@ -14,11 +17,31 @@
         <div class="scroll-progress"></div>
 
         <nav class="nav" aria-label="Navigation principale">
-            <button class="nav-dot active" data-section="0" aria-label="Aller à la section Accueil"></button>
-            <button class="nav-dot" data-section="1" aria-label="Aller à la section Vision"></button>
-            <button class="nav-dot" data-section="2" aria-label="Aller à la section Solutions"></button>
-            <button class="nav-dot" data-section="3" aria-label="Aller à la section Études de cas"></button>
-            <button class="nav-dot" data-section="4" aria-label="Aller à la section Contact"></button>
+            <button
+                class="nav-dot active"
+                data-section="0"
+                aria-label="Aller à la section Accueil"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="1"
+                aria-label="Aller à la section Vision"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="2"
+                aria-label="Aller à la section Solutions"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="3"
+                aria-label="Aller à la section Études de cas"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="4"
+                aria-label="Aller à la section Contact"
+            ></button>
         </nav>
 
         <canvas class="bg-canvas"></canvas>
@@ -43,19 +66,15 @@
             <!-- Vision Section -->
             <section class="section" data-section="1">
                 <div class="section-content">
-                    <h2>Notre Vision</h2>
+                    <h2>Notre mission</h2>
                     <p>
-                        Chez CraftData, nous sommes convaincus que
-                        l’intelligence artificielle et la data science ne sont
-                        pas des buzzwords, mais des leviers concrets de
-                        transformation. Notre mission : transformer vos données
-                        en décisions, vos processus en solutions intelligentes,
-                        et vos idées en produits data-centrés. Grâce à une
-                        approche mêlant stratégie, développement sur mesure et
-                        IA de pointe (LLM, RAG, machine learning), nous donnons
-                        vie à vos projets les plus ambitieux — avec des
-                        résultats mesurables, durables, et parfaitement intégrés
-                        à vos métiers.
+                        Transformer vos données en décisions, vos processus en
+                        solutions intelligentes, et vos idées en produits
+                        data-centrés. Grâce à une approche mêlant stratégie,
+                        développement sur mesure et IA de pointe (LLM, RAG,
+                        machine learning), nous donnons vie à vos projets les
+                        plus ambitieux — avec des résultats mesurables,
+                        durables, et parfaitement intégrés à vos métiers.
                     </p>
 
                     <div class="data-viz">
@@ -229,13 +248,9 @@
                 <div class="section-content">
                     <h2>Nos Solutions</h2>
                     <p>
-                        Que vous en soyez au stade de la réflexion stratégique
-                        ou de l’industrialisation de vos modèles, CraftData vous
-                        accompagne sur l’ensemble du cycle de vie de vos projets
-                        data et intelligence artificielle. Nos solutions
-                        combinent conseil, développement sur mesure et
-                        accompagnement long terme, pour faire de vos données un
-                        véritable moteur de performance.
+                        Nos solutions combinent conseil, développement sur
+                        mesure et accompagnement long terme, pour faire de vos
+                        données un véritable moteur de performance.
                     </p>
 
                     <div class="data-viz">
@@ -414,14 +429,16 @@
                         Voici deux cas concrets illustrant comment l’IA
                         appliquée aux données permet d’apporter des gains de
                         performance immédiats dans des contextes industriels ou
-                        opérationnels. Nos solutions s’adaptent aux contraintes
-                        du terrain, avec des résultats mesurables dès les
-                        premières semaines.
+                        opérationnels.
                     </p>
 
                     <div class="data-viz">
                         <!-- Cas d’usage 1 : LLM / RAG sur PDF -->
-                        <div class="data-card" id="rag-use-case-card" onclick="toggleCard(this)">
+                        <div
+                            class="data-card"
+                            id="rag-use-case-card"
+                            onclick="toggleCard(this)"
+                        >
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
@@ -474,56 +491,137 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="demo-button-container" style="text-align: center; margin: 20px 0;">
-                                        <button class="cta-button show-demo-button">Voir la démo</button>
+                                    <div
+                                        class="demo-button-container"
+                                        style="
+                                            text-align: center;
+                                            margin: 20px 0;
+                                        "
+                                    >
+                                        <button
+                                            class="cta-button show-demo-button"
+                                        >
+                                            Voir la démo
+                                        </button>
                                     </div>
-                                    <div class="carousel-container" style="display: none;">
+                                    <div
+                                        class="carousel-container"
+                                        style="display: none"
+                                    >
                                         <div class="carousel-track">
                                             <!-- Slide 1: PDF Ingestion -->
                                             <div class="carousel-slide active">
-                                                <h3>Étape 1: Ingestion des documents</h3>
-                                                <p>Sélectionnez un ou plusieurs documents PDF à intégrer dans la base de connaissances de l'IA.</p>
+                                                <h3>
+                                                    Étape 1: Ingestion des
+                                                    documents
+                                                </h3>
+                                                <p>
+                                                    Sélectionnez un ou plusieurs
+                                                    documents PDF à intégrer
+                                                    dans la base de
+                                                    connaissances de l'IA.
+                                                </p>
                                                 <form class="upload-form">
-                                                    <input type="file" id="pdf-upload" accept="application/pdf" multiple style="display: none;" />
-                                                    <label for="pdf-upload" class="cta-button">Choisir des fichiers</label>
-                                                    <p class="file-info">Aucun fichier sélectionné</p>
+                                                    <input
+                                                        type="file"
+                                                        id="pdf-upload"
+                                                        accept="application/pdf"
+                                                        multiple
+                                                        style="display: none"
+                                                    />
+                                                    <label
+                                                        for="pdf-upload"
+                                                        class="cta-button"
+                                                        >Choisir des
+                                                        fichiers</label
+                                                    >
+                                                    <p class="file-info">
+                                                        Aucun fichier
+                                                        sélectionné
+                                                    </p>
                                                 </form>
                                             </div>
 
                                             <!-- Slide 2: Fine-tuning -->
                                             <div class="carousel-slide">
-                                                <h3>Étape 2: Fine-tuning du modèle</h3>
-                                                <p>Le modèle de langage (LLM) est fine-tuné sur la base de vos documents pour comprendre votre jargon.</p>
-                                                <div class="progress-bar-container">
-                                                    <div class="progress-bar"></div>
+                                                <h3>
+                                                    Étape 2: Fine-tuning du
+                                                    modèle
+                                                </h3>
+                                                <p>
+                                                    Le modèle de langage (LLM)
+                                                    est fine-tuné sur la base de
+                                                    vos documents pour
+                                                    comprendre votre jargon.
+                                                </p>
+                                                <div
+                                                    class="progress-bar-container"
+                                                >
+                                                    <div
+                                                        class="progress-bar"
+                                                    ></div>
                                                 </div>
-                                                <p class="progress-text">Fine-tuning en cours...</p>
+                                                <p class="progress-text">
+                                                    Fine-tuning en cours...
+                                                </p>
                                             </div>
 
                                             <!-- Slide 3: Chat with AI -->
                                             <div class="carousel-slide">
-                                                <h3>Étape 3: Interrogation de l'IA</h3>
-                                                <p>Posez vos questions en langage naturel et obtenez des réponses précises basées sur vos documents.</p>
+                                                <h3>
+                                                    Étape 3: Interrogation de
+                                                    l'IA
+                                                </h3>
+                                                <p>
+                                                    Posez vos questions en
+                                                    langage naturel et obtenez
+                                                    des réponses précises basées
+                                                    sur vos documents.
+                                                </p>
                                                 <div class="chat-container">
                                                     <div class="chat-box">
-                                                        <div class="chat-message bot">Bonjour ! Sur quels documents puis-je vous aider ?</div>
+                                                        <div
+                                                            class="chat-message bot"
+                                                        >
+                                                            Bonjour ! Sur quels
+                                                            documents puis-je
+                                                            vous aider ?
+                                                        </div>
                                                     </div>
-                                                    <div class="chat-input-container">
-                                                        <input type="text" class="chat-input" placeholder="Posez votre question ici...">
-                                                        <button class="chat-send-button">Envoyer</button>
-                                                     </div>
+                                                    <div
+                                                        class="chat-input-container"
+                                                    >
+                                                        <input
+                                                            type="text"
+                                                            class="chat-input"
+                                                            placeholder="Posez votre question ici..."
+                                                        />
+                                                        <button
+                                                            class="chat-send-button"
+                                                        >
+                                                            Envoyer
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="carousel-arrow prev">&lt;</button>
-                                        <button class="carousel-arrow next">&gt;</button>
+                                        <button class="carousel-arrow prev">
+                                            &lt;
+                                        </button>
+                                        <button class="carousel-arrow next">
+                                            &gt;
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cas d’usage 2 : Prédiction des besoins -->
-                        <div class="data-card" id="prediction-use-case-card" onclick="toggleCard(this)">
+                        <div
+                            class="data-card"
+                            id="prediction-use-case-card"
+                            onclick="toggleCard(this)"
+                        >
                             <button
                                 class="close-card"
                                 onclick="event.stopPropagation(); closeCard(this.parentElement)"
@@ -576,7 +674,13 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="chart-container" style="min-height: 350px; margin-top: 2rem;">
+                                    <div
+                                        class="chart-container"
+                                        style="
+                                            min-height: 350px;
+                                            margin-top: 2rem;
+                                        "
+                                    >
                                         <canvas id="predictionChart"></canvas>
                                     </div>
                                 </div>
@@ -601,7 +705,9 @@
                         </div>
                         <form class="contact-form" action="#" method="POST">
                             <div class="form-group">
-                                <label for="name" class="sr-only">Votre nom</label>
+                                <label for="name" class="sr-only"
+                                    >Votre nom</label
+                                >
                                 <input
                                     type="text"
                                     id="name"
@@ -611,7 +717,9 @@
                                 />
                             </div>
                             <div class="form-group">
-                                <label for="email" class="sr-only">Votre email</label>
+                                <label for="email" class="sr-only"
+                                    >Votre email</label
+                                >
                                 <input
                                     type="email"
                                     id="email"
@@ -621,7 +729,9 @@
                                 />
                             </div>
                             <div class="form-group">
-                                <label for="message" class="sr-only">Votre message</label>
+                                <label for="message" class="sr-only"
+                                    >Votre message</label
+                                >
                                 <textarea
                                     id="message"
                                     name="message"
@@ -648,8 +758,6 @@
                 </div>
             </div>
         </footer>
-
-        
 
         <script src="js/main.js" defer></script>
     </body>
