@@ -10,7 +10,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="common/styles/main.css" />
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
@@ -52,12 +52,12 @@
                         >
                     </div>
                     <div class="cta-container">
-                        <a href="services.html#contact" class="cta-button">Discutons de votre projet</a>
+                        <a href="features/services/index.html#contact" class="cta-button">Discutons de votre projet</a>
                         <div class="dropdown-container">
                             <button class="cta-button cta-button-secondary dropdown-toggle">Nos Offres</button>
                             <div class="dropdown-content">
-                                <a href="services.html">CraftData Services</a>
-                                <a href="products.html">Nos Produits</a>
+                                <a href="features/services/index.html">CraftData Services</a>
+                                <a href="features/products/index.html">Nos Produits</a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                     <h2>Nos Entités</h2>
                     <p>Découvrez les piliers de l'écosystème CraftData.</p>
                     <div class="data-viz">
-                        <div class="data-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
+                        <div class="data-card" onclick="window.location.href='features/services/index.html';" style="cursor: pointer;">
                             <div class="data-card-content">
                                 <h3>CraftData Services</h3>
                                 <p>
@@ -88,7 +88,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="data-card" onclick="window.location.href='products.html';" style="cursor: pointer;">
+                        <div class="data-card" onclick="window.location.href='features/products/index.html';" style="cursor: pointer;">
                             <div class="data-card-content">
                                 <h3>PrintGenie</h3>
                                 <p>
@@ -142,7 +142,7 @@
             </div>
         </footer>
 
-        <script src="js/main.js" defer></script>
+        <script src="common/scripts/main.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const dropdownToggleButton = document.querySelector('.dropdown-toggle');
