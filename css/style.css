@@ -841,3 +841,54 @@ body {
 .chat-send-button:hover {
     background: var(--color-secondary);
 }
+
+/* Styles for multiple CTAs in hero */
+.cta-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.cta-button-secondary {
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+}
+
+.cta-button-secondary:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+/* Back to Home Button for saas.html */
+.back-to-home-button {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1001; /* Higher than nav dots */
+    background: var(--color-primary);
+    color: var(--color-text);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-button);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    box-shadow: 0 5px 15px var(--color-primary-t-30);
+}
+
+.back-to-home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--color-primary-t-50);
+}
+
+@media (max-width: 768px) {
+    .back-to-home-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}

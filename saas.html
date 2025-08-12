@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintGenie - Service d'impression 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <a href="index.html" class="back-to-home-button" aria-label="Retour à l'accueil">
+        &larr; Accueil
+    </a>
+
+    <nav class="nav" aria-label="Navigation PrintGenie">
+        <button
+            class="nav-dot active"
+            data-section="0"
+            aria-label="Aller à la section Accueil PrintGenie"
+        ></button>
+        <button
+            class="nav-dot"
+            data-section="1"
+            aria-label="Aller à la section Comment ça marche"
+        ></button>
+        <button
+            class="nav-dot"
+            data-section="2"
+            aria-label="Aller à la section Nos Formules"
+        ></button>
+    </nav>
+
+    <canvas class="bg-canvas"></canvas>
+
+    <div class="container">
+        <!-- Section Hero -->
+        <section id="saas-hero" class="hero" data-section="0">
+            <div class="hero-content">
+                <h1>PrintGenie</h1>
+                <p>Transformez vos idées en objets réels avec l'IA.</p>
+                <div class="cta-container">
+                    <a href="#saas-showcase" class="cta-button">Découvrir</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Showcase -->
+        <section id="saas-showcase" class="section" data-section="1">
+            <div class="section-content">
+                <h2>Comment ça marche ?</h2>
+                <div class="data-viz">
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button
+                            class="close-card"
+                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                            aria-label="Fermer la carte"
+                        >
+                            &times;
+                        </button>
+                        <div class="data-card-content">
+                            <h3>1. Imaginez</h3>
+                            <p>"Je veux un support pour mon téléphone avec un style cyberpunk."</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Problématique</h4>
+                                        <p>Tu as une idée géniale mais pas les compétences en modélisation 3D ?</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Solution</h4>
+                                        <p>Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Résultat</h4>
+                                        <p>Ton concept prend forme, sans effort ni logiciel complexe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button
+                            class="close-card"
+                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                            aria-label="Fermer la carte"
+                        >
+                            &times;
+                        </button>
+                        <div class="data-card-content">
+                            <h3>2. L'IA Crée</h3>
+                            <p>Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Problématique</h4>
+                                        <p>La modélisation 3D est longue et technique ?</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Solution</h4>
+                                        <p>Notre IA génère un modèle 3D optimisé pour l'impression en quelques secondes.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Résultat</h4>
+                                        <p>Un fichier prêt à imprimer, sans les heures de travail habituelles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-card" onclick="toggleCard(this)">
+                        <button
+                            class="close-card"
+                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                            aria-label="Fermer la carte"
+                        >
+                            &times;
+                        </button>
+                        <div class="data-card-content">
+                            <h3>3. Recevez</h3>
+                            <p>Nous imprimons votre création en 3D et vous la livrons directement chez vous.</p>
+                            <div class="data-card-expanded-content">
+                                <div class="expanded-details">
+                                    <div class="expanded-detail">
+                                        <h4>Problématique</h4>
+                                        <p>Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ?</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Solution</h4>
+                                        <p>Nous imprimons ton objet avec des matériaux de qualité et te l'expédions.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Résultat</h4>
+                                        <p>Ton idée matérialisée, livrée directement chez toi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Tarifs -->
+        <section id="saas-pricing" class="section" data-section="2">
+            <div class="section-content">
+                <h2>Nos Formules</h2>
+                <div class="data-viz">
+                     <div class="data-card">
+                        <div class="data-card-content">
+                            <h3>1 Jeton</h3>
+                            <p style="font-size: 2rem; font-weight: bold;">29,90€</p>
+                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
+                                <li>1 création 3D</li>
+                                <li>Idéal pour un essai</li>
+                                <li>Accès immédiat</li>
+                            </ul>
+                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Acheter 1 Jeton</a>
+                        </div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-card-content">
+                            <h3>5 Jetons</h3>
+                            <p style="font-size: 2rem; font-weight: bold;">99,90€</p>
+                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
+                                <li>5 créations 3D</li>
+                                <li>Économique</li>
+                                <li>Accès immédiat</li>
+                            </ul>
+                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Acheter 5 Jetons</a>
+                        </div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-card-content">
+                            <h3>Offre Pro</h3>
+                            <p style="font-size: 2rem; font-weight: bold;">Sur mesure</p>
+                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
+                                <li>Volume élevé</li>
+                                <li>Fonctionnalités personnalisées</li>
+                                <li>Support dédié</li>
+                            </ul>
+                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section (simplified for saas.html) -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2025 PrintGenie. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="#">contact@printgenie.ai</a>
+                </div>
+            </div>
+        </footer>
+
+    </div> <!-- End of .container -->
+
+    <script src="js/main.js" defer></script>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+            const expandedContent = card.querySelector('.data-card-expanded-content');
+            if (card.classList.contains('expanded')) {
+                expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px';
+            } else {
+                expandedContent.style.maxHeight = '0';
+            }
+        }
+
+        function closeCard(card) {
+            card.classList.remove('expanded');
+            const expandedContent = card.querySelector('.data-card-expanded-content');
+            expandedContent.style.maxHeight = '0';
+        }
+    </script>
+</body>
+</html>
