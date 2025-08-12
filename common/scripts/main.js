@@ -146,11 +146,23 @@ const sections = document.querySelectorAll("section[data-section]");
 const updateActiveDot = () => {
   let currentSectionIndex = "0";
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (window.pageYOffset >= sectionTop - window.innerHeight / 2) {
+    const rect = section.getBoundingClientRect();
+    // A section is active if its top is within the top half of the viewport
+    // or if it's the last section and scrolled to the bottom
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
       currentSectionIndex = section.getAttribute("data-section");
     }
   });
+
+  // Fallback for the very last section if it's not perfectly centered
+  const lastSection = sections[sections.length - 1];
+  if (lastSection) {
+      const lastRect = lastSection.getBoundingClientRect();
+      if (lastRect.bottom <= window.innerHeight + 10 && lastRect.bottom >= 0) { // If bottom of last section is visible
+          currentSectionIndex = lastSection.getAttribute("data-section");
+      }
+  }
+
 
   navDots.forEach((dot) => {
     dot.classList.toggle(
@@ -472,9 +484,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // --- INITIALIZATION ---
-updateActiveDot();
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize navigation dots after DOM is fully loaded
+    updateActiveDot();
+
+    // Attach click listeners to nav dots
+    navDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+            const sectionIndex = dot.getAttribute("data-section");
+            const targetSection = document.querySelector(
+                `section[data-section="${sectionIndex}"]`,
+            );
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+
     // Show demo button logic
     const showDemoButton = document.querySelector('.show-demo-button');
 
