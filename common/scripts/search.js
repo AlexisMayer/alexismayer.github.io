@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             keyword: "GPT 3D Printer",
             url: "features/products/index.html",
-            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules 1 Jeton 5 Jetons Offre Pro"
+            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules Modélisation IA Modélisation Assistée Offre Pro cadeau personnalisé, anniversaire, figurine, customisation, sur mesure, impression 3D, modélisation 3D, IA, intelligence artificielle"
         },
         {
             keyword: "Produits",
             url: "features/products/index.html",
-            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules 1 Jeton 5 Jetons Offre Pro"
+            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules Modélisation IA Modélisation Assistée Offre Pro cadeau personnalisé, anniversaire, figurine, customisation, sur mesure, impression 3D, modélisation 3D, IA, intelligence artificielle"
         },
         {
             keyword: "Services",
@@ -21,17 +21,37 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             keyword: "Boutique",
             url: "features/shop/index.html",
-            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D"
+            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D berger, cheval, labrador"
         },
         {
             keyword: "Shop",
             url: "features/shop/index.html",
-            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D"
+            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D berger, cheval, labrador"
         },
         { keyword: "Contact", url: "#contact-group", content: "Contactez le Groupe CraftData Pour toute question concernant le groupe, les partenariats ou les investissements, n'hésitez pas à nous contacter." },
         { keyword: "Vision", url: "#vision-section", content: "Notre Vision CraftData est la fondation qui unit et propulse des entités spécialisées dans la Data et l'Intelligence Artificielle. Notre mission est de créer un écosystème d'innovation où chaque entité excelle dans son domaine, tout en bénéficiant de la synergie et de l'expertise collective du groupe. Nous investissons dans des projets à fort potentiel, développons des solutions de pointe et accompagnons nos équipes vers l'excellence." },
         { keyword: "Entités", url: "#nos-entites", content: "Découvrez les piliers de l'écosystème CraftData. CraftData Services Votre partenaire expert en développement de solutions Data & IA sur mesure pour les entreprises. PrintGenie Notre startup innovante qui transforme vos idées en objets 3D réels grâce à l'IA. CraftData Boutique Découvrez nos créations uniques imprimées en 3D." },
-        { keyword: "Accueil", url: "index.html", content: "CraftData L'écosystème qui propulse l'innovation Data & IA Discutons de votre projet Nos Offres Nos Services Nos Produits Notre Boutique" }
+        { keyword: "Accueil", url: "index.html", content: "CraftData L'écosystème qui propulse l'innovation Data & IA Discutons de votre projet Nos Offres Nos Services Nos Produits Notre Boutique" },
+        {
+            keyword: "Labrador",
+            url: "features/shop/index.html?product=1",
+            content: "Labrador A partir de 29,90€ Une figurine élégante avec des lignes épurées, parfait pour une touche moderne."
+        },
+        {
+            keyword: "Berger Allemand",
+            url: "features/shop/index.html?product=2",
+            content: "Berger Allemand 45,00€ Support robuste et stylisé pour votre casque de jeu, personnalisable."
+        },
+        {
+            keyword: "Cheval",
+            url: "features/shop/index.html?product=3",
+            content: "Cheval 60,00€ Une figurine de cheval, un chef-d'œuvre de l'impression 3D."
+        },
+        {
+            keyword: "Créez le vôtre",
+            url: "features/shop/index.html?product=4",
+            content: "Créez le vôtre A partir de 29,90€ Grâce à notre produit GPT 3D Printer, donnez vie à vos idées les plus folles."
+        }
     ];
 
     if (searchInput && searchSuggestions) {

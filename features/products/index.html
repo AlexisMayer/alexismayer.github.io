@@ -30,6 +30,11 @@
             data-section="2"
             aria-label="Aller à la section Nos Formules"
         ></button>
+        <button
+            class="nav-dot"
+            data-section="3"
+            aria-label="Aller à la section Contact"
+        ></button>
     </nav>
 
     <canvas class="bg-canvas"></canvas>
@@ -41,7 +46,7 @@
                 <h1>GPT 3D Printer</h1>
                 <p>Transformez vos idées en objets réels avec l'IA.</p>
                 <div class="cta-container">
-                    <a href="#saas-showcase" class="cta-button">Découvrir</a>
+                    <a href="#contact-products" class="cta-button">Contact</a>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -80,6 +85,10 @@
                                     <div class="expanded-detail">
                                         <h4>Résultat</h4>
                                         <p>Ton concept prend forme, sans effort ni logiciel complexe.</p>
+                                    </div>
+                                    <div class="expanded-detail">
+                                        <h4>Cas d'usages</h4>
+                                        <p>Créez des cadeaux personnalisés, figurines uniques, objets pour anniversaires, ou toute autre idée sur mesure. Idéal pour le custom et les projets spéciaux.</p>
                                     </div>
                                 </div>
                             </div>
@@ -159,26 +168,26 @@
                 <div class="data-viz">
                      <div class="data-card">
                         <div class="data-card-content">
-                            <h3>1 Jeton</h3>
+                            <h3>Modélisation IA</h3>
                             <p style="font-size: 2rem; font-weight: bold;">29,90€</p>
                             <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
-                                <li>1 création 3D</li>
-                                <li>Idéal pour un essai</li>
+                                <li>Génération 3D par IA</li>
+                                <li>Idéal pour un essai rapide</li>
                                 <li>Accès immédiat</li>
                             </ul>
-                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Acheter 1 Jeton</a>
+                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Choisir l'IA</a>
                         </div>
                     </div>
                     <div class="data-card">
                         <div class="data-card-content">
-                            <h3>5 Jetons</h3>
+                            <h3>Modélisation Assistée</h3>
                             <p style="font-size: 2rem; font-weight: bold;">99,90€</p>
                             <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
-                                <li>5 créations 3D</li>
-                                <li>Économique</li>
-                                <li>Accès immédiat</li>
+                                <li>Génération 3D par IA + Retouche Humaine</li>
+                                <li>Idéal pour des projets complexes</li>
+                                <li>Support personnalisé</li>
                             </ul>
-                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Acheter 5 Jetons</a>
+                            <a href="#" class="cta-button" style="margin-top: 1.5rem;">Choisir l'Assistance</a>
                         </div>
                     </div>
                     <div class="data-card">
@@ -199,6 +208,35 @@
                 <svg class="scroll-arrow" viewBox="0 0 24 24">
                     <path d="M7 10l5 5 5-5z"/>
                 </svg>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" data-section="3" id="contact-products">
+            <div class="section-content">
+                <h2>Contactez GPT 3D Printer</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-text">
+                        <p>
+                            Pour toute question concernant nos services d'impression 3D, n'hésitez pas à nous contacter.
+                        </p>
+                    </div>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Votre nom</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Votre email</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Votre message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Envoyer le message</button>
+                    </form>
+                </div>
             </div>
         </section>
 
