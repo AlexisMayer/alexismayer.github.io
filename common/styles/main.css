@@ -959,7 +959,7 @@ body {
     background: transparent;
     color: var(--color-text);
     font-size: 1rem;
-    width: 250px; /* Adjust as needed */
+    width: 350px; /* Adjust as needed */
     transition: all 0.3s ease;
 }
 
