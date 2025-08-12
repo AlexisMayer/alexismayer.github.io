@@ -6,6 +6,7 @@
     <title>GPT 3D Printer - Service d'impression 3D</title>
     <link rel="stylesheet" href="../../common/styles/main.css">
         <link rel="stylesheet" href="products.css">
+        <link rel="stylesheet" href="shop_preview.css">
     <style>
         .workflow {
             display: grid;
@@ -68,6 +69,11 @@
         <button
             class="nav-dot"
             data-section="3"
+            aria-label="Aller à la section Boutique"
+        ></button>
+        <button
+            class="nav-dot"
+            data-section="4"
             aria-label="Aller à la section Contact"
         ></button>
     </nav>
@@ -322,8 +328,38 @@
             </div>
         </section>
 
+        <!-- Shop Preview Section -->
+<section class="section shop-preview" data-section="3">
+    <div class="section-content">
+        <h2>Découvrez notre boutique</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../shop/assets/berger.png" alt="Berger">
+                <h3>Berger</h3>
+            </div>
+            <div class="product-card">
+                <img src="../shop/assets/cheval.png" alt="Cheval">
+                <h3>Cheval</h3>
+            </div>
+            <div class="product-card">
+                <img src="../shop/assets/labrador.png" alt="Labrador">
+                <h3>Labrador</h3>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="../shop/index.html" class="cta-button">Visiter la boutique</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <svg class="scroll-arrow" viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5z"/>
+        </svg>
+    </div>
+</section>
+
+
         <!-- Contact Section -->
-        <section class="section" data-section="3" id="contact-products">
+        <section class="section" data-section="4" id="contact-products">
             <div class="section-content">
                 <h2>Contactez GPT 3D Printer</h2>
                 <div class="contact-wrapper">
@@ -366,6 +402,8 @@
     <script src="../../common/scripts/main.js" defer></script>
 
     <script src="products.js" defer></script>
+
+    <script src="shop_preview.js" defer></script>
 
     <script>
         function toggleCard(card) {
