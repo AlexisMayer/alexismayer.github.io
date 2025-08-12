@@ -477,3 +477,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
+
+    scrollIndicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            const currentSection = indicator.closest('section');
+            if (currentSection) {
+                // Find the next section after the current section
+                const nextSection = currentSection.nextElementSibling;
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+
+// Back to Top Button Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (backToTopButton) {
+        const toggleBackToTop = () => {
+            if (window.pageYOffset > 200) { // Show button after scrolling 200px
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', throttle(toggleBackToTop, 100)); // Use throttle for performance
+        toggleBackToTop(); // Initial check
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
