@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CraftData - Intelligence Artificielle & Données</title>
+        <title>CraftData - Fondation & Groupe</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,31 +16,26 @@
     <body>
         <div class="scroll-progress"></div>
 
-        <nav class="nav" aria-label="Navigation principale">
+        <nav class="nav" aria-label="Navigation CraftData Groupe">
             <button
                 class="nav-dot active"
                 data-section="0"
-                aria-label="Aller à la section Accueil"
+                aria-label="Aller à la section Accueil Groupe"
             ></button>
             <button
                 class="nav-dot"
                 data-section="1"
-                aria-label="Aller à la section Vision"
+                aria-label="Aller à la section Notre Vision"
             ></button>
             <button
                 class="nav-dot"
                 data-section="2"
-                aria-label="Aller à la section Solutions"
+                aria-label="Aller à la section Nos Entités"
             ></button>
             <button
                 class="nav-dot"
                 data-section="3"
-                aria-label="Aller à la section Études de cas"
-            ></button>
-            <button
-                class="nav-dot"
-                data-section="4"
-                aria-label="Aller à la section Contact"
+                aria-label="Aller à la section Contact Groupe"
             ></button>
         </nav>
 
@@ -53,13 +48,18 @@
                     <h1>CraftData</h1>
                     <div class="hero-subline-container">
                         <span id="rotating-text" class="hero-subline"
-                            >Transformons vos données en levier de
-                            performance</span
+                            >L'écosystème qui propulse l'innovation Data & IA</span
                         >
                     </div>
                     <div class="cta-container">
-                        <a href="#contact" class="cta-button">Discutons de votre projet</a>
-                        <a href="saas.html" class="cta-button cta-button-secondary">Découvrir PrintGenie</a>
+                        <a href="services.html#contact" class="cta-button">Discutons de votre projet</a>
+                        <div class="dropdown-container">
+                            <button class="cta-button cta-button-secondary dropdown-toggle">Nos Offres</button>
+                            <div class="dropdown-content">
+                                <a href="services.html">CraftData Services</a>
+                                <a href="products.html">Nos Produits</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -67,683 +67,65 @@
             <!-- Vision Section -->
             <section class="section" data-section="1">
                 <div class="section-content">
-                    <h2>Notre mission</h2>
+                    <h2>Notre Vision</h2>
                     <p>
-                        Transformer vos données en décisions, vos processus en
-                        solutions intelligentes, et vos idées en produits
-                        data-centrés. Grâce à une approche mêlant stratégie,
-                        développement sur mesure et IA de pointe (LLM, RAG,
-                        machine learning), nous donnons vie à vos projets les
-                        plus ambitieux — avec des résultats mesurables,
-                        durables, et parfaitement intégrés à vos métiers.
+                        CraftData est la fondation qui unit et propulse des entités spécialisées dans la Data et l'Intelligence Artificielle. Notre mission est de créer un écosystème d'innovation où chaque entité excelle dans son domaine, tout en bénéficiant de la synergie et de l'expertise collective du groupe. Nous investissons dans des projets à fort potentiel, développons des solutions de pointe et accompagnons nos équipes vers l'excellence.
                     </p>
-
-                    <div class="data-viz">
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>Data First</h3>
-                                <p>
-                                    Chaque projet commence par une compréhension
-                                    fine de vos données. Structure, qualité,
-                                    usages : tout part du terrain.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Cartographie & Audit</h4>
-                                            <p>
-                                                Analyse structurelle et
-                                                sémantique de vos sources de
-                                                données (bases, fichiers, flux).
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Qualité & Fiabilité</h4>
-                                            <p>
-                                                Détection des anomalies, gestion
-                                                des doublons, complétion des
-                                                jeux de données.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Potentiel d’usage</h4>
-                                            <p>
-                                                Identification des cas d’usage
-                                                viables via un cadrage
-                                                stratégique orienté valeur
-                                                métier.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Architecture Data</h4>
-                                            <p>
-                                                Structuration des pipelines de
-                                                collecte, transformation
-                                                (ETL/ELT) et stockage adaptés à
-                                                vos besoins.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>IA sur mesure</h3>
-                                <p>
-                                    Pas de modèles génériques. Nous développons
-                                    des solutions IA adaptées à vos contraintes,
-                                    vos systèmes, vos objectifs.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Modèles personnalisés</h4>
-                                            <p>
-                                                Conception de modèles IA
-                                                (machine learning, deep
-                                                learning, LLM, RAG) en lien
-                                                direct avec vos objectifs.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Explicabilité & confiance</h4>
-                                            <p>
-                                                Algorithmes interprétables,
-                                                validation des performances,
-                                                auditabilité des prédictions.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Intégration métier</h4>
-                                            <p>
-                                                Déploiement fluide dans vos
-                                                outils internes (API, ERP, CRM,
-                                                applications sur mesure).
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Scalabilité & robustesse</h4>
-                                            <p>
-                                                Architectures cloud-native et
-                                                performantes prêtes à gérer la
-                                                montée en charge.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>Évolution continue</h3>
-                                <p>
-                                    Nos solutions vivent, s’adaptent et
-                                    s’améliorent avec vous.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Monitoring intelligent</h4>
-                                            <p>
-                                                Suivi automatique des
-                                                performances, détection des
-                                                dérives, alertes contextuelles.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>MLOps & CI/CD</h4>
-                                            <p>
-                                                Pipelines de réentraînement,
-                                                versioning des modèles,
-                                                automatisation du déploiement.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Amélioration incrémentale</h4>
-                                            <p>
-                                                Enrichissement continu des
-                                                modèles avec les nouvelles
-                                                données et retours utilisateurs.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Transfert & autonomie</h4>
-                                            <p>
-                                                Documentation, formation et
-                                                transfert de compétences pour
-                                                rendre vos équipes autonomes.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
-            <!-- Services Section -->
-            <section class="section" data-section="2">
+            <!-- Nos Entités Section -->
+            <section class="section" data-section="2" id="nos-entites">
                 <div class="section-content">
-                    <h2>Nos Solutions</h2>
-                    <p>
-                        Nos solutions combinent conseil, développement sur
-                        mesure et accompagnement long terme, pour faire de vos
-                        données un véritable moteur de performance.
-                    </p>
-
+                    <h2>Nos Entités</h2>
+                    <p>Découvrez les piliers de l'écosystème CraftData.</p>
                     <div class="data-viz">
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
+                        <div class="data-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
                             <div class="data-card-content">
-                                <h3>Audit & Stratégie</h3>
+                                <h3>CraftData Services</h3>
                                 <p>
-                                    Évaluation complète de votre écosystème data
-                                    et définition d'une roadmap personnalisée
-                                    pour maximiser le ROI de vos
-                                    investissements.
+                                    Votre partenaire expert en développement de solutions Data & IA sur mesure pour les entreprises.
                                 </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Audit Data & IA</h4>
-                                            <p>
-                                                Analyse de la maturité data, des
-                                                cas d’usage potentiels et de
-                                                l’écosystème technique.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>
-                                                Cadrage fonctionnel & technique
-                                            </h4>
-                                            <p>
-                                                Définition précise des objectifs
-                                                IA, des KPIs et des contraintes
-                                                d’implémentation.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Architecture cible</h4>
-                                            <p>
-                                                Recommandations sur les
-                                                infrastructures data, cloud,
-                                                sécurité et intégration.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Roadmap Stratégique</h4>
-                                            <p>
-                                                Plan d'action détaillé avec
-                                                priorités, timeline et jalons de
-                                                réussite.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
+                        <div class="data-card" onclick="window.location.href='products.html';" style="cursor: pointer;">
                             <div class="data-card-content">
-                                <h3>Développement IA</h3>
+                                <h3>PrintGenie</h3>
                                 <p>
-                                    Création de modèles d'intelligence
-                                    artificielle sur-mesure, du prototypage à la
-                                    mise en production à grande échelle.
+                                    Notre startup innovante qui transforme vos idées en objets 3D réels grâce à l'IA.
                                 </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Modèles IA sur mesure</h4>
-                                            <p>
-                                                Machine learning, NLP, computer
-                                                vision, LLM, RAG… adaptés à vos
-                                                données métiers.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>MLOps & pipelines IA</h4>
-                                            <p>
-                                                Infrastructure complète pour
-                                                l'entraînement, déploiement et
-                                                monitoring de vos modèles.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Automatisation intelligente</h4>
-                                            <p>
-                                                RPA augmentée par l’IA pour
-                                                traiter documents, emails,
-                                                tickets, etc.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>APIs et intégration</h4>
-                                            <p>
-                                                Connexion fluide à vos systèmes
-                                                métier (ERP, CRM, outils
-                                                internes ou SaaS).
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-card" onclick="toggleCard(this)">
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>Formation & Support</h3>
-                                <p>
-                                    Accompagnement de vos équipes avec des
-                                    formations pratiques et un support technique
-                                    continu pour garantir votre autonomie.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Formation sur mesure</h4>
-                                            <p>
-                                                Sessions d'acculturation
-                                                adaptées à chaque profil :
-                                                dirigeants, analystes,
-                                                utilisateurs finaux.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Workshops pratiques</h4>
-                                            <p>
-                                                Ateliers pratiques sur vos
-                                                vraies données pour une montée
-                                                en compétence immédiate.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Support technique continu</h4>
-                                            <p>
-                                                Assistance technique continue
-                                                avec des experts dédiés à votre
-                                                projet.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Transfert de compétences</h4>
-                                            <p>
-                                                Documentation complète et
-                                                transfert de compétences pour
-                                                votre autonomie totale.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Case Studies Section -->
-            <section class="section" data-section="3">
-                <div class="section-content">
-                    <h2>Études de cas</h2>
-                    <p>
-                        Voici deux cas concrets illustrant comment l’IA
-                        appliquée aux données permet d’apporter des gains de
-                        performance immédiats dans des contextes industriels ou
-                        opérationnels.
-                    </p>
-
-                    <div class="data-viz">
-                        <!-- Cas d’usage 1 : LLM / RAG sur PDF -->
-                        <div
-                            class="data-card"
-                            id="rag-use-case-card"
-                            onclick="toggleCard(this)"
-                        >
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>IA documentaire (LLM / RAG)</h3>
-                                <p>
-                                    Moteur de recherche intelligent sur
-                                    documents internes (PDF, fiches techniques,
-                                    rapports...) basé sur un modèle de langage
-                                    augmenté.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Problématique</h4>
-                                            <p>
-                                                Des centaines de documents PDF
-                                                dispersés (procédures, notices,
-                                                rapports...), difficiles à
-                                                explorer. Les équipes perdaient
-                                                un temps considérable à chercher
-                                                des informations pourtant
-                                                existantes.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Solution</h4>
-                                            <p>
-                                                Déploiement d’une solution LLM +
-                                                RAG permettant d’interroger un
-                                                corpus documentaire en langage
-                                                naturel. Indexation automatique
-                                                des PDF, interface simple et
-                                                réponse contextualisée.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Résultat</h4>
-                                            <p>
-                                                Accès instantané à l’information
-                                                sans fouiller les répertoires.
-                                                Gain de temps opérationnel,
-                                                meilleure autonomie des équipes,
-                                                valorisation du capital
-                                                documentaire existant.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="demo-button-container"
-                                        style="
-                                            text-align: center;
-                                            margin: 20px 0;
-                                        "
-                                    >
-                                        <button
-                                            class="cta-button show-demo-button"
-                                        >
-                                            Voir la démo
-                                        </button>
-                                    </div>
-                                    <div
-                                        class="carousel-container"
-                                        style="display: none"
-                                    >
-                                        <div class="carousel-track">
-                                            <!-- Slide 1: PDF Ingestion -->
-                                            <div class="carousel-slide active">
-                                                <h3>
-                                                    Étape 1: Ingestion des
-                                                    documents
-                                                </h3>
-                                                <p>
-                                                    Sélectionnez un ou plusieurs
-                                                    documents PDF à intégrer
-                                                    dans la base de
-                                                    connaissances de l'IA.
-                                                </p>
-                                                <form class="upload-form">
-                                                    <input
-                                                        type="file"
-                                                        id="pdf-upload"
-                                                        accept="application/pdf"
-                                                        multiple
-                                                        style="display: none"
-                                                    />
-                                                    <label
-                                                        for="pdf-upload"
-                                                        class="cta-button"
-                                                        >Choisir des
-                                                        fichiers</label
-                                                    >
-                                                    <p class="file-info">
-                                                        Aucun fichier
-                                                        sélectionné
-                                                    </p>
-                                                </form>
-                                            </div>
-
-                                            <!-- Slide 2: Fine-tuning -->
-                                            <div class="carousel-slide">
-                                                <h3>
-                                                    Étape 2: Fine-tuning du
-                                                    modèle
-                                                </h3>
-                                                <p>
-                                                    Le modèle de langage (LLM)
-                                                    est fine-tuné sur la base de
-                                                    vos documents pour
-                                                    comprendre votre jargon.
-                                                </p>
-                                                <div
-                                                    class="progress-bar-container"
-                                                >
-                                                    <div
-                                                        class="progress-bar"
-                                                    ></div>
-                                                </div>
-                                                <p class="progress-text">
-                                                    Fine-tuning en cours...
-                                                </p>
-                                            </div>
-
-                                            <!-- Slide 3: Chat with AI -->
-                                            <div class="carousel-slide">
-                                                <h3>
-                                                    Étape 3: Interrogation de
-                                                    l'IA
-                                                </h3>
-                                                <p>
-                                                    Posez vos questions en
-                                                    langage naturel et obtenez
-                                                    des réponses précises basées
-                                                    sur vos documents.
-                                                </p>
-                                                <div class="chat-container">
-                                                    <div class="chat-box">
-                                                        <div
-                                                            class="chat-message bot"
-                                                        >
-                                                            Bonjour ! Sur quels
-                                                            documents puis-je
-                                                            vous aider ?
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="chat-input-container"
-                                                    >
-                                                        <input
-                                                            type="text"
-                                                            class="chat-input"
-                                                            placeholder="Posez votre question ici..."
-                                                        />
-                                                        <button
-                                                            class="chat-send-button"
-                                                        >
-                                                            Envoyer
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="carousel-arrow prev">
-                                            &lt;
-                                        </button>
-                                        <button class="carousel-arrow next">
-                                            &gt;
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cas d’usage 2 : Prédiction des besoins -->
-                        <div
-                            class="data-card"
-                            id="prediction-use-case-card"
-                            onclick="toggleCard(this)"
-                        >
-                            <button
-                                class="close-card"
-                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                                aria-label="Fermer la carte"
-                            >
-                                &times;
-                            </button>
-                            <div class="data-card-content">
-                                <h3>Prévision des approvisionnements</h3>
-                                <p>
-                                    Modèle de machine learning pour anticiper
-                                    les besoins logistiques en fonction de
-                                    l’historique de consommation et de données
-                                    contextuelles.
-                                </p>
-                                <div class="data-card-expanded-content">
-                                    <div class="expanded-details">
-                                        <div class="expanded-detail">
-                                            <h4>Problématique</h4>
-                                            <p>
-                                                Les équipes géraient les
-                                                prévisions de stock manuellement
-                                                dans Excel, souvent à
-                                                l’intuition. Difficulté à
-                                                anticiper les ruptures ou à
-                                                justifier les commandes.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Solution</h4>
-                                            <p>
-                                                Développement d’un modèle de
-                                                machine learning supervisé,
-                                                prenant en compte les
-                                                historiques, les tendances
-                                                saisonnières, et autres données
-                                                métier. Intégration simple via
-                                                fichier Excel ou dashboard.
-                                            </p>
-                                        </div>
-                                        <div class="expanded-detail">
-                                            <h4>Résultat</h4>
-                                            <p>
-                                                Des prévisions plus fiables, une
-                                                réduction des erreurs, et un
-                                                gain de temps sur la
-                                                planification. L’IA devient un
-                                                assistant métier accessible et
-                                                évolutif.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="chart-container"
-                                        style="
-                                            min-height: 350px;
-                                            margin-top: 2rem;
-                                        "
-                                    >
-                                        <canvas id="predictionChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             <!-- Contact Section -->
-            <section class="section" data-section="4" id="contact">
+            <section class="section" data-section="3" id="contact-group">
                 <div class="section-content">
-                    <h2>Prêt à transformer vos données ?</h2>
+                    <h2>Contactez le Groupe CraftData</h2>
                     <div class="contact-wrapper">
                         <div class="contact-text">
                             <p>
-                                Contactez-nous dès aujourd'hui pour découvrir
-                                comment CraftData peut révolutionner votre
-                                approche de la donnée et vous donner un avantage
-                                concurrentiel décisif.
+                                Pour toute question concernant le groupe, les partenariats ou les investissements, n'hésitez pas à nous contacter.
                             </p>
                         </div>
                         <form class="contact-form" action="#" method="POST">
                             <div class="form-group">
-                                <label for="name" class="sr-only"
-                                    >Votre nom</label
-                                >
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    placeholder="Votre nom"
-                                />
+                                <label for="name" class="sr-only">Votre nom</label>
+                                <input type="text" id="name" name="name" required placeholder="Votre nom" />
                             </div>
                             <div class="form-group">
-                                <label for="email" class="sr-only"
-                                    >Votre email</label
-                                >
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    placeholder="Votre email"
-                                />
+                                <label for="email" class="sr-only">Votre email</label>
+                                <input type="email" id="email" name="email" required placeholder="Votre email" />
                             </div>
                             <div class="form-group">
-                                <label for="message" class="sr-only"
-                                    >Votre message</label
-                                >
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="5"
-                                    required
-                                    placeholder="Votre message"
-                                ></textarea>
+                                <label for="message" class="sr-only">Votre message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
                             </div>
-                            <button type="submit" class="cta-button">
-                                Envoyer le message
-                            </button>
+                            <button type="submit" class="cta-button">Envoyer le message</button>
                         </form>
                     </div>
                 </div>
@@ -755,11 +137,29 @@
             <div class="footer-content">
                 <p>&copy; 2025 CraftData. Tous droits réservés.</p>
                 <div class="social-links">
-                    <a href="#">contact@craftdata.fr</a>
+                    <a href="#">contact@craftdata.group</a>
                 </div>
             </div>
         </footer>
 
         <script src="js/main.js" defer></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdownToggleButton = document.querySelector('.dropdown-toggle');
+                const nosEntitesSection = document.getElementById('nos-entites');
+
+                if (dropdownToggleButton && nosEntitesSection) {
+                    dropdownToggleButton.addEventListener('click', function(event) {
+                        event.preventDefault(); // Empêche l'action par défaut du bouton
+
+                        // Défilement vers la section
+                        nosEntitesSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

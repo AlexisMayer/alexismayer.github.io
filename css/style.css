@@ -691,11 +691,6 @@ body {
     min-height: 350px;
 }
 
-.carousel-slide.active {
-    opacity: 1;
-    transform: scale(1);
-}
-
 .carousel-slide h3 {
     color: var(--color-accent);
     margin-bottom: 1rem;
@@ -891,4 +886,61 @@ body {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block; /* Allows it to sit next to other buttons */
+    z-index: 10000; /* Very high z-index */
+}
+
+/* Dropdown Button (inherits cta-button-secondary styles) */
+.dropdown-toggle {
+    /* Ensure it looks like a button */
+    cursor: pointer;
+    border: none; /* Override default button border */
+    /* Inherits padding, colors, etc. from cta-button-secondary */
+}
+
+/* Dropdown Content (the actual menu) */
+.dropdown-content {
+    /* display: none; */ /* Removed this line */
+    position: absolute;
+    background-color: var(--color-bg); /* Dark background */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 100; /* Above other content */
+    border-radius: var(--radius-detail); /* Rounded corners */
+    overflow: hidden; /* For rounded corners on links */
+    top: 100%; /* Position below the button */
+    bottom: auto; /* Remove bottom: 100% */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    margin-top: 0.5rem; /* Small gap below button */
+    margin-bottom: auto; /* Remove margin-bottom */
+    opacity: 0; /* Start hidden with opacity */
+    visibility: hidden; /* Hide from screen readers and interaction */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--color-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: 400; /* Less bold than buttons */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--color-white-t-05); /* Light hover effect */
+    color: var(--color-primary); /* Accent color on hover */
+}
+
+.dropdown-container:hover > .dropdown-content {
+    opacity: 1;
+    visibility: visible;
 }
