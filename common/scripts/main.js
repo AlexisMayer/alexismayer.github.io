@@ -177,14 +177,36 @@ navDots.forEach((dot) => {
 // --- ROTATING TEXT EFFECT ---
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.style.scrollSnapType = 'y mandatory';
-  const phrases = [
-    "Transformons vos données en levier de performance",
-    "Des solutions sur mesure, conçues pour vos enjeux métier",
-    "Un accompagnement durable pour faire évoluer vos modèles",
-  ];
+  
+  const rotatingText = document.getElementById("rotating-text");
+  if (!rotatingText) return;
+
+  const pageH1 = document.querySelector('h1')?.textContent;
+  let phrases = [];
+
+  if (pageH1 === 'CraftData') {
+    phrases = [
+      "Développement sur mesure, IA et impression 3D.",
+      "Solutions Data, Machine Learning et fabrication additive.",
+      "Experts en Large Language Models (LLM) et RAG.",
+      "Du concept à l'objet : nous donnons vie à vos idées.",
+      "L'innovation au croisement du software et de la matière.",
+    ];
+  } else if (pageH1 === 'Logiciel sur mesure') {
+    phrases = [
+      "Transformons vos données en levier de performance",
+      "Des solutions sur mesure, conçues pour vos enjeux métier",
+      "Un accompagnement durable pour faire évoluer vos modèles",
+    ];
+  } else {
+    return; // Do nothing if the page is not recognized
+  }
+
+  if (phrases.length === 0) return;
 
   let index = 0;
-  const rotatingText = document.getElementById("rotating-text");
+  // Immediately set the first text
+  rotatingText.textContent = phrases[index];
 
   setInterval(() => {
     index = (index + 1) % phrases.length;

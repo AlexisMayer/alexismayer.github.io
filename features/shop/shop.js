@@ -11,26 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
             shopifyLink: 'https://example.shopify.com/vase-geometrique' // Placeholder link
         },
         {
-            id: 2,
-            name: 'Berger Allemand',
-            price: '45,00€',
-            imageUrl: 'assets/berger.png',
-            description: 'Support robuste et stylisé pour votre casque de jeu, personnalisable.',
-            shopifyLink: 'https://example.shopify.com/support-casque' // Placeholder link
-        },
-        {
             id: 3,
             name: 'Cheval',
-            price: '60,00€',
+            price: 'A partir de 29,90€',
             imageUrl: 'assets/cheval.png',
-            description: 'Une figurine de cheval, un chef-d\'œuvre de l\'impression 3D.',
+            description: 'Une figurine de cheval, avec des traits réalistes et des lignes fines.',
             shopifyLink: 'https://example.shopify.com/dragon-articule' // Placeholder link
         },
         {
             id: 4,
             name: 'Créez le vôtre',
             price: 'A partir de 29,90€',
-            imageUrl: 'assets/gpt-3d-printer.png',
+            imageUrl: 'assets/berger.png',
             description: 'Grâce à notre produit GPT 3D Printer, donnez vie à vos idées les plus folles.',
             shopifyLink: '../products/index.html'
         }
