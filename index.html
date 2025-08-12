@@ -52,12 +52,17 @@
                         >
                     </div>
                     <div class="cta-container">
-                        <a href="features/services/index.html#contact" class="cta-button">Discutons de votre projet</a>
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Rechercher sur le site..." aria-label="Rechercher sur le site">
+                            <div id="search-suggestions" class="search-suggestions"></div>
+                        </div>
+                        <a href="#contact-group" class="cta-button">Discutons de votre projet</a>
                         <div class="dropdown-container">
                             <button class="cta-button cta-button-secondary dropdown-toggle">Nos Offres</button>
                             <div class="dropdown-content">
-                                <a href="features/services/index.html">Nos Services</a>
-                                <a href="features/products/index.html">Nos Produits</a>
+                                <a href="features/services/index.html">Services</a>
+                                <a href="features/products/index.html">Produits</a>
+                                <a href="features/shop/index.html">Boutique</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +70,7 @@
             </section>
 
             <!-- Vision Section -->
-            <section class="section" data-section="1">
+            <section class="section" data-section="1" id="vision-section">
                 <div class="section-content">
                     <h2>Notre Vision</h2>
                     <p>
@@ -77,12 +82,11 @@
             <!-- Nos Entités Section -->
             <section class="section" data-section="2" id="nos-entites">
                 <div class="section-content">
-                    <h2>Nos Entités</h2>
-                    <p>Découvrez les piliers de l'écosystème CraftData.</p>
+                    <h2>Découvrez l'écosystème CraftData</h2>
                     <div class="data-viz">
                         <div class="data-card" onclick="window.location.href='features/services/index.html';" style="cursor: pointer;">
                             <div class="data-card-content">
-                                <h3>CraftData Services</h3>
+                                <h3>Services de développement</h3>
                                 <p>
                                     Votre partenaire expert en développement de solutions Data & IA sur mesure pour les entreprises.
                                 </p>
@@ -90,9 +94,17 @@
                         </div>
                         <div class="data-card" onclick="window.location.href='features/products/index.html';" style="cursor: pointer;">
                             <div class="data-card-content">
-                                <h3>PrintGenie</h3>
+                                <h3>GPT 3D Printer</h3>
                                 <p>
                                     Notre startup innovante qui transforme vos idées en objets 3D réels grâce à l'IA.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="data-card" onclick="window.location.href='features/shop/index.html';" style="cursor: pointer;">
+                            <div class="data-card-content">
+                                <h3>Boutique</h3>
+                                <p>
+                                    Découvrez nos créations uniques imprimées en 3D.
                                 </p>
                             </div>
                         </div>
@@ -143,6 +155,7 @@
         </footer>
 
         <script src="common/scripts/main.js" defer></script>
+        <script src="common/scripts/search.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const dropdownToggleButton = document.querySelector('.dropdown-toggle');
