@@ -480,6 +480,34 @@ body {
     color: var(--color-accent);
 }
 
+/* Badge Styles */
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-text);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-pro {
+    background-color: var(--color-primary);
+}
+
+.badge-public {
+    background-color: var(--color-accent);
+    color: var(--color-bg); /* Text color for better contrast with accent */
+}
+
+.data-card.data-card-badged {
+    overflow: visible;
+    padding-top: 40px;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     to {

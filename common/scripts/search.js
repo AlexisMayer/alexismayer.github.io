@@ -4,53 +4,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchData = [
         {
-            keyword: "GPT 3D Printer",
+            keyword: "Service d'impression 3D par IA",
             url: "features/products/index.html",
-            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules Modélisation IA Modélisation Assistée Offre Pro cadeau personnalisé, anniversaire, figurine, customisation, sur mesure, impression 3D, modélisation 3D, IA, intelligence artificielle"
+            content: "Donnez vie à vos idées. Décrivez simplement votre concept, notre IA génère le modèle 3D et nous l'imprimons pour vous. De l'imagination à l'objet réel, sans effort."
         },
         {
-            keyword: "Produits",
+            keyword: "Nos produits et créations 3D",
             url: "features/products/index.html",
-            content: "GPT 3D Printer Service d'impression 3D Transformez vos idées en objets réels avec l'IA. Comment ça marche ? Imaginez L'IA Crée Recevez Tu as une idée géniale mais pas les compétences en modélisation 3D ? Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions. Ton concept prend forme, sans effort ni logiciel complexe. La modélisation 3D est longue et technique ? Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes. Un fichier prêt à imprimer, sans les heures de travail habituelles. Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ? Nous imprimons votre création en 3D et vous la livrons directement chez vous. Ton idée matérialisée, livrée directement chez toi. Nos Formules Modélisation IA Modélisation Assistée Offre Pro cadeau personnalisé, anniversaire, figurine, customisation, sur mesure, impression 3D, modélisation 3D, IA, intelligence artificielle. La Ferme d'Imprimantes CraftData Découvrez notre projet de production locale et rejoignez l'aventure de la fabrication additive. Nous avons démarré avec <strong>2 machines professionnelles</strong> (2500€ chacune) et visons <strong>20 machines en 2 ans</strong> pour décupler notre capacité et renforcer la production locale. Votre soutien est essentiel pour cette aventure. Contribuez à notre développement et faites partie de l'avenir de la fabrication locale !"
+            content: "Découvrez notre service d'impression 3D révolutionnaire et notre ferme d'imprimantes. Nous transformons vos idées en réalité et soutenons la production locale."
         },
         {
-            keyword: "Services",
+            keyword: "Solutions Data & IA sur mesure",
             url: "features/services/index.html",
-            content: "Logiciel SaaS, CaaS, PaaS, CraftData Services Solutions IA & Données Votre partenaire en solutions Data & IA sur mesure Notre mission Transformer vos données en décisions, vos processus en solutions intelligentes, et vos idées en produits data-centrés. Data First Chaque projet commence par une compréhension fine de vos données. Cartographie & Audit Qualité & Fiabilité Potentiel d’usage Architecture Data IA sur mesure Pas de modèles génériques. Nous développons des solutions IA adaptées à vos contraintes, vos systèmes, vos objectifs. Modèles personnalisés Explicabilité & confiance Intégration métier Scalabilité & robustesse Évolution continue Nos solutions vivent, s’adaptent et s’améliorent avec vous. Monitoring intelligent MLOps & CI/CD Amélioration incrémentale Transfert & autonomie Nos Solutions Nos solutions combinent conseil, développement sur mesure et accompagnement long terme, pour faire de vos données un véritable moteur de performance. Audit & Stratégie Évaluation complète de votre écosystème data et définition d'une roadmap personnalisée Audit Data & IA Cadrage fonctionnel & technique Architecture cible Roadmap Stratégique Développement IA Création de modèles d'intelligence artificielle sur-mesure, du prototypage à la mise en production à grande échelle. Modèles IA sur mesure MLOps & pipelines IA Automatisation intelligente APIs et intégration Formation & Support Accompagnement de vos équipes avec des formations pratiques et un support technique continu Formation sur mesure Workshops pratiques Support technique continu Transfert de compétences Études de cas Voici deux cas concrets illustrant comment l’IA appliquée aux données permet d’apporter des gains de performance immédiats IA documentaire (LLM / RAG) Moteur de recherche intelligent sur documents internes Problématique Solution Résultat Prévision des approvisionnements Modèle de machine learning pour anticiper les besoins logistiques Problématique Solution Résultat Prêt à transfor..."
+            content: "Nous transformons vos données en avantage concurrentiel. Découvrez nos services sur mesure : audit, stratégie, développement de modèles IA, MLOps et formation."
         },
         {
-            keyword: "Boutique",
+            keyword: "Boutique de créations 3D",
             url: "features/shop/index.html",
-            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D berger, cheval, labrador"
+            content: "Explorez notre boutique de créations 3D uniques. Trouvez des figurines d'animaux, des objets décoratifs et des cadeaux originaux imprimés en 3D."
         },
+        { keyword: "Contacter le groupe CraftData", url: "#contact-group", content: "Une question ? Un projet ? Contactez-nous pour discuter de partenariats, d'investissements ou pour toute autre demande." },
+        { keyword: "Notre Vision : L'écosystème CraftData", url: "#vision-section", content: "Notre mission est de bâtir un écosystème d'innovation en Data et IA. Nous unissons des expertises pour développer des solutions de pointe et propulser des projets à fort potentiel." },
+        { keyword: "Les entités du groupe CraftData", url: "#nos-entites", content: "Découvrez les entités qui forment notre écosystème : CraftData Services pour les solutions d'entreprise, PrintGenie pour l'impression 3D par IA, et notre Boutique de créations uniques." },
+        { keyword: "Accueil - CraftData", url: "index.html", content: "Bienvenue chez CraftData, l'écosystème qui accélère l'innovation en Data et IA. Explorez nos services, nos produits et notre boutique." },
         {
-            keyword: "Shop",
-            url: "features/shop/index.html",
-            content: "Boutique en ligne - CraftData Notre Boutique 3D Nos Créations Imprimées en 3D berger, cheval, labrador"
-        },
-        { keyword: "Contact", url: "#contact-group", content: "Contactez le Groupe CraftData Pour toute question concernant le groupe, les partenariats ou les investissements, n'hésitez pas à nous contacter." },
-        { keyword: "Vision", url: "#vision-section", content: "Notre Vision CraftData est la fondation qui unit et propulse des entités spécialisées dans la Data et l'Intelligence Artificielle. Notre mission est de créer un écosystème d'innovation où chaque entité excelle dans son domaine, tout en bénéficiant de la synergie et de l'expertise collective du groupe. Nous investissons dans des projets à fort potentiel, développons des solutions de pointe et accompagnons nos équipes vers l'excellence." },
-        { keyword: "Entités", url: "#nos-entites", content: "Découvrez les piliers de l'écosystème CraftData. CraftData Services Votre partenaire expert en développement de solutions Data & IA sur mesure pour les entreprises. PrintGenie Notre startup innovante qui transforme vos idées en objets 3D réels grâce à l'IA. CraftData Boutique Découvrez nos créations uniques imprimées en 3D." },
-        { keyword: "Accueil", url: "index.html", content: "CraftData L'écosystème qui propulse l'innovation Data & IA Discutons de votre projet Nos Offres Nos Services Nos Produits Notre Boutique" },
-        {
-            keyword: "Labrador",
+            keyword: "Figurine de Labrador imprimée en 3D",
             url: "features/shop/index.html?product=1",
-            content: "Labrador A partir de 29,90€ Une figurine élégante avec des lignes épurées, parfait pour une touche moderne."
+            content: "Adoptez cette élégante figurine de Labrador. Imprimée en 3D avec des lignes épurées, elle apportera une touche de modernité à votre intérieur. À partir de 29,90€."
         },
         {
-            keyword: "Berger Allemand",
+            keyword: "Figurine de Berger Allemand imprimée en 3D",
             url: "features/shop/index.html?product=2",
-            content: "Berger Allemand 45,00€ Support robuste et stylisé pour votre casque de jeu, personnalisable."
+            content: "Un support pour casque en forme de Berger Allemand. Robuste, stylisé et personnalisable, c'est l'accessoire parfait pour votre bureau de jeu. 45,00€."
         },
         {
-            keyword: "Cheval",
+            keyword: "Figurine de Cheval imprimée en 3D",
             url: "features/shop/index.html?product=3",
-            content: "Cheval 60,00€ Une figurine de cheval, un chef-d'œuvre de l'impression 3D."
+            content: "Admirez ce chef-d'œuvre de l'impression 3D : une magnifique figurine de cheval aux détails soignés. Une pièce maîtresse pour votre collection. 60,00€."
         },
         {
-            keyword: "Créez le vôtre",
+            keyword: "Créez votre propre objet 3D",
             url: "features/shop/index.html?product=4",
-            content: "Créez le vôtre A partir de 29,90€ Grâce à notre produit GPT 3D Printer, donnez vie à vos idées les plus folles."
+            content: "Votre imagination est la seule limite. Utilisez notre service d'impression 3D par IA pour donner vie à vos idées les plus folles. À partir de 29,90€."
         }
     ];
 
