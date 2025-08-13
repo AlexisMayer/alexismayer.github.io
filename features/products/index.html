@@ -8,296 +8,243 @@
     <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <div class="scroll-progress"></div>
+<div class="scroll-progress"></div>
+<a href="../../index.html" class="back-to-home-button" aria-label="Retour à l'accueil">
+    &larr; Accueil
+</a>
+<nav class="nav" aria-label="Navigation PrintGenie">
+    <button
+        class="nav-dot"
+        data-section="0"
+        aria-label="Aller à la section Accueil PrintGenie"
+    ></button>
+    <button
+        class="nav-dot"
+        data-section="1"
+        aria-label="Aller à la section Comment ça marche"
+    ></button>
+    <button
+        class="nav-dot"
+        data-section="2"
+        aria-label="Aller à la section Nos Formules"
+    ></button>
+    <button
+        class="nav-dot"
+        data-section="3"
+        aria-label="Aller à la section Boutique"
+    ></button>
+    <button
+        class="nav-dot"
+        data-section="4"
+        aria-label="Aller à la section Contact"
+    ></button>
+</nav>
 
-    <a href="../../index.html" class="back-to-home-button" aria-label="Retour à l'accueil">
-        &larr; Accueil
-    </a>
+<canvas class="bg-canvas"></canvas>
 
-    <nav class="nav" aria-label="Navigation PrintGenie">
-        <button
-            class="nav-dot"
-            data-section="0"
-            aria-label="Aller à la section Accueil PrintGenie"
-        ></button>
-        <button
-            class="nav-dot"
-            data-section="1"
-            aria-label="Aller à la section Comment ça marche"
-        ></button>
-        <button
-            class="nav-dot"
-            data-section="2"
-            aria-label="Aller à la section Nos Formules"
-        ></button>
-        <button
-            class="nav-dot"
-            data-section="3"
-            aria-label="Aller à la section Boutique"
-        ></button>
-        <button
-            class="nav-dot"
-            data-section="4"
-            aria-label="Aller à la section Contact"
-        ></button>
-        <button
-            class="nav-dot"
-            data-section="5"
-            aria-label="Aller à la section La Ferme d'Imprimantes CraftData"
-        ></button>
-    </nav>
-
-    <canvas class="bg-canvas"></canvas>
-
-    <div class="container">
-        <!-- Section Hero -->
-        <section id="saas-hero" class="hero" data-section="0">
-            <div class="hero-content">
-                <h1>GPT 3D Printer</h1>
-                <p>Transformez vos idées en objets réels avec l'IA.</p>
-                <div class="cta-container">
-                    <a href="#contact-products" class="cta-button">Contact</a>
-                </div>
+<div class="container">
+    <!-- Section Hero -->
+    <section id="saas-hero" class="hero" data-section="0">
+        <div class="hero-content">
+            <h1>GPT 3D Printer</h1>
+            <p>Transformez vos idées en objets réels avec l'IA.</p>
+            <div class="cta-container">
+                <a href="#contact-products" class="cta-button">Contact</a>
             </div>
-            <div class="scroll-indicator">
-                <svg class="scroll-arrow" viewBox="0 0 24 24">
-                    <path d="M7 10l5 5 5-5z"/>
-                </svg>
-            </div>
-        </section>
+        </div>
+        <div class="scroll-indicator">
+            <svg class="scroll-arrow" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z"/>
+            </svg>
+        </div>
+    </section>
 
-        <!-- Section Showcase -->
-        <section id="saas-showcase" class="section" data-section="1">
-            <div class="section-content">
-                <h2>Comment ça marche ?</h2>
-                <div class="data-viz">
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button
-                            class="close-card"
-                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                            aria-label="Fermer la carte"
-                        >
-                            &times;
-                        </button>
-                        <div class="data-card-content">
-                            <h3>1. Imaginez</h3>
-                            <p>"Je veux un support pour mon téléphone avec un style cyberpunk."</p>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <div class="expanded-detail">
-                                        <h4>Problématique</h4>
-                                        <p>Tu as une idée géniale mais pas les compétences en modélisation 3D ?</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Solution</h4>
-                                        <p>Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions.</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Résultat</h4>
-                                        <p>Ton concept prend forme, sans effort ni logiciel complexe.</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Cas d'usages</h4>
-                                        <p>Créez des cadeaux personnalisés, figurines uniques, objets pour anniversaires, ou toute autre idée sur mesure. Idéal pour le custom et les projets spéciaux.</p>
-                                    </div>
-                                </div>
+<!-- Section Showcase -->
+<section id="saas-showcase" class="section" data-section="1">
+    <div class="section-content">
+        <h2>Comment ça marche ?</h2>
+        <div class="data-viz">
+            <div class="data-card" onclick="toggleCard(this)">
+                <button
+                    class="close-card"
+                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                    aria-label="Fermer la carte"
+                >
+                    &times;
+                </button>
+                <div class="data-card-content">
+                    <h3>1. Imaginez</h3>
+                    <p>"Je veux un support pour mon téléphone avec un style cyberpunk."</p>
+                    <div class="data-card-expanded-content">
+                        <div class="expanded-details">
+                            <div class="expanded-detail">
+                                <h4>Problématique</h4>
+                                <p>Tu as une idée géniale mais pas les compétences en modélisation 3D ?</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button
-                            class="close-card"
-                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                            aria-label="Fermer la carte"
-                        >
-                            &times;
-                        </button>
-                        <div class="data-card-content">
-                            <h3>2. L'IA Crée</h3>
-                            <p>Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes.</p>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <div class="expanded-detail">
-                                        <h4>Problématique</h4>
-                                        <p>La modélisation 3D est longue et technique ?</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Solution</h4>
-                                        <p>Notre IA génère un modèle 3D optimisé pour l'impression en quelques secondes.</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Résultat</h4>
-                                        <p>Un fichier prêt à imprimer, sans les heures de travail habituelles.</p>
-                                    </div>
-                                </div>
+                            <div class="expanded-detail">
+                                <h4>Solution</h4>
+                                <p>Décris simplement ton objet en langage naturel. Notre IA comprend tes intentions.</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button
-                            class="close-card"
-                            onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                            aria-label="Fermer la carte"
-                        >
-                            &times;
-                        </button>
-                        <div class="data-card-content">
-                            <h3>3. Recevez</h3>
-                            <p>Nous imprimons votre création en 3D et vous la livrons directement chez vous.</p>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <div class="expanded-detail">
-                                        <h4>Problématique</h4>
-                                        <p>Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ?</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Solution</h4>
-                                        <p>Nous imprimons ton objet avec des matériaux de qualité et te l'expédions.</p>
-                                    </div>
-                                    <div class="expanded-detail">
-                                        <h4>Résultat</h4>
-                                        <p>Ton idée matérialisée, livrée directement chez toi.</p>
-                                    </div>
-                                </div>
+                            <div class="expanded-detail">
+                                <h4>Résultat</h4>
+                                <p>Ton concept prend forme, sans effort ni logiciel complexe.</p>
+                            </div>
+                            <div class="expanded-detail">
+                                <h4>Cas d'usages</h4>
+                                <p>Créez des cadeaux personnalisés, figurines uniques, objets pour anniversaires, ou toute autre idée sur mesure. Idéal pour le custom et les projets spéciaux.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <svg class="scroll-arrow" viewBox="0 0 24 24">
-                    <path d="M7 10l5 5 5-5z"/>
-                </svg>
-            </div>
-        </section>
-
-        <!-- Section Tarifs -->
-        <section id="saas-pricing" class="section" data-section="2">
-            <div class="section-content">
-                <h2>Nos Formules</h2>
-                <div class="data-viz">
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)" aria-label="Fermer la carte">&times;</button>
-                        <div class="data-card-content">
-                            <h3>Modélisation IA</h3>
-                            <p style="font-size: 2rem; font-weight: bold;">29,90€</p>
-                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
-                                <li>Génération 3D par IA</li>
-                                <li>Idéal pour un essai rapide</li>
-                                <li>Accès immédiat</li>
-                            </ul>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <h4>Processus IA</h4>
-                                    <div class="workflow">
-                                        <div class="workflow-step">
-                                            <p>Votre Idée</p>
-                                            <span>(Texte)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>IA de PrintGenie</p>
-                                            <span>(Génération)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Modèle 3D</p>
-                                            <span>(Fichier .stl)</span>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="data-card" onclick="toggleCard(this)">
+                <button
+                    class="close-card"
+                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                    aria-label="Fermer la carte"
+                >
+                    &times;
+                </button>
+                <div class="data-card-content">
+                    <h3>2. L'IA Crée</h3>
+                    <p>Notre intelligence artificielle génère un modèle 3D parfait en quelques secondes.</p>
+                    <div class="data-card-expanded-content">
+                        <div class="expanded-details">
+                            <div class="expanded-detail">
+                                <h4>Problématique</h4>
+                                <p>La modélisation 3D est longue et technique ?</p>
+                            </div>
+                            <div class="expanded-detail">
+                                <h4>Solution</h4>
+                                <p>Notre IA génère un modèle 3D optimisé pour l'impression en quelques secondes.</p>
+                            </div>
+                            <div class="expanded-detail">
+                                <h4>Résultat</h4>
+                                <p>Un fichier prêt à imprimer, sans les heures de travail habituelles.</p>
                             </div>
                         </div>
-                        <a href="#" class="cta-button" style="margin-top: 1.5rem;">Choisir l'IA</a>
-                    </div>
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)" aria-label="Fermer la carte">&times;</button>
-                        <div class="data-card-content">
-                            <h3>Modélisation Assistée</h3>
-                            <p style="font-size: 2rem; font-weight: bold;">99,90€</p>
-                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
-                                <li>Génération 3D par IA + Retouche Humaine</li>
-                                <li>Idéal pour des projets complexes</li>
-                                <li>Support personnalisé</li>
-                            </ul>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <h4>Processus Assisté</h4>
-                                    <div class="workflow">
-                                        <div class="workflow-step">
-                                            <p>Votre Idée</p>
-                                            <span>(Texte)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>IA de PrintGenie</p>
-                                            <span>(Génération)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Expert 3D</p>
-                                            <span>(Retouche)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Modèle 3D Final</p>
-                                            <span>(Qualité Pro)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="cta-button" style="margin-top: 1.5rem;">Choisir l'Assistance</a>
-                    </div>
-                    <div class="data-card" onclick="toggleCard(this)">
-                        <button class="close-card" onclick="event.stopPropagation(); closeCard(this.parentElement)" aria-label="Fermer la carte">&times;</button>
-                        <div class="data-card-content">
-                            <h3>Offre Pro</h3>
-                            <p style="font-size: 2rem; font-weight: bold;">Sur mesure</p>
-                            <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem;">
-                                <li>Volume élevé</li>
-                                <li>Fonctionnalités personnalisées</li>
-                                <li>Support dédié</li>
-                            </ul>
-                            <div class="data-card-expanded-content">
-                                <div class="expanded-details">
-                                    <h4>Processus Pro</h4>
-                                    <div class="workflow">
-                                        <div class="workflow-step">
-                                            <p>Consultation</p>
-                                            <span>(Vos Besoins)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Développement</p>
-                                            <span>(Sur Mesure)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Production</p>
-                                            <span>(Volume)</span>
-                                        </div>
-                                        <div class="workflow-arrow">&rarr;</div>
-                                        <div class="workflow-step">
-                                            <p>Support</p>
-                                            <span>(Dédié)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="cta-button" style="margin-top: 1.5rem;">Demander un devis</a>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <svg class="scroll-arrow" viewBox="0 0 24 24">
-                    <path d="M7 10l5 5 5-5z"/>
-                </svg
+            <div class="data-card" onclick="toggleCard(this)">
+                <button
+                    class="close-card"
+                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                    aria-label="Fermer la carte"
+                >
+                    &times;
+                </button>
+                <div class="data-card-content">
+                    <h3>3. Recevez</h3>
+                    <p>Nous imprimons votre création en 3D et vous la livrons directement chez vous.</p>
+                    <div class="data-card-expanded-content">
+                        <div class="expanded-details">
+                            <div class="expanded-detail">
+                                <h4>Problématique</h4>
+                                <p>Tu n'as pas d'imprimante 3D ou tu ne sais pas l'utiliser ?</p>
+                            </div>
+                            <div class="expanded-detail">
+                                <h4>Solution</h4>
+                                <p>Nous imprimons ton objet avec des matériaux de qualité et te l'expédions.</p>
+                            </div>
+                            <div class="expanded-detail">
+                                <h4>Résultat</h4>
+                                <p>Ton idée matérialisée, livrée directement chez toi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <svg class="scroll-arrow" viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5z"/>
+        </svg>
+    </div>
+</section>
 
-        <!-- Shop Preview Section -->
+<!-- Section Tarifs -->
+<section id="saas-pricing" class="section" data-section="2" style="overflow: visible;">
+    <div class="section-content">
+        <h2>Nos Offres</h2>
+        <p>
+            Achetez des jetons et utilisez-les pour donner vie à vos idées.
+        </p>
+        <div class="data-viz" style="overflow: visible;">
+            <!-- Pack Essentiel -->
+            <div class="data-card" style="text-align: center;">
+                <div class="data-card-content">
+                    <h3>Pack Essentiel</h3>
+                    <p style="font-size: 2rem; font-weight: bold;">30€</p>
+                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
+                        <li><strong>3 Jetons</strong> à utiliser librement</li>
+                        <li><strong>+10 Générations IA</strong> offertes</li>
+                        <li>Idéal pour démarrer</li>
+                    </ul>
+                </div>
+                <a href="#" class="cta-button" style="margin-top: 1.5rem;" aria-label="Acheter le Pack Essentiel">Commander</a>
+            </div>
+
+            <!-- Pack Créateur -->
+            <div class="data-card" style="transform: scale(1.05); border-color: #4a90e2; text-align: center; position: relative; padding-top: 30px; overflow: visible;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #4a90e2; color: white; padding: 5px 15px; border-radius: 15px; font-size: 0.9rem;">
+                    Populaire
+                </div>
+                <div class="data-card-content">
+                    <h3>Pack Créateur</h3>
+                    <p style="font-size: 2rem; font-weight: bold;">100€</p>
+                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
+                        <li><strong>11 Jetons</strong> (10 + 1 offert)</li>
+                        <li>Parfait pour les projets ambitieux</li>
+                        <li>Flexibilité maximale</li>
+                    </ul>
+                </div>
+                <a href="#" class="cta-button" style="margin-top: 1.5rem; background-color: #4a90e2;" aria-label="Acheter le Pack Créateur">Commander</a>
+            </div>
+
+            <!-- Offre Entreprise -->
+            <div class="data-card">
+                <div class="data-card-content">
+                    <h3>Offre Entreprise</h3>
+                    <p style="font-size: 2rem; font-weight: bold;">Sur Mesure</p>
+                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
+                        <li>Volume de jetons personnalisé</li>
+                        <li>Support prioritaire</li>
+                        <li>Solutions et intégrations dédiées</li>
+                    </ul>
+                </div>
+                <a href="#contact-products" class="cta-button" style="margin-top: 1.5rem;">Nous Contacter</a>
+            </div>
+        </div>
+
+        <!-- Utilisation des jetons -->
+        <div style="margin-top: 4rem; text-align: center;">
+            <h3 style="margin-bottom: 1.5rem;">À quoi servent vos jetons ?</h3>
+            <div class="workflow" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="workflow-step">
+                    <p>Génération IA</p>
+                    <span style="font-size: 1.5rem; color: white; font-weight: bold;">0.01 Jeton</span>
+                </div>
+                <div class="workflow-step">
+                    <p>Impression 3D</p>
+                    <span style="font-size: 1.5rem; color: white; font-weight: bold;">3 Jetons</span>
+                </div>
+                <div class="workflow-step">
+                    <p>Assistance Design</p>
+                    <span style="font-size: 1.5rem; color: white; font-weight: bold;">Sur Devis</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <svg class="scroll-arrow" viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5z"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Shop Preview Section -->
 <section class="section shop-preview" data-section="3">
     <div class="section-content">
         <h2>Découvrez notre boutique</h2>
@@ -326,76 +273,52 @@
     </div>
 </section>
 
-        <!-- Ferme Section (simplified) -->
-        <section class="section" data-section="4" id="ferme-section">
-            <div class="section-content">
-                <h2>Notre Ferme</h2>
-                <p>Découvrez notre projet de production locale et rejoignez l'aventure de la fabrication additive.</p>
-                <div class="cta-container" style="margin-top: 2rem;">
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_PAYPAL_BUTTON_ID" class="cta-button" target="_blank">Soutenir l'Aventure !</a>
+<!-- Contact Section -->
+<section class="section" data-section="5" id="contact-products">
+    <div class="section-content">
+        <h2>Contactez GPT 3D Printer</h2>
+        <div class="contact-wrapper">
+            <div class="contact-text">
+                <p>
+                    Pour toute question concernant nos services d'impression 3D, n'hésitez pas à nous contacter.
+                </p>
+            </div>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name" class="sr-only">Votre nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom" />
                 </div>
-                <p style="margin-top: 1rem;">Votre soutien est essentiel. Chaque contribution nous rapproche de notre objectif. Ensemble, construisons l'avenir de la production locale !</p>
-            </div>
-            <div class="scroll-indicator">
-                <svg class="scroll-arrow" viewBox="0 0 24 24">
-                    <path d="M7 10l5 5 5-5z"/>
-                </svg>
-            </div>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section class="section" data-section="5" id="contact-products">
-            <div class="section-content">
-                <h2>Contactez GPT 3D Printer</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-text">
-                        <p>
-                            Pour toute question concernant nos services d'impression 3D, n'hésitez pas à nous contacter.
-                        </p>
-                    </div>
-                    <form class="contact-form" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name" class="sr-only">Votre nom</label>
-                            <input type="text" id="name" name="name" required placeholder="Votre nom" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="sr-only">Votre email</label>
-                            <input type="email" id="email" name="email" required placeholder="Votre email" />
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="sr-only">Votre message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">Envoyer le message</button>
-                    </form>
+                <div class="form-group">
+                    <label for="email" class="sr-only">Votre email</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email" />
                 </div>
-            </div>
-        </section>
-
-        <!-- Footer Section (simplified for saas.html) -->
-        <footer class="site-footer">
-            <div class="footer-content">
-                <p>&copy; 2025 PrintGenie. Tous droits réservés.</p>
-                <div class="social-links">
-                    <a href="#">contact@printgenie.ai</a>
+                <div class="form-group">
+                    <label for="message" class="sr-only">Votre message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
                 </div>
-            </div>
-        </footer>
+                <button type="submit" class="cta-button">Envoyer le message</button>
+            </form>
+        </div>
+    </div>
+</section>
 
-    </div> <!-- End of .container -->
+<!-- Footer Section (simplified for saas.html) -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 PrintGenie. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#">contact@printgenie.ai</a>
+        </div>
+    </div>
+</footer>
 
-    <script src="../../common/scripts/main.js" defer></script>
-
-    <script src="products.js" defer></script>
-
-    
-
-    
-        <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
-            <svg viewBox="0 0 24 24">
-                <path d="M7 14l5-5 5 5z"/>
-            </svg>
-        </button>
-    </body>
+</div>
+<script src="../../common/scripts/main.js" defer></script>
+<script src="products.js" defer></script>
+<button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
+    <svg viewBox="0 0 24 24">
+        <path d="M7 14l5-5 5 5z"/>
+    </svg>
+</button>
+</body>
 </html>
