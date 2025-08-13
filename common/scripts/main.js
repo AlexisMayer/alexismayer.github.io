@@ -446,9 +446,11 @@ function initPredictionChart(card) {
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('pdf-upload');
     const fileInfo = document.querySelector('.file-info');
-    fileInput.addEventListener('change', () => {
-        fileInfo.textContent = fileInput.files.length > 0 ? `${fileInput.files.length} fichier(s) sélectionné(s).` : 'Aucun fichier sélectionné';
-    });
+    if (fileInput) {
+        fileInput.addEventListener('change', () => {
+            fileInfo.textContent = fileInput.files.length > 0 ? `${fileInput.files.length} fichier(s) sélectionné(s).` : 'Aucun fichier sélectionné';
+        });
+    }
 
     const chatInput = document.querySelector('.chat-input');
     const chatSendButton = document.querySelector('.chat-send-button');
@@ -456,7 +458,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chat-container');
 
     // Prevent card from closing when interacting with the chat
-    chatContainer.addEventListener('click', e => e.stopPropagation());
+    if (chatContainer) {
+        chatContainer.addEventListener('click', e => e.stopPropagation());
+    }
 
     const handleSendMessage = () => {
         const message = chatInput.value.trim();
@@ -478,8 +482,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    chatSendButton.addEventListener('click', handleSendMessage);
-    chatInput.addEventListener('keypress', e => e.key === 'Enter' && handleSendMessage());
+    if (chatSendButton && chatInput) {
+        chatSendButton.addEventListener('click', handleSendMessage);
+        chatInput.addEventListener('keypress', e => e.key === 'Enter' && handleSendMessage());
+    }
 });
 
 

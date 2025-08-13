@@ -5,43 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT 3D Printer - Service d'impression 3D</title>
     <link rel="stylesheet" href="../../common/styles/main.css">
-        <link rel="stylesheet" href="products.css">
-        <link rel="stylesheet" href="shop_preview.css">
-    <style>
-        .workflow {
-            display: grid;
-            /* Let the grid figure out the number of columns based on a min-width */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            align-items: center; /* Vertically center items in their row */
-            justify-items: center; /* Horizontally center content in its cell */
-            width: 100%;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-        }
-        .workflow-step {
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            /* No flex properties needed anymore */
-        }
-        .workflow-step p {
-            margin: 0;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .workflow-step span {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-        .workflow-arrow {
-            font-size: 2.5rem;
-            color: #ccc;
-        }
-    </style>
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
     <div class="scroll-progress"></div>
@@ -365,14 +329,12 @@
         <!-- Ferme Section (simplified) -->
         <section class="section" data-section="4" id="ferme-section">
             <div class="section-content">
-                <h2>Notre Ferme d'Imprimantes </h2>
+                <h2>Notre Ferme</h2>
                 <p>Découvrez notre projet de production locale et rejoignez l'aventure de la fabrication additive.</p>
-                <p>Nous avons démarré avec <strong>2 machines professionnelles</strong> (2500€ chacune) et visons <strong>20 machines en 2 ans</strong> pour décupler notre capacité et renforcer la production locale.</p>
                 <div class="cta-container" style="margin-top: 2rem;">
                     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_PAYPAL_BUTTON_ID" class="cta-button" target="_blank">Soutenir l'Aventure !</a>
                 </div>
                 <p style="margin-top: 1rem;">Votre soutien est essentiel. Chaque contribution nous rapproche de notre objectif. Ensemble, construisons l'avenir de la production locale !</p>
-                <p style="font-size: 0.9em; color: #ccc;">Veuillez noter que "YOUR_PAYPAL_BUTTON_ID" doit être remplacé par l'ID réel de votre bouton de donation PayPal.</p>
             </div>
             <div class="scroll-indicator">
                 <svg class="scroll-arrow" viewBox="0 0 24 24">
@@ -427,25 +389,9 @@
 
     <script src="products.js" defer></script>
 
-    <script src="shop_preview.js" defer></script>
+    
 
-    <script>
-        function toggleCard(card) {
-            card.classList.toggle('expanded');
-            const expandedContent = card.querySelector('.data-card-expanded-content');
-            if (card.classList.contains('expanded')) {
-                expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px';
-            } else {
-                expandedContent.style.maxHeight = '0';
-            }
-        }
-
-        function closeCard(card) {
-            card.classList.remove('expanded');
-            const expandedContent = card.querySelector('.data-card-expanded-content');
-            expandedContent.style.maxHeight = '0';
-        }
-    </script>
+    
         <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
             <svg viewBox="0 0 24 24">
                 <path d="M7 14l5-5 5 5z"/>
