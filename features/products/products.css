@@ -1,78 +1,10 @@
-
-.workflow {
-    display: grid;
-    /* Let the grid figure out the number of columns based on a min-width */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    align-items: center; /* Vertically center items in their row */
-    justify-items: center; /* Horizontally center content in its cell */
-    width: 100%;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-}
-.workflow-step {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-    /* No flex properties needed anymore */
-}
-.workflow-step p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.workflow-step span {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-.workflow-arrow {
-    font-size: 2.5rem;
-    color: #ccc;
-}
 /* Styles for the shop preview section */
-.shop-preview {
-    padding: 2rem 0;
-}
+/* These were removed in a previous step, but keeping the comment for context */
 
-.shop-preview h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.shop-preview .section-content {
-    padding-bottom: 4rem; /* Add space for the scroll indicator */
-}
-
-.product-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.product-card h3 {
-    margin: 0;
-    font-size: 1.2rem;
+/* Styles for the new token usage section */
+.data-card-content .price {
+    font-size: 1.5rem; /* From original inline style */
+    color: white; /* From original inline style */
+    font-weight: bold; /* From original inline style */
+    margin-top: 0.5rem; /* Add some spacing */
 }
