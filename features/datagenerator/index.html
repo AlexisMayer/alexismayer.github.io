@@ -1,299 +1,485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service d'enrichissement de données</title>
-    <link rel="stylesheet" href="../../common/styles/main.css">
-    <link rel="stylesheet" href="datagenerator.css">
-</head>
-<body>
-<header class="main-header">
-    <a href="../../index.html" class="cta-button header-login-button">Retour à l'accueil</a>
-    <a href="../../personal.html" class="cta-button header-login-button login-cta-button">Login</a>
-</header>
-<div class="scroll-progress"></div>
-<nav class="nav" aria-label="Navigation DataGenerator">
-    <button
-        class="nav-dot"
-        data-section="0"
-        aria-label="Aller à la section Accueil DataGenerator"
-    ></button>
-    <button
-        class="nav-dot"
-        data-section="1"
-        aria-label="Aller à la section Comment ça marche"
-    ></button>
-    <button
-        class="nav-dot"
-        data-section="2"
-        aria-label="Aller à la section Nos Formules"
-    ></button>
-    <button
-        class="nav-dot"
-        data-section="3"
-        aria-label="Aller à la section Cas d'usage"
-    ></button>
-    <button
-        class="nav-dot"
-        data-section="4"
-        aria-label="Aller à la section Contact"
-    ></button>
-</nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Service d'enrichissement de données</title>
+        <link rel="stylesheet" href="../../common/styles/main.css" />
+        <link rel="stylesheet" href="datagenerator.css" />
+    </head>
+    <body>
+        <header class="main-header">
+            <a href="../../index.html" class="cta-button header-login-button"
+                >Retour à l'accueil</a
+            >
+            <a
+                href="../user/index.html"
+                class="cta-button header-login-button login-cta-button"
+                >Login</a
+            >
+        </header>
+        <div class="scroll-progress"></div>
+        <nav class="nav" aria-label="Navigation DataGenerator">
+            <button
+                class="nav-dot"
+                data-section="0"
+                aria-label="Aller à la section Accueil DataGenerator"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="1"
+                aria-label="Aller à la section Comment ça marche"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="2"
+                aria-label="Aller à la section Nos Formules"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="3"
+                aria-label="Aller à la section Cas d'usage"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="4"
+                aria-label="Aller à la section Contact"
+            ></button>
+        </nav>
 
-<canvas class="bg-canvas"></canvas>
+        <canvas class="bg-canvas"></canvas>
 
-<div class="container">
-    <!-- Section Hero -->
-    <section id="saas-hero" class="hero" data-section="0">
-        <div class="hero-content">
-            <h1>DataGenerator</h1>
-            <p>Ne laissez plus de cases vides. Automatisez l'enrichissement de vos données.</p>
-            <div class="cta-container">
-                <a href="#contact-datagenerator" class="cta-button">Contact</a>
-            </div>
+        <div class="container">
+            <!-- Section Hero -->
+            <section id="saas-hero" class="hero" data-section="0">
+                <div class="hero-content">
+                    <h1>DataGenerator</h1>
+                    <p>
+                        Ne laissez plus de cases vides. Automatisez
+                        l'enrichissement de vos données.
+                    </p>
+                    <div class="cta-container">
+                        <a href="#contact-datagenerator" class="cta-button"
+                            >Contact</a
+                        >
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Section Showcase -->
+            <section id="saas-showcase" class="section" data-section="1">
+                <div class="section-content">
+                    <h2>Comment ça marche ?</h2>
+                    <div class="data-viz">
+                        <div class="data-card" onclick="toggleCard(this)">
+                            <button
+                                class="close-card"
+                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
+                            >
+                                &times;
+                            </button>
+                            <div class="data-card-content">
+                                <h3>1. Uploadez</h3>
+                                <p>
+                                    Déposez votre fichier Excel ou CSV en toute
+                                    sécurité sur notre plateforme.
+                                </p>
+                                <div class="data-card-expanded-content">
+                                    <div class="expanded-details">
+                                        <div class="expanded-detail">
+                                            <h4>Problématique</h4>
+                                            <p>
+                                                Vous avez un fichier avec des
+                                                informations manquantes ?
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Solution</h4>
+                                            <p>
+                                                Notre interface simple vous
+                                                permet de téléverser vos données
+                                                en un clic.
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Résultat</h4>
+                                            <p>
+                                                Votre fichier est prêt à être
+                                                traité par notre IA.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-card" onclick="toggleCard(this)">
+                            <button
+                                class="close-card"
+                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
+                            >
+                                &times;
+                            </button>
+                            <div class="data-card-content">
+                                <h3>2. Configurez</h3>
+                                <p>
+                                    Sélectionnez les colonnes à compléter et
+                                    laissez l'IA analyser les données.
+                                </p>
+                                <div class="data-card-expanded-content">
+                                    <div class="expanded-details">
+                                        <div class="expanded-detail">
+                                            <h4>Problématique</h4>
+                                            <p>
+                                                Comment indiquer à l'IA ce qu'il
+                                                faut chercher ?
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Solution</h4>
+                                            <p>
+                                                Cochez simplement les colonnes
+                                                que vous souhaitez enrichir.
+                                                L'IA comprend le contexte à
+                                                partir des données existantes.
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Résultat</h4>
+                                            <p>
+                                                Une prévisualisation du coût en
+                                                jetons et des données à générer.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-card" onclick="toggleCard(this)">
+                            <button
+                                class="close-card"
+                                onclick="event.stopPropagation(); closeCard(this.parentElement)"
+                                aria-label="Fermer la carte"
+                            >
+                                &times;
+                            </button>
+                            <div class="data-card-content">
+                                <h3>3. Téléchargez</h3>
+                                <p>
+                                    Recevez votre fichier complété avec des
+                                    données précises et pertinentes.
+                                </p>
+                                <div class="data-card-expanded-content">
+                                    <div class="expanded-details">
+                                        <div class="expanded-detail">
+                                            <h4>Problématique</h4>
+                                            <p>
+                                                Comment récupérer les données
+                                                une fois le travail terminé ?
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Solution</h4>
+                                            <p>
+                                                Téléchargez votre fichier au
+                                                même format (Excel/CSV), avec
+                                                les nouvelles données intégrées.
+                                            </p>
+                                        </div>
+                                        <div class="expanded-detail">
+                                            <h4>Résultat</h4>
+                                            <p>
+                                                Une base de données propre,
+                                                complète et prête à l'emploi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Section Tarifs -->
+            <section
+                id="saas-pricing"
+                class="section"
+                data-section="2"
+                style="overflow: visible"
+            >
+                <div class="section-content">
+                    <h2>Nos Formules</h2>
+                    <p>
+                        Achetez des jetons et utilisez-les pour enrichir vos
+                        bases de données.
+                    </p>
+                    <div class="data-viz" style="overflow: visible">
+                        <!-- Pack Essentiel -->
+                        <div class="data-card" style="text-align: center">
+                            <div class="data-card-content">
+                                <h3>Pack Essentiel</h3>
+                                <p style="font-size: 2rem; font-weight: bold">
+                                    30€
+                                </p>
+                                <ul
+                                    style="
+                                        list-style-position: inside;
+                                        padding-left: 1rem;
+                                        margin-top: 1rem;
+                                        text-align: left;
+                                    "
+                                >
+                                    <li>
+                                        <strong>3 Jetons</strong> à utiliser
+                                        librement
+                                    </li>
+                                    <li>
+                                        Jusqu'à <strong>100 000</strong> de
+                                        cellules
+                                    </li>
+                                    <li>Idéal pour démarrer</li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                class="cta-button"
+                                style="margin-top: 1.5rem"
+                                aria-label="Acheter le Pack Essentiel"
+                                >Commander</a
+                            >
+                        </div>
+
+                        <!-- Pack Créateur -->
+                        <div
+                            class="data-card"
+                            style="
+                                transform: scale(1.05);
+                                border-color: #4a90e2;
+                                text-align: center;
+                                position: relative;
+                                padding-top: 30px;
+                                overflow: visible;
+                            "
+                        >
+                            <div
+                                style="
+                                    position: absolute;
+                                    top: -15px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    background-color: #4a90e2;
+                                    color: white;
+                                    padding: 5px 15px;
+                                    border-radius: 15px;
+                                    font-size: 0.9rem;
+                                "
+                            >
+                                Populaire
+                            </div>
+                            <div class="data-card-content">
+                                <h3>Pack Pro</h3>
+                                <p style="font-size: 2rem; font-weight: bold">
+                                    100€
+                                </p>
+                                <ul
+                                    style="
+                                        list-style-position: inside;
+                                        padding-left: 1rem;
+                                        margin-top: 1rem;
+                                        text-align: left;
+                                    "
+                                >
+                                    <li>
+                                        <strong>10 Jetons</strong> (10 + 1
+                                        offerts)
+                                    </li>
+                                    <li>
+                                        Jusqu'à <strong>1 millions</strong> de
+                                        cellules
+                                    </li>
+                                    <li>Parfait pour les gros volumes</li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                class="cta-button"
+                                style="
+                                    margin-top: 1.5rem;
+                                    background-color: #4a90e2;
+                                "
+                                aria-label="Acheter le Pack Pro"
+                                >Commander</a
+                            >
+                        </div>
+
+                        <!-- Offre Entreprise -->
+                        <div class="data-card">
+                            <div class="data-card-content">
+                                <h3>Offre Entreprise</h3>
+                                <p style="font-size: 2rem; font-weight: bold">
+                                    Sur Mesure
+                                </p>
+                                <ul
+                                    style="
+                                        list-style-position: inside;
+                                        padding-left: 1rem;
+                                        margin-top: 1rem;
+                                        text-align: left;
+                                    "
+                                >
+                                    <li>Volume de jetons personnalisé</li>
+                                    <li>Support prioritaire</li>
+                                    <li>Solutions et intégrations dédiées</li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#contact-datagenerator"
+                                class="cta-button"
+                                style="margin-top: 1.5rem"
+                                >Nous Contacter</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="section" data-section="3">
+                <div class="section-content">
+                    <h2>Pour qui ? Cas d'usage</h2>
+                    <div class="data-viz">
+                        <div class="data-card">
+                            <h3>Marketeurs & Sales</h3>
+                            <p>
+                                Enrichissez vos listes de prospects avec des
+                                emails, numéros de téléphone, ou informations
+                                d'entreprise pour des campagnes plus efficaces.
+                            </p>
+                        </div>
+                        <div class="data-card">
+                            <h3>Data Analysts</h3>
+                            <p>
+                                Nettoyez et complétez vos datasets avant analyse
+                                pour obtenir des insights plus précis et
+                                fiables, sans passer des heures sur la
+                                préparation.
+                            </p>
+                        </div>
+                        <div class="data-card">
+                            <h3>Chefs de Projet</h3>
+                            <p>
+                                Obtenez rapidement des données de marché, des
+                                listes de fournisseurs potentiels ou des
+                                informations concurrentielles pour vos études.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section
+                class="section"
+                data-section="4"
+                id="contact-datagenerator"
+            >
+                <div class="section-content">
+                    <h2>Contactez DataGenerator</h2>
+                    <div class="contact-wrapper">
+                        <div class="contact-text">
+                            <p>
+                                Pour toute question concernant notre service
+                                d'enrichissement de données, n'hésitez pas à
+                                nous contacter.
+                            </p>
+                        </div>
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name" class="sr-only"
+                                    >Votre nom</label
+                                >
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="Votre nom"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only"
+                                    >Votre email</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="Votre email"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only"
+                                    >Votre message</label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    placeholder="Votre message"
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="site-footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 DataGenerator. Tous droits réservés.</p>
+                    <div class="social-links">
+                        <a href="#">contact@datagenerator.ai</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <div class="scroll-indicator">
-            <svg class="scroll-arrow" viewBox="0 0 24 24">
-                <path d="M7 10l5 5 5-5z"/>
+        <script src="../../common/scripts/main.js" defer></script>
+        <script src="datagenerator.js" defer></script>
+        <button
+            id="back-to-top"
+            class="back-to-top"
+            aria-label="Retour en haut de page"
+        >
+            <svg viewBox="0 0 24 24">
+                <path d="M7 14l5-5 5 5z" />
             </svg>
-        </div>
-    </section>
-
-<!-- Section Showcase -->
-<section id="saas-showcase" class="section" data-section="1">
-    <div class="section-content">
-        <h2>Comment ça marche ?</h2>
-        <div class="data-viz">
-            <div class="data-card" onclick="toggleCard(this)">
-                <button
-                    class="close-card"
-                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                    aria-label="Fermer la carte"
-                >
-                    &times;
-                </button>
-                <div class="data-card-content">
-                    <h3>1. Uploadez</h3>
-                    <p>Déposez votre fichier Excel ou CSV en toute sécurité sur notre plateforme.</p>
-                    <div class="data-card-expanded-content">
-                        <div class="expanded-details">
-                             <div class="expanded-detail">
-                                <h4>Problématique</h4>
-                                <p>Vous avez un fichier avec des informations manquantes ?</p>
-                            </div>
-                            <div class="expanded-detail">
-                                <h4>Solution</h4>
-                                <p>Notre interface simple vous permet de téléverser vos données en un clic.</p>
-                            </div>
-                            <div class="expanded-detail">
-                                <h4>Résultat</h4>
-                                <p>Votre fichier est prêt à être traité par notre IA.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="data-card" onclick="toggleCard(this)">
-                <button
-                    class="close-card"
-                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                    aria-label="Fermer la carte"
-                >
-                    &times;
-                </button>
-                <div class="data-card-content">
-                    <h3>2. Configurez</h3>
-                    <p>Sélectionnez les colonnes à compléter et laissez l'IA analyser les données.</p>
-                    <div class="data-card-expanded-content">
-                        <div class="expanded-details">
-                            <div class="expanded-detail">
-                                <h4>Problématique</h4>
-                                <p>Comment indiquer à l'IA ce qu'il faut chercher ?</p>
-                            </div>
-                            <div class="expanded-detail">
-                                <h4>Solution</h4>
-                                <p>Cochez simplement les colonnes que vous souhaitez enrichir. L'IA comprend le contexte à partir des données existantes.</p>
-                            </div>
-                             <div class="expanded-detail">
-                                <h4>Résultat</h4>
-                                <p>Une prévisualisation du coût en jetons et des données à générer.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="data-card" onclick="toggleCard(this)">
-                <button
-                    class="close-card"
-                    onclick="event.stopPropagation(); closeCard(this.parentElement)"
-                    aria-label="Fermer la carte"
-                >
-                    &times;
-                </button>
-                <div class="data-card-content">
-                    <h3>3. Téléchargez</h3>
-                    <p>Recevez votre fichier complété avec des données précises et pertinentes.</p>
-                    <div class="data-card-expanded-content">
-                        <div class="expanded-details">
-                            <div class="expanded-detail">
-                                <h4>Problématique</h4>
-                                <p>Comment récupérer les données une fois le travail terminé ?</p>
-                            </div>
-                            <div class="expanded-detail">
-                                <h4>Solution</h4>
-                                <p>Téléchargez votre fichier au même format (Excel/CSV), avec les nouvelles données intégrées.</p>
-                            </div>
-                            <div class="expanded-detail">
-                                <h4>Résultat</h4>
-                                <p>Une base de données propre, complète et prête à l'emploi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <svg class="scroll-arrow" viewBox="0 0 24 24">
-            <path d="M7 10l5 5 5-5z"/>
-        </svg>
-    </div>
-</section>
-
-<!-- Section Tarifs -->
-<section id="saas-pricing" class="section" data-section="2" style="overflow: visible;">
-    <div class="section-content">
-        <h2>Nos Formules</h2>
-        <p>
-            Achetez des jetons et utilisez-les pour enrichir vos bases de données.
-        </p>
-        <div class="data-viz" style="overflow: visible;">
-            <!-- Pack Essentiel -->
-            <div class="data-card" style="text-align: center;">
-                <div class="data-card-content">
-                    <h3>Pack Essentiel</h3>
-                    <p style="font-size: 2rem; font-weight: bold;">30€</p>
-                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
-                        <li><strong>3 Jetons</strong> à utiliser librement</li>
-                        <li>Jusqu'à <strong>100 000</strong> de cellules</li>
-                        <li>Idéal pour démarrer</li>
-                    </ul>
-                </div>
-                <a href="#" class="cta-button" style="margin-top: 1.5rem;" aria-label="Acheter le Pack Essentiel">Commander</a>
-            </div>
-
-            <!-- Pack Créateur -->
-            <div class="data-card" style="transform: scale(1.05); border-color: #4a90e2; text-align: center; position: relative; padding-top: 30px; overflow: visible;">
-                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #4a90e2; color: white; padding: 5px 15px; border-radius: 15px; font-size: 0.9rem;">
-                    Populaire
-                </div>
-                <div class="data-card-content">
-                    <h3>Pack Pro</h3>
-                    <p style="font-size: 2rem; font-weight: bold;">100€</p>
-                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
-                        <li><strong>10 Jetons</strong> (10 + 1 offerts)</li>
-                        <li>Jusqu'à <strong>1 millions</strong> de cellules</li>
-                        <li>Parfait pour les gros volumes</li>
-                    </ul>
-                </div>
-                <a href="#" class="cta-button" style="margin-top: 1.5rem; background-color: #4a90e2;" aria-label="Acheter le Pack Pro">Commander</a>
-            </div>
-
-            <!-- Offre Entreprise -->
-            <div class="data-card">
-                <div class="data-card-content">
-                    <h3>Offre Entreprise</h3>
-                    <p style="font-size: 2rem; font-weight: bold;">Sur Mesure</p>
-                    <ul style="list-style-position: inside; padding-left: 1rem; margin-top: 1rem; text-align: left;">
-                        <li>Volume de jetons personnalisé</li>
-                        <li>Support prioritaire</li>
-                        <li>Solutions et intégrations dédiées</li>
-                    </ul>
-                </div>
-                <a href="#contact-datagenerator" class="cta-button" style="margin-top: 1.5rem;">Nous Contacter</a>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <svg class="scroll-arrow" viewBox="0 0 24 24">
-            <path d="M7 10l5 5 5-5z"/>
-        </svg>
-    </div>
-</section>
-
-<!-- Use Cases Section -->
-<section class="section" data-section="3">
-    <div class="section-content">
-        <h2>Pour qui ? Cas d'usage</h2>
-        <div class="data-viz">
-            <div class="data-card">
-                <h3>Marketeurs & Sales</h3>
-                <p>Enrichissez vos listes de prospects avec des emails, numéros de téléphone, ou informations d'entreprise pour des campagnes plus efficaces.</p>
-            </div>
-            <div class="data-card">
-                <h3>Data Analysts</h3>
-                <p>Nettoyez et complétez vos datasets avant analyse pour obtenir des insights plus précis et fiables, sans passer des heures sur la préparation.</p>
-            </div>
-            <div class="data-card">
-                <h3>Chefs de Projet</h3>
-                <p>Obtenez rapidement des données de marché, des listes de fournisseurs potentiels ou des informations concurrentielles pour vos études.</p>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <svg class="scroll-arrow" viewBox="0 0 24 24">
-            <path d="M7 10l5 5 5-5z"/>
-        </svg>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="section" data-section="4" id="contact-datagenerator">
-    <div class="section-content">
-        <h2>Contactez DataGenerator</h2>
-        <div class="contact-wrapper">
-            <div class="contact-text">
-                <p>
-                    Pour toute question concernant notre service d'enrichissement de données, n'hésitez pas à nous contacter.
-                </p>
-            </div>
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name" class="sr-only">Votre nom</label>
-                    <input type="text" id="name" name="name" required placeholder="Votre nom" />
-                </div>
-                <div class="form-group">
-                    <label for="email" class="sr-only">Votre email</label>
-                    <input type="email" id="email" name="email" required placeholder="Votre email" />
-                </div>
-                <div class="form-group">
-                    <label for="message" class="sr-only">Votre message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
-                </div>
-                <button type="submit" class="cta-button">Envoyer le message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="site-footer">
-    <div class="footer-content">
-        <p>&copy; 2025 DataGenerator. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="#">contact@datagenerator.ai</a>
-        </div>
-    </div>
-</footer>
-
-</div>
-<script src="../../common/scripts/main.js" defer></script>
-<script src="datagenerator.js" defer></script>
-<button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
-    <svg viewBox="0 0 24 24">
-        <path d="M7 14l5-5 5 5z"/>
-    </svg>
-</button>
-</body>
+        </button>
+    </body>
 </html>
