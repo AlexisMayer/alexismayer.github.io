@@ -8,6 +8,10 @@
 
     </head>
     <body>
+        <header class="main-header">
+    <div></div> <!-- Empty div to push content to the right -->
+    <a href="personal.html" class="cta-button header-login-button login-cta-button">Login</a>
+</header>
         <div class="scroll-progress"></div>
 
         <nav class="nav" aria-label="Navigation CraftData Groupe">
@@ -56,6 +60,7 @@
                             <div class="dropdown-content">
                                 <a href="features/services/index.html">Développement Logiciel Data & IA</a>
                                 <a href="features/products/index.html">Impression 3D</a>
+                                <a href="features/datagenerator/index.html">Données Synthétiques</a>
                                 <a href="features/shop/index.html">Boutique</a>
                             </div>
                         </div>
@@ -103,6 +108,15 @@
                                 <h3>GPT 3D Printer</h3>
                                 <p>
                                     Notre startup innovante qui transforme vos idées en objets 3D réels grâce à l'IA.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="data-card data-card-badged" onclick="window.location.href='features/datagenerator/index.html';">
+                            <div class="badge badge-pro">Pro</div>
+                            <div class="data-card-content">
+                                <h3>DataGenerator</h3>
+                                <p>
+                                    Enrichissez et complétez vos données grâce à l'IA.
                                 </p>
                             </div>
                         </div>
@@ -168,24 +182,7 @@
 
         <script src="common/scripts/main.js" defer></script>
         <script src="common/scripts/search.js" defer></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const dropdownToggleButton = document.querySelector('.dropdown-toggle');
-                const nosEntitesSection = document.getElementById('nos-entites');
-
-                if (dropdownToggleButton && nosEntitesSection) {
-                    dropdownToggleButton.addEventListener('click', function(event) {
-                        event.preventDefault(); // Empêche l'action par défaut du bouton
-
-                        // Défilement vers la section
-                        nosEntitesSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    });
-                }
-            });
-        </script>
+        
     <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
             <svg viewBox="0 0 24 24">
                 <path d="M7 14l5-5 5 5z"/>

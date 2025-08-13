@@ -572,4 +572,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Set return_to parameter for login button
+    const loginButton = document.querySelector('.header-login-button[href*="personal.html"]');
+    if (loginButton) {
+        const currentPagePath = window.location.pathname;
+        const personalPagePath = loginButton.getAttribute('href');
+        
+        const returnToUrl = encodeURIComponent(currentPagePath);
+        
+        const separator = personalPagePath.includes('?') ? '&' : '?';
+        loginButton.href = `${personalPagePath}${separator}return_to=${returnToUrl}`;
+    }
 });

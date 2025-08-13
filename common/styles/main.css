@@ -939,44 +939,63 @@ body {
 
 /* Dropdown Content (the actual menu) */
 .dropdown-content {
-    /* display: none; */ /* Removed this line */
     position: absolute;
-    background-color: var(--color-bg); /* Dark background */
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 100; /* Above other content */
-    border-radius: var(--radius-detail); /* Rounded corners */
-    overflow: hidden; /* For rounded corners on links */
-    top: 100%; /* Position below the button */
-    bottom: auto; /* Remove bottom: 100% */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    margin-top: 0.5rem; /* Small gap below button */
-    margin-bottom: auto; /* Remove margin-bottom */
-    opacity: 0; /* Start hidden with opacity */
-    visibility: hidden; /* Hide from screen readers and interaction */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    background-color: #1c1c1c; /* Slightly lighter dark */
+    min-width: 240px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    border-radius: var(--radius-detail);
+    overflow: hidden;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-15px);
+    margin-top: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+    border: 1px solid var(--color-white-t-10);
+    pointer-events: none; /* Prevent interaction when hidden */
 }
+
+/* Invisible bridge for hover */
+.dropdown-container::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1rem; /* Should match the dropdown's margin-top */
+}
+
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: var(--color-text);
-    padding: 12px 16px;
+    color: var(--color-white-t-70);
+    padding: 14px 20px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
-    font-weight: 400; /* Less bold than buttons */
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-white-t-08);
 }
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: var(--color-white-t-05); /* Light hover effect */
-    color: var(--color-primary); /* Accent color on hover */
+    background-color: var(--color-primary-t-30);
+    color: var(--color-text);
+    transform: translateX(5px);
 }
 
-.dropdown-container:hover > .dropdown-content {
+.dropdown-container:hover .dropdown-content {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto; /* Allow interaction when visible */
 }
 
 /* Search Bar Styles */
@@ -1124,4 +1143,34 @@ body {
     width: 24px;
     height: 24px;
     fill: currentColor;
+}
+
+/* Main Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Align content to the left and right */
+    align-items: center;
+    background: rgba(10, 10, 10, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(5px);
+}
+
+.header-login-button {
+    /* Inherits from cta-button */
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+}
+
+.login-cta-button {
+    background: var(--color-accent);
+    color: var(--color-bg); /* Ensure text is visible on accent background */
+}
+
+.login-cta-button:hover {
+    box-shadow: 0 20px 40px var(--color-accent-t-20);
 }
