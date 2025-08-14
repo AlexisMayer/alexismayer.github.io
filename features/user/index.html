@@ -102,7 +102,9 @@
     </head>
     <body>
         <header class="main-header">
-            <a href="index.html" id="back-to-previous-page-button" class="cta-button header-login-button">Quitter</a>
+            <a href="index.html" id="back-to-previous-page-button" class="header-button" aria-label="Quitter">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </a>
         </header>
             <canvas class="bg-canvas"></canvas>
         <div class="personal-container">
@@ -131,6 +133,24 @@
 
         </div>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const backButton = document.getElementById('back-to-previous-page-button');
+                if (backButton) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const returnTo = urlParams.get('return_to');
+
+                    if (returnTo) {
+                        // The path is URL encoded, decode it for use in href
+                        backButton.href = decodeURIComponent(returnTo);
+                    } else {
+                        // Fallback to the main index page if no return_to is specified
+                        // The path is relative to the current file (user/index.html)
+                        backButton.href = '../../index.html';
+                    }
+                }
+            });
+        </script>
         <script src="https://accounts.google.com/gsi/client" async defer></script>
         <script src="../../common/scripts/main.js" defer></script>
         <script src="../../common/scripts/auth.js" defer></script>

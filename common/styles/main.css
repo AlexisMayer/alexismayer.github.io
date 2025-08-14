@@ -1112,9 +1112,9 @@ body {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: var(--color-primary);
+    background: var(--color-white-t-08);
     color: var(--color-text);
-    border: none;
+    border: 1px solid var(--color-white-t-12);
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -1124,9 +1124,9 @@ body {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top.show {
@@ -1135,8 +1135,10 @@ body {
 }
 
 .back-to-top:hover {
-    background: var(--color-secondary);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--color-primary-t-30);
 }
 
 .back-to-top svg {
@@ -1173,4 +1175,73 @@ body {
 
 .login-cta-button:hover {
     box-shadow: 0 20px 40px var(--color-accent-t-20);
+}
+
+/* Header Buttons & Click-based Dropdown */
+.header-button {
+    background: var(--color-white-t-08); /* More subtle background */
+    border: 1px solid var(--color-white-t-12); /* Subtle border for definition */
+    color: var(--color-text);
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-round);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-button:hover {
+    background: var(--color-primary); /* Use primary color on hover */
+    border-color: var(--color-primary); /* Match border to background */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--color-primary-t-30); /* Use theme color for shadow */
+}
+
+.header-button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: calc(100% + 12px); /* Position below the button with a gap */
+    background-color: #1c1c1c; /* Match hover dropdown bg */
+    border-radius: var(--radius-detail);
+    padding: 0.5rem 0;
+    min-width: 180px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border: 1px solid var(--color-white-t-10);
+    overflow: hidden;
+}
+
+/* This class will be toggled by JS */
+.dropdown-menu.show {
+    display: block;
+    animation: fadeIn 0.2s ease-out; /* Re-use existing animation */
+}
+
+.dropdown-menu a {
+    color: var(--color-white-t-70);
+    padding: 12px 24px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: var(--transition-smooth);
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--color-primary-t-30);
+    color: var(--color-text);
 }

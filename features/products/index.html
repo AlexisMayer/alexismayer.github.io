@@ -9,14 +9,18 @@
     </head>
     <body>
         <header class="main-header">
-            <a href="../../index.html" class="cta-button header-login-button"
-                >Retour à l'accueil</a
-            >
-            <a
-                href="../user/index.html"
-                class="cta-button header-login-button login-cta-button"
-                >Login</a
-            >
+            <a href="../../index.html" class="header-button" aria-label="Retour à l'accueil">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </a>
+            <div class="dropdown">
+                <button class="header-button dropdown-toggle" aria-label="Menu utilisateur">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="../user/index.html">Se connecter</a>
+                    <a href="#contact-products">Contact</a>
+                </div>
+            </div>
         </header>
         <div class="scroll-progress"></div>
         <nav class="nav" aria-label="Navigation PrintGenie">
@@ -248,9 +252,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="text-align: center; margin-top: 2rem">
-                    <a href="../shop/index.html" class="cta-button">Visiter la boutique</a>
+                        <div class="cta-buttons-container">
+                            <a href="../shop/index.html" class="cta-button cta-button-secondary">Jetons</a>
+                            <button id="show-gallery-btn" class="cta-button">Voir nos créations</button>
+                        </div>
+                    </div>
                 </div>
+            </section>
+
+            <div id="product-gallery" class="gallery-overlay" style="display: none;">
+                <button id="close-gallery-btn" class="close-gallery-btn">&times;</button>
+                <div class="gallery-content">
+                    <h2>Nos Créations</h2>
+                    <div id="gallery-images" class="gallery-images">
+                        <!-- Les images seront chargées ici par JavaScript -->
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div> <!-- Closing section-content -->
                 
@@ -262,7 +280,7 @@
             </section>
 
             <!-- Contact Section -->
-            <section class="section" data-section="4" id="contact-products">
+            <section class="section" data-section="3" id="contact-products">
                 <div class="section-content">
                     <h2>Contactez GPT 3D Printer</h2>
                     <div class="contact-wrapper">

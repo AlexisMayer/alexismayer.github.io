@@ -8,3 +8,72 @@
     font-weight: bold; /* From original inline style */
     margin-top: 0.5rem; /* Add some spacing */
 }
+
+/* Product Gallery Styles */
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery-content {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.close-gallery-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.cta-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button.cta-button-secondary {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.cta-button.cta-button-secondary:hover {
+    background-color: #007bff;
+    color: white;
+}

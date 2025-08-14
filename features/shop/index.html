@@ -9,14 +9,18 @@
     </head>
     <body>
         <header class="main-header">
-            <a href="../../index.html" class="cta-button header-login-button"
-                >Retour à l'accueil</a
-            >
-            <a
-                href="../user/index.html"
-                class="cta-button header-login-button login-cta-button"
-                >Login</a
-            >
+            <a href="../../index.html" class="header-button" aria-label="Retour à l'accueil">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </a>
+            <div class="dropdown">
+                <button class="header-button dropdown-toggle" aria-label="Menu utilisateur">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="../user/index.html">Se connecter</a>
+                    <a href="#contact-shop">Contact</a>
+                </div>
+            </div>
         </header>
 
         <div class="scroll-progress"></div>

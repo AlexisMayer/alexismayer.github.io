@@ -574,14 +574,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Set return_to parameter for login button
-    const loginButton = document.querySelector('.header-login-button[href*="personal.html"]');
-    if (loginButton) {
-        const currentPagePath = window.location.pathname;
-        const personalPagePath = loginButton.getAttribute('href');
-        
-        const returnToUrl = encodeURIComponent(currentPagePath);
-        
-        const separator = personalPagePath.includes('?') ? '&' : '?';
-        loginButton.href = `${personalPagePath}${separator}return_to=${returnToUrl}`;
+    const loginLinks = document.querySelectorAll('a[href*="features/user/index.html"]');
+    loginLinks.forEach(loginLink => {
+        if (loginLink) {
+            // Avoid adding the parameter to the link on the user page itself
+            if (window.location.pathname.includes('features/user/index.html')) return;
+
+            const currentPagePath = window.location.pathname + window.location.search;
+            const userPagePath = loginLink.getAttribute('href');
+            
+            const returnToUrl = encodeURIComponent(currentPagePath);
+            
+            const separator = userPagePath.includes('?') ? '&' : '?';
+            loginLink.href = `${userPagePath}${separator}return_to=${returnToUrl}`;
+        }
+    });
+});
+
+// --- HEADER DROPDOWN MENU (CLICK-BASED) ---
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownToggle = document.querySelector('.dropdown .dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown .dropdown-menu');
+
+    if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', function (event) {
+            event.stopPropagation(); // Empêche le clic de se propager à la fenêtre
+            dropdownMenu.classList.toggle('show');
+        });
     }
+
+    // Ajoute un écouteur sur la fenêtre pour fermer le menu en cliquant à l'extérieur
+    window.addEventListener('click', function (event) {
+        const dropdownMenu = document.querySelector('.dropdown .dropdown-menu');
+        // Si le menu déroulant existe, est affiché, et que le clic est en dehors de celui-ci
+        if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+            const dropdown = dropdownMenu.closest('.dropdown');
+            if (dropdown && !dropdown.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        }
+    });
 });
