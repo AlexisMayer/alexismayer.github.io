@@ -8,17 +8,47 @@
         <link rel="stylesheet" href="services.css" />
     </head>
     <body>
-<header class="main-header">
+    <header class="main-header">
     <a href="../../index.html" class="header-button" aria-label="Retour à l'accueil">
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
     </a>
     <div class="dropdown">
-        <button class="header-button dropdown-toggle" aria-label="Menu utilisateur">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg>
+        <button
+            class="header-button dropdown-toggle"
+            aria-label="Menu utilisateur"
+        >
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="19" cy="12" r="2"></circle>
+                <circle cx="5" cy="12" r="2"></circle>
+            </svg>
         </button>
         <div class="dropdown-menu">
-            <a href="features/services/index.html">Logiciel Data / IA</a>
-            <hr>
+            <button id="theme-toggle" aria-label="Basculer le thème clair/sombre" class="dropdown-item">
+                <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span>Thème</span>
+            </button>
+            <hr />
+            <a href="#missions"
+                >Notre mission</a
+            >
+            <a href="#solutions"
+                >Nos solutions</a
+            >
+            <a href="#exemples"
+                >Études de cas</a
+            >
+            <hr />
             <a href="#contact-group">Contact</a>
         </div>
     </div>
@@ -75,7 +105,7 @@
             </section>
 
             <!-- Vision Section -->
-            <section class="section" data-section="1">
+            <section class="section" data-section="1" id="missions">
                 <div class="section-content">
                     <h2>Notre mission</h2>
                     <p>
@@ -260,7 +290,7 @@
             </section>
 
             <!-- Services Section -->
-            <section class="section" data-section="2">
+            <section class="section" data-section="2" id="solutions">
                 <div class="section-content">
                     <h2>Nos Solutions</h2>
                     <p>
@@ -443,7 +473,7 @@
             </section>
 
             <!-- Case Studies Section -->
-            <section class="section" data-section="3">
+            <section class="section" data-section="3" id="exemples">
                 <div class="section-content">
                     <h2>Études de cas</h2>
                     <p>

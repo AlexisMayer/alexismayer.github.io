@@ -8,7 +8,7 @@ This project uses a feature-oriented directory structure:
 
   - `index.html`: The main entry point of the website.
   - `common/`: Global styles and scripts.
-  - `features/`: Contains subdirectories for each distinct feature (e.g., `products`, `services`). Each feature directory co-locates its HTML, CSS, JS, and specific assets.
+  - `features/`: Contains subdirectories for each distinct feature (e.g., `services`). Each feature directory co-locates its HTML, CSS, JS, and specific assets.
   - `assets/`: Global assets like images or fonts not tied to a specific feature.
 
 ## Getting Started
