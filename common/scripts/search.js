@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const searchData = [
     {
-      keyword: "Service d'impression 3D par IA",
-      url: "features/products/index.html",
-      content:
-        "Donnez vie à vos idées. Décrivez simplement votre concept, notre IA génère le modèle 3D et nous l'imprimons pour vous. De l'imagination à l'objet réel, sans effort.",
-    },
-    {
       keyword: "Solutions Data & IA sur mesure",
       url: "features/services/index.html",
       content:
@@ -28,10 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "Notre mission est de bâtir un écosystème d'innovation en Data et IA. Nous unissons des expertises pour développer des solutions de pointe et propulser des projets à fort potentiel.",
     },
     {
-      keyword: "Les entités du groupe CraftData",
-      url: "#nos-entites",
-      content:
-        "Découvrez les entités qui forment notre écosystème : CraftData Services pour les solutions d'entreprise, PrintGenie pour l'impression 3D par IA, et notre Boutique de créations uniques.",
+      keyword: "Les services du groupe CraftData",
+      url: "#nos-services",
+      content: "Découvrez nos services pour les solutions d'entreprise.",
     },
     {
       keyword: "Accueil - CraftData",

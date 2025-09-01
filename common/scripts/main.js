@@ -2,28 +2,27 @@
 // Throttle function: limits how often a function can be called.
 function throttle(func, limit) {
   let inThrottle;
-  return function() {
+  return function () {
     const args = arguments;
     const context = this;
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => (inThrottle = false), limit);
     }
-  }
+  };
 }
 
 // Debounce function: delays invoking a function until after a certain time has passed without it being called.
 function debounce(func, delay) {
   let timeout;
-  return function() {
+  return function () {
     const context = this;
     const args = arguments;
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(context, args), delay);
   };
 }
-
 
 // --- SCROLL PROGRESS BAR ---
 const scrollProgress = document.querySelector(".scroll-progress");
@@ -35,7 +34,6 @@ const handleScroll = () => {
 };
 window.addEventListener("scroll", throttle(handleScroll, 10));
 
-
 // --- ANIMATED BACKGROUND CANVAS ---
 const canvas = document.querySelector(".bg-canvas");
 const ctx = canvas.getContext("2d");
@@ -46,7 +44,6 @@ function resizeCanvas() {
 }
 resizeCanvas();
 window.addEventListener("resize", debounce(resizeCanvas, 250));
-
 
 // --- PARTICLES SYSTEM ---
 const particles = [];
@@ -91,7 +88,8 @@ function animateParticles() {
       const dy = particle.y - otherParticle.y;
       const distSquared = dx * dx + dy * dy;
 
-      if (distSquared < 14400) { // 120 * 120
+      if (distSquared < 14400) {
+        // 120 * 120
         const distance = Math.sqrt(distSquared);
         const opacity = (1 - distance / 120) * 0.3;
         const gradient = ctx.createLinearGradient(
@@ -117,7 +115,6 @@ function animateParticles() {
 }
 animateParticles();
 
-
 // --- SCROLL ANIMATIONS ---
 const observerOptions = {
   threshold: 0.3,
@@ -138,7 +135,6 @@ document.querySelectorAll(".section").forEach((section) => {
   }
 });
 
-
 // --- NAVIGATION DOTS ---
 const navDots = document.querySelectorAll(".nav-dot");
 const sections = document.querySelectorAll("section[data-section]");
@@ -149,7 +145,10 @@ const updateActiveDot = () => {
     const rect = section.getBoundingClientRect();
     // A section is active if its top is within the top half of the viewport
     // or if it's the last section and scrolled to the bottom
-    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+    if (
+      rect.top <= window.innerHeight / 2 &&
+      rect.bottom >= window.innerHeight / 2
+    ) {
       currentSectionIndex = section.getAttribute("data-section");
     }
   });
@@ -157,12 +156,12 @@ const updateActiveDot = () => {
   // Fallback for the very last section if it's not perfectly centered
   const lastSection = sections[sections.length - 1];
   if (lastSection) {
-      const lastRect = lastSection.getBoundingClientRect();
-      if (lastRect.bottom <= window.innerHeight + 10 && lastRect.bottom >= 0) { // If bottom of last section is visible
-          currentSectionIndex = lastSection.getAttribute("data-section");
-      }
+    const lastRect = lastSection.getBoundingClientRect();
+    if (lastRect.bottom <= window.innerHeight + 10 && lastRect.bottom >= 0) {
+      // If bottom of last section is visible
+      currentSectionIndex = lastSection.getAttribute("data-section");
+    }
   }
-
 
   navDots.forEach((dot) => {
     dot.classList.toggle(
@@ -185,26 +184,25 @@ navDots.forEach((dot) => {
   });
 });
 
-
 // --- ROTATING TEXT EFFECT ---
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.style.scrollSnapType = 'y mandatory';
-  
+  document.documentElement.style.scrollSnapType = "y mandatory";
+
   const rotatingText = document.getElementById("rotating-text");
   if (!rotatingText) return;
 
-  const pageH1 = document.querySelector('h1')?.textContent;
+  const pageH1 = document.querySelector("h1")?.textContent;
   let phrases = [];
 
-  if (pageH1 === 'CraftData') {
+  if (pageH1 === "CraftData") {
     phrases = [
-      "Développement sur mesure, IA et impression 3D.",
+      "Développement sur mesure, Data et IA.",
       "Solutions Data, Machine Learning et fabrication additive.",
       "Experts en Large Language Models (LLM) et RAG.",
       "Du concept à l'objet : nous donnons vie à vos idées.",
       "L'innovation au croisement du software et de la matière.",
     ];
-  } else if (pageH1 === 'Logiciel sur mesure') {
+  } else if (pageH1 === "Logiciel sur mesure") {
     phrases = [
       "Transformons vos données en levier de performance",
       "Des solutions sur mesure, conçues pour vos enjeux métier",
@@ -231,387 +229,426 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 });
 
-
 // --- CARD EXPANSION & CAROUSEL LOGIC ---
 let activeCarousel = null;
 
 function toggleCard(card) {
-    const isExpanded = card.classList.contains("expanded");
-    const html = document.documentElement;
+  const isExpanded = card.classList.contains("expanded");
+  const html = document.documentElement;
 
-    document.querySelectorAll(".data-card.expanded").forEach(c => {
-        if (c !== card) {
-            closeCard(c, false);
-        }
-    });
-
-    const expandedContent = card.querySelector('.data-card-expanded-content');
-    if (!expandedContent) return;
-
-    if (!isExpanded) {
-        const section = card.closest(".section");
-        if (!section) return;
-
-        html.style.scrollSnapType = 'none';
-
-        card.classList.add("expanded");
-        section.querySelectorAll(".data-card").forEach(otherCard => {
-            if (otherCard !== card) {
-                otherCard.classList.add("collapsed");
-            }
-        });
-
-        // Set height dynamically
-        expandedContent.style.maxHeight = expandedContent.scrollHeight + "px";
-
-        if (card.id === 'rag-use-case-card') {
-            initCarousel(card);
-        } else if (card.id === 'prediction-use-case-card') {
-            initPredictionChart(card);
-        }
-
-        setTimeout(() => {
-            const isMobile = window.innerWidth <= 768;
-            if (isMobile) {
-                card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }, 300);
-
-    } else {
-        closeCard(card, true);
+  document.querySelectorAll(".data-card.expanded").forEach((c) => {
+    if (c !== card) {
+      closeCard(c, false);
     }
-}
+  });
 
-function closeCard(card, reEnableSnap = true) {
+  const expandedContent = card.querySelector(".data-card-expanded-content");
+  if (!expandedContent) return;
+
+  if (!isExpanded) {
     const section = card.closest(".section");
     if (!section) return;
 
-    const expandedContent = card.querySelector('.data-card-expanded-content');
-    if (expandedContent) {
-        expandedContent.style.maxHeight = null;
-    }
+    html.style.scrollSnapType = "none";
 
-    card.classList.remove("expanded");
-
-    section.querySelectorAll(".data-card.collapsed").forEach(otherCard => {
-        otherCard.classList.remove("collapsed");
+    card.classList.add("expanded");
+    section.querySelectorAll(".data-card").forEach((otherCard) => {
+      if (otherCard !== card) {
+        otherCard.classList.add("collapsed");
+      }
     });
 
-    if (reEnableSnap) {
-        document.documentElement.style.scrollSnapType = 'y mandatory';
+    // Set height dynamically
+    expandedContent.style.maxHeight = expandedContent.scrollHeight + "px";
+
+    if (card.id === "rag-use-case-card") {
+      initCarousel(card);
+    } else if (card.id === "prediction-use-case-card") {
+      initPredictionChart(card);
     }
+
+    setTimeout(() => {
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        card.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 300);
+  } else {
+    closeCard(card, true);
+  }
+}
+
+function closeCard(card, reEnableSnap = true) {
+  const section = card.closest(".section");
+  if (!section) return;
+
+  const expandedContent = card.querySelector(".data-card-expanded-content");
+  if (expandedContent) {
+    expandedContent.style.maxHeight = null;
+  }
+
+  card.classList.remove("expanded");
+
+  section.querySelectorAll(".data-card.collapsed").forEach((otherCard) => {
+    otherCard.classList.remove("collapsed");
+  });
+
+  if (reEnableSnap) {
+    document.documentElement.style.scrollSnapType = "y mandatory";
+  }
 }
 
 function initCarousel(card) {
-    const track = card.querySelector('.carousel-track');
-    if (!track) return;
+  const track = card.querySelector(".carousel-track");
+  if (!track) return;
 
-    const slides = Array.from(track.children);
-    const nextButton = card.querySelector('.carousel-arrow.next');
-    const prevButton = card.querySelector('.carousel-arrow.prev');
-    let slideWidth = slides[0].getBoundingClientRect().width;
-    let currentSlide = 0;
+  const slides = Array.from(track.children);
+  const nextButton = card.querySelector(".carousel-arrow.next");
+  const prevButton = card.querySelector(".carousel-arrow.prev");
+  let slideWidth = slides[0].getBoundingClientRect().width;
+  let currentSlide = 0;
 
-    const moveToSlide = (targetIndex) => {
-        if (targetIndex < 0 || targetIndex >= slides.length) return;
+  const moveToSlide = (targetIndex) => {
+    if (targetIndex < 0 || targetIndex >= slides.length) return;
 
-        slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform = 'translateX(-' + targetIndex * slideWidth + 'px)';
+    slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = "translateX(-" + targetIndex * slideWidth + "px)";
 
-        slides[currentSlide].classList.remove('active');
-        slides[targetIndex].classList.add('active');
-        currentSlide = targetIndex;
+    slides[currentSlide].classList.remove("active");
+    slides[targetIndex].classList.add("active");
+    currentSlide = targetIndex;
 
-        updateArrows();
-        handleSlideChange(slides[targetIndex]);
+    updateArrows();
+    handleSlideChange(slides[targetIndex]);
+  };
+
+  const updateArrows = () => {
+    prevButton.style.display = currentSlide === 0 ? "none" : "block";
+    nextButton.style.display =
+      currentSlide === slides.length - 1 ? "none" : "block";
+  };
+
+  nextButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    moveToSlide(currentSlide + 1);
+  });
+  prevButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    moveToSlide(currentSlide - 1);
+  });
+
+  // Swipe functionality
+  let touchStartX = 0;
+  track.addEventListener(
+    "touchstart",
+    (e) => (touchStartX = e.changedTouches[0].screenX),
+    { passive: true },
+  );
+  track.addEventListener("touchend", (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX < touchStartX - 50) moveToSlide(currentSlide + 1);
+    if (touchEndX > touchStartX + 50) moveToSlide(currentSlide - 1);
+  });
+
+  // Simulation logic
+  const handleSlideChange = (slide) => {
+    const progressBar = card.querySelector(".progress-bar");
+    const progressText = card.querySelector(".progress-text");
+    if (!progressBar) return;
+
+    progressBar.style.transition = "none";
+    progressBar.style.width = "0%";
+    progressText.textContent = "Fine-tuning en cours...";
+
+    if (slide.contains(progressBar)) {
+      setTimeout(() => {
+        progressBar.style.transition = "width 2s ease-in-out";
+        progressBar.style.width = "100%";
+        progressText.textContent = "Fine-tuning terminé !";
+      }, 500);
     }
+  };
 
-    const updateArrows = () => {
-        prevButton.style.display = (currentSlide === 0) ? 'none' : 'block';
-        nextButton.style.display = (currentSlide === slides.length - 1) ? 'none' : 'block';
-    }
+  // Initial setup
+  moveToSlide(0);
 
-    nextButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        moveToSlide(currentSlide + 1);
-    });
-    prevButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        moveToSlide(currentSlide - 1);
-    });
-
-    // Swipe functionality
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, { passive: true });
-    track.addEventListener('touchend', e => {
-        const touchEndX = e.changedTouches[0].screenX;
-        if (touchEndX < touchStartX - 50) moveToSlide(currentSlide + 1);
-        if (touchEndX > touchStartX + 50) moveToSlide(currentSlide - 1);
-    });
-
-    // Simulation logic
-    const handleSlideChange = (slide) => {
-        const progressBar = card.querySelector('.progress-bar');
-        const progressText = card.querySelector('.progress-text');
-        if (!progressBar) return;
-
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '0%';
-        progressText.textContent = 'Fine-tuning en cours...';
-
-        if (slide.contains(progressBar)) {
-            setTimeout(() => {
-                progressBar.style.transition = 'width 2s ease-in-out';
-                progressBar.style.width = '100%';
-                progressText.textContent = 'Fine-tuning terminé !';
-            }, 500);
-        }
-    }
-
-    // Initial setup
-    moveToSlide(0);
-
-    // Resize listener
-    const resizeObserver = new ResizeObserver(debounce(() => {
-        moveToSlide(currentSlide);
-    }, 200));
-    resizeObserver.observe(card);
+  // Resize listener
+  const resizeObserver = new ResizeObserver(
+    debounce(() => {
+      moveToSlide(currentSlide);
+    }, 200),
+  );
+  resizeObserver.observe(card);
 }
 
 function initPredictionChart(card) {
-    const ctx = card.querySelector('#predictionChart').getContext('2d');
-    const labels = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
-    const historicalData = [65, 59, 80, 81, 56, 55, 40, 45, 50, 60, 70, 75];
-    const predictedData = [null, null, null, null, null, null, null, null, 55, 65, 75, 80]; // Predictions start from September
+  const ctx = card.querySelector("#predictionChart").getContext("2d");
+  const labels = [
+    "Jan",
+    "Fév",
+    "Mar",
+    "Avr",
+    "Mai",
+    "Juin",
+    "Juil",
+    "Août",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Déc",
+  ];
+  const historicalData = [65, 59, 80, 81, 56, 55, 40, 45, 50, 60, 70, 75];
+  const predictedData = [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    55,
+    65,
+    75,
+    80,
+  ]; // Predictions start from September
 
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    label: 'Données Historiques',
-                    data: historicalData,
-                    borderColor: 'rgba(124, 58, 237, 1)',
-                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
-                    fill: false,
-                    tension: 0.1
-                },
-                {
-                    label: 'Prévisions',
-                    data: predictedData,
-                    borderColor: 'rgba(0, 212, 255, 1)',
-                    backgroundColor: 'rgba(0, 212, 255, 0.2)',
-                    borderDash: [5, 5],
-                    fill: false,
-                    tension: 0.1
-                }
-            ]
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Données Historiques",
+          data: historicalData,
+          borderColor: "rgba(124, 58, 237, 1)",
+          backgroundColor: "rgba(124, 58, 237, 0.2)",
+          fill: false,
+          tension: 0.1,
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Quantité'
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Mois'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top',
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false,
-                }
-            }
-        }
-    });
+        {
+          label: "Prévisions",
+          data: predictedData,
+          borderColor: "rgba(0, 212, 255, 1)",
+          backgroundColor: "rgba(0, 212, 255, 0.2)",
+          borderDash: [5, 5],
+          fill: false,
+          tension: 0.1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Quantité",
+          },
+        },
+        x: {
+          title: {
+            display: true,
+            text: "Mois",
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: "top",
+        },
+        tooltip: {
+          mode: "index",
+          intersect: false,
+        },
+      },
+    },
+  });
 }
 
 // --- SIMULATION LOGIC (FILE UPLOAD & CHAT) ---
-document.addEventListener('DOMContentLoaded', () => {
-    const fileInput = document.getElementById('pdf-upload');
-    const fileInfo = document.querySelector('.file-info');
-    if (fileInput) {
-        fileInput.addEventListener('change', () => {
-            fileInfo.textContent = fileInput.files.length > 0 ? `${fileInput.files.length} fichier(s) sélectionné(s).` : 'Aucun fichier sélectionné';
-        });
+document.addEventListener("DOMContentLoaded", () => {
+  const fileInput = document.getElementById("pdf-upload");
+  const fileInfo = document.querySelector(".file-info");
+  if (fileInput) {
+    fileInput.addEventListener("change", () => {
+      fileInfo.textContent =
+        fileInput.files.length > 0
+          ? `${fileInput.files.length} fichier(s) sélectionné(s).`
+          : "Aucun fichier sélectionné";
+    });
+  }
+
+  const chatInput = document.querySelector(".chat-input");
+  const chatSendButton = document.querySelector(".chat-send-button");
+  const chatBox = document.querySelector(".chat-box");
+  const chatContainer = document.querySelector(".chat-container");
+
+  // Prevent card from closing when interacting with the chat
+  if (chatContainer) {
+    chatContainer.addEventListener("click", (e) => e.stopPropagation());
+  }
+
+  const handleSendMessage = () => {
+    const message = chatInput.value.trim();
+    if (message) {
+      const userMsg = document.createElement("div");
+      userMsg.className = "chat-message user";
+      userMsg.textContent = message;
+      chatBox.appendChild(userMsg);
+      chatInput.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      setTimeout(() => {
+        const botMsg = document.createElement("div");
+        botMsg.className = "chat-message bot";
+        botMsg.textContent = "[Réponse IA simulée]";
+        chatBox.appendChild(botMsg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 1500);
     }
+  };
 
-    const chatInput = document.querySelector('.chat-input');
-    const chatSendButton = document.querySelector('.chat-send-button');
-    const chatBox = document.querySelector('.chat-box');
-    const chatContainer = document.querySelector('.chat-container');
-
-    // Prevent card from closing when interacting with the chat
-    if (chatContainer) {
-        chatContainer.addEventListener('click', e => e.stopPropagation());
-    }
-
-    const handleSendMessage = () => {
-        const message = chatInput.value.trim();
-        if (message) {
-            const userMsg = document.createElement('div');
-            userMsg.className = 'chat-message user';
-            userMsg.textContent = message;
-            chatBox.appendChild(userMsg);
-            chatInput.value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
-
-            setTimeout(() => {
-                const botMsg = document.createElement('div');
-                botMsg.className = 'chat-message bot';
-                botMsg.textContent = '[Réponse IA simulée]';
-                chatBox.appendChild(botMsg);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 1500);
-        }
-    }
-
-    if (chatSendButton && chatInput) {
-        chatSendButton.addEventListener('click', handleSendMessage);
-        chatInput.addEventListener('keypress', e => e.key === 'Enter' && handleSendMessage());
-    }
+  if (chatSendButton && chatInput) {
+    chatSendButton.addEventListener("click", handleSendMessage);
+    chatInput.addEventListener(
+      "keypress",
+      (e) => e.key === "Enter" && handleSendMessage(),
+    );
+  }
 });
-
 
 // --- INITIALIZATION ---
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize navigation dots after DOM is fully loaded
-    updateActiveDot();
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize navigation dots after DOM is fully loaded
+  updateActiveDot();
 
-    // Attach click listeners to nav dots
-    navDots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-            const sectionIndex = dot.getAttribute("data-section");
-            const targetSection = document.querySelector(
-                `section[data-section="${sectionIndex}"]`,
-            );
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: "smooth" });
-            }
-        });
+  // Attach click listeners to nav dots
+  navDots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const sectionIndex = dot.getAttribute("data-section");
+      const targetSection = document.querySelector(
+        `section[data-section="${sectionIndex}"]`,
+      );
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
     });
+  });
 
-    // Show demo button logic
-    const showDemoButton = document.querySelector('.show-demo-button');
+  // Show demo button logic
+  const showDemoButton = document.querySelector(".show-demo-button");
 
-    if (showDemoButton) {
-        showDemoButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the card from closing
+  if (showDemoButton) {
+    showDemoButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent the card from closing
 
-            const card = showDemoButton.closest('.data-card');
-            if (!card) return;
+      const card = showDemoButton.closest(".data-card");
+      if (!card) return;
 
-            const carouselContainer = card.querySelector('.carousel-container');
-            const expandedContent = card.querySelector('.data-card-expanded-content');
+      const carouselContainer = card.querySelector(".carousel-container");
+      const expandedContent = card.querySelector(".data-card-expanded-content");
 
-            if (carouselContainer && expandedContent) {
-                // Show the carousel and hide the button
-                carouselContainer.style.display = 'block';
-                showDemoButton.parentElement.style.display = 'none';
+      if (carouselContainer && expandedContent) {
+        // Show the carousel and hide the button
+        carouselContainer.style.display = "block";
+        showDemoButton.parentElement.style.display = "none";
 
-                // Recalculate the card's height to fit the new content
-                expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px';
-            }
-        });
-    }
+        // Recalculate the card's height to fit the new content
+        expandedContent.style.maxHeight = expandedContent.scrollHeight + "px";
+      }
+    });
+  }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollIndicators = document.querySelectorAll(".scroll-indicator");
 
-    scrollIndicators.forEach(indicator => {
-        indicator.addEventListener('click', () => {
-            const currentSection = indicator.closest('section');
-            if (currentSection) {
-                // Find the next section after the current section
-                const nextSection = currentSection.nextElementSibling;
-                if (nextSection) {
-                    nextSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
+  scrollIndicators.forEach((indicator) => {
+    indicator.addEventListener("click", () => {
+      const currentSection = indicator.closest("section");
+      if (currentSection) {
+        // Find the next section after the current section
+        const nextSection = currentSection.nextElementSibling;
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     });
+  });
 });
 
 // Back to Top Button Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const backToTopButton = document.getElementById('back-to-top');
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopButton = document.getElementById("back-to-top");
 
-    if (backToTopButton) {
-        const toggleBackToTop = () => {
-            if (window.pageYOffset > 200) { // Show button after scrolling 200px
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        };
+  if (backToTopButton) {
+    const toggleBackToTop = () => {
+      if (window.pageYOffset > 200) {
+        // Show button after scrolling 200px
+        backToTopButton.classList.add("show");
+      } else {
+        backToTopButton.classList.remove("show");
+      }
+    };
 
-        window.addEventListener('scroll', throttle(toggleBackToTop, 100)); // Use throttle for performance
-        toggleBackToTop(); // Initial check
+    window.addEventListener("scroll", throttle(toggleBackToTop, 100)); // Use throttle for performance
+    toggleBackToTop(); // Initial check
 
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-    // Set return_to parameter for login button
-    const loginLinks = document.querySelectorAll('a[href*="features/user/index.html"]');
-    loginLinks.forEach(loginLink => {
-        if (loginLink) {
-            // Avoid adding the parameter to the link on the user page itself
-            if (window.location.pathname.includes('features/user/index.html')) return;
-
-            const currentPagePath = window.location.pathname + window.location.search;
-            const userPagePath = loginLink.getAttribute('href');
-            
-            const returnToUrl = encodeURIComponent(currentPagePath);
-            
-            const separator = userPagePath.includes('?') ? '&' : '?';
-            loginLink.href = `${userPagePath}${separator}return_to=${returnToUrl}`;
-        }
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
+  }
+
+  // Set return_to parameter for login button
+  const loginLinks = document.querySelectorAll(
+    'a[href*="features/user/index.html"]',
+  );
+  loginLinks.forEach((loginLink) => {
+    if (loginLink) {
+      // Avoid adding the parameter to the link on the user page itself
+      if (window.location.pathname.includes("features/user/index.html")) return;
+
+      const currentPagePath = window.location.pathname + window.location.search;
+      const userPagePath = loginLink.getAttribute("href");
+
+      const returnToUrl = encodeURIComponent(currentPagePath);
+
+      const separator = userPagePath.includes("?") ? "&" : "?";
+      loginLink.href = `${userPagePath}${separator}return_to=${returnToUrl}`;
+    }
+  });
 });
 
 // --- HEADER DROPDOWN MENU (CLICK-BASED) ---
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdownToggle = document.querySelector('.dropdown .dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown .dropdown-menu');
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggle = document.querySelector(".dropdown .dropdown-toggle");
+  const dropdownMenu = document.querySelector(".dropdown .dropdown-menu");
 
-    if (dropdownToggle && dropdownMenu) {
-        dropdownToggle.addEventListener('click', function (event) {
-            event.stopPropagation(); // Empêche le clic de se propager à la fenêtre
-            dropdownMenu.classList.toggle('show');
-        });
-    }
-
-    // Ajoute un écouteur sur la fenêtre pour fermer le menu en cliquant à l'extérieur
-    window.addEventListener('click', function (event) {
-        const dropdownMenu = document.querySelector('.dropdown .dropdown-menu');
-        // Si le menu déroulant existe, est affiché, et que le clic est en dehors de celui-ci
-        if (dropdownMenu && dropdownMenu.classList.contains('show')) {
-            const dropdown = dropdownMenu.closest('.dropdown');
-            if (dropdown && !dropdown.contains(event.target)) {
-                dropdownMenu.classList.remove('show');
-            }
-        }
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener("click", function (event) {
+      event.stopPropagation(); // Empêche le clic de se propager à la fenêtre
+      dropdownMenu.classList.toggle("show");
     });
+  }
+
+  // Ajoute un écouteur sur la fenêtre pour fermer le menu en cliquant à l'extérieur
+  window.addEventListener("click", function (event) {
+    const dropdownMenu = document.querySelector(".dropdown .dropdown-menu");
+    // Si le menu déroulant existe, est affiché, et que le clic est en dehors de celui-ci
+    if (dropdownMenu && dropdownMenu.classList.contains("show")) {
+      const dropdown = dropdownMenu.closest(".dropdown");
+      if (dropdown && !dropdown.contains(event.target)) {
+        dropdownMenu.classList.remove("show");
+      }
+    }
+  });
 });
