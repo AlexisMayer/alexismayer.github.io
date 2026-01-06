@@ -399,58 +399,6 @@ function initCarousel(card) {
   resizeObserver.observe(card);
 }
 
-// --- SIMULATION LOGIC (FILE UPLOAD & CHAT) ---
-document.addEventListener("DOMContentLoaded", () => {
-  const fileInput = document.getElementById("pdf-upload");
-  const fileInfo = document.querySelector(".file-info");
-  if (fileInput) {
-    fileInput.addEventListener("change", () => {
-      fileInfo.textContent =
-        fileInput.files.length > 0
-          ? `${fileInput.files.length} fichier(s) sélectionné(s).`
-          : "Aucun fichier sélectionné";
-    });
-  }
-
-  const chatInput = document.querySelector(".chat-input");
-  const chatSendButton = document.querySelector(".chat-send-button");
-  const chatBox = document.querySelector(".chat-box");
-  const chatContainer = document.querySelector(".chat-container");
-
-  // Prevent card from closing when interacting with the chat
-  if (chatContainer) {
-    chatContainer.addEventListener("click", (e) => e.stopPropagation());
-  }
-
-  const handleSendMessage = () => {
-    const message = chatInput.value.trim();
-    if (message) {
-      const userMsg = document.createElement("div");
-      userMsg.className = "chat-message user";
-      userMsg.textContent = message;
-      chatBox.appendChild(userMsg);
-      chatInput.value = "";
-      chatBox.scrollTop = chatBox.scrollHeight;
-
-      setTimeout(() => {
-        const botMsg = document.createElement("div");
-        botMsg.className = "chat-message bot";
-        botMsg.textContent = "[Réponse IA simulée]";
-        chatBox.appendChild(botMsg);
-        chatBox.scrollTop = chatBox.scrollHeight;
-      }, 1500);
-    }
-  };
-
-  if (chatSendButton && chatInput) {
-    chatSendButton.addEventListener("click", handleSendMessage);
-    chatInput.addEventListener(
-      "keypress",
-      (e) => e.key === "Enter" && handleSendMessage(),
-    );
-  }
-});
-
 // --- INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize navigation dots after DOM is fully loaded
