@@ -99,7 +99,6 @@ body {
 
 .container {
     position: relative;
-    z-index: 1;
 }
 
 /* Background Animation */
@@ -237,12 +236,12 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 .section-content {
     max-width: 1200px;
-    width: 100%;
+    width: 95%;
     transform: translateY(100px);
     opacity: 0;
     transition: all 1s ease;
@@ -254,6 +253,8 @@ body {
 }
 
 .section h2 {
+    position: relative;
+    z-index: 1001;
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 800;
     margin-bottom: 2rem;
@@ -515,33 +516,6 @@ body {
     color: var(--color-accent);
 }
 
-/* Badge Styles */
-.badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--color-text);
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.badge-pro {
-    background-color: var(--color-primary);
-}
-
-.badge-public {
-    background-color: var(--color-accent);
-    color: var(--color-bg); /* Text color for better contrast with accent */
-}
-
-.data-card.data-card-badged {
-    overflow: visible;
-    padding-top: 40px;
-}
 
 /* Animations */
 @keyframes fadeInUp {
@@ -602,7 +576,7 @@ body {
     );
     transform-origin: left;
     transform: scaleX(0);
-    z-index: 1000;
+    z-index: 1001;
 }
 
 /* Navigation */
@@ -644,6 +618,7 @@ body {
     }
 
     .nav {
+        display: none;
         top: 1rem;
         right: 1rem;
     }
@@ -730,6 +705,11 @@ body {
         max-height: none;
         opacity: 1;
         overflow: visible;
+    }
+
+    #contact {
+        min-height: auto;
+        scroll-snap-align: start;
     }
 }
 
@@ -906,126 +886,7 @@ body {
     background: var(--color-secondary);
 }
 
-/* Styles for multiple CTAs in hero */
-.cta-container {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-}
 
-.cta-button-secondary {
-    background: transparent;
-    border: 2px solid var(--color-text);
-    color: var(--color-text);
-}
-
-.cta-button-secondary:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
-}
-
-/* Back to Home Button for saas.html */
-.back-to-home-button {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    z-index: 1001; /* Higher than nav dots */
-    background: var(--color-primary);
-    color: var(--color-text);
-    padding: 0.8rem 1.2rem;
-    border-radius: var(--radius-button);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-    box-shadow: 0 5px 15px var(--color-primary-t-30);
-}
-
-.back-to-home-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px var(--color-primary-t-50);
-}
-
-@media (max-width: 768px) {
-    .back-to-home-button {
-        top: 1rem;
-        left: 1rem;
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Dropdown Container */
-.dropdown-container {
-    position: relative;
-    display: inline-block; /* Allows it to sit next to other buttons */
-    z-index: 10000; /* Very high z-index */
-}
-
-/* Dropdown Button (inherits cta-button-secondary styles) */
-.dropdown-toggle {
-    /* Ensure it looks like a button */
-    cursor: pointer;
-    border: none; /* Override default button border */
-    /* Inherits padding, colors, etc. from cta-button-secondary */
-}
-
-/* Dropdown Content (the actual menu) */
-.dropdown-content {
-    position: absolute;
-    background-color: var(--color-dropdown-bg); /* Slightly lighter dark */
-    min-width: 240px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
-    z-index: 100;
-    border-radius: var(--radius-detail);
-    overflow: hidden;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-15px);
-    margin-top: 1rem;
-    opacity: 0;
-    visibility: hidden;
-    transition:
-        opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 0.3s;
-    border: 1px solid var(--color-white-t-10);
-    pointer-events: none; /* Prevent interaction when hidden */
-}
-
-/* Invisible bridge for hover */
-.dropdown-container::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 1rem; /* Should match the dropdown's margin-top */
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: var(--color-white-t-70);
-    padding: 14px 20px;
-    text-decoration: none;
-    display: block;
-    transition: all 0.2s ease-in-out;
-    font-weight: 500;
-    border-bottom: 1px solid var(--color-white-t-08);
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: var(--color-primary-t-30);
-    color: var(--color-text);
-    transform: translateX(5px);
-}
 
 .dropdown-item {
     display: flex;
@@ -1055,13 +916,6 @@ body {
     fill: currentColor;
 }
 
-.dropdown-container:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto; /* Allow interaction when visible */
-}
-
 /* Scroll Indicator */
 .hero {
     position: relative; /* Ensure hero section is positioned for absolute child */
@@ -1069,10 +923,11 @@ body {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    color: var(--color-text);
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     z-index: 10;
@@ -1085,7 +940,7 @@ body {
 .scroll-arrow {
     width: 60px;
     height: 60px;
-    fill: white; /* Or a color that contrasts with your hero background */
+    fill: currentColor; /* Or a color that contrasts with your hero background */
     animation: bounce 2s infinite;
 }
 
@@ -1165,20 +1020,6 @@ body {
     background: transparent; /* Make header background transparent */
 }
 
-.header-login-button {
-    /* Inherits from cta-button */
-    padding: 0.7rem 1.5rem;
-    font-size: 1rem;
-}
-
-.login-cta-button {
-    background: var(--color-accent);
-    color: var(--color-bg); /* Ensure text is visible on accent background */
-}
-
-.login-cta-button:hover {
-    box-shadow: 0 20px 40px var(--color-accent-t-20);
-}
 
 /* Header Buttons & Click-based Dropdown */
 .header-button {
