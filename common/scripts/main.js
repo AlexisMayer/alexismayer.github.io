@@ -24,11 +24,39 @@ function debounce(func, delay) {
   };
 }
 
+// Helper function to check if the device is mobile based on screen width
+function isMobile() {
+  return window.innerWidth <= 768; // Or any breakpoint you define as mobile
+}
+
+// Function to set scroll-snap-type based on device
+function setScrollSnapType() {
+  if (isMobile()) {
+    document.documentElement.style.scrollSnapType = "none";
+  } else {
+    document.documentElement.style.scrollSnapType = "y mandatory";
+  }
+}
+
+function smoothScrollToElement(element) {
+  if (!element) return;
+
+  const header = document.querySelector('.main-header');
+  const headerHeight = header ? header.offsetHeight : 0;
+  const elementTop = element.getBoundingClientRect().top + window.scrollY;
+  const offset = 20; // 20px margin
+
+  window.scrollTo({
+    top: elementTop - headerHeight - offset,
+    behavior: 'smooth'
+  });
+}
+
 // --- SCROLL PROGRESS BAR ---
 const scrollProgress = document.querySelector(".scroll-progress");
 const handleScroll = () => {
   const scrollTop = window.pageYOffset;
-  const docHeight = document.body.offsetHeight - window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPercent = scrollTop / docHeight;
   scrollProgress.style.transform = `scaleX(${scrollPercent})`;
 };
@@ -179,14 +207,15 @@ navDots.forEach((dot) => {
       `section[data-section="${sectionIndex}"]`,
     );
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
+      smoothScrollToElement(targetSection);
     }
   });
 });
 
 // --- ROTATING TEXT EFFECT ---
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.style.scrollSnapType = "y mandatory";
+  setScrollSnapType();
+  window.addEventListener("resize", debounce(setScrollSnapType, 250));
 
   const rotatingText = document.getElementById("rotating-text");
   if (!rotatingText) return;
@@ -263,17 +292,10 @@ function toggleCard(card) {
 
     if (card.id === "rag-use-case-card") {
       initCarousel(card);
-    } else if (card.id === "prediction-use-case-card") {
-      initPredictionChart(card);
     }
 
     setTimeout(() => {
-      const isMobile = window.innerWidth <= 768;
-      if (isMobile) {
-        card.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      smoothScrollToElement(card);
     }, 300);
   } else {
     closeCard(card, true);
@@ -296,7 +318,7 @@ function closeCard(card, reEnableSnap = true) {
   });
 
   if (reEnableSnap) {
-    document.documentElement.style.scrollSnapType = "y mandatory";
+    setScrollSnapType();
   }
 }
 
@@ -381,94 +403,6 @@ function initCarousel(card) {
     }, 200),
   );
   resizeObserver.observe(card);
-}
-
-function initPredictionChart(card) {
-  const ctx = card.querySelector("#predictionChart").getContext("2d");
-  const labels = [
-    "Jan",
-    "Fév",
-    "Mar",
-    "Avr",
-    "Mai",
-    "Juin",
-    "Juil",
-    "Août",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Déc",
-  ];
-  const historicalData = [65, 59, 80, 81, 56, 55, 40, 45, 50, 60, 70, 75];
-  const predictedData = [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    55,
-    65,
-    75,
-    80,
-  ]; // Predictions start from September
-
-  new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [
-        {
-          label: "Données Historiques",
-          data: historicalData,
-          borderColor: "rgba(124, 58, 237, 1)",
-          backgroundColor: "rgba(124, 58, 237, 0.2)",
-          fill: false,
-          tension: 0.1,
-        },
-        {
-          label: "Prévisions",
-          data: predictedData,
-          borderColor: "rgba(0, 212, 255, 1)",
-          backgroundColor: "rgba(0, 212, 255, 0.2)",
-          borderDash: [5, 5],
-          fill: false,
-          tension: 0.1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: "Quantité",
-          },
-        },
-        x: {
-          title: {
-            display: true,
-            text: "Mois",
-          },
-        },
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-        },
-        tooltip: {
-          mode: "index",
-          intersect: false,
-        },
-      },
-    },
-  });
 }
 
 // --- SIMULATION LOGIC (FILE UPLOAD & CHAT) ---
@@ -607,25 +541,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // Set return_to parameter for login button
-  const loginLinks = document.querySelectorAll(
-    'a[href*="features/user/index.html"]',
-  );
-  loginLinks.forEach((loginLink) => {
-    if (loginLink) {
-      // Avoid adding the parameter to the link on the user page itself
-      if (window.location.pathname.includes("features/user/index.html")) return;
-
-      const currentPagePath = window.location.pathname + window.location.search;
-      const userPagePath = loginLink.getAttribute("href");
-
-      const returnToUrl = encodeURIComponent(currentPagePath);
-
-      const separator = userPagePath.includes("?") ? "&" : "?";
-      loginLink.href = `${userPagePath}${separator}return_to=${returnToUrl}`;
-    }
-  });
 });
 
 // --- HEADER DROPDOWN MENU (CLICK-BASED) ---
