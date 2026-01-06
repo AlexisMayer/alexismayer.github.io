@@ -225,17 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (pageH1 === "CraftData") {
     phrases = [
-      "Développement sur mesure, Data et IA.",
-      "Solutions Data, Machine Learning, LLM.",
-      "Experts en Large Language Models (LLM) et RAG.",
-      "Du concept à l'objet : nous donnons vie à vos idées.",
-      "L'innovation au croisement du software et de la matière.",
-    ];
-  } else if (pageH1 === "Logiciel sur mesure") {
-    phrases = [
-      "Transformons vos données en levier de performance",
-      "Des solutions sur mesure, conçues pour vos enjeux métier",
-      "Un accompagnement durable pour faire évoluer vos modèles",
+      "Transformez vos données en décisions opérationnelles, rapidement.",
+      "Une approche pilotée par vos enjeux métier, pas par la technologie.",
+      "Construire ou utiliser les meilleurs outils du marché.",
+      "Vos données restent sous contrôle, sans dépendance ni complexité inutile.",
+      "Discutons de votre cas — un premier diagnostic pour y voir clair."
     ];
   } else {
     return; // Do nothing if the page is not recognized
