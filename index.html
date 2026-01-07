@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CraftData</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <canvas class="bg-canvas"></canvas>
+        <div class="scroll-progress"></div>
+
+        <header class="main-header">
+            <div></div>
+            <div class="dropdown">
+                <button
+                    class="header-button dropdown-toggle"
+                    aria-label="Menu utilisateur"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <circle cx="19" cy="12" r="2"></circle>
+                        <circle cx="5" cy="12" r="2"></circle>
+                    </svg>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#missions">Notre mission</a>
+                    <a href="#parcours">Notre parcours</a>
+                    <a href="#solutions">Nos solutions</a>
+                    <a href="#exemples">Études de cas</a>
+                    <a href="#a-propos">À propos</a>
+                    <hr />
+                    <a href="#contact">Contact</a>
+                    <hr />
+                    <button id="theme-toggle" aria-label="Basculer le thème clair/sombre" class="dropdown-item">
+                        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <span>Thème</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav" aria-label="Navigation CraftData Services">
+            <button
+                class="nav-dot active"
+                data-section="0"
+                aria-label="Accueil"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="1"
+                aria-label="Missions"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="2"
+                aria-label="Parcours"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="3"
+                aria-label="Solutions"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="4"
+                aria-label="Études de cas"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="5"
+                aria-label="À propos"
+            ></button>
+            <button
+                class="nav-dot"
+                data-section="6"
+                aria-label="Contact"
+            ></button>
+        </nav>
+
+        <div class="container">
+
+            <!-- Hero Section -->
+            <section class="hero" data-section="0">
+                <div class="hero-content">
+                    <h1>CraftData</h1>
+                    <p>Nous aidons les entreprises à transformer le potentiel de leurs données et de l’IA en résultats concrets, sans dépendance technologique ni complexité inutile.</p>
+                    <div class="hero-tags">
+                        <span class="tag">🎯 PME & Organisations agiles</span>
+                        <span class="tag">📊 Données structurées</span>
+                        <span class="tag">🤖 IA utile</span>
+                        <span class="tag">⚡ Résultats rapides</span>
+                    </div>
+                    <a href="#contact" class="cta-button">Discutons de votre projet</a>
+                </div>
+            </section>
+
+            <!-- NOTRE MISSION -->
+            <section class="section" data-section="1" id="missions">
+                <div class="section-content">
+                    <div class="text-center mb-lg">
+                        <h2 class="animate-on-scroll">Notre mission</h2>
+                        <p>
+                            Transformer le potentiel de vos données et de l'IA en résultats concrets, sans dépendance technologique ni complexité inutile.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-3 mt-lg">
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);">
+                                🎯
+                            </div>
+                            <h3 class="card-title">Compréhension métier</h3>
+                            <p class="card-description">
+                                Nous partons de vos processus, de vos contraintes et de vos décisions, pas d'une technologie à placer.
+                            </p>
+                            <ul style="list-style: none; margin-top: 1rem; color: var(--neutral-gray);">
+                                <li style="margin-bottom: 0.5rem;">✓ Cadrage métier approfondi</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Traduction en cas d'usage concrets</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Estimation ROI et impact</li>
+                                <li>✓ Alignement des équipes</li>
+                            </ul>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #00D9FF 0%, #0EA5E9 100%);">
+                                ⚙️
+                            </div>
+                            <h3 class="card-title">Pragmatisme technologique</h3>
+                            <p class="card-description">
+                                Solutions existantes quand elles suffisent, développement sur-mesure uniquement quand cela crée plus de valeur.
+                            </p>
+                            <ul style="list-style: none; margin-top: 1rem; color: var(--neutral-gray);">
+                                <li style="margin-bottom: 0.5rem;">✓ Sélection d'outils du marché</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Sur-mesure ciblé si nécessaire</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Architecture hybride optimale</li>
+                                <li>✓ Time-to-value prioritaire</li>
+                            </ul>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #FF6B35 0%, #F59E0B 100%);">
+                                🔒
+                            </div>
+                            <h3 class="card-title">Maîtrise et confiance</h3>
+                            <p class="card-description">
+                                Créer de la valeur avec l'IA n'a de sens que si vous gardez le contrôle de vos données et de votre avenir.
+                            </p>
+                            <ul style="list-style: none; margin-top: 1rem; color: var(--neutral-gray);">
+                                <li style="margin-bottom: 0.5rem;">✓ Souveraineté des données</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Sécurité et conformité</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Indépendance technologique</li>
+                                <li>✓ Solutions durables</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOTRE PARCOURS -->
+            <section class="section" data-section="2" id="parcours">
+                <div class="section-content">
+                    <div class="text-center mb-lg">
+                        <h2 class="animate-on-scroll">Notre parcours</h2>
+                        <p>
+                            Une approche structurée en 4 étapes pour des résultats mesurables.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-4 mt-lg">
+                        <div class="card animate-on-scroll" style="border-top: 4px solid #3B82F6;">
+                            <div style="font-size: 3rem; font-weight: 700; color: rgba(59, 130, 246, 0.2); margin-bottom: 1rem;">01</div>
+                            <h3 class="card-title">Diagnostic</h3>
+                            <p class="card-description">
+                                Compréhension approfondie de vos données, de vos processus et de vos enjeux métier.
+                            </p>
+                        </div>
+
+                        <div class="card animate-on-scroll" style="border-top: 4px solid #00D9FF;">
+                            <div style="font-size: 3rem; font-weight: 700; color: rgba(0, 217, 255, 0.2); margin-bottom: 1rem;">02</div>
+                            <h3 class="card-title">Cadrage</h3>
+                            <p class="card-description">
+                                Identification des cas d'usage utiles et des solutions les plus pertinentes (existantes ou sur-mesure).
+                            </p>
+                        </div>
+
+                        <div class="card animate-on-scroll" style="border-top: 4px solid #10B981;">
+                            <div style="font-size: 3rem; font-weight: 700; color: rgba(16, 185, 129, 0.2); margin-bottom: 1rem;">03</div>
+                            <h3 class="card-title">Mise en œuvre</h3>
+                            <p class="card-description">
+                                Déploiement rapide de solutions data & IA exploitables et intégrées à vos outils.
+                            </p>
+                        </div>
+
+                        <div class="card animate-on-scroll" style="border-top: 4px solid #FF6B35;">
+                            <div style="font-size: 3rem; font-weight: 700; color: rgba(255, 107, 53, 0.2); margin-bottom: 1rem;">04</div>
+                            <h3 class="card-title">Autonomie</h3>
+                            <p class="card-description">
+                                Formation, documentation et transmission pour que vous restiez maître de vos outils.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hero-content" style="padding-top: 2rem;">
+                        <a href="#contact" class="cta-button">Commencez votre diagnostic gratuit</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOS SOLUTIONS -->
+            <section class="section" data-section="3" id="solutions">
+                <div class="section-content">
+                    <div class="text-center mb-lg">
+                        <h2 class="animate-on-scroll">Nos Solutions</h2>
+                        <p>
+                            Des solutions concrètes pour passer de vos données à des résultats mesurables.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-3 mt-lg">
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);">
+                                📊
+                            </div>
+                            <h3 class="card-title">Fondations data</h3>
+                            <p class="card-description">
+                                Mettez fin aux données dispersées et peu fiables. Construisez une base solide pour des décisions justes.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary-dark);">Nos services :</h3>
+                                <ul style="list-style: none; color: var(--neutral-gray); line-height: 1.8;">
+                                    <li>→ Centralisation des données</li>
+                                    <li>→ Nettoyage & qualité</li>
+                                    <li>→ Pipelines automatisés</li>
+                                    <li>→ Vision unifiée</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
+                                🤖
+                            </div>
+                            <h3 class="card-title">Automatisation & IA utile</h3>
+                            <p class="card-description">
+                                Libérez vos équipes des tâches chronophages et utilisez l'IA pour accélérer vos opérations.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary-dark);">Nos services :</h3>
+                                <ul style="list-style: none; color: var(--neutral-gray); line-height: 1.8;">
+                                    <li>→ Automatisation de tâches</li>
+                                    <li>→ IA intégrée aux outils métier</li>
+                                    <li>→ Solutions sur-mesure ciblées</li>
+                                    <li>→ Résultats concrets mesurables</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                                🚀
+                            </div>
+                            <h3 class="card-title">Mise en production & autonomie</h3>
+                            <p class="card-description">
+                                Vos solutions data et IA doivent fonctionner dans la durée, en toute sécurité et sans dépendance.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary-dark);">Nos services :</h3>
+                                <ul style="list-style: none; color: var(--neutral-gray); line-height: 1.8;">
+                                    <li>→ Déploiement fiable</li>
+                                    <li>→ Sécurité & conformité</li>
+                                    <li>→ Documentation & formation</li>
+                                    <li>→ Évolution continue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ÉTUDES DE CAS -->
+            <section class="section" data-section="4" id="exemples">
+                <div class="section-content">
+                    <div class="text-center mb-lg">
+                        <h2 class="animate-on-scroll">Études de cas</h2>
+                        <p>
+                            Des exemples concrets de ce que vos données et l'IA peuvent réellement vous apporter.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-3 mt-lg">
+                        <div class="card animate-on-scroll">
+                            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: rgba(59, 130, 246, 0.1); color: #3B82F6; border-radius: 999px; font-size: 0.875rem; margin-bottom: 1rem;">Pilotage</span>
+                            <h3 class="card-title">Pilotage en temps réel</h3>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #EF4444; margin-bottom: 0.5rem;">❌ Problème</h3>
+                                <p style="font-size: 1rem;">
+                                    Données dispersées, reporting manuel, chiffres peu fiables pour piloter l'activité.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #3B82F6; margin-bottom: 0.5rem;">💡 Solution</h3>
+                                <p style="font-size: 1rem;">
+                                    Centralisation des données + automatisation des calculs + tableaux de bord clairs pour les équipes dirigeantes.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #10B981; margin-bottom: 0.5rem;">✅ Résultat</h3>
+                                <p style="font-size: 1rem;">
+                                    Des décisions plus rapides, basées sur des chiffres à jour et partagés.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: rgba(0, 217, 255, 0.1); color: #00D9FF; border-radius: 999px; font-size: 0.875rem; margin-bottom: 1rem;">IA</span>
+                            <h3 class="card-title">Recherche et analyse intelligente</h3>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #EF4444; margin-bottom: 0.5rem;">❌ Problème</h3>
+                                <p style="font-size: 1rem;">
+                                    Contrats, rapports, emails ou dossiers clients difficiles à exploiter manuellement.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #3B82F6; margin-bottom: 0.5rem;">💡 Solution</h3>
+                                <p style="font-size: 1rem;">
+                                    Moteur de recherche intelligent et IA conversationnelle connectée à vos documents.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #10B981; margin-bottom: 0.5rem;">✅ Résultat</h3>
+                                <p style="font-size: 1rem;">
+                                    Gain de temps massif et accès instantané à l'information clé.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card animate-on-scroll">
+                            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: rgba(139, 92, 246, 0.1); color: #8B5CF6; border-radius: 999px; font-size: 0.875rem; margin-bottom: 1rem;">Prévision</span>
+                            <h3 class="card-title">Prévision et aide à la décision</h3>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #EF4444; margin-bottom: 0.5rem;">❌ Problème</h3>
+                                <p style="font-size: 1rem;">
+                                    Décisions prises à l'instinct, stocks mal dimensionnés, charge de travail difficile à anticiper.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #3B82F6; margin-bottom: 0.5rem;">💡 Solution</h3>
+                                <p style="font-size: 1rem;">
+                                    Modèles de prévision simples, intégrés à vos outils existants.
+                                </p>
+                            </div>
+
+                            <div style="margin: 1.5rem 0;">
+                                <h3 style="color: #10B981; margin-bottom: 0.5rem;">✅ Résultat</h3>
+                                <p style="font-size: 1rem;">
+                                    Moins de gaspillage, plus de visibilité, des décisions plus fiables.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- À PROPOS -->
+            <section class="section" data-section="5" id="a-propos">
+                <div class="section-content">
+                    <div class="text-center mb-lg">
+                        <h2 class="animate-on-scroll">Qui sommes-nous</h2>
+                    </div>
+                    <p>
+                        CraftData est fondée par <strong>Alexis Mayer</strong>, expert data & IA ayant travaillé sur des projets en finance, analyse économique et systèmes complexes dans des start-ups puis des grands groupes.
+                    </p>
+                    <p>
+                        L'objectif : mettre cette expertise au service des PME pour leur permettre d'exploiter leurs données et l'IA de manière pragmatique, sécurisée et réellement utile.
+                    </p>
+                    <h2 >Notre philosophie</h2>
+                    <p>
+                        Nous ne vendons pas de promesses irréalistes ni de projets IA gadget.
+                    </p>
+                    <p>
+                        Si une solution simple suffit, nous la mettons en place.<br>
+                        Si un projet est trop risqué ou inutile, nous vous le dirons.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section" data-section="6" id="contact">
+                <div class="section-content">
+                    <h2>Prêt à transformer vos données ?</h2>
+                    <div class="contact-wrapper">
+                        <div class="contact-text">
+                            <p>
+                                Vous avez des données, des idées ou des projets autour de l’IA,
+                                mais vous ne savez pas par où commencer ou comment les rendre réellement utiles ?
+                            </p>
+                            <p>
+                                Nous vous proposons un premier échange pour comprendre votre contexte, vos contraintes et vos objectifs,
+                                puis vous donner une vision claire de ce qui est possible et de ce qui ne l’est pas.
+                            </p>
+                        </div>
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name" class="sr-only"
+                                    >Votre nom</label
+                                >
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="Votre nom"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only"
+                                    >Votre email</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="Votre email"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only"
+                                    >Votre message</label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    placeholder="Parlez-nous brièvement de votre activité, de vos données et de ce que vous aimeriez améliorer. Nous reviendrons vers vous rapidement pour planifier un échange."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 CraftData. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="#">contact@craftdata.fr</a>
+            </div>
+        </footer>
+
+        <script src="script.js" defer></script>
+        <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+        </button>
+
+    </body>
+</html>
