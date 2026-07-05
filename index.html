@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CraftData — Développement de Logiciel & Stratégie Data IA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="#" class="nav-logo">Craft<span>Data</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Nos services</a></li>
+                <li><a href="#offre">Notre offre</a></li>
+                <li>
+                    <a href="produit.html"
+                        >Découvrez Lore <span class="nav-badge">New</span></a
+                    >
+                </li>
+
+                <li>
+                    <a href="#cta-final" class="nav-cta"
+                        >Discuter d'un projet</a
+                    >
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- HERO SPLIT-SCREEN -->
+        <section id="hero">
+            <div class="hero-split">
+                <!-- GAUCHE — Identité CraftData -->
+                <div class="hero-left fade-up">
+                    <div class="hero-left-top">
+                        <span class="hero-eyebrow">
+                            <span class="hero-eyebrow-dot"></span>
+                            Développement logiciel & IA
+                        </span>
+                    </div>
+
+                    <div class="hero-left-body">
+                        <h1>
+                            On construit le logiciel <br />que
+                            <em>votre métier</em> mérite.
+                        </h1>
+                        <p>
+                            De l'architecture au déploiement, CraftData conçoit
+                            des outils sur mesure — et Lore, son assistant
+                            documentaire, est né de cette même exigence.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#cta-final" class="btn-hero-main"
+                                >Discuter d'un projet →</a
+                            >
+                            <a href="#services" class="btn-hero-ghost"
+                                >Nos expertises</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="hero-left-footer">
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">POC</span>
+                            <span class="hero-stat-label"
+                                >en quelques jours</span
+                            >
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">0</span>
+                            <span class="hero-stat-label">jargon inutile</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-val">100%</span>
+                            <span class="hero-stat-label">sur mesure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DROITE — Vitrine Lore -->
+                <div class="hero-right fade-up delay-2">
+                    <div class="lore-showcase-header">
+                        <div class="lore-showcase-identity">
+                            <div class="lore-showcase-icon">L</div>
+                            <div>
+                                <div class="lore-showcase-name">Lore</div>
+                                <div class="lore-showcase-sub">
+                                    assistant documentaire
+                                </div>
+                            </div>
+                        </div>
+                        <span class="lore-showcase-badge"
+                            >Notre produit phare</span
+                        >
+                    </div>
+
+                    <div class="terminal terminal--hero">
+                        <div class="terminal-bar">
+                            <div class="t-dot red"></div>
+                            <div class="t-dot yellow"></div>
+                            <div class="t-dot green"></div>
+                            <span class="terminal-title">terminal — lore</span>
+                        </div>
+                        <div class="terminal-body" id="heroTermBody">
+                            <!-- Rempli par le JS -->
+                        </div>
+                    </div>
+
+                    <a href="produit.html" class="lore-showcase-cta">
+                        <div class="lore-showcase-cta-left">
+                            <span class="lore-showcase-cta-title"
+                                >Découvrir Lore</span
+                            >
+                            <span class="lore-showcase-cta-sub"
+                                >Interface web · CLI gratuit · Démo sur vos
+                                docs</span
+                            >
+                        </div>
+                        <span class="lore-showcase-cta-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section
+            id="services"
+            style="padding: 6rem 0; background: var(--gray-50)"
+        >
+            <div class="container">
+                <span class="label">Nos Services</span>
+                <h2 class="section-heading">
+                    Une expertise double pour vos projets critiques
+                </h2>
+                <p class="section-sub">
+                    Nous combinons la rigueur du développement logiciel avec la
+                    puissance de l'IA générative.
+                </p>
+
+                <div class="problem-grid" style="margin-top: 3rem">
+                    <div class="problem-card">
+                        <span class="problem-icon">🛠️</span>
+                        <h3>Développement Logiciel</h3>
+                        <p>
+                            Conception d'outils métiers, d'applications web et
+                            de solutions d'automatisation performantes et
+                            scalables.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">🧠</span>
+                        <h3>Conseil en Stratégie IA</h3>
+                        <p>
+                            Accompagnement dans l'identification et la mise en
+                            œuvre de cas d'usage IA à forte valeur ajoutée.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">📊</span>
+                        <h3>Exploitation de Données</h3>
+                        <p>
+                            Audit, structuration et valorisation de vos
+                            documents et bases de données internes.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">🚀</span>
+                        <h3>Produits sur Mesure</h3>
+                        <p>
+                            Comme Lore, nous créons vos propres outils d'IA
+                            personnalisés selon vos besoins spécifiques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LORE PROMO -->
+        <section id="lore-promo" style="padding: 6rem 0">
+            <div class="container">
+                <div class="lore-teaser">
+                    <div class="lore-teaser-content">
+                        <span class="label">Notre produit phare</span>
+                        <h2>Lore : L'intelligence au cœur de vos documents</h2>
+                        <p>
+                            Né de notre expertise terrain, Lore est l'outil de
+                            référence pour transformer votre documentation
+                            interne en un assistant conversationnel puissant,
+                            local et sécurisé.
+                        </p>
+                        <a href="produit.html" class="btn-lore"
+                            >Découvrir Lore →</a
+                        >
+                    </div>
+                    <div class="lore-teaser-visual">
+                        <div class="t-lore-line">
+                            <span class="t-lore-cmd">$</span> lore ask
+                            "Expertise CraftData ?"
+                        </div>
+                        <div class="t-lore-out">▸ Analyse en cours...</div>
+                        <div class="t-lore-out">
+                            ↳ Réponse : CraftData est spécialisé en Dev Logiciel
+                            et IA...
+                        </div>
+                        <div class="t-lore-out">
+                            ↳ Sources : craftdata-presentation.pdf
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFRE -->
+        <section id="offre">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem">
+                    <span class="label">Notre offre d'entrée</span>
+                    <h2 class="section-heading">
+                        Un prototype en quelques jours,<br />sur vos vrais
+                        enjeux
+                    </h2>
+                </div>
+                <div class="offre-card">
+                    <div>
+                        <div class="offre-badge">POC Développement / IA</div>
+                        <h3>
+                            Validez votre idée concrètement, en quelques jours
+                        </h3>
+                        <p>
+                            Pas de promesse abstraite. Nous construisons un
+                            premier prototype fonctionnel de votre futur outil
+                            pour vous montrer la valeur réelle avant de lancer
+                            le développement complet.
+                        </p>
+                        <a href="#cta-final" class="btn-primary"
+                            >Discuter de votre projet →</a
+                        >
+                    </div>
+                    <div>
+                        <div class="offre-steps">
+                            <div class="offre-step">
+                                <div class="step-num">1</div>
+                                <div>
+                                    <strong>Cadrage technique</strong>
+                                    <p>
+                                        On définit ensemble les fonctionnalités
+                                        critiques et les objectifs business de
+                                        votre solution.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="offre-step">
+                                <div class="step-num">2</div>
+                                <div>
+                                    <strong>Architecture & Design</strong>
+                                    <p>
+                                        Nous concevons une architecture robuste
+                                        et une interface intuitive adaptée à vos
+                                        futurs utilisateurs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="offre-step">
+                                <div class="step-num">3</div>
+                                <div>
+                                    <strong>Développement Agile</strong>
+                                    <p>
+                                        Livraison d'un MVP (Produit Minimum
+                                        Viable) fonctionnel que vous pouvez déjà
+                                        tester sur le terrain.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="offre-step">
+                                <div class="step-num">4</div>
+                                <div>
+                                    <strong>Validation & Road-map</strong>
+                                    <p>
+                                        Analyse des retours, ajustements et
+                                        planification de la montée en charge et
+                                        des futures évolutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POURQUOI CRAFTDATA -->
+        <section id="pourquoi">
+            <div class="container">
+                <div style="max-width: 620px">
+                    <span class="label">Pourquoi CraftData</span>
+                    <h2 class="section-heading">
+                        Une approche pragmatique, sans jargon, orientée terrain
+                    </h2>
+                    <p class="section-sub">
+                        Nous ne vendons pas de la technologie pour la
+                        technologie. Nous cherchons à résoudre un problème
+                        métier réel, avec des outils adaptés à votre réalité.
+                    </p>
+                </div>
+                <div class="differents-grid">
+                    <div class="diff-card">
+                        <span class="diff-icon">🏭</span>
+                        <h4>Compréhension métier</h4>
+                        <p>
+                            Nous parlons votre langue avant de parler
+                            technologie. Ce qui compte, c'est votre problème,
+                            pas notre stack.
+                        </p>
+                    </div>
+                    <div class="diff-card">
+                        <span class="diff-icon">🎯</span>
+                        <h4>Résultats concrets</h4>
+                        <p>
+                            Un prototype testable en quelques jours. Vous voyez
+                            la valeur avant de vous engager.
+                        </p>
+                    </div>
+                    <div class="diff-card">
+                        <span class="diff-icon">🛠️</span>
+                        <h4>Pragmatisme</h4>
+                        <p>
+                            Pas de refonte complète de votre organisation. On
+                            part de ce qui existe pour l'améliorer.
+                        </p>
+                    </div>
+                    <div class="diff-card">
+                        <span class="diff-icon">💬</span>
+                        <h4>Sans jargon technique</h4>
+                        <p>
+                            Pas de buzz words. Des explications claires sur ce
+                            qu'on fait, ce que ça apporte, ce que ça coûte.
+                        </p>
+                    </div>
+                    <div class="diff-card">
+                        <span class="diff-icon">🔒</span>
+                        <h4>Sécurité et confidentialité</h4>
+                        <p>
+                            Vos données restent les vôtres. Nous travaillons
+                            dans des environnements sécurisés et souverains.
+                        </p>
+                    </div>
+                    <div class="diff-card">
+                        <span class="diff-icon">📈</span>
+                        <h4>Mise en place progressive</h4>
+                        <p>
+                            On commence petit, on valide, on étend. Pas de
+                            projet massif à risque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="cta-final">
+            <div class="container" style="text-align: center">
+                <span class="label">Passons à l'action</span>
+                <h2 class="section-heading">
+                    Prêt à transformer vos idées en réalité logicielle ?
+                </h2>
+                <p class="section-sub">
+                    Un échange de 30 minutes suffit pour évaluer la faisabilité
+                    de votre projet. Sans engagement.
+                </p>
+                <div
+                    style="
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    "
+                >
+                    <form
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                        class="cta-form"
+                    >
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="votre@email.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre projet</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Dites-nous en plus sur vos besoins..."
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            Envoyer ma demande →
+                        </button>
+                    </form>
+                </div>
+                <p
+                    style="
+                        margin-top: 1.5rem;
+                        font-size: 0.8rem;
+                        color: var(--gray-400);
+                    "
+                ></p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="#" class="nav-logo">Craft<span>Data</span></a>
+            <p>© 2025 CraftData — Tous droits réservés</p>
+            <div class="footer-links">
+                <a href="mailto:contact@craftdata.fr">contact@craftdata.fr</a>
+                <a href="produit.html">Lore</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </footer>
+
+        <script src="common.js" defer></script>
+        <script src="script.js" defer></script>
+        <script>
+            // Hero terminal animation
+            (function () {
+                const lines = [
+                    {
+                        type: "cmd",
+                        text: 'lore ask "Procédure urgence ligne B ?"',
+                    },
+                    { type: "gap" },
+                    { type: "output", text: "▸ Analyse de 47 documents..." },
+                    {
+                        type: "output",
+                        text: "▸ Recherche sémantique en cours...",
+                    },
+                    {
+                        type: "ok",
+                        text: "✓ 3 sections pertinentes identifiées",
+                    },
+                    {
+                        type: "answer",
+                        text: "La procédure d'urgence ligne B requiert l'arrêt immédiat via le bouton E-STOP rouge, puis l'isolation des vannes V-204.",
+                    },
+                    {
+                        type: "source",
+                        text: "↳ Sources : plan-securite.pdf §4.1 · checklist-B.docx",
+                    },
+                ];
+
+                const body = document.getElementById("heroTermBody");
+
+                async function typeText(el, text, speed = 40) {
+                    for (let i = 0; i < text.length; i++) {
+                        el.textContent += text.charAt(i);
+                        await new Promise((r) => setTimeout(r, speed));
+                    }
+                }
+
+                async function play() {
+                    for (const l of lines) {
+                        if (l.type === "gap") {
+                            const gap = document.createElement("div");
+                            gap.className = "t-gap";
+                            body.appendChild(gap);
+                            await new Promise((r) => setTimeout(r, 200));
+                            continue;
+                        }
+
+                        const div = document.createElement("div");
+                        div.className = "t-line";
+
+                        if (l.type === "cmd") {
+                            div.innerHTML =
+                                '<span class="t-prompt">$</span><span class="t-cmd"></span>';
+                            body.appendChild(div);
+                            await typeText(div.querySelector(".t-cmd"), l.text);
+                        } else {
+                            const map = {
+                                output: "t-output",
+                                ok: "t-success",
+                                source: "t-source",
+                                answer: "t-answer",
+                            };
+                            div.className = map[l.type] || "t-output";
+                            body.appendChild(div);
+                            await typeText(div, l.text, 20);
+                        }
+                    }
+                    const cursor = document.createElement("div");
+                    cursor.innerHTML =
+                        '<span class="t-prompt">$</span><span class="t-cursor"></span>';
+                    body.appendChild(cursor);
+                }
+
+                document.addEventListener("DOMContentLoaded", () =>
+                    setTimeout(play, 1000),
+                );
+            })();
+        </script>
+    </body>
+</html>

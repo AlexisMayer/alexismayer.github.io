@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Lore — L'assistant documentaire intelligent pour vos documents
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="produit.css" />
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="index.html" class="nav-logo"
+                >Craft<span>Data</span
+                ><span class="nav-logo-sub">/ Lore</span></a
+            >
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#probleme">Le problème</a></li>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#interfaces">Interfaces</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#cas-usage">Cas d'usage</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="index.html">← CraftData</a></li>
+                <li>
+                    <a href="#tarifs" class="nav-cta">Essayer gratuitement</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="hero-inner">
+                <div class="hero-content fade-up">
+                    <a href="index.html" class="back-breadcrumb">← CraftData</a>
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        v0.1 — alpha
+                    </div>
+                    <h1>
+                        Lore
+                        <em>L'assistant documentaire intelligent</em>
+                    </h1>
+                    <p>
+                        Lore indexe vos documents, comprend vos questions
+                        précisément, et vous répond en citant ses sources.
+                        Local-first, contrôle total, sans boîte noire.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#tarifs" class="btn-hero"
+                            >Voir les formules →</a
+                        >
+                        <a href="#interfaces" class="btn-hero-ghost">Essayer</a>
+                    </div>
+                </div>
+                <div class="fade-up delay-2">
+                    <div class="terminal terminal--hero">
+                        <div class="terminal-bar">
+                            <div class="t-dot red"></div>
+                            <div class="t-dot yellow"></div>
+                            <div class="t-dot green"></div>
+                            <span class="terminal-title">terminal — lore</span>
+                        </div>
+                        <div class="terminal-body" id="heroTermBody">
+                            <!-- Rempli par le JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLÈME -->
+        <section id="probleme">
+            <div class="container">
+                <span class="label">Le problème</span>
+                <h2 class="section-heading">
+                    L'information existe déjà.<br />Elle est juste difficile à
+                    retrouver.
+                </h2>
+                <p class="section-sub">
+                    Tout le monde accumule des années de savoir-faire dans ses
+                    documents. Le problème n'est pas le manque d'information —
+                    c'est son accès.
+                </p>
+
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <span class="problem-icon">📂</span>
+                        <h3>Documents dispersés</h3>
+                        <p>
+                            Dossiers réseau, e-mails, SharePoint, Google Drive…
+                            La connaissance est partout, donc nulle part.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">🔍</span>
+                        <h3>Recherche chronophage</h3>
+                        <p>
+                            Retrouver une procédure ou une spécification
+                            technique prend des minutes, parfois des heures.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">👤</span>
+                        <h3>Dépendance aux experts</h3>
+                        <p>
+                            « Demande à Marie, elle sait où c'est. » Les équipes
+                            dépendent de quelques personnes clés.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-icon">🔄</span>
+                        <h3>Turnover et perte de savoir</h3>
+                        <p>
+                            Quand un expert part, une partie de la connaissance
+                            part avec lui. Sans documentation accessible, tout
+                            est à reconstruire.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="consequence-box">
+                    <p>
+                        Résultat : Pertes de temps, des erreurs évitables, des
+                        réponses plus lentes qu'elles ne devraient l'être — non
+                        par manque de compétence, mais par manque d'accès à
+                        l'information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCEPT -->
+        <section id="concept">
+            <div class="container">
+                <div class="concept-layout">
+                    <div>
+                        <span class="label">Comment ça fonctionne</span>
+                        <h2 class="section-heading">
+                            Un moteur documentaire cognitif, pas un chatbot
+                        </h2>
+                        <p class="section-sub">
+                            Lore ne cherche pas des mots-clés — il comprend la
+                            structure de vos documents, construit un index
+                            logique, et raisonne à partir de vos sources. La
+                            hiérarchie documentaire reste intacte pour des
+                            réponses de meilleur qualité.
+                        </p>
+                        <div class="terminal terminal--hero">
+                            <div class="terminal-bar">
+                                <div class="t-dot red"></div>
+                                <div class="t-dot yellow"></div>
+                                <div class="t-dot green"></div>
+                                <span class="terminal-title"
+                                    >lore ask --debug</span
+                                >
+                            </div>
+                            <div class="terminal-body" id="conceptTermBody">
+                                <!-- Rempli par le JS -->
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step active">
+                                <div class="pipeline-num">1</div>
+                                <div class="pipeline-content">
+                                    <strong>Découverte & extraction</strong>
+                                    <p>
+                                        Le moteur détecte, structure et
+                                        hiérarchise vos documents — Word, PDF,
+                                        Excel, texte — sans en modifier un seul
+                                        octet.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pipeline-step active">
+                                <div class="pipeline-num">2</div>
+                                <div class="pipeline-content">
+                                    <strong>Compréhension cognitive</strong>
+                                    <p>
+                                        Le LLM résume, catégorise, génère des
+                                        tags et identifie les concepts clés. Les
+                                        métadonnées sont stockées localement
+                                        dans SQLite.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pipeline-step active">
+                                <div class="pipeline-num">3</div>
+                                <div class="pipeline-content">
+                                    <strong>Index logique local</strong>
+                                    <p>
+                                        Un index structuré — pas un vecteur
+                                        flottant — fidèle à vos arborescences,
+                                        avec relations et navigation entre
+                                        documents.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pipeline-step active">
+                                <div class="pipeline-num">4</div>
+                                <div class="pipeline-content">
+                                    <strong>Réponse tracée</strong>
+                                    <p>
+                                        Chaque réponse cite ses sources :
+                                        document, section, page, extrait.
+                                        Vérifiez en un instant dans l'original.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pipeline-step active">
+                                <div class="pipeline-num">5</div>
+                                <div class="pipeline-content">
+                                    <strong
+                                        >Historique & contexte de
+                                        session</strong
+                                    >
+                                    <p>
+                                        Questions, réponses et sources utilisées
+                                        conservées localement. Continuez une
+                                        recherche là où vous l'avez laissée.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERFACES -->
+        <section id="interfaces">
+            <div class="container">
+                <span class="label">Comment accéder</span>
+                <h2 class="section-heading">
+                    Dès maintenant depuis votre terminal
+                </h2>
+                <p class="section-sub">
+                    L'accès depuis un terminal en local est gratuit — ils
+                    s'exécutent sur votre machine avec votre propre clé API
+                    (essayer gratuitement ici). La plateforme web est une offre
+                    payante qui ajoute l'interface web, le stockage et
+                    l'inférence IA hébergée.
+                </p>
+
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 2rem;
+                        align-items: start;
+                    "
+                >
+                    <!-- CLI -->
+                    <div>
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 0.75rem;
+                                margin-bottom: 1.25rem;
+                            "
+                        >
+                            <span
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 0.75rem;
+                                    font-weight: 500;
+                                    background: var(--gray-100);
+                                    color: var(--gray-600);
+                                    padding: 0.25rem 0.6rem;
+                                    border-radius: 4px;
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.08em;
+                                "
+                                >CLI</span
+                            >
+                            <span
+                                style="
+                                    font-size: 0.875rem;
+                                    font-weight: 600;
+                                    color: var(--anthracite);
+                                    font-family: var(--font-display);
+                                "
+                                >Gratuit depuis votre terminal (nécessite une
+                                clé API active)</span
+                            >
+                        </div>
+                        <div class="terminal" style="font-size: 0.8rem">
+                            <div class="terminal-bar">
+                                <div class="t-dot red"></div>
+                                <div class="t-dot yellow"></div>
+                                <div class="t-dot green"></div>
+                                <span class="terminal-title">bash</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="t-line">
+                                    <span class="t-prompt">$</span>
+                                    <span class="t-cmd"
+                                        >lore ask "Quelle norme s'applique au
+                                        traitement X ?"</span
+                                    >
+                                </div>
+                                <div class="t-gap"></div>
+                                <div class="t-answer">
+                                    Le traitement X est soumis à la norme EN
+                                    13485. Les enregistrements requis sont
+                                    listés en §6.4.
+                                </div>
+                                <div class="t-gap"></div>
+                                <div class="t-source">
+                                    ↳ Sources : norme-qualite.pdf §6.4 ·
+                                    audit-mars.docx
+                                </div>
+                                <div class="t-gap"></div>
+                                <div class="t-line">
+                                    <span class="t-prompt">$</span>
+                                    <span class="t-cmd">lore sources</span>
+                                </div>
+                                <div class="t-output">
+                                    1. norme-qualite.pdf — §6.4 (p. 18)
+                                </div>
+                                <div class="t-output">
+                                    2. audit-mars.docx — §2 (p. 4)
+                                </div>
+                                <div class="t-gap"></div>
+                                <div class="t-line">
+                                    <span class="t-prompt">$</span>
+                                    <span class="t-cursor"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p
+                            style="
+                                font-size: 0.825rem;
+                                color: var(--gray-600);
+                                margin-top: 1rem;
+                                line-height: 1.6;
+                                font-weight: 300;
+                            "
+                        >
+                            La clés API est potentiellement gratuite, vous
+                            renseigner ici. <br />
+                            Intégration dans vos scripts shell, CI/CD,
+                            Makefiles. Sortie structurée, pipe-friendly.
+                            Navigation au clavier, historique de session,
+                            affichage structuré des sources. Construit avec
+                            React/Ink.
+                        </p>
+                    </div>
+
+                    <!-- WEB-UI -->
+                    <div>
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 0.75rem;
+                                margin-bottom: 1.25rem;
+                            "
+                        >
+                            <span
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 0.75rem;
+                                    font-weight: 500;
+                                    background: var(--accent-light);
+                                    color: var(--accent);
+                                    padding: 0.25rem 0.6rem;
+                                    border-radius: 4px;
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.08em;
+                                "
+                                >WEB</span
+                            >
+                            <span
+                                style="
+                                    font-size: 0.875rem;
+                                    font-weight: 600;
+                                    color: var(--anthracite);
+                                    font-family: var(--font-display);
+                                "
+                                >Plateforme web moderne (à partir de
+                                9,90€/mois)</span
+                            >
+                        </div>
+                        <img
+                            src="plateforme.png"
+                            alt="Interface Plateforme Lore"
+                            class="zoomable"
+                            style="
+                                width: 100%;
+                                border-radius: 12px;
+                                border: 1px solid var(--gray-200);
+                                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                            "
+                        />
+                        <p
+                            style="
+                                font-size: 0.825rem;
+                                color: var(--gray-600);
+                                margin-top: 1rem;
+                                line-height: 1.6;
+                                font-weight: 300;
+                            "
+                        >
+                            Interface web, stockage cloud et inférence IA
+                            incluse. Aucune configuration, aucune clé API à
+                            gérer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TARIFS -->
+        <section id="tarifs">
+            <div class="container">
+                <div style="max-width: 640px; margin-bottom: 1.5rem">
+                    <span class="label">Formules</span>
+                </div>
+
+                <div class="pricing-tabs">
+                    <button class="tab-btn active" data-tab="solo">
+                        Usage individuel
+                    </button>
+                    <button class="tab-btn" data-tab="equipe">
+                        Entreprise
+                    </button>
+                </div>
+
+                <div class="pricing-display">
+                    <!-- SOLO / INDIVIDUEL -->
+                    <div class="pricing-content active" id="tab-solo">
+                        <div class="pricing-block">
+                            <div class="pricing-section-title">
+                                Pour tester ou travailler seul
+                            </div>
+                            <div class="pricing-row">
+                                <!-- LOCAL SOLO -->
+                                <div class="plan-card">
+                                    <div class="plan-type local">Local</div>
+                                    <div class="plan-name">
+                                        Depuis votre terminal
+                                    </div>
+                                    <div class="plan-desc">
+                                        L'outil en ligne de commande, exécuté
+                                        entièrement sur votre machine. Vos
+                                        données ne quittent jamais votre poste.
+                                    </div>
+                                    <div class="plan-price">
+                                        <span class="price-main">Gratuit</span>
+                                    </div>
+                                    <div class="price-note">
+                                        Nécessite une clé API LLM active (au
+                                        choix).<br />Vous payez votre usage
+                                        directement au provider.
+                                    </div>
+                                    <div class="plan-divider"></div>
+                                    <ul class="plan-features">
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >CLI open source + TUI React/Ink
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Index local SQLite, 100% offline
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Compatible PDF, Word, Excel, texte
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Historique et contexte de session
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Mode debug
+                                            <span
+                                                style="
+                                                    font-family: var(
+                                                        --font-mono
+                                                    );
+                                                    font-size: 0.75rem;
+                                                    background: var(--gray-100);
+                                                    padding: 0 3px;
+                                                    border-radius: 3px;
+                                                "
+                                                >--debug</span
+                                            >
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Clé API LLM requise (provider au
+                                            choix)
+                                        </li>
+                                    </ul>
+                                    <a href="#cta-final" class="plan-cta"
+                                        >Télécharger Lore →</a
+                                    >
+                                </div>
+
+                                <!-- CLOUD SOLO -->
+                                <div class="plan-card featured">
+                                    <div class="plan-featured-badge">
+                                        Recommandé pour débuter
+                                    </div>
+                                    <div class="plan-type cloud">Cloud</div>
+                                    <div class="plan-name">
+                                        Pour votre tranquilité
+                                    </div>
+                                    <div class="plan-desc">
+                                        Interface web, stockage cloud et
+                                        inférence IA incluse. Aucune
+                                        configuration, aucune clé API à gérer.
+                                    </div>
+                                    <div class="plan-price">
+                                        <span class="price-main">9,90€</span>
+                                        <span class="price-period">/ mois</span>
+                                    </div>
+                                    <div class="price-note">
+                                        Inférence IA incluse · Stockage 5 Go
+                                        inclus<br />Sans engagement, résiliable
+                                        à tout moment
+                                    </div>
+                                    <div class="plan-divider"></div>
+                                    <ul class="plan-features">
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Interface web intuitive
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Inférence IA incluse (hébergée, au
+                                            choix)
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Stockage documentaire 5 Go
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Mise à jour automatique
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Support par e-mail
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Accès depuis n'importe quel
+                                            appareil
+                                        </li>
+                                    </ul>
+                                    <a
+                                        href="#cta-final"
+                                        class="plan-cta primary"
+                                        >Démarrer l'essai →</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NOTE CLEF API -->
+                        <div
+                            style="
+                                background: var(--white);
+                                border: 1px solid var(--gray-200);
+                                border-left: 4px solid var(--blue-mid);
+                                border-radius: 0 12px 12px 0;
+                                padding: 1.25rem 1.75rem;
+                                font-size: 0.875rem;
+                                color: var(--gray-600);
+                                font-weight: 300;
+                                line-height: 1.75;
+                            "
+                        >
+                            <strong
+                                style="
+                                    color: var(--anthracite);
+                                    font-weight: 600;
+                                    font-family: var(--font-display);
+                                "
+                                >À propos de la clé API (formule Local)</strong
+                            ><br />
+                            La version locale de Lore est gratuite et open
+                            source. Elle nécessite une clé API LLM active — vous
+                            choisissez votre provider et le configurez via
+                            <span
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 0.825rem;
+                                    background: var(--gray-100);
+                                    padding: 0 4px;
+                                    border-radius: 3px;
+                                "
+                                >lore config</span
+                            >. Vous payez uniquement votre usage, au volume,
+                            sans intermédiaire. La formule cloud inclue
+                            l'inférence : aucune clé à configurer.
+                        </div>
+                    </div>
+
+                    <!-- ENTREPRISE -->
+                    <div class="pricing-content" id="tab-equipe">
+                        <div class="pricing-block">
+                            <div class="pricing-section-title">
+                                Déploiement entreprise — pour les équipes
+                            </div>
+                            <div class="pricing-row">
+                                <!-- LOCAL ENTERPRISE -->
+                                <div class="plan-card">
+                                    <div class="plan-type local">
+                                        Local multi-utilisateurs
+                                    </div>
+                                    <div class="plan-name">
+                                        Pour un maximum de sécurité
+                                    </div>
+                                    <div class="plan-desc">
+                                        Déploiement sur votre infrastructure.
+                                        Vos données restent dans votre
+                                        périmètre. Installation et maintenance
+                                        incluses.
+                                    </div>
+                                    <div class="plan-price">
+                                        <span class="price-main"
+                                            >Sur devis</span
+                                        >
+                                    </div>
+                                    <div class="price-note">
+                                        Frais de mise en service selon le nombre
+                                        d'utilisateurs et la complexité
+                                        d'intégration.
+                                    </div>
+                                    <div class="plan-divider"></div>
+                                    <ul class="plan-features">
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Déploiement sur votre
+                                            infrastructure
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Multi-utilisateurs avec droits
+                                            d'accès
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Connecteurs sur mesure (SharePoint,
+                                            Drive…)
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Données 100% dans votre périmètre
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Accompagnement à la mise en service
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Support dédié
+                                        </li>
+                                    </ul>
+                                    <a href="#cta-final" class="plan-cta"
+                                        >Demander un devis →</a
+                                    >
+                                </div>
+
+                                <!-- CLOUD ENTERPRISE -->
+                                <div class="plan-card">
+                                    <div class="plan-type cloud">
+                                        Cloud entreprise
+                                    </div>
+                                    <div class="plan-name">
+                                        Pour votre tranquilité
+                                    </div>
+                                    <div class="plan-desc">
+                                        La plateforme cloud avec gestion
+                                        multi-utilisateurs, espaces de travail
+                                        partagés et inférence IA mutualisée.
+                                    </div>
+                                    <div class="plan-price">
+                                        <span class="price-main"
+                                            >à partir de 9,90€</span
+                                        >
+                                        <span class="price-period"
+                                            >/ utilisateur / mois</span
+                                        >
+                                    </div>
+                                    <div class="price-note">
+                                        À partir de 3 utilisateurs · Stockage 20
+                                        Go partagé inclus<br />Facturation
+                                        annuelle available (−15%)
+                                    </div>
+                                    <div class="plan-divider"></div>
+                                    <ul class="plan-features">
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Espaces de travail partagés
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Gestion des droits par équipe
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Inférence IA mutualisée incluse
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Stockage 20 Go partagé
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Tableau de bord d'administration
+                                        </li>
+                                        <li class="plan-feature">
+                                            <span class="feature-check"></span
+                                            >Support prioritaire + onboarding
+                                        </li>
+                                    </ul>
+                                    <a href="#cta-final" class="plan-cta"
+                                        >Contacter l'équipe →</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAS D'USAGE -->
+        <section id="cas-usage">
+            <div class="container">
+                <span class="label">Cas d'usage</span>
+                <h2 class="section-heading">Pour quels besoins ?</h2>
+                <p class="section-sub">
+                    La même technologie s'adapte à différents contextes métier.
+                    Voici les plus courants dans les PME industrielles et de
+                    services.
+                </p>
+
+                <div class="usecase-tabs">
+                    <button class="tab-btn active" data-tab="doc-tech">
+                        Documentation technique
+                    </button>
+                    <button class="tab-btn" data-tab="procedures">
+                        Procédures internes
+                    </button>
+                    <button class="tab-btn" data-tab="sav">
+                        Support & SAV
+                    </button>
+                    <button class="tab-btn" data-tab="qualite">Qualité</button>
+                    <button class="tab-btn" data-tab="produits">
+                        Fiches produits
+                    </button>
+                    <button class="tab-btn" data-tab="knowledge">
+                        Capitalisation
+                    </button>
+                </div>
+
+                <div class="usecase-display">
+                    <div class="usecase-content active" id="tab-doc-tech">
+                        <h3>Documentation technique</h3>
+                        <p>
+                            Vos techniciens retrouvent les spécifications, les
+                            schémas et les instructions d'intervention en
+                            quelques secondes — sans avoir à fouiller des
+                            dossiers réseau.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Quelle est la pression nominale de la vanne
+                                V-204 sur la ligne B ?
+                            </div>
+                            <div class="example-question">
+                                Quel couple de serrage pour les boulons M16 sur
+                                cet équipement ?
+                            </div>
+                            <div class="example-question">
+                                Quelles sont les tolérances dimensionnelles de
+                                la pièce référence 4421-B ?
+                            </div>
+                            <div class="example-question">
+                                Quelle révision du plan est en vigueur pour le
+                                bâtiment 3 ?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usecase-content" id="tab-procedures">
+                        <h3>Procédures internes</h3>
+                        <p>
+                            Onboarding, processus RH, achats, comptabilité — vos
+                            collaborateurs accèdent aux procédures exactes dont
+                            ils ont besoin, sans solliciter leurs collègues.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Comment soumettre une demande d'achat au-delà de
+                                5 000 € ?
+                            </div>
+                            <div class="example-question">
+                                Qui valide les notes de frais des responsables
+                                de site ?
+                            </div>
+                            <div class="example-question">
+                                Quelle est la procédure d'intégration pour un
+                                nouveau technicien ?
+                            </div>
+                            <div class="example-question">
+                                Quel est le délai légal pour répondre à une
+                                demande d'accès RGPD ?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usecase-content" id="tab-sav">
+                        <h3>Support & SAV</h3>
+                        <p>
+                            Vos équipes support répondent plus vite et plus
+                            précisément aux clients, sans dépendre des experts
+                            techniques pour chaque question complexe.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Quelle est la procédure de retour pour un
+                                produit défectueux sous garantie ?
+                            </div>
+                            <div class="example-question">
+                                Quelles pannes courantes sont associées au code
+                                erreur E-504 ?
+                            </div>
+                            <div class="example-question">
+                                Ce client est sous contrat de maintenance —
+                                qu'est-il couvert exactement ?
+                            </div>
+                            <div class="example-question">
+                                Quel est le délai d'intervention garanti pour ce
+                                type d'équipement ?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usecase-content" id="tab-qualite">
+                        <h3>Qualité & Conformité</h3>
+                        <p>
+                            Vos responsables qualité accèdent instantanément aux
+                            exigences normatives, aux non-conformités traitées
+                            et aux plans d'action en cours.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Quelle est la norme applicable pour le
+                                traitement de surface type X ?
+                            </div>
+                            <div class="example-question">
+                                Quelles actions correctives ont été menées suite
+                                à l'audit de mars ?
+                            </div>
+                            <div class="example-question">
+                                Quels enregistrements sont requis pour la
+                                certification ISO 9001 lot 7 ?
+                            </div>
+                            <div class="example-question">
+                                Quel est le taux de rebuts sur la ligne 3 ce
+                                trimestre ?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usecase-content" id="tab-produits">
+                        <h3>Fiches produits</h3>
+                        <p>
+                            Commerciaux et technico-commerciaux retrouvent les
+                            caractéristiques, compatibilités et arguments
+                            produit en temps réel, même en déplacement.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Ce produit est-il compatible avec les
+                                installations ATEX zone 2 ?
+                            </div>
+                            <div class="example-question">
+                                Quelle est la durée de vie typique en cycles de
+                                la référence A-120 ?
+                            </div>
+                            <div class="example-question">
+                                Quelles certifications couvre ce produit en
+                                Europe et aux États-Unis ?
+                            </div>
+                            <div class="example-question">
+                                Quel est l'équivalent de la référence
+                                concurrente ZX-44 dans notre catalogue ?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usecase-content" id="tab-knowledge">
+                        <h3>Capitalisation des savoirs</h3>
+                        <p>
+                            Préservez et rendez accessible le savoir-faire de
+                            vos experts, même après leur départ. La connaissance
+                            critique reste dans l'entreprise.
+                        </p>
+                        <div class="usecase-examples">
+                            <div class="example-question">
+                                Quels réglages Jean-Pierre avait-il documenté
+                                pour la machine 7 ?
+                            </div>
+                            <div class="example-question">
+                                Quels problèmes similaires avons-nous déjà
+                                résolus sur ce type de client ?
+                            </div>
+                            <div class="example-question">
+                                Quels enseignements ont été tirés du projet
+                                Durand en 2022 ?
+                            </div>
+                            <div class="example-question">
+                                Quelle est la meilleure pratique pour la mise en
+                                service de ce modèle ?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHIE -->
+        <section id="philosophie">
+            <div class="container">
+                <div style="max-width: 560px; margin-bottom: 0.5rem">
+                    <span class="label">Philosophie produit</span>
+                    <h2 class="section-heading">
+                        Conçu pour ne pas vous trahir
+                    </h2>
+                    <p class="section-sub">
+                        Lore repose sur trois principes non-négociables, qui
+                        guident chaque décision d'architecture.
+                    </p>
+                </div>
+                <div class="philo-grid">
+                    <div class="philo-card">
+                        <div class="philo-num">01</div>
+                        <h4>Le document reste la vérité</h4>
+                        <p>
+                            L'assistant ne doit jamais inventer. Chaque
+                            affirmation est ancrée dans un extrait documentaire
+                            réel, tracé et vérifiable.
+                        </p>
+                    </div>
+                    <div class="philo-card">
+                        <div class="philo-num">02</div>
+                        <h4>Local-first, toujours</h4>
+                        <p>
+                            Vos données restent chez vous par défaut. L'index,
+                            l'historique, le cache — tout est local. Le cloud
+                            est un choix, pas une contrainte.
+                        </p>
+                    </div>
+                    <div class="philo-card">
+                        <div class="philo-num">03</div>
+                        <h4>Observabilité complète</h4>
+                        <p>
+                            Chaque étape du pipeline est visible : sources
+                            sélectionnées, prompts envoyés, coûts d'inférence,
+                            temps d'exécution. Aucune boîte noire.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container-narrow">
+                <span class="label">Questions fréquentes</span>
+                <h2 class="section-heading">Ce qu'on nous demande souvent</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span
+                                >Quels types de fichiers sont compatibles
+                                ?</span
+                            >
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            Word (.docx), PDF, Excel, PowerPoint, fichiers
+                            texte, et selon votre configuration : SharePoint,
+                            Google Drive, Confluence, et d'autres outils
+                            collaboratifs. Nous analysons votre contexte lors du
+                            cadrage pour adapter la solution à vos sources de
+                            données.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span
+                                >Mes documents doivent-ils être parfaitement
+                                organisés pour commencer ?</span
+                            >
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            Non. C'est même souvent parce que les documents sont
+                            désorganisés que nos clients viennent nous voir.
+                            Nous analysons l'existant et aidons à identifier les
+                            documents les plus pertinents pour démarrer, sans
+                            attendre une organisation parfaite.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Nos données sont-elles en sécurité ?</span>
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            La sécurité est un point de départ, pas un ajout
+                            tardif. Nous définissons avec vous les contraintes
+                            de confidentialité dès le cadrage. Vos documents ne
+                            sont pas partagés avec des tiers, et nous pouvons
+                            travailler dans des environnements isolés selon vos
+                            exigences.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span
+                                >Combien de temps prend la mise en place ?</span
+                            >
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            Un premier prototype fonctionnel est généralement
+                            livré en 5 à 10 jours ouvrés après le cadrage. Pour
+                            aller en production sur un périmètre plus large,
+                            cela dépend de la quantité de documents et de la
+                            complexité des accès — nous le définissons ensemble.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span
+                                >Faut-il un niveau de maturité numérique
+                                particulier ?</span
+                            >
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            Non. Nous travaillons avec des PME à différents
+                            niveaux de maturité numérique. L'essentiel, c'est
+                            d'avoir des documents à connecter et un besoin
+                            concret. Le reste, on l'adapte à votre réalité.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span
+                                >L'assistant peut-il se tromper dans ses
+                                réponses ?</span
+                            >
+                            <span class="faq-arrow">›</span>
+                        </button>
+                        <div class="faq-a">
+                            Oui, comme tout système, il peut produire des
+                            inexactitudes. C'est pourquoi chaque réponse cite sa
+                            source : vos équipes peuvent vérifier directement
+                            dans le document d'origine. Nous configurons
+                            également des garde-fous pour limiter les réponses
+                            hors du périmètre documentaire défini.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DÉMONSTRATEUR -->
+        <section id="demo">
+            <div class="container">
+                <div style="max-width: 560px; margin-bottom: 1rem">
+                    <span class="label">Démonstration</span>
+                    <h2 class="section-heading">
+                        Voyez comment ça fonctionne sur de vrais documents
+                    </h2>
+                    <p class="section-sub">
+                        Pas une démo générique. Nous montrons votre assistant,
+                        sur vos documents, qui répond à vos questions métier.
+                    </p>
+                </div>
+
+                <div class="demo-layout">
+                    <div class="demo-screen">
+                        <div class="demo-bar">
+                            <div class="demo-dot"></div>
+                            <div class="demo-dot"></div>
+                            <div class="demo-dot"></div>
+                        </div>
+                        <div class="demo-input-wrap">
+                            <span class="demo-input-icon">🔍</span>
+                            <span class="demo-input-text"
+                                >Posez votre question métier…</span
+                            >
+                        </div>
+                        <div class="demo-suggestion">
+                            <span class="demo-suggestion-icon">→</span>
+                            Quelle est la procédure d'urgence pour l'arrêt de la
+                            ligne 2 ?
+                        </div>
+                        <div class="demo-suggestion">
+                            <span class="demo-suggestion-icon">→</span>
+                            Quel délai de garantie s'applique aux moteurs série
+                            900 ?
+                        </div>
+                        <div class="demo-suggestion">
+                            <span class="demo-suggestion-icon">→</span>
+                            Quels documents sont requis pour l'audit qualité
+                            trimestriel ?
+                        </div>
+                        <div class="demo-suggestion">
+                            <span class="demo-suggestion-icon">→</span>
+                            Synthétise les 5 derniers rapports d'incident sur la
+                            ligne B.
+                        </div>
+                    </div>
+                    <div class="demo-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-num">01</div>
+                            <div class="benefit-text">
+                                <strong>Sources citées systématiquement</strong>
+                                <p>
+                                    Chaque réponse indique le document source
+                                    exact. Vos équipes vérifient en un clic,
+                                    sans avoir à faire confiance aveuglément.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-num">02</div>
+                            <div class="benefit-text">
+                                <strong>Questions en langage naturel</strong>
+                                <p>
+                                    Pas de syntaxe à apprendre, pas de mots-clés
+                                    à deviner. On pose la question comme on la
+                                    poserait à un collègue.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-num">03</div>
+                            <div class="benefit-text">
+                                <strong
+                                    >Vos documents, pas des données
+                                    génériques</strong
+                                >
+                                <p>
+                                    L'assistant est entraîné sur votre
+                                    documentation. Les réponses reflètent vos
+                                    réalités, votre vocabulaire, vos procédures.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="demo-cta-wrap">
+                            <a href="#cta-final" class="btn-demo"
+                                >Demander une démonstration →</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="cta-final">
+            <div class="container" style="text-align: center">
+                <span class="label">Prêt à commencer</span>
+                <h2
+                    class="section-heading"
+                    style="max-width: 640px; margin: 0 auto 1.25rem"
+                >
+                    Un outil, vos documents, des réponses — en quelques minutes
+                </h2>
+                <p
+                    class="section-sub"
+                    style="max-width: 480px; margin: 0 auto 2.5rem"
+                >
+                    Téléchargez Lore pour commencer localement, ou
+                    contactez-nous pour une démonstration sur vos documents
+                    réels.
+                </p>
+                <div
+                    style="
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    "
+                >
+                    <form
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                        class="cta-form"
+                    >
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="votre@email.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre projet</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Dites-nous en plus sur vos besoins..."
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            Envoyer ma demande →
+                        </button>
+                    </form>
+                </div>
+                <p
+                    style="
+                        margin-top: 1.5rem;
+                        font-size: 0.8rem;
+                        color: var(--gray-400);
+                    "
+                ></p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="index.html" class="nav-logo">Craft<span>Data</span></a>
+            <p>© 2025 CraftData — LoreCLI</p>
+            <div class="footer-links">
+                <a href="mailto:contact@craftdata.fr">contact@craftdata.fr</a>
+                <a href="index.html">craftdata.fr</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </footer>
+
+        <!-- IMAGE ZOOM MODAL -->
+        <div id="imageModal" class="image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="modalImg" />
+        </div>
+
+        <script src="common.js" defer></script>
+        <script src="script.js" defer></script>
+        <script>
+            // Hero terminal animation
+            async function runTerminal(bodyId, lines, speed = 40) {
+                const body = document.getElementById(bodyId);
+                if (!body) return;
+
+                async function typeText(el, text, speed) {
+                    for (let i = 0; i < text.length; i++) {
+                        el.textContent += text.charAt(i);
+                        await new Promise((r) => setTimeout(r, speed));
+                    }
+                }
+
+                for (const l of lines) {
+                    if (l.type === "gap") {
+                        const gap = document.createElement("div");
+                        gap.className = "t-gap";
+                        body.appendChild(gap);
+                        await new Promise((r) => setTimeout(r, 200));
+                        continue;
+                    }
+
+                    const div = document.createElement("div");
+                    div.className = "t-line";
+
+                    if (l.type === "cmd") {
+                        div.innerHTML =
+                            '<span class="t-prompt">$</span><span class="t-cmd"></span>';
+                        body.appendChild(div);
+                        await typeText(
+                            div.querySelector(".t-cmd"),
+                            l.text,
+                            speed,
+                        );
+                    } else {
+                        const map = {
+                            output: "t-output",
+                            ok: "t-success",
+                            source: "t-source",
+                            answer: "t-answer",
+                            info: "t-output",
+                        };
+                        div.className = map[l.type] || "t-output";
+                        body.appendChild(div);
+                        await typeText(div, l.text, 15);
+                    }
+                }
+                const cursor = document.createElement("div");
+                cursor.innerHTML =
+                    '<span class="t-prompt">$</span><span class="t-cursor"></span>';
+                body.appendChild(cursor);
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const heroLines = [
+                    { type: "cmd", text: "lore init ./mon-projet" },
+                    { type: "output", text: "✓ Workspace initialisé" },
+                    { type: "output", text: "✓ Base SQLite créée" },
+                    { type: "gap" },
+                    { type: "cmd", text: "lore add ./documents" },
+                    { type: "output", text: "▸ Découverte : 47 fichiers..." },
+                    { type: "ok", text: "✓ Indexation terminée (4.2s)" },
+                    { type: "gap" },
+                    { type: "cmd", text: 'lore ask "Maintenance ligne B ?"' },
+                    {
+                        type: "answer",
+                        text: "La maintenance préventive ligne B : tous les 500 cycles (plan M-14). Vérifications : niveaux, jeux, capteurs.",
+                    },
+                    {
+                        type: "source",
+                        text: "↳ Sources : plan-maintenance.pdf §3.2 · checklist-B.docx",
+                    },
+                ];
+
+                const conceptLines = [
+                    {
+                        type: "cmd",
+                        text: 'lore ask "Maintenance ligne B ?" --debug',
+                    },
+                    { type: "info", text: "▸ Interprétation de la requête…" },
+                    {
+                        type: "output",
+                        text: "Intention : procédure / périmètre : ligne B",
+                    },
+                    { type: "info", text: "▸ Exploration index logique…" },
+                    {
+                        type: "output",
+                        text: "3 sections pertinentes identifiées",
+                    },
+                    { type: "info", text: "▸ Synthèse LLM…" },
+                    { type: "ok", text: "✓ Réponse tracée — 2 sources" },
+                ];
+
+                setTimeout(() => runTerminal("heroTermBody", heroLines), 1000);
+                setTimeout(
+                    () => runTerminal("conceptTermBody", conceptLines, 30),
+                    1000,
+                );
+            });
+        </script>
+    </body>
+</html>
