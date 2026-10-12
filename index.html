@@ -3,519 +3,517 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CraftData — Développement de Logiciel & Stratégie Data IA</title>
+        <title>CraftData — Atelier d'IA appliquée au métier</title>
+        <meta
+            name="description"
+            content="CraftData conçoit et fabrique des outils sur mesure qui mettent l'IA là où elle fait gagner du temps : sur le terrain, dans vos documents, dans vos données."
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="common.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <!-- NAVIGATION -->
-        <nav>
+        <nav class="nav" id="nav">
             <a href="#" class="nav-logo">Craft<span>Data</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#services">Nos services</a></li>
-                <li><a href="#offre">Notre offre</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#realisation">Réalisation</a></li>
+                <li><a href="#atelier">L'atelier</a></li>
                 <li>
-                    <a href="produit.html"
-                        >Découvrez Lore <span class="nav-badge">New</span></a
-                    >
-                </li>
-
-                <li>
-                    <a href="#cta-final" class="nav-cta"
-                        >Discuter d'un projet</a
+                    <a href="#contact" class="btn btn-dark btn-sm"
+                        >Parlons de votre métier</a
                     >
                 </li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
                 <span></span><span></span><span></span>
             </button>
         </nav>
 
-        <!-- HERO SPLIT-SCREEN -->
-        <section id="hero">
-            <div class="hero-split">
-                <!-- GAUCHE — Identité CraftData -->
-                <div class="hero-left fade-up">
-                    <div class="hero-left-top">
-                        <span class="hero-eyebrow">
-                            <span class="hero-eyebrow-dot"></span>
-                            Développement logiciel & IA
-                        </span>
-                    </div>
-
-                    <div class="hero-left-body">
+        <main>
+            <!-- HERO -->
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <span class="eyebrow">Atelier d'IA appliquée</span>
                         <h1>
-                            On construit le logiciel <br />que
-                            <em>votre métier</em> mérite.
+                            L'IA qui sert <em>votre métier</em>, pas l'inverse.
                         </h1>
-                        <p>
-                            De l'architecture au déploiement, CraftData conçoit
-                            des outils sur mesure — et Lore, son assistant
-                            documentaire, est né de cette même exigence.
+                        <p class="lead">
+                            CraftData conçoit et fabrique des outils sur mesure
+                            qui mettent l'IA là où elle fait gagner du temps :
+                            sur le terrain, dans vos documents, dans vos
+                            données.
                         </p>
-                        <div class="hero-actions">
-                            <a href="#cta-final" class="btn-hero-main"
-                                >Discuter d'un projet →</a
+                        <div class="actions">
+                            <a href="#contact" class="btn btn-dark"
+                                >Parlons de votre métier →</a
                             >
-                            <a href="#services" class="btn-hero-ghost"
-                                >Nos expertises</a
+                            <a href="#realisation" class="btn btn-ghost"
+                                >Voir une réalisation</a
                             >
                         </div>
                     </div>
-
-                    <div class="hero-left-footer">
-                        <div class="hero-stat">
-                            <span class="hero-stat-val">POC</span>
-                            <span class="hero-stat-label"
-                                >en quelques jours</span
-                            >
-                        </div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-val">0</span>
-                            <span class="hero-stat-label">jargon inutile</span>
-                        </div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-val">100%</span>
-                            <span class="hero-stat-label">sur mesure</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DROITE — Vitrine Lore -->
-                <div class="hero-right fade-up delay-2">
-                    <div class="lore-showcase-header">
-                        <div class="lore-showcase-identity">
-                            <div class="lore-showcase-icon">L</div>
-                            <div>
-                                <div class="lore-showcase-name">Lore</div>
-                                <div class="lore-showcase-sub">
-                                    assistant documentaire
-                                </div>
-                            </div>
-                        </div>
-                        <span class="lore-showcase-badge"
-                            >Notre produit phare</span
+                    <div class="hero-anim">
+                        <svg
+                            viewBox="0 0 400 500"
+                            role="img"
+                            aria-label="Des documents, la voix et la vidéo transformés par l'IA en une réponse sourcée"
                         >
-                    </div>
+                            <rect class="ha-bg" width="400" height="500" rx="16" />
 
-                    <div class="terminal terminal--hero">
-                        <div class="terminal-bar">
-                            <div class="t-dot red"></div>
-                            <div class="t-dot yellow"></div>
-                            <div class="t-dot green"></div>
-                            <span class="terminal-title">terminal — lore</span>
-                        </div>
-                        <div class="terminal-body" id="heroTermBody">
-                            <!-- Rempli par le JS -->
-                        </div>
-                    </div>
+                            <!-- Entrées -->
+                            <g class="ha-in ha-in-1">
+                                <rect class="ha-card" x="20" y="28" width="108" height="104" rx="10" />
+                                <rect class="ha-stroke" x="58" y="44" width="32" height="40" rx="3" />
+                                <path class="ha-stroke" d="M64 54h20M64 62h20M64 70h14" />
+                                <text class="ha-label" x="74" y="116">Documents</text>
+                            </g>
+                            <g class="ha-in ha-in-2">
+                                <rect class="ha-card" x="146" y="28" width="108" height="104" rx="10" />
+                                <rect class="ha-wave" x="174" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="182" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="190" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="198" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="206" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="214" y="48" width="4" height="32" rx="2" />
+                                <rect class="ha-wave" x="222" y="48" width="4" height="32" rx="2" />
+                                <text class="ha-label" x="200" y="116">Voix</text>
+                            </g>
+                            <g class="ha-in ha-in-3">
+                                <rect class="ha-card" x="272" y="28" width="108" height="104" rx="10" />
+                                <rect class="ha-stroke" x="298" y="44" width="56" height="40" rx="4" />
+                                <path class="ha-play" d="M320 56l14 8-14 8z" />
+                                <path class="ha-scan" d="M300 46h52" />
+                                <text class="ha-label" x="326" y="116">Vidéo</text>
+                            </g>
 
-                    <a href="produit.html" class="lore-showcase-cta">
-                        <div class="lore-showcase-cta-left">
-                            <span class="lore-showcase-cta-title"
-                                >Découvrir Lore</span
-                            >
-                            <span class="lore-showcase-cta-sub"
-                                >Interface web · CLI gratuit · Démo sur vos
-                                docs</span
-                            >
-                        </div>
-                        <span class="lore-showcase-cta-arrow">→</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+                            <!-- Flux vers l'IA -->
+                            <g class="ha-flow">
+                                <path d="M74 132c0 58 126 48 126 84" />
+                                <path d="M200 132v84" />
+                                <path d="M326 132c0 58-126 48-126 84" />
+                            </g>
 
-        <!-- SERVICES -->
-        <section
-            id="services"
-            style="padding: 6rem 0; background: var(--gray-50)"
-        >
-            <div class="container">
-                <span class="label">Nos Services</span>
-                <h2 class="section-heading">
-                    Une expertise double pour vos projets critiques
-                </h2>
-                <p class="section-sub">
-                    Nous combinons la rigueur du développement logiciel avec la
-                    puissance de l'IA générative.
-                </p>
+                            <g class="ha-node">
+                                <circle class="ha-ring" cx="200" cy="250" r="34" />
+                                <circle class="ha-core" cx="200" cy="250" r="34" />
+                                <text class="ha-node-text" x="200" y="258">IA</text>
+                            </g>
 
-                <div class="problem-grid" style="margin-top: 3rem">
-                    <div class="problem-card">
-                        <span class="problem-icon">🛠️</span>
-                        <h3>Développement Logiciel</h3>
-                        <p>
-                            Conception d'outils métiers, d'applications web et
-                            de solutions d'automatisation performantes et
-                            scalables.
-                        </p>
-                    </div>
-                    <div class="problem-card">
-                        <span class="problem-icon">🧠</span>
-                        <h3>Conseil en Stratégie IA</h3>
-                        <p>
-                            Accompagnement dans l'identification et la mise en
-                            œuvre de cas d'usage IA à forte valeur ajoutée.
-                        </p>
-                    </div>
-                    <div class="problem-card">
-                        <span class="problem-icon">📊</span>
-                        <h3>Exploitation de Données</h3>
-                        <p>
-                            Audit, structuration et valorisation de vos
-                            documents et bases de données internes.
-                        </p>
-                    </div>
-                    <div class="problem-card">
-                        <span class="problem-icon">🚀</span>
-                        <h3>Produits sur Mesure</h3>
-                        <p>
-                            Comme Lore, nous créons vos propres outils d'IA
-                            personnalisés selon vos besoins spécifiques.
-                        </p>
+                            <path class="ha-flow ha-flow-out" d="M200 284v34" />
+
+                            <!-- Sortie -->
+                            <g class="ha-out">
+                                <rect class="ha-card ha-card-out" x="20" y="318" width="360" height="158" rx="12" />
+                                <text class="ha-eyebrow" x="40" y="348">RÉPONSE</text>
+                                <text class="ha-text ha-out-1" x="40" y="378">Remplacer le joint de la vanne V-204.</text>
+                                <text class="ha-src ha-out-2" x="40" y="402">Source : manuel ligne B, §4.1</text>
+                                <g class="ha-bars">
+                                    <rect x="40" y="438" width="14" height="18" rx="2" />
+                                    <rect x="62" y="428" width="14" height="28" rx="2" />
+                                    <rect x="84" y="434" width="14" height="22" rx="2" />
+                                    <rect x="106" y="420" width="14" height="36" rx="2" />
+                                    <rect x="128" y="426" width="14" height="30" rx="2" />
+                                </g>
+                                <text class="ha-mute ha-out-3" x="164" y="440">Interventions ligne B</text>
+                                <text class="ha-mute ha-out-3" x="164" y="456">6 derniers mois</text>
+                            </g>
+                        </svg>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- LORE PROMO -->
-        <section id="lore-promo" style="padding: 6rem 0">
-            <div class="container">
-                <div class="lore-teaser">
-                    <div class="lore-teaser-content">
-                        <span class="label">Notre produit phare</span>
-                        <h2>Lore : L'intelligence au cœur de vos documents</h2>
-                        <p>
-                            Né de notre expertise terrain, Lore est l'outil de
-                            référence pour transformer votre documentation
-                            interne en un assistant conversationnel puissant,
-                            local et sécurisé.
-                        </p>
-                        <a href="produit.html" class="btn-lore"
-                            >Découvrir Lore →</a
-                        >
-                    </div>
-                    <div class="lore-teaser-visual">
-                        <div class="t-lore-line">
-                            <span class="t-lore-cmd">$</span> lore ask
-                            "Expertise CraftData ?"
+            <!-- CONSTAT -->
+            <section class="section section--tight">
+                <div class="container">
+                    <h2 class="section-title reveal">Vous vous reconnaissez ?</h2>
+                    <div class="situations">
+                        <div class="situation reveal">
+                            <span class="situation-num">—</span>
+                            <p>
+                                Des années de documents, et personne ne
+                                retrouve l'information quand il en a besoin.
+                            </p>
                         </div>
-                        <div class="t-lore-out">▸ Analyse en cours...</div>
-                        <div class="t-lore-out">
-                            ↳ Réponse : CraftData est spécialisé en Dev Logiciel
-                            et IA...
+                        <div class="situation reveal">
+                            <span class="situation-num">—</span>
+                            <p>
+                                Des équipes terrain aux mains occupées, avec des
+                                outils pensés pour un bureau.
+                            </p>
                         </div>
-                        <div class="t-lore-out">
-                            ↳ Sources : craftdata-presentation.pdf
+                        <div class="situation reveal">
+                            <span class="situation-num">—</span>
+                            <p>
+                                La conviction que l'IA peut aider, sans savoir
+                                par où commencer.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- OFFRE -->
-        <section id="offre">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 3rem">
-                    <span class="label">Notre offre d'entrée</span>
-                    <h2 class="section-heading">
-                        Un prototype en quelques jours,<br />sur vos vrais
-                        enjeux
+            <!-- MISSIONS -->
+            <section class="section section--paper" id="missions">
+                <div class="container">
+                    <span class="eyebrow">Missions</span>
+                    <h2 class="section-title">
+                        Du premier échange à l'outil en production
                     </h2>
+                    <ol class="missions">
+                        <li class="mission reveal">
+                            <span class="mission-num">01</span>
+                            <h3>Cadrer</h3>
+                            <p class="mission-hook">
+                                Trouver où l'IA sert vraiment.
+                            </p>
+                            <p>
+                                Un atelier de 1 à 2 jours avec vos équipes. On
+                                part de vos irritants, pas de la technologie.
+                                Vous repartez avec 2 ou 3 cas d'usage
+                                priorisés, et ceux qu'il vaut mieux écarter.
+                            </p>
+                        </li>
+                        <li class="mission reveal">
+                            <span class="mission-num">02</span>
+                            <h3>Prototyper</h3>
+                            <p class="mission-hook">
+                                Le voir fonctionner avant d'investir.
+                            </p>
+                            <p>
+                                Un prototype fonctionnel en quelques jours, sur
+                                vos vraies données, testé par vos vrais
+                                utilisateurs. Si l'idée ne tient pas, vous le
+                                savez vite et sans gros budget.
+                            </p>
+                        </li>
+                        <li class="mission reveal">
+                            <span class="mission-num">03</span>
+                            <h3>Fabriquer</h3>
+                            <p class="mission-hook">
+                                Un outil qu'on utilise tous les jours.
+                            </p>
+                            <p>
+                                Une application web ou mobile complète,
+                                branchée sur vos outils existants, puis
+                                maintenue et améliorée dans le temps.
+                            </p>
+                        </li>
+                    </ol>
                 </div>
-                <div class="offre-card">
-                    <div>
-                        <div class="offre-badge">POC Développement / IA</div>
-                        <h3>
-                            Validez votre idée concrètement, en quelques jours
-                        </h3>
-                        <p>
-                            Pas de promesse abstraite. Nous construisons un
-                            premier prototype fonctionnel de votre futur outil
-                            pour vous montrer la valeur réelle avant de lancer
-                            le développement complet.
-                        </p>
-                        <a href="#cta-final" class="btn-primary"
-                            >Discuter de votre projet →</a
-                        >
-                    </div>
-                    <div>
-                        <div class="offre-steps">
-                            <div class="offre-step">
-                                <div class="step-num">1</div>
+            </section>
+
+            <!-- SAVOIR-FAIRE -->
+            <section class="section" id="savoir-faire">
+                <div class="container">
+                    <span class="eyebrow">Savoir-faire</span>
+                    <h2 class="section-title">Les briques de l'atelier</h2>
+                    <ul class="skills">
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="9" y="3" width="6" height="11" rx="3" />
+                                <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+                            </svg>
+                            <h3>Commande vocale</h3>
+                            <p>Piloter un outil sans les mains.</p>
+                        </li>
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="6" width="13" height="12" rx="2" />
+                                <path d="M16 10l5-3v10l-5-3z" />
+                            </svg>
+                            <h3>Analyse vidéo</h3>
+                            <p>Repérer un geste, un écart, une anomalie.</p>
+                        </li>
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 3h8l4 4v6M6 3v18h7M14 3v4h4" />
+                                <circle cx="17" cy="17" r="3" />
+                                <path d="M19.5 19.5L22 22" />
+                            </svg>
+                            <h3>Recherche dans vos documents</h3>
+                            <p>
+                                Poser une question, obtenir la réponse et sa
+                                source.
+                            </p>
+                        </li>
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h10l4 4v12H4z" />
+                                <path d="M8 12h8M8 16h5" />
+                            </svg>
+                            <h3>Extraction de données</h3>
+                            <p>
+                                Transformer PDF, formulaires et e-mails en
+                                données exploitables.
+                            </p>
+                        </li>
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 20V4M4 20h16" />
+                                <path d="M8 16v-4M12 16V8M16 16v-6" />
+                            </svg>
+                            <h3>Tableaux de bord</h3>
+                            <p>Suivre ce qui compte, au fil de l'eau.</p>
+                        </li>
+                        <li class="skill reveal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="7" y="2" width="10" height="20" rx="2" />
+                                <path d="M11 18h2" />
+                            </svg>
+                            <h3>Applications web et mobile</h3>
+                            <p>L'enveloppe qui rend tout ça utilisable.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- RÉALISATION -->
+            <section class="section section--dark" id="realisation">
+                <div class="container">
+                    <span class="eyebrow">Sorti de l'atelier</span>
+                    <h2 class="section-title">
+                        L'IA dans les mains (déjà prises) d'un cavalier
+                    </h2>
+                    <div class="case">
+                        <div class="case-text">
+                            <p class="lead">
+                                <strong>HorsePerformanceTracker</strong> (HPT)
+                                est une application de suivi de progression en
+                                saut d'obstacles, conçue et développée de A à Z
+                                par CraftData : analytics, contrôle à la voix,
+                                analyse vidéo et briques d'IA.
+                            </p>
+                            <p>
+                                <strong>Le défi :</strong> un utilisateur en
+                                mouvement, en extérieur, les mains occupées,
+                                qui attend un retour immédiat.
+                            </p>
+
+                            <h3 class="case-subtitle">
+                                Ce que ça prouve pour vous
+                            </h3>
+                            <dl class="proofs">
                                 <div>
-                                    <strong>Cadrage technique</strong>
-                                    <p>
-                                        On définit ensemble les fonctionnalités
-                                        critiques et les objectifs business de
-                                        votre solution.
-                                    </p>
+                                    <dt>Contrôle à la voix</dt>
+                                    <dd>
+                                        Des interfaces mains libres pour le
+                                        terrain : gants, EPI, mains occupées.
+                                    </dd>
                                 </div>
-                            </div>
-                            <div class="offre-step">
-                                <div class="step-num">2</div>
                                 <div>
-                                    <strong>Architecture & Design</strong>
-                                    <p>
-                                        Nous concevons une architecture robuste
-                                        et une interface intuitive adaptée à vos
-                                        futurs utilisateurs.
-                                    </p>
+                                    <dt>Analyse vidéo et IA</dt>
+                                    <dd>
+                                        Contrôle visuel, analyse de gestes,
+                                        détection d'anomalies.
+                                    </dd>
                                 </div>
-                            </div>
-                            <div class="offre-step">
-                                <div class="step-num">3</div>
                                 <div>
-                                    <strong>Développement Agile</strong>
-                                    <p>
-                                        Livraison d'un MVP (Produit Minimum
-                                        Viable) fonctionnel que vous pouvez déjà
-                                        tester sur le terrain.
-                                    </p>
+                                    <dt>Analytics</dt>
+                                    <dd>
+                                        Suivi de performance et tableaux de bord
+                                        terrain.
+                                    </dd>
                                 </div>
-                            </div>
-                            <div class="offre-step">
-                                <div class="step-num">4</div>
                                 <div>
-                                    <strong>Validation & Road-map</strong>
-                                    <p>
-                                        Analyse des retours, ajustements et
-                                        planification de la montée en charge et
-                                        des futures évolutions.
-                                    </p>
+                                    <dt>Produit complet</dt>
+                                    <dd>
+                                        Mobile, serveur, IA : un produit
+                                        publié, pas une démo.
+                                    </dd>
                                 </div>
-                            </div>
+                            </dl>
+
+                            <a
+                                href="https://www.horseperformancetracker.com"
+                                class="btn btn-light"
+                                target="_blank"
+                                rel="noopener"
+                                >Découvrir HPT →</a
+                            >
+                        </div>
+                        <div class="case-shots">
+                            <figure class="photo photo--phone">
+                                <img
+                                    src="images/hpt-1.png"
+                                    alt="Capture de l'application HPT"
+                                    data-fallback
+                                />
+                                <figcaption class="photo-empty">
+                                    Capture HPT 1
+                                </figcaption>
+                            </figure>
+                            <figure class="photo photo--phone">
+                                <img
+                                    src="images/hpt-2.png"
+                                    alt="Capture de l'application HPT"
+                                    data-fallback
+                                />
+                                <figcaption class="photo-empty">
+                                    Capture HPT 2
+                                </figcaption>
+                            </figure>
+                            <figure class="photo photo--phone">
+                                <img
+                                    src="images/hpt-3.png"
+                                    alt="Capture de l'application HPT"
+                                    data-fallback
+                                />
+                                <figcaption class="photo-empty">
+                                    Capture HPT 3
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- POURQUOI CRAFTDATA -->
-        <section id="pourquoi">
-            <div class="container">
-                <div style="max-width: 620px">
-                    <span class="label">Pourquoi CraftData</span>
-                    <h2 class="section-heading">
-                        Une approche pragmatique, sans jargon, orientée terrain
-                    </h2>
-                    <p class="section-sub">
-                        Nous ne vendons pas de la technologie pour la
-                        technologie. Nous cherchons à résoudre un problème
-                        métier réel, avec des outils adaptés à votre réalité.
-                    </p>
-                </div>
-                <div class="differents-grid">
-                    <div class="diff-card">
-                        <span class="diff-icon">🏭</span>
-                        <h4>Compréhension métier</h4>
-                        <p>
-                            Nous parlons votre langue avant de parler
-                            technologie. Ce qui compte, c'est votre problème,
-                            pas notre stack.
+            <!-- L'ATELIER -->
+            <section class="section" id="atelier">
+                <div class="container about">
+                    <figure class="photo photo--portrait">
+                        <img
+                            src="images/alexis-mayer.jpg"
+                            alt="Portrait d'Alexis Mayer"
+                            data-fallback
+                        />
+                        <figcaption class="photo-empty">Portrait</figcaption>
+                    </figure>
+                    <div class="about-text">
+                        <span class="eyebrow">L'atelier</span>
+                        <h2 class="section-title">
+                            Un seul interlocuteur, du premier échange à la mise
+                            en production.
+                        </h2>
+                        <p class="lead">
+                            Je m'appelle Alexis Mayer. Titulaire d'un master en
+                            économétrie, j'ai passé environ 8 ans comme data
+                            scientist : 3 ans dans des start-ups et PME, 5 ans
+                            dans un grand groupe.
                         </p>
-                    </div>
-                    <div class="diff-card">
-                        <span class="diff-icon">🎯</span>
-                        <h4>Résultats concrets</h4>
                         <p>
-                            Un prototype testable en quelques jours. Vous voyez
-                            la valeur avant de vous engager.
-                        </p>
-                    </div>
-                    <div class="diff-card">
-                        <span class="diff-icon">🛠️</span>
-                        <h4>Pragmatisme</h4>
-                        <p>
-                            Pas de refonte complète de votre organisation. On
-                            part de ce qui existe pour l'améliorer.
-                        </p>
-                    </div>
-                    <div class="diff-card">
-                        <span class="diff-icon">💬</span>
-                        <h4>Sans jargon technique</h4>
-                        <p>
-                            Pas de buzz words. Des explications claires sur ce
-                            qu'on fait, ce que ça apporte, ce que ça coûte.
-                        </p>
-                    </div>
-                    <div class="diff-card">
-                        <span class="diff-icon">🔒</span>
-                        <h4>Sécurité et confidentialité</h4>
-                        <p>
-                            Vos données restent les vôtres. Nous travaillons
-                            dans des environnements sécurisés et souverains.
-                        </p>
-                    </div>
-                    <div class="diff-card">
-                        <span class="diff-icon">📈</span>
-                        <h4>Mise en place progressive</h4>
-                        <p>
-                            On commence petit, on valide, on étend. Pas de
-                            projet massif à risque.
+                            Chez CraftData, vous parlez directement à la personne
+                            qui conçoit et code votre outil : pas
+                            d'intermédiaire, pas de perte d'information.
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA FINAL -->
-        <section id="cta-final">
-            <div class="container" style="text-align: center">
-                <span class="label">Passons à l'action</span>
-                <h2 class="section-heading">
-                    Prêt à transformer vos idées en réalité logicielle ?
-                </h2>
-                <p class="section-sub">
-                    Un échange de 30 minutes suffit pour évaluer la faisabilité
-                    de votre projet. Sans engagement.
-                </p>
-                <div
-                    style="
-                        display: flex;
-                        gap: 1rem;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                    "
-                >
+                <div class="container">
+                    <ul class="pledges">
+                        <li class="reveal">
+                            <h3>Votre métier d'abord</h3>
+                            <p>La technologie vient après le problème.</p>
+                        </li>
+                        <li class="reveal">
+                            <h3>Commencer petit</h3>
+                            <p>On valide, puis on étend.</p>
+                        </li>
+                        <li class="reveal">
+                            <h3>Parler clair</h3>
+                            <p>
+                                Ce qu'on fait, ce que ça apporte, ce que ça
+                                coûte.
+                            </p>
+                        </li>
+                        <li class="reveal">
+                            <h3>Vos données restent les vôtres</h3>
+                            <p>Pas de réutilisation, pas de surprise.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="section section--paper" id="contact">
+                <div class="container contact">
+                    <div>
+                        <span class="eyebrow">Contact</span>
+                        <h2 class="section-title">Parlons de votre métier.</h2>
+                        <p class="lead">
+                            30 minutes pour voir si l'IA peut vous aider, et
+                            vous le dire honnêtement si ce n'est pas le cas.
+                        </p>
+                        <p class="contact-mail">
+                            Ou directement :
+                            <a href="mailto:contact@craftdata.fr"
+                                >contact@craftdata.fr</a
+                            >
+                        </p>
+                    </div>
                     <form
                         action="https://formspree.io/f/mwvwpgdd"
                         method="POST"
-                        class="cta-form"
+                        class="form"
                     >
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
+                        <label>
+                            E-mail
                             <input
                                 type="email"
-                                id="email"
                                 name="email"
-                                placeholder="votre@email.com"
+                                placeholder="vous@entreprise.fr"
+                                autocomplete="email"
                                 required
                             />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Votre projet</label>
+                        </label>
+                        <label>
+                            <span
+                                >Entreprise
+                                <span class="optional">(facultatif)</span></span
+                            >
+                            <input
+                                type="text"
+                                name="entreprise"
+                                autocomplete="organization"
+                            />
+                        </label>
+                        <label>
+                            Votre besoin
                             <textarea
-                                id="message"
                                 name="message"
-                                placeholder="Dites-nous en plus sur vos besoins..."
+                                rows="5"
+                                placeholder="Votre métier, ce qui vous fait perdre du temps, ce que vous aimeriez changer…"
                                 required
                             ></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">
-                            Envoyer ma demande →
+                        </label>
+                        <button type="submit" class="btn btn-dark">
+                            Envoyer →
                         </button>
                     </form>
                 </div>
-                <p
-                    style="
-                        margin-top: 1.5rem;
-                        font-size: 0.8rem;
-                        color: var(--gray-400);
-                    "
-                ></p>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- FOOTER -->
-        <footer>
-            <a href="#" class="nav-logo">Craft<span>Data</span></a>
-            <p>© 2025 CraftData — Tous droits réservés</p>
-            <div class="footer-links">
-                <a href="mailto:contact@craftdata.fr">contact@craftdata.fr</a>
-                <a href="produit.html">Lore</a>
-                <a href="#">Mentions légales</a>
+        <footer class="footer">
+            <div class="container footer-inner">
+                <a href="#" class="nav-logo">Craft<span>Data</span></a>
+                <p class="footer-recruit">
+                    L'atelier grandit.
+                    <a
+                        href="mailto:contact@craftdata.fr?subject=Rejoindre%20l'atelier"
+                        >Envie de le rejoindre ?</a
+                    >
+                </p>
+                <div class="footer-links">
+                    <a href="mailto:contact@craftdata.fr">contact@craftdata.fr</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
             </div>
         </footer>
 
-        <script src="common.js" defer></script>
         <script src="script.js" defer></script>
-        <script>
-            // Hero terminal animation
-            (function () {
-                const lines = [
-                    {
-                        type: "cmd",
-                        text: 'lore ask "Procédure urgence ligne B ?"',
-                    },
-                    { type: "gap" },
-                    { type: "output", text: "▸ Analyse de 47 documents..." },
-                    {
-                        type: "output",
-                        text: "▸ Recherche sémantique en cours...",
-                    },
-                    {
-                        type: "ok",
-                        text: "✓ 3 sections pertinentes identifiées",
-                    },
-                    {
-                        type: "answer",
-                        text: "La procédure d'urgence ligne B requiert l'arrêt immédiat via le bouton E-STOP rouge, puis l'isolation des vannes V-204.",
-                    },
-                    {
-                        type: "source",
-                        text: "↳ Sources : plan-securite.pdf §4.1 · checklist-B.docx",
-                    },
-                ];
-
-                const body = document.getElementById("heroTermBody");
-
-                async function typeText(el, text, speed = 40) {
-                    for (let i = 0; i < text.length; i++) {
-                        el.textContent += text.charAt(i);
-                        await new Promise((r) => setTimeout(r, speed));
-                    }
-                }
-
-                async function play() {
-                    for (const l of lines) {
-                        if (l.type === "gap") {
-                            const gap = document.createElement("div");
-                            gap.className = "t-gap";
-                            body.appendChild(gap);
-                            await new Promise((r) => setTimeout(r, 200));
-                            continue;
-                        }
-
-                        const div = document.createElement("div");
-                        div.className = "t-line";
-
-                        if (l.type === "cmd") {
-                            div.innerHTML =
-                                '<span class="t-prompt">$</span><span class="t-cmd"></span>';
-                            body.appendChild(div);
-                            await typeText(div.querySelector(".t-cmd"), l.text);
-                        } else {
-                            const map = {
-                                output: "t-output",
-                                ok: "t-success",
-                                source: "t-source",
-                                answer: "t-answer",
-                            };
-                            div.className = map[l.type] || "t-output";
-                            body.appendChild(div);
-                            await typeText(div, l.text, 20);
-                        }
-                    }
-                    const cursor = document.createElement("div");
-                    cursor.innerHTML =
-                        '<span class="t-prompt">$</span><span class="t-cursor"></span>';
-                    body.appendChild(cursor);
-                }
-
-                document.addEventListener("DOMContentLoaded", () =>
-                    setTimeout(play, 1000),
-                );
-            })();
-        </script>
     </body>
 </html>
